@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Niagara Presentation XML -->
+<px version="1.0" media="workbench:WbPxMedia">
+<import>
+  <module name="baja"/>
+  <module name="bajaui"/>
+  <module name="converters"/>
+  <module name="gx"/>
+  <module name="kitPx"/>
+</import>
+<layers>
+  <layer name="newLayer" status="normal"/>
+  <layer name="BG_Lock" status="normal"/>
+  <layer name="Device" status="normal"/>
+</layers>
+<content>
+<CanvasPane viewSize="1855.0,955.0" scale="fit" background="image( source(null) )">
+
+  <BoundLabel layout="-100.0,920.0,1960.0,40.0" background="linearGradient( angle(90.0) stop(0.0% black) stop(100.0% #505050) )">
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+  </BoundLabel>
+
+  <Picture layout="0.0,0.0,1855.0,930.0" image="file:/px/Backgound/BG_Help.jpg" scale="fit">
+    <LayerTag name="LayerTag" layerName="BG_Lock"/>
+  </Picture>
+
+  <BoundLabel layout="0.0,0.0,410.0,100.0">
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+    <PopupBinding ord="file:^px/Home.px" title="BMS Home" position="0.0,0.0" size="1920.0,1055.0" modal="true"/>
+  </BoundLabel>
+
+  <BoundLabel layout="1040.0,20.0,780.0,90.0">
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+    <BoundLabelBinding hyperlink="file:^px/Home.px"/>
+  </BoundLabel>
+
+  <BoundLabel layout="1799.9999999999998,35.0,55.00000000000023,30.0" font="16.0pt Segoe UI" foreground="black" halign="left">
+    <BoundLabelBinding ord="station:|slot:/Drivers/NiagaraNetwork/WEB_LH/points/DDC_H1_1/TEMP_GEN/out/value" summary="%displayName?typeDisplayName% = %.% ">
+      <ObjectToString name="text"/>
+    </BoundLabelBinding>
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+  </BoundLabel>
+
+  <Label layout="45.0,605.0,89.99999999999997,30.0" text="L&#x1ecb;ch b&#x1ead;t" background="#cc00ff00"/>
+
+  <BoundLabel layout="25.0,480.0,115.0,30.0" text="  C&#xe0;i &#x111;&#x1eb7;t l&#x1ecb;ch" font="18.0pt SansSerif" halign="left" border="2.0 solid black">
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+    <PopupBinding ord="station:|slot:/Drivers/NiagaraNetwork/Schedules/SCH_HELP" title="C&#xe0;i &#x111;&#x1eb7;t l&#x1ecb;ch b&#x1ead;t t&#x1eaf;t" position="0.0,0.0" modal="true"/>
+  </BoundLabel>
+
+  <Label layout="45.0,635.0,89.99999999999997,30.0" text="L&#x1ecb;ch t&#x1eaf;t" background="#ccff0000"/>
+
+  <ImageButton layout="1040.0,340.0,800.0,580.0" image="file:^Image/SCH_Help.PNG" font="bold 20.0pt SansSerif" foreground="white" halign="left" buttonStyle="none">
+    <WsAnnotation name="wsAnnotation" value="6,6,8"/>
+  </ImageButton>
+
+  <BoundLabel layout="240.0,100.0,150.0,30.0">
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+    <BoundLabelBinding hyperlink="file:^px/CHILLER.px"/>
+  </BoundLabel>
+
+  <BoundLabel layout="400.0,100.0,150.0,30.0">
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+    <BoundLabelBinding hyperlink="file:^px/AHU_Main.px"/>
+  </BoundLabel>
+
+  <BoundLabel layout="550.0,100.0,150.0,30.0">
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+    <BoundLabelBinding hyperlink="file:^px/PAU_Main.px"/>
+  </BoundLabel>
+
+  <BoundLabel layout="705.0,100.0,160.0,30.0">
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+    <BoundLabelBinding hyperlink="file:^px/FCU_Main.px"/>
+  </BoundLabel>
+
+  <BoundLabel layout="870.0,100.0,150.0,30.0">
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+    <BoundLabelBinding hyperlink="file:^px/HELP/Help.px"/>
+  </BoundLabel>
+
+  <PxInclude layout="560.0,180.0,210.0,70.0" ord="file:^px/Panel/Help/PanelVSD.px"/>
+
+  <BoundLabel layout="20.0,180.0,209.9999999999999,20.0" text="&#x110;i&#x1ec1;u khi&#x1ec3;n On/Off" font="14.0pt Tahoma" foreground="black" background="#e0e0e0" border="2.0 groove black">
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+  </BoundLabel>
+
+  <BoundLabel layout="20.0,210.0,470.0,20.0" text="  &#x1ea4;n On &#x111;&#x1ec3; b&#x1ead;t, Off &#x111;&#x1ec3; t&#x1eaf;t c&#x1b0;&#x1ee1;ng b&#x1ee9;c b&#x1eb1;ng BMS" font="14.0pt Tahoma" foreground="white" background="#4d000000" halign="left">
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+  </BoundLabel>
+
+  <BoundLabel layout="20.0,235.0,470.0,20.0" text="  &#x1ea4;n Auto &#x111;&#x1ec3; thi&#x1ebf;t b&#x1ecb; ch&#x1ea1;y theo l&#x1ecb;ch ho&#x1eb7;c l&#x1ead;p tr&#xec;nh t&#x1ef1; &#x111;&#x1ed9;ng" font="14.0pt Tahoma" foreground="white" background="#4d000000" halign="left">
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+  </BoundLabel>
+
+  <BoundLabel layout="20.0,260.0,759.9999999999999,20.0" text="  N&#xfa;t Auto c&#xf3; n&#x1ec1;n m&#xe0;u t&#xed;m l&#xe0; &#x111;ang b&#x1ead;t c&#x1b0;&#x1ee1;ng b&#x1ee9;c, trong su&#x1ed1;t m&#xe0;u tr&#x1eaf;ng l&#xe0; &#x111;ang &#x1edf; ch&#x1ebf; &#x111;&#x1ed9; t&#x1ef1; &#x111;&#x1ed9;ng / l&#x1ecb;ch" font="14.0pt Tahoma" foreground="white" background="#4d000000" halign="left">
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+  </BoundLabel>
+
+  <BoundLabel layout="20.0,290.0,209.9999999999999,20.0" text="&#x110;i&#x1ec1;u khi&#x1ec3;n bi&#x1ebf;n t&#x1ea7;n" font="14.0pt Tahoma" foreground="black" background="#e0e0e0" border="2.0 groove black">
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+  </BoundLabel>
+
+  <BoundLabel layout="20.0,320.0,649.9999999999999,20.0" text=" Click chu&#x1ed9;t v&#xe0;o &#xf4; gi&#xe1; tr&#x1ecb; Hz nh&#x1ead;p gi&#xe1; tr&#x1ecb; c&#x1ea7;n ch&#x1ea1;y (25-50Hz)" font="14.0pt Tahoma" foreground="white" background="#4d000000" halign="left">
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+  </BoundLabel>
+
+  <BoundLabel layout="20.0,420.0,759.9999999999999,20.0" text="  Khuy&#x1ebf;n c&#xe1;o: Ch&#x1ec9; n&#xea;n c&#xe0;i &#x111;&#x1eb7;t bi&#x1ebf;n t&#x1ea7;n &#x1edf; m&#x1ee9;c 50-100 (%) &#x111;&#x1ec3; &#x111;&#x1ea3;m b&#x1ea3;o &#x111;&#x1ed9; b&#x1ec1;n cho thi&#x1ebf;t b&#x1ecb; qu&#x1ea1;t b&#x1a1;m d&#xf9;ng bi&#x1ebf;n t&#x1ea7;n" font="14.0pt Tahoma" foreground="white" background="#80ff0000" halign="left">
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+  </BoundLabel>
+
+  <BoundLabel layout="20.0,370.0,650.0,20.0" text="  Khi b&#x1ead;t/ t&#x1eaf;t c&#x1b0;&#x1ee1;ng b&#x1ee9;c, n&#xfa;t b&#x1ead;t t&#x1eaf;t s&#x1ebd; hi&#x1ec3;n th&#x1ecb; m&#xe0;u t&#xed;m t&#x1b0;&#x1a1;ng t&#x1ef1; n&#xfa;t Auto" font="14.0pt Tahoma" foreground="white" background="#4d000000" halign="left">
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+  </BoundLabel>
+
+  <BoundLabel layout="20.0,395.0,650.0,20.0" text=" 3. Khi c&#x1ea7;n ch&#x1ea1;y t&#x1ef1; &#x111;&#x1ed9;ng theo l&#x1ecb;ch ho&#x1eb7;c ch&#x1b0;&#x1a1;ng tr&#xec;nh c&#xe0;i &#x111;&#x1eb7;t th&#xec; click chu&#x1ed9;t ph&#x1ea3;i ch&#x1ecd;n Auto n&#x1ec1;n ch&#x1eef; trong su&#x1ed1;t nh&#x1b0; h&#xec;nh l&#xe0; ok" font="14.0pt Tahoma" foreground="white" background="#4d000000" halign="left">
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+  </BoundLabel>
+
+  <BoundLabel layout="25.0,450.0,209.9999999999999,20.0" text="  C&#xe0;i &#x111;&#x1eb7;t L&#x1ecb;ch b&#x1ead;t t&#x1eaf;t" font="14.0pt Tahoma" foreground="black" background="#e0e0e0" border="2.0 groove black">
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+  </BoundLabel>
+
+  <BoundLabel layout="150.0,490.0,519.9999999999999,20.0" text="  Nh&#x1ea5;n v&#xe0;o C&#xe0;i &#x111;&#x1eb7;t l&#x1ecb;ch &#x111;&#x1ec3; c&#xe0;i l&#x1ecb;ch" font="14.0pt Tahoma" foreground="white" background="#4d000000" halign="left">
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+  </BoundLabel>
+
+  <BoundLabel layout="150.0,515.0,519.9999999999999,20.0" text="  Event Stat: Th&#x1edd;i gian b&#x1eaf;t &#x111;&#x1ea7;u" font="14.0pt Tahoma" foreground="white" background="#4d000000" halign="left">
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+  </BoundLabel>
+
+  <BoundLabel layout="150.0,540.0,519.9999999999999,20.0" text="  Event Finish: Th&#x1edd;i gian k&#x1ebf;t th&#xfa;c" font="14.0pt Tahoma" foreground="white" background="#4d000000" halign="left">
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+  </BoundLabel>
+
+  <BoundLabel layout="150.0,565.0,519.9999999999999,20.0" text="True: &#x111;ang &#x111;&#x1b0;&#x1ee3;c b&#x1ead;t trong kho&#x1ea3;ng TRUE n&#xe0;y, False s&#x1ebd; t&#x1eaf;t" font="14.0pt Tahoma" foreground="white" background="#4d000000" halign="left">
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+  </BoundLabel>
+
+  <BoundLabel layout="150.0,615.0,519.9999999999999,20.0" text="  L&#x1ecb;ch &#x111;ang b&#x1ead;t" font="14.0pt Tahoma" foreground="white" background="#4d000000" halign="left">
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+  </BoundLabel>
+
+  <BoundLabel layout="150.0,645.0,519.9999999999999,20.0" text="  L&#x1ecb;ch &#x111;ang t&#x1eaf;t" font="14.0pt Tahoma" foreground="white" background="#4d000000" halign="left">
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+  </BoundLabel>
+
+  <BoundLabel layout="90.0,685.0,320.0,30.0" text=" C&#xf3; l&#x1ed7;i Trip - C&#x1ea7;n ki&#x1ec3;m tra t&#x1ee7; l&#x1ef1;c t&#x1b0;&#x1a1;ng &#x1ee9;ng" font="14.0pt Tahoma" foreground="white" background="#4d000000" halign="left">
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+  </BoundLabel>
+
+  <Picture layout="40.0,680.0,32.0,32.0" image="file:^px/Images/Icon/Trip_On.png" scale="fitRatio"/>
+
+  <Picture layout="40.0,715.0,32.0,32.0" image="file:^px/Images/Icon/Trip_Off.png" scale="fitRatio"/>
+
+  <BoundLabel layout="90.0,720.0,310.0,30.0" text=" Kh&#xf4;ng l&#x1ed7;i trip" font="14.0pt Tahoma" foreground="white" background="#4d000000" halign="left">
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+  </BoundLabel>
+
+</CanvasPane>
+</content>
+</px>

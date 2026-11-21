@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Niagara Presentation XML -->
+<px version="1.0" media="workbench:WbPxMedia">
+<import>
+  <module name="baja"/>
+  <module name="bajaui"/>
+  <module name="gx"/>
+  <module name="kitPx"/>
+</import>
+<layers>
+  <layer name="newLayer" status="locked"/>
+  <layer name="newLayer1" status="normal"/>
+  <layer name="newLayer2" status="normal"/>
+</layers>
+<content>
+<CanvasPane viewSize="1855.0,955.0" scale="fit" background="image( source(null) )">
+
+  <Picture image="file:/Backgound/07_Help.png" scale="fit">
+    <LayerTag name="LayerTag" layerName="newLayer"/>
+  </Picture>
+
+  <BoundLabel layout="0.0,0.0,420.0,100.00000000000003">
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+    <PopupBinding ord="file:^px/ELECTRIC/Electric.px" title="H&#x1ec7; th&#x1ed1;ng &#x111;i&#x1ec7;n" position="0.0,0.0" size="1920.0,1055.0" modal="true"/>
+  </BoundLabel>
+
+  <ImageButton layout="0.0,95.0,110.0,40.0" styleClasses="toolbar" text="Dictionary" font="bold 18.0pt SansSerif" foreground="white" background="#6c6c6c" buttonStyle="toolBar">
+    <WsAnnotation name="wsAnnotation" value="6,6,8"/>
+    <ValueBinding hyperlink="file:^px/HELP/Help.px"/>
+  </ImageButton>
+
+  <ImageButton layout="110.0,95.0,110.0,40.0" styleClasses="toolbar" text="Fan" font="bold 18.0pt SansSerif" foreground="white" background="#6c6c6c" buttonStyle="toolBar">
+    <WsAnnotation name="wsAnnotation" value="6,6,8"/>
+    <ValueBinding hyperlink="file:^px/HELP/Help1.px"/>
+  </ImageButton>
+
+  <BoundLabel layout="570.0,0.0,150.0,90.0">
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+    <BoundLabelBinding hyperlink="file:^px/Home.px"/>
+  </BoundLabel>
+
+  <BoundLabel layout="715.0,0.0,150.0,90.0">
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+    <BoundLabelBinding hyperlink="file:^px/FAN/Fan.px"/>
+  </BoundLabel>
+
+  <BoundLabel layout="865.0,0.0,150.0,90.0">
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+    <BoundLabelBinding hyperlink="file:^px/LIGHTING/Lighting.px"/>
+  </BoundLabel>
+
+  <BoundLabel layout="1015.0,0.0,150.0,90.0">
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+    <BoundLabelBinding hyperlink="file:^px/ELECTRIC/Electric.px"/>
+  </BoundLabel>
+
+  <BoundLabel layout="1165.0,0.0,150.0,90.0">
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+    <BoundLabelBinding hyperlink="file:^px/PUMP/Pump.px"/>
+  </BoundLabel>
+
+  <BoundLabel layout="1310.0,0.0,150.0,90.0">
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+    <BoundLabelBinding hyperlink="file:^px/FIRE/Fire.px"/>
+  </BoundLabel>
+
+  <BoundLabel layout="1460.0,0.0,150.0,90.0">
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+    <BoundLabelBinding hyperlink="file:^px/HELP/Help.px"/>
+  </BoundLabel>
+
+  <ImageButton layout="220.0,95.0,110.0,40.0" styleClasses="toolbar" text="Lighting" font="bold 18.0pt SansSerif" foreground="white" background="#6c6c6c" buttonStyle="toolBar">
+    <WsAnnotation name="wsAnnotation" value="6,6,8"/>
+    <ValueBinding hyperlink="file:^px/HELP/Help2.px"/>
+  </ImageButton>
+
+  <ImageButton layout="330.0,95.0,110.0,40.0" styleClasses="toolbar" text="Electric" font="bold 18.0pt SansSerif" foreground="white" background="#6c6c6c" buttonStyle="toolBar">
+    <WsAnnotation name="wsAnnotation" value="6,6,8"/>
+    <ValueBinding hyperlink="file:^px/HELP/Help3.px"/>
+  </ImageButton>
+
+  <ImageButton layout="440.0,95.0,110.0,40.0" styleClasses="toolbar" text="Pump" font="bold 18.0pt SansSerif" foreground="white" background="#6c6c6c" buttonStyle="toolBar">
+    <WsAnnotation name="wsAnnotation" value="6,6,8"/>
+    <ValueBinding hyperlink="file:^px/HELP/Help4.px"/>
+  </ImageButton>
+
+  <ImageButton layout="550.0,95.0,110.0,40.0" styleClasses="toolbar" text="Fire" font="bold 18.0pt SansSerif" foreground="white" background="#4040ff" buttonStyle="toolBar">
+    <WsAnnotation name="wsAnnotation" value="6,6,8"/>
+    <ValueBinding hyperlink="file:^px/HELP/Help5.px"/>
+  </ImageButton>
+
+  <ImageButton layout="660.0,95.0,110.0,40.0" styleClasses="toolbar" text="About" font="bold 18.0pt SansSerif" foreground="white" background="#6c6c6c" buttonStyle="toolBar">
+    <WsAnnotation name="wsAnnotation" value="6,6,8"/>
+    <ValueBinding hyperlink="file:^px/HELP/Help6.px"/>
+  </ImageButton>
+
+  <ImageButton layout="20.0,140.0,530.0,40.0" text="I. H&#x1af;&#x1eda;NG D&#x1eaa;N CHUNG" font="bold 20.0pt SansSerif" foreground="white" background="#8080ff" halign="left">
+    <WsAnnotation name="wsAnnotation" value="6,6,8"/>
+  </ImageButton>
+
+  <ImageButton layout="150.0,205.0,730.0,40.0" text="Ch&#x1ee9;c n&#x103;ng ch&#xed;nh: gi&#xe1;m s&#xe1;t tr&#x1ea1;ng th&#xe1;i c&#x1eed;a tho&#xe1;t hi&#x1ec3;m ph&#xf2;ng ch&#xe1;y " font="bold 18.0pt SansSerif" foreground="black" halign="left" buttonStyle="none">
+    <WsAnnotation name="wsAnnotation" value="6,6,8"/>
+  </ImageButton>
+
+  <ImageButton layout="150.0,250.0,1020.0,40.0" text="T&#x1ea7;ng 1 v&#xe0; h&#x1ea7;m 1 c&#xf3; 3 c&#x1eed;a, c&#xe1;c t&#x1ea7;ng kh&#xe1;c m&#x1ed7;i t&#x1ea7;ng 2 c&#x1eed;a" font="bold 18.0pt SansSerif" foreground="black" halign="left" buttonStyle="none">
+    <WsAnnotation name="wsAnnotation" value="6,6,8"/>
+  </ImageButton>
+
+  <ImageButton layout="10.0,340.0,580.0,40.0" text="II. GI&#x1ea2;I TH&#xcd;CH  ICON H&#x1ec6; C&#x1eec;A THO&#xc1;T HI&#x1ec2;M PH&#xd2;NG CH&#xc1;Y" font="bold 20.0pt SansSerif" foreground="white" background="#8080ff" halign="left">
+    <WsAnnotation name="wsAnnotation" value="6,6,8"/>
+  </ImageButton>
+
+  <ImageButton layout="240.0,405.0,360.0,29.999999999999943" text="Tr&#x1ea1;ng th&#xe1;i c&#x1eed;a &#x111;&#xf3;ng" font="bold 18.0pt SansSerif" foreground="black" halign="left" buttonStyle="none">
+    <WsAnnotation name="wsAnnotation" value="6,6,8"/>
+  </ImageButton>
+
+  <ImageButton layout="240.0,460.0,360.0,29.999999999999943" text="Tr&#x1ea1;ng th&#xe1;i c&#x1eed;a m&#x1edf;" font="bold 18.0pt SansSerif" foreground="black" halign="left" buttonStyle="none">
+    <WsAnnotation name="wsAnnotation" value="6,6,8"/>
+  </ImageButton>
+
+  <BoundLabel layout="20.0,385.0,220.0,50.0" font="bold 12.0pt Segoe UI" background="#4d40ffff" border="1.0 solid black">
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+  </BoundLabel>
+
+  <Picture layout="105.0,385.0,50.0,50.0" image="file:^px/Images/Icon/DoorCL.png" scale="fitRatio" halign="fill"/>
+
+  <BoundLabel layout="20.0,440.0,220.0,50.0" font="bold 12.0pt Segoe UI" background="#80ff0000" border="1.0 solid black">
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+  </BoundLabel>
+
+  <Picture layout="105.0,440.0,50.0,50.0" image="file:^px/Images/Icon/DoorOP.png" scale="fitRatio" halign="fill"/>
+
+</CanvasPane>
+</content>
+</px>

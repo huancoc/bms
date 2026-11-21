@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Niagara Presentation XML -->
+<px version="1.0" media="workbench:WbPxMedia">
+<import>
+  <module name="baja"/>
+  <module name="bajaui"/>
+  <module name="gx"/>
+</import>
+<content>
+<ScrollPane>
+
+  <CanvasPane name="content" viewSize="600.0,800.0" background="white">
+
+    <Label layout="0.0,0.0,600.0,800.0" background="#ffc0ff"/>
+
+  </CanvasPane>
+
+</ScrollPane>
+</content>
+</px>

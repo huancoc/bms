@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Niagara Presentation XML -->
+<px version="1.0" media="workbench:WbPxMedia">
+<import>
+  <module name="baja"/>
+  <module name="bajaui"/>
+  <module name="converters"/>
+  <module name="gx"/>
+</import>
+<layers>
+  <layer name="lock" status="locked"/>
+  <layer name="Nomal" status="normal"/>
+</layers>
+<content>
+<ScrollPane>
+
+  <CanvasPane name="content" viewSize="1855.0,955.0" scale="fit" minScaleFactor="0.5" maxScaleFactor="1.0">
+
+    <Picture image="file:^px/image/Background/SysBG/vhp-hvac.png" scale="fitRatio">
+      <LayerTag name="LayerTag" layerName="lock"/>
+    </Picture>
+
+    <Label layout="580.0,20.0,600.0,30.0" text="H&#x1ec6; TH&#x1ed0;NG C&#x1ea4;P N&#x1af;&#x1eda;C N&#xd3;NG" font="bold 18.0pt Segoe UI" foreground="#ff4040"/>
+
+    <Picture layout="1250.0,455.0,205.00000000000023,100.0" image="file:^px/kitPxGraphics/Chillers/Trane/Chiller_Trane_Off.png" scale="fit">
+      <LayerTag name="LayerTag" layerName="Nomal"/>
+    </Picture>
+
+    <Picture layout="650.0,640.0,20.0,20.0" scale="fit">
+      <ValueBinding ord="station:|slot:/Drivers/NiagaraNetwork/VCHP/points/Chiller/PNN_02_Am">
+        <IBooleanToSimple name="image">
+          <Image name="trueValue" value="file:^px/image/State/Au.png"/>
+          <Image name="falseValue" value="file:^px/image/State/Ma.png"/>
+        </IBooleanToSimple>
+      </ValueBinding>
+      <LayerTag name="LayerTag" layerName="Nomal"/>
+    </Picture>
+
+    <Picture layout="585.0,635.0,90.0,51.99999999999994" image="file:^px/kitPxGraphics/Pumps/Pumps_Base/Pump_Base_Right/Pump_Base_Right_Off.png" scale="fit">
+      <LayerTag name="LayerTag" layerName="Nomal"/>
+    </Picture>
+
+    <Label layout="610.0,690.0,60.0,20.0" text="HWP1" font="bold 14.0pt Tahoma">
+      <LayerTag name="LayerTag" layerName="Nomal"/>
+    </Label>
+
+    <Label layout="855.0,570.0,170.0,20.0" text="Heat Exchanger" font="bold 14.0pt Tahoma">
+      <LayerTag name="LayerTag" layerName="Nomal"/>
+    </Label>
+
+    <Picture layout="860.0,485.0,160.0,80.0" image="file:^px/image/Background/heatEx_N.png">
+      <LayerTag name="LayerTag" layerName="Nomal"/>
+    </Picture>
+
+    <Picture layout="990.0,515.0,90.0,19.999999999999943" image="file:^px/kitPxGraphics/Piping/large_piping/hws/hws_hor_3.png">
+      <LayerTag name="LayerTag" layerName="Nomal"/>
+    </Picture>
+
+    <Picture layout="1085.0,515.0,90.0,19.999999999999943" image="file:^px/kitPxGraphics/Piping/large_piping/hws/hws_hor_3.png">
+      <LayerTag name="LayerTag" layerName="Nomal"/>
+    </Picture>
+
+    <Picture layout="1065.0,505.0,39.999999999999886,30.0" image="file:^px/kitPxGraphics/Valves/valve_2way_elec_top.png">
+      <LayerTag name="LayerTag" layerName="Nomal"/>
+    </Picture>
+
+    <Picture layout="990.0,540.0,90.0,19.999999999999943" image="file:^px/kitPxGraphics/Piping/large_piping/hwr/hwr_hor_3.png">
+      <LayerTag name="LayerTag" layerName="Nomal"/>
+    </Picture>
+
+    <Picture layout="1100.0,540.0,90.0,19.999999999999943" image="file:^px/kitPxGraphics/Piping/large_piping/hwr/hwr_hor_3.png">
+      <LayerTag name="LayerTag" layerName="Nomal"/>
+    </Picture>
+
+    <Picture layout="1070.0,535.0,45.0,19.999999999999943" image="file:^px/kitPxGraphics/Valves/valve_strainer_right.png">
+      <LayerTag name="LayerTag" layerName="Nomal"/>
+    </Picture>
+
+    <Picture layout="1170.0,545.0,30.0,19.999999999999943" image="file:^px/kitPxGraphics/Piping/large_piping/hwr/hwr_elbow_SW.png">
+      <LayerTag name="LayerTag" layerName="Nomal"/>
+    </Picture>
+
+    <Picture layout="1120.0,620.0,180.0,110.0" image="file:^px/kitPxGraphics/Tanks/Fuel/Tank_Fuel_0.png">
+      <LayerTag name="LayerTag" layerName="Nomal"/>
+    </Picture>
+
+    <Picture layout="1175.0,565.0,30.0,65.0" image="file:^px/kitPxGraphics/Piping/large_piping/hwr/hwr_vert_3.png">
+      <LayerTag name="LayerTag" layerName="Nomal"/>
+    </Picture>
+
+    <Picture layout="1165.0,515.0,90.0,19.999999999999943" image="file:^px/kitPxGraphics/Piping/large_piping/hws/hws_hor_3.png">
+      <LayerTag name="LayerTag" layerName="Nomal"/>
+    </Picture>
+
+    <Picture layout="800.0,505.0,90.0,19.999999999999943" image="file:^px/kitPxGraphics/Piping/large_piping/hwr/hwr_hor_3.png">
+      <LayerTag name="LayerTag" layerName="Nomal"/>
+    </Picture>
+
+    <Picture layout="795.0,530.0,90.0,19.999999999999943" image="file:^px/kitPxGraphics/Piping/large_piping/hwr/hwr_hor_3.png">
+      <LayerTag name="LayerTag" layerName="Nomal"/>
+    </Picture>
+
+    <Picture layout="720.0,530.0,90.0,19.999999999999943" image="file:^px/kitPxGraphics/Piping/large_piping/hwr/hwr_hor_3.png">
+      <LayerTag name="LayerTag" layerName="Nomal"/>
+    </Picture>
+
+    <Picture layout="745.0,525.0,39.999999999999886,30.0" image="file:^px/kitPxGraphics/Valves/valve_3way_elec_top.png">
+      <LayerTag name="LayerTag" layerName="Nomal"/>
+    </Picture>
+
+    <Picture layout="750.0,550.0,30.0,105.0" image="file:^px/kitPxGraphics/Piping/large_piping/hwr/hwr_vert_4.png">
+      <LayerTag name="LayerTag" layerName="Nomal"/>
+    </Picture>
+
+    <Picture layout="745.0,650.0,30.0,19.999999999999943" image="file:^px/kitPxGraphics/Piping/large_piping/hwr/hwr_elbow_NW.png">
+      <LayerTag name="LayerTag" layerName="Nomal"/>
+    </Picture>
+
+    <Picture layout="665.0,655.0,90.0,19.999999999999943" image="file:^px/kitPxGraphics/Piping/large_piping/hwr/hwr_hor_3.png">
+      <LayerTag name="LayerTag" layerName="Nomal"/>
+    </Picture>
+
+    <Picture layout="665.0,530.0,90.0,19.999999999999943" image="file:^px/kitPxGraphics/Piping/large_piping/hwr/hwr_hor_3.png">
+      <LayerTag name="LayerTag" layerName="Nomal"/>
+    </Picture>
+
+    <Label layout="610.0,565.0,60.0,20.0" text="HWP2" font="bold 14.0pt Tahoma">
+      <LayerTag name="LayerTag" layerName="Nomal"/>
+    </Label>
+
+    <Picture layout="585.0,510.0,90.0,51.99999999999994" image="file:^px/kitPxGraphics/Pumps/Pumps_Base/Pump_Base_Right/Pump_Base_Right_Off.png" scale="fit">
+      <LayerTag name="LayerTag" layerName="Nomal"/>
+    </Picture>
+
+    <Picture layout="560.0,615.0,90.0,19.999999999999943" image="file:^px/kitPxGraphics/Piping/large_piping/hwr/hwr_hor_3.png">
+      <LayerTag name="LayerTag" layerName="Nomal"/>
+    </Picture>
+
+    <Picture layout="635.0,620.0,30.0,19.999999999999943" image="file:^px/kitPxGraphics/Piping/large_piping/hwr/hwr_elbow_SW.png">
+      <LayerTag name="LayerTag" layerName="Nomal"/>
+    </Picture>
+
+    <Picture layout="555.0,495.0,90.0,19.999999999999943" image="file:^px/kitPxGraphics/Piping/large_piping/hwr/hwr_hor_3.png">
+      <LayerTag name="LayerTag" layerName="Nomal"/>
+    </Picture>
+
+    <Picture layout="630.0,500.0,30.0,19.999999999999943" image="file:^px/kitPxGraphics/Piping/large_piping/hwr/hwr_elbow_SW.png">
+      <LayerTag name="LayerTag" layerName="Nomal"/>
+    </Picture>
+
+    <Picture layout="535.0,515.0,30.0,105.0" image="file:^px/kitPxGraphics/Piping/large_piping/hwr/hwr_vert_4.png">
+      <LayerTag name="LayerTag" layerName="Nomal"/>
+    </Picture>
+
+    <Picture layout="535.0,490.0,39.999999999999886,30.0" image="file:^px/kitPxGraphics/Piping/large_piping/hwr/hwr_tee_right.png">
+      <LayerTag name="LayerTag" layerName="Nomal"/>
+    </Picture>
+
+    <Picture layout="540.0,610.0,30.0,19.999999999999943" image="file:^px/kitPxGraphics/Piping/large_piping/hwr/hwr_elbow_NE.png">
+      <LayerTag name="LayerTag" layerName="Nomal"/>
+    </Picture>
+
+    <Picture layout="535.0,385.0,30.0,105.0" image="file:^px/kitPxGraphics/Piping/large_piping/hwr/hwr_vert_4.png">
+      <LayerTag name="LayerTag" layerName="Nomal"/>
+    </Picture>
+
+    <Picture layout="550.0,465.0,90.0,19.999999999999943" image="file:^px/kitPxGraphics/Piping/large_piping/hwr/hwr_hor_3.png">
+      <LayerTag name="LayerTag" layerName="Nomal"/>
+    </Picture>
+
+    <Picture layout="655.0,465.0,74.99999999999994,19.999999999999943" image="file:^px/kitPxGraphics/Piping/large_piping/hwr/hwr_hor_3.png">
+      <LayerTag name="LayerTag" layerName="Nomal"/>
+    </Picture>
+
+    <Picture layout="805.0,455.0,40.0,65.0" image="file:^px/kitPxGraphics/Sensors/sensor_pipe_dp_hor_up_2.png">
+      <LayerTag name="LayerTag" layerName="Nomal"/>
+    </Picture>
+
+    <Picture layout="630.0,455.0,39.999999999999886,30.0" image="file:^px/kitPxGraphics/Valves/valve_2way_elec_top.png">
+      <LayerTag name="LayerTag" layerName="Nomal"/>
+    </Picture>
+
+    <Picture layout="635.0,415.0,90.0,19.999999999999943" image="file:^px/kitPxGraphics/Piping/large_piping/hwr/hwr_hor_3.png">
+      <LayerTag name="LayerTag" layerName="Nomal"/>
+    </Picture>
+
+    <Picture layout="550.0,415.0,90.0,19.999999999999943" image="file:^px/kitPxGraphics/Piping/large_piping/hwr/hwr_hor_3.png">
+      <LayerTag name="LayerTag" layerName="Nomal"/>
+    </Picture>
+
+    <Picture layout="620.0,365.0,40.0,65.0" image="file:^px/kitPxGraphics/Sensors/sensor_pipe_dp_hor_up_2.png">
+      <LayerTag name="LayerTag" layerName="Nomal"/>
+    </Picture>
+
+    <Picture layout="720.0,400.0,30.0,105.0" image="file:^px/kitPxGraphics/Piping/large_piping/hwr/hwr_vert_4.png">
+      <LayerTag name="LayerTag" layerName="Nomal"/>
+    </Picture>
+
+    <Picture layout="710.0,410.0,39.999999999999886,30.0" image="file:^px/kitPxGraphics/Piping/large_piping/hwr/hwr_tee_left.png">
+      <LayerTag name="LayerTag" layerName="Nomal"/>
+    </Picture>
+
+    <Picture layout="710.0,460.0,39.999999999999886,30.0" image="file:^px/kitPxGraphics/Piping/large_piping/hwr/hwr_tee_left.png">
+      <LayerTag name="LayerTag" layerName="Nomal"/>
+    </Picture>
+
+    <Picture layout="730.0,505.0,90.0,19.999999999999943" image="file:^px/kitPxGraphics/Piping/large_piping/hwr/hwr_hor_3.png">
+      <LayerTag name="LayerTag" layerName="Nomal"/>
+    </Picture>
+
+    <Picture layout="725.0,500.0,30.0,19.999999999999943" image="file:^px/kitPxGraphics/Piping/large_piping/hwr/hwr_elbow_NE.png">
+      <LayerTag name="LayerTag" layerName="Nomal"/>
+    </Picture>
+
+    <Picture layout="720.0,345.0,30.0,55.0" image="file:^px/kitPxGraphics/Piping/large_piping/hwr/hwr_vert_4.png">
+      <LayerTag name="LayerTag" layerName="Nomal"/>
+    </Picture>
+
+    <Picture layout="535.0,345.0,30.0,55.0" image="file:^px/kitPxGraphics/Piping/large_piping/hwr/hwr_vert_4.png">
+      <LayerTag name="LayerTag" layerName="Nomal"/>
+    </Picture>
+
+    <Picture layout="700.0,220.0,74.99999999999994,140.0" image="file:^px/kitPxGraphics/Tanks/Water/Tank_Water_4.png">
+      <LayerTag name="LayerTag" layerName="Nomal"/>
+    </Picture>
+
+    <Picture layout="515.0,220.0,74.99999999999994,140.0" image="file:^px/kitPxGraphics/Tanks/Water/Tank_Water_4.png">
+      <LayerTag name="LayerTag" layerName="Nomal"/>
+    </Picture>
+
+    <Picture layout="535.0,455.0,39.999999999999886,30.0" image="file:^px/kitPxGraphics/Piping/large_piping/hwr/hwr_tee_right.png">
+      <LayerTag name="LayerTag" layerName="Nomal"/>
+    </Picture>
+
+    <Picture layout="535.0,410.0,39.999999999999886,30.0" image="file:^px/kitPxGraphics/Piping/large_piping/hwr/hwr_tee_right.png">
+      <LayerTag name="LayerTag" layerName="Nomal"/>
+    </Picture>
+
+    <Picture layout="810.0,535.0,45.0,19.999999999999943" image="file:^px/kitPxGraphics/Valves/valve_2way_pneu_bottom.png">
+      <LayerTag name="LayerTag" layerName="Nomal"/>
+    </Picture>
+
+    <Label layout="1050.0,560.0,89.99999999999989,20.0" text="B&#x1eab;y h&#x1a1;i" font="bold 14.0pt Tahoma">
+      <LayerTag name="LayerTag" layerName="Nomal"/>
+    </Label>
+
+    <Label layout="1120.0,735.0,180.0,20.0" text="B&#x1ed3;n ch&#x1ee9;a n&#x1b0;&#x1edb;c n&#x1ed3;i h&#x1a1;i" font="bold 14.0pt Tahoma">
+      <LayerTag name="LayerTag" layerName="Nomal"/>
+    </Label>
+
+    <Label layout="1305.0,555.0,70.0,20.0" text="N&#x1ed3;i h&#x1a1;i" font="bold 14.0pt Tahoma">
+      <LayerTag name="LayerTag" layerName="Nomal"/>
+    </Label>
+
+    <Label layout="790.0,435.0,70.0,20.0" text="&#xc1;p su&#x1ea5;t" font="bold 14.0pt Tahoma">
+      <LayerTag name="LayerTag" layerName="Nomal"/>
+    </Label>
+
+    <Label layout="605.0,440.0,70.0,20.0" text="Valve" font="bold 14.0pt Tahoma">
+      <LayerTag name="LayerTag" layerName="Nomal"/>
+    </Label>
+
+  </CanvasPane>
+
+</ScrollPane>
+</content>
+</px>

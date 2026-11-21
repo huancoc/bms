@@ -1,0 +1,266 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Niagara Presentation XML -->
+<px version="1.0" media="workbench:WbPxMedia">
+<import>
+  <module name="baja"/>
+  <module name="bajaui"/>
+  <module name="converters"/>
+  <module name="gx"/>
+  <module name="kitPx"/>
+</import>
+<layers>
+  <layer name="newLayer" status="normal"/>
+  <layer name="BG_Lock" status="locked"/>
+</layers>
+<content>
+<CanvasPane viewSize="1000.0,400.0" scale="fit" background="image( source(null) )">
+
+  <Rect fill="white" stroke="black" geom="0.0,0.0,1400.0,550.0">
+    <LayerTag name="LayerTag" layerName="BG_Lock"/>
+  </Rect>
+
+  <BoundLabel layout="0.0,0.0,1400.0,40.0" text="  FCU" font="24.0pt Tahoma" foreground="white" background="linearGradient( angle(90.0) stop(0.0% black) stop(100.0% #505050) )" halign="left">
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+  </BoundLabel>
+
+  <Label layout="30.0,260.0,150.0,20.0" text="Nhi&#x1ec7;t &#x111;&#x1ed9; ph&#xf2;ng" font="14.0pt Tahoma" foreground="white" background="black"/>
+
+  <Label layout="250.0,260.0,205.0,20.0" text="Qu&#x1ea1;t FCU" font="14.0pt Tahoma" foreground="white" background="black"/>
+
+  <Picture layout="245.0,286.0,200.0,20.0" image="file:^px/image/State/Frame_0_150x20_t2.png" scale="fit"/>
+
+  <Label layout="249.0,286.0,96.0,20.0" text=" B&#x1ead;t FCU" font="14.0pt Tahoma" foreground="white" background="black" halign="left"/>
+
+  <Picture layout="245.0,336.0,200.0,20.0" image="file:^px/image/State/Frame_0_150x20_t2.png" scale="fit"/>
+
+  <Label layout="249.0,336.0,96.0,20.0" text=" Tr&#x1ea1;ng th&#xe1;i FCU" font="14.0pt Tahoma" foreground="white" background="black" halign="left"/>
+
+  <Picture layout="245.0,310.0,200.0,20.0" image="file:^px/image/State/Frame_0_150x20_t2.png" scale="fit"/>
+
+  <Label layout="250.0,310.0,95.0,20.0" text=" T&#x1ed1;c &#x111;&#x1ed9; FCU" font="14.0pt Tahoma" foreground="white" background="black" halign="left"/>
+
+  <Label layout="610.0,260.0,170.0,20.0" text="Ch&#x1ebf; &#x111;&#x1ed9; BMS" font="14.0pt Tahoma" foreground="white" background="black"/>
+
+  <Picture layout="610.0,285.0,170.0,20.0" image="file:^px/image/State/Frame_0_150x20_t2.png" scale="fit"/>
+
+  <Label layout="614.0,285.0,65.0,20.0" text="&#x110;&#x1eb7;t l&#x1ecb;ch" font="14.0pt Tahoma" foreground="white" background="black" halign="left"/>
+
+  <Label layout="680.0,285.0,100.0,20.0" font="14.0pt Tahoma" background="#80000068">
+    <ValueBinding ord="station:|slot:/Drivers/NiagaraNetwork/Schedule_FCU/SCH_FCU_13/out">
+      <IBooleanToSimple name="text">
+        <String name="trueValue" value="B&#x1ead;t"/>
+        <String name="falseValue" value="T&#x1eaf;t"/>
+      </IBooleanToSimple>
+      <IBooleanToSimple name="foreground">
+        <Brush name="trueValue" value="lime"/>
+        <Brush name="falseValue" value="red"/>
+      </IBooleanToSimple>
+    </ValueBinding>
+  </Label>
+
+  <Picture layout="30.0,335.0,150.0,20.0" image="file:^px/image/State/Frame_0_150x20_t2.png" scale="fit"/>
+
+  <Label layout="34.0,336.0,66.0,20.0" text=" C&#xe0;i &#x111;&#x1eb7;t" font="14.0pt Tahoma" foreground="white" background="black" halign="left"/>
+
+  <Label layout="100.0,335.0,80.0,21.0" font="14.0pt Tahoma" foreground="lime" background="#80000068">
+    <ValueBinding ord="station:|slot:/Drivers/ModbusTcpNetwork/FCU_13/points/Setpoint_Temp">
+      <ValueToString name="text" format="%out.value%"/>
+    </ValueBinding>
+  </Label>
+
+  <Label layout="30.0,310.0,150.0,20.0" text="Nhi&#x1ec7;t &#x111;&#x1ed9; &#x111;&#x1eb7;t" font="14.0pt Tahoma" foreground="white" background="black"/>
+
+  <Button layout="161.0,337.0,16.0,16.0" image="file:^px/image/iconAx/x16/build.png">
+    <ActionBinding ord="station:|slot:/Drivers/ModbusTcpNetwork/FCU_13/points/Setpoint_Temp/set" widgetEvent="actionPerformed"/>
+  </Button>
+
+  <Picture layout="30.0,286.0,150.0,20.0" image="file:^px/image/State/Frame_0_150x20_t2.png" scale="fit"/>
+
+  <Label layout="34.0,286.0,66.00000000000003,20.0" text=" Nhi&#x1ec7;t &#x111;&#x1ed9;" font="14.0pt Tahoma" foreground="white" background="black" halign="left"/>
+
+  <Label layout="100.0,286.0,80.0,20.0" font="14.0pt Tahoma" foreground="lime" background="#80000068">
+    <ValueBinding ord="station:|slot:/Drivers/ModbusTcpNetwork/FCU_13/points/Room_Temp">
+      <ValueToString name="text" format="%out.value%"/>
+    </ValueBinding>
+  </Label>
+
+  <Picture layout="545.0,110.0,100.0,100.0" scale="fitRatio">
+    <ValueBinding ord="station:|slot:/Drivers/ModbusTcpNetwork/FCU_13/points/Fan_Speed_Fbk">
+      <INumericToSimple name="image" map="gx:Image 0.0:0.9=null;0.9:3.0=file:^px/image/WindFlow.gif;default=file:^px/image/WindFlow.gif;"/>
+    </ValueBinding>
+  </Picture>
+
+  <Label layout="345.0,286.0,110.0,20.0" font="14.0pt Tahoma" background="#80000068">
+    <ValueBinding ord="station:|slot:/Drivers/ModbusTcpNetwork/FCU_13/points/Fan_Status">
+      <INumericToSimple name="text" map="baja:String 0.0:0.9=T&#x1eaf;t;0.9:1.9=B&#x1ead;t;default=;"/>
+      <INumericToSimple name="foreground" map="gx:Brush 0.0:0.9=red;0.9:1.9=lime;default=null;"/>
+    </ValueBinding>
+  </Label>
+
+  <Label layout="345.0,336.0,110.0,20.0" font="14.0pt Tahoma" background="#80000068">
+    <ValueBinding ord="station:|slot:/Drivers/ModbusTcpNetwork/FCU_13/points/Fan_Speed_Fbk">
+      <INumericToSimple name="text" map="baja:String 0.0:0.9=D&#x1eeb;ng;0.9:1.9=T&#x110; Th&#x1ea5;p;1.9:2.9=T&#x110; Trung b&#xec;nh;2.9:3.1=T&#x110; Cao;default=;"/>
+      <INumericToSimple name="foreground" map="gx:Brush 0.0:0.9=red;0.9:3.0=lime;default=null;"/>
+    </ValueBinding>
+  </Label>
+
+  <Button layout="425.0,287.0,16.0,16.0" image="file:^px/image/iconAx/x16/build.png">
+    <ActionBinding ord="station:|slot:/Drivers/ModbusTcpNetwork/FCU_13/points/Fan_Status/set" widgetEvent="actionPerformed"/>
+  </Button>
+
+  <Label layout="345.0,310.0,110.0,20.0" font="14.0pt Tahoma" background="#80000068">
+    <ValueBinding ord="station:|slot:/Drivers/ModbusTcpNetwork/FCU_13/points/Fan_Speed">
+      <INumericToSimple name="text" map="baja:String 0.0:0.9=Auto;0.9:1.9=Th&#x1ea5;p;1.9:2.9=Trung b&#xec;nh    ;2.9:3.1=Cao;default=;"/>
+      <INumericToSimple name="foreground" map="gx:Brush 0.0:4.0=red;default=null;"/>
+    </ValueBinding>
+  </Label>
+
+  <Button layout="425.0,313.0,16.0,16.0" image="file:^px/image/iconAx/x16/build.png">
+    <ActionBinding ord="station:|slot:/Drivers/ModbusTcpNetwork/FCU_13/points/Fan_Speed/set" widgetEvent="actionPerformed"/>
+  </Button>
+
+  <Picture layout="610.0,310.0,170.0,20.0" image="file:^px/image/State/Frame_0_150x20_t2.png" scale="fit"/>
+
+  <Label layout="614.0,310.0,65.0,20.0" text="L&#x1ed7;i FCU" font="14.0pt Tahoma" foreground="white" background="black" halign="left"/>
+
+  <Label layout="680.0,310.0,100.0,20.0" font="14.0pt Tahoma" background="#80000068">
+    <ValueBinding ord="station:|slot:/Drivers/ModbusTcpNetwork/FCU_13/points/Error$20Code">
+      <INumericToSimple name="text" map="baja:String 0.0:0.9=B&#xec;nh th&#x1b0;&#x1edd;ng;0.9:3.0=L&#x1ed7;i;default=;"/>
+      <INumericToSimple name="foreground" map="gx:Brush 0.0:0.9=lime;0.9:3.0=red;default=null;"/>
+    </ValueBinding>
+  </Label>
+
+  <Picture layout="610.0,335.0,170.0,20.0" image="file:^px/image/State/Frame_0_150x20_t2.png" scale="fit"/>
+
+  <Label layout="614.0,335.0,65.0,20.0" text="Kh&#xf3;a FCU" font="14.0pt Tahoma" foreground="white" background="black" halign="left"/>
+
+  <Label layout="680.0,335.0,100.0,20.0" font="14.0pt Tahoma" background="#80000068">
+    <ValueBinding ord="station:|slot:/Drivers/ModbusTcpNetwork/FCU_13/points/Keypad_Lock" popupEnabled="false">
+      <INumericToSimple name="text" map="baja:String 0.0:0.9=M&#x1edf; Ph&#xed;m   ;0.9:4.0=Kh&#xf3;a ph&#xed;m  ;default=;"/>
+      <INumericToSimple name="foreground" map="gx:Brush 0.0:0.9=lime;0.9:4.0=red;default=null;"/>
+    </ValueBinding>
+  </Label>
+
+  <Button layout="760.0,337.0,16.0,16.0" image="file:^px/image/iconAx/x16/build.png">
+    <ActionBinding ord="station:|slot:/Drivers/ModbusTcpNetwork/FCU_13/points/Keypad_Lock/set" widgetEvent="actionPerformed"/>
+  </Button>
+
+  <BoundLabel layout="50.0,100.0,130.0,105.0" image="file:^px/kitPxGraphics/Ductwork/Duct_Horz_End_Left.png">
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+  </BoundLabel>
+
+  <BoundLabel layout="170.0,100.0,175.0,105.0" image="file:^px/kitPxGraphics/Ductwork/Duct_Horz_Short.png">
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+  </BoundLabel>
+
+  <BoundLabel layout="420.0,100.0,175.0,105.0" image="file:^px/kitPxGraphics/Ductwork/Duct_Horz_Short.png">
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+  </BoundLabel>
+
+  <BoundLabel layout="300.0,100.0,175.0,105.0">
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+    <ValueBinding ord="station:|slot:/Drivers/DO1">
+      <IBooleanToSimple name="image">
+        <Image name="trueValue" value="file:^px/kitPxGraphics/Filters/Filter_Single_Dp/Filter_Single_DP_4.png"/>
+        <Image name="falseValue" value="file:^px/kitPxGraphics/Filters/Filter_Single_Dp/Filter_Single_DP_0.png"/>
+      </IBooleanToSimple>
+    </ValueBinding>
+  </BoundLabel>
+
+  <BoundLabel layout="660.0,100.0,175.0,105.0" image="file:^px/kitPxGraphics/Ductwork/Duct_Horz_Short.png">
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+  </BoundLabel>
+
+  <BoundLabel layout="450.0,102.0,96.0,160.0">
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+    <ValueBinding ord="station:|slot:/Drivers/Point_Demo/AO_Demo_Fan">
+      <INumericToSimple name="image" map="gx:Image -inf:20.0=file:^px/kitPxGraphics/Coils/Coils_Cooling_2Way_Bottom/Coils_Cooling_2Way_Bottom_0.png;20.0:40.0=file:^px/kitPxGraphics/Coils/Coils_Cooling_2Way_Bottom/Coils_Cooling_2Way_Bottom_1.png;40.0:60.0=file:^px/kitPxGraphics/Coils/Coils_Cooling_2Way_Bottom/Coils_Cooling_2Way_Bottom_2.png;60.0:80.0=file:^px/kitPxGraphics/Coils/Coils_Cooling_2Way_Bottom/Coils_Cooling_2Way_Bottom_3.png;80.0:+inf=file:^px/kitPxGraphics/Coils/Coils_Cooling_2Way_Bottom/Coils_Cooling_2Way_Bottom_4.png;default=file:^px/kitPxGraphics/Coils/Coils_Cooling_2Way_Bottom/Coils_Cooling_2Way_Bottom_0.png;"/>
+    </ValueBinding>
+  </BoundLabel>
+
+  <BoundLabel layout="800.0,100.0,130.0,105.0" image="file:^px/kitPxGraphics/Ductwork/Duct_Horz_End_Right.png">
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+  </BoundLabel>
+
+  <BoundLabel layout="695.0,100.0,130.0,105.0" image="file:^px/kitPxGraphics/Sensors/sensor_duct_pressurealrm_top.png">
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+  </BoundLabel>
+
+  <BoundLabel layout="700.0,55.0,120.0,20.0" text="Nhi&#x1ec7;t &#x111;&#x1ed9; gi&#xf3; c&#x1ea5;p" font="14.0pt Tahoma" foreground="black" background="#e0e0e0" border="2.0 groove black">
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+  </BoundLabel>
+
+  <BoundLabel layout="700.0,75.0,120.0,20.0" border="2.0 groove black">
+    <BoundLabelBinding ord="station:|slot:/Drivers/ModbusTcpNetwork/FCU_13/points/Room_Temp">
+      <ObjectToString name="text"/>
+    </BoundLabelBinding>
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+  </BoundLabel>
+
+  <BoundLabel layout="310.0,55.0,120.0,20.0" text="B&#x1ed9; l&#x1ecd;c t&#x1ea5;m G4" font="14.0pt Tahoma" foreground="black" background="#e0e0e0" border="2.0 groove black">
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+  </BoundLabel>
+
+  <BoundLabel layout="540.0,55.0,120.0,20.0" text="Qu&#x1ea1;t c&#x1ea5;p FCU" font="14.0pt Tahoma" foreground="black" background="#e0e0e0" border="2.0 groove black">
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+  </BoundLabel>
+
+  <BoundLabel layout="10.0,105.0,130.0,105.0" image="file:^px/kitPxGraphics/Misc/Arrows/arrowRight.png">
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+  </BoundLabel>
+
+  <BoundLabel layout="855.0,105.0,130.0,105.0" image="file:^px/kitPxGraphics/Misc/Arrows/arrowRight.png">
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+  </BoundLabel>
+
+  <BoundLabel layout="65.0,175.0,120.0,20.0" text="Gi&#xf3; h&#x1ed3;i" font="bold 16.0pt Tahoma" foreground="yellow">
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+  </BoundLabel>
+
+  <BoundLabel layout="805.0,175.0,120.0,20.0" text="Gi&#xf3; c&#x1ea5;p" font="bold 16.0pt Tahoma" foreground="yellow">
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+  </BoundLabel>
+
+  <BoundLabel layout="525.0,100.0,175.0,105.0">
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+    <ValueBinding ord="station:|slot:/Drivers/FCU_Status/Status_FCU_13">
+      <IBooleanToSimple name="image">
+        <Image name="trueValue" value="file:^px/kitPxGraphics/Fans/Fans_Horz/Fans_Horz/Fans_Horz_Right/Fans_Horz_Right_On.gif"/>
+        <Image name="falseValue" value="file:^px/kitPxGraphics/Fans/Fans_Horz/Fans_Horz/Fans_Horz_Right/Fans_Horz_Right_Off.png"/>
+      </IBooleanToSimple>
+    </ValueBinding>
+  </BoundLabel>
+
+  <BoundLabel layout="435.0000000000001,55.0,89.99999999999989,20.0" text="D&#xe0;n l&#x1ea1;nh" font="14.0pt Tahoma" foreground="black" background="#e0e0e0" border="2.0 groove black">
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+  </BoundLabel>
+
+  <BoundLabel layout="0.0,0.0,1110.0,40.0" text="  FCU" font="24.0pt Tahoma" foreground="white" background="linearGradient( angle(90.0) stop(0.0% black) stop(100.0% #505050) )" halign="left">
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+  </BoundLabel>
+
+  <Button layout="758.0,287.0,16.0,16.0" styleClasses="hyperlink" image="file:^px/image/iconAx/x16/calendar.png" buttonStyle="hyperlink">
+    <PopupBinding ord="station:|slot:/Drivers/NiagaraNetwork/Schedule_FCU/SCH_FCU_13" title="FCU-13"/>
+  </Button>
+
+  <ExpandablePane layout="440.0,285.0,95.0,25.0">
+
+    <Label name="expansion" text="T&#x1eaf;t=0, B&#x1ead;t=1" background="white"/>
+
+  </ExpandablePane>
+
+  <ExpandablePane layout="440.0,310.0,165.0,25.0">
+
+    <Label name="expansion" text="Auto=0, Th&#x1ea5;p=1,TB=2,Cao=3" background="white"/>
+
+  </ExpandablePane>
+
+  <ExpandablePane layout="780.0,335.0,149.9999999999999,25.0">
+
+    <Label name="expansion" text="M&#x1edf; ph&#xed;m=0, Kh&#xf3;a ph&#xed;m=4" background="white"/>
+
+  </ExpandablePane>
+
+</CanvasPane>
+</content>
+</px>

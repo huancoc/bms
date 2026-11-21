@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Niagara Presentation XML -->
+<px version="1.0" media="workbench:WbPxMedia">
+<import>
+  <module name="baja"/>
+  <module name="bajaui"/>
+  <module name="converters"/>
+  <module name="gx"/>
+  <module name="kitPx"/>
+</import>
+<layers>
+  <layer name="newLayer" status="normal"/>
+  <layer name="BG_Lock" status="normal"/>
+</layers>
+<content>
+<CanvasPane viewSize="690.0,810.0" background="image( source(null) )">
+
+  <BoundLabel layout="0.0,930.0,1960.0,40.0" background="linearGradient( angle(90.0) stop(0.0% black) stop(100.0% #505050) )">
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+  </BoundLabel>
+
+  <Picture layout="0.0,0.0,690.0,810.0" scale="fitRatio" halign="fill">
+    <ValueBinding ord="station:|slot:/Drivers/Page_ani/Pic_1">
+      <IBooleanToSimple name="image">
+        <Image name="trueValue" value="file:^px/Images/ANIMATION/1.jpg"/>
+        <Image name="falseValue" value="file:^px/Images/ANIMATION/1.jpg"/>
+      </IBooleanToSimple>
+    </ValueBinding>
+  </Picture>
+
+  <Picture layout="0.0,0.0,690.0,810.0" scale="fitRatio" halign="fill">
+    <ValueBinding ord="station:|slot:/Drivers/Page_ani/Pic_2">
+      <IBooleanToSimple name="image">
+        <Image name="trueValue" value="file:^px/Images/ANIMATION/2.jpg"/>
+        <Image name="falseValue" value="file:^px/Images/ANIMATION/2.jpg"/>
+      </IBooleanToSimple>
+    </ValueBinding>
+  </Picture>
+
+  <Picture layout="0.0,0.0,690.0,810.0" scale="fitRatio" halign="fill">
+    <ValueBinding ord="station:|slot:/Drivers/Page_ani/Pic_3">
+      <IBooleanToSimple name="image">
+        <Image name="trueValue" value="file:^px/Images/ANIMATION/3.jpg"/>
+        <Image name="falseValue" value="file:^px/Images/ANIMATION/3.jpg"/>
+      </IBooleanToSimple>
+    </ValueBinding>
+  </Picture>
+
+  <Picture layout="0.0,0.0,690.0,810.0" scale="fitRatio" halign="fill">
+    <ValueBinding ord="station:|slot:/Drivers/Page_ani/Pic_4">
+      <IBooleanToSimple name="image">
+        <Image name="trueValue" value="file:^px/Images/ANIMATION/4.jpg"/>
+        <Image name="falseValue" value="file:^px/Images/ANIMATION/4.jpg"/>
+      </IBooleanToSimple>
+    </ValueBinding>
+  </Picture>
+
+  <Picture layout="0.0,0.0,690.0,810.0" scale="fitRatio" halign="fill">
+    <ValueBinding ord="station:|slot:/Drivers/Page_ani/Pic_5">
+      <IBooleanToSimple name="image">
+        <Image name="trueValue" value="file:^px/Images/ANIMATION/5.jpg"/>
+        <Image name="falseValue" value="file:^px/Images/ANIMATION/5.jpg"/>
+      </IBooleanToSimple>
+    </ValueBinding>
+  </Picture>
+
+</CanvasPane>
+</content>
+</px>

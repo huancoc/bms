@@ -1,0 +1,1003 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Niagara Presentation XML -->
+<px version="1.0" media="workbench:WbPxMedia">
+<import>
+  <module name="baja"/>
+  <module name="bajaui"/>
+  <module name="converters"/>
+  <module name="gx"/>
+  <module name="kitPx"/>
+</import>
+<layers>
+  <layer name="lock" status="locked"/>
+  <layer name="Nomal" status="normal"/>
+</layers>
+<content>
+<ScrollPane>
+
+  <CanvasPane name="content" viewSize="1855.0,955.0" scale="fit" minScaleFactor="0.5" maxScaleFactor="1.0">
+
+    <Picture image="file:^px/image/Background/SysBG/vhp-hvac.png" scale="fitRatio">
+      <LayerTag name="LayerTag" layerName="lock"/>
+    </Picture>
+
+    <ImageButton layout="0.0,880.0,130.0,70.00000000000011" styleClasses="hyperlink" buttonStyle="hyperlink">
+      <ValueBinding hyperlink="station:|slot:/Home"/>
+      <WsAnnotation name="wsAnnotation" value="10,10,8"/>
+    </ImageButton>
+
+    <ImageButton layout="250.0,875.0,130.0,70.00000000000011" styleClasses="hyperlink" buttonStyle="hyperlink">
+      <ValueBinding hyperlink="file:^px/System/Dien/MBA1.px"/>
+      <WsAnnotation name="wsAnnotation" value="10,10,8"/>
+    </ImageButton>
+
+    <ImageButton layout="380.0,880.0,120.0,70.00000000000011" styleClasses="hyperlink" buttonStyle="hyperlink">
+      <ValueBinding hyperlink="file:^px/System/Nuoc/cap nuoc.px"/>
+      <WsAnnotation name="wsAnnotation" value="10,10,8"/>
+    </ImageButton>
+
+    <ImageButton layout="500.0,880.0,130.0,75.00000000000011" styleClasses="hyperlink" buttonStyle="hyperlink">
+      <ValueBinding hyperlink="file:^px/System/Nuoc/PCCC.px"/>
+      <WsAnnotation name="wsAnnotation" value="10,10,8"/>
+    </ImageButton>
+
+    <ImageButton layout="130.0,880.0,120.0,70.00000000000011" styleClasses="hyperlink" buttonStyle="hyperlink">
+      <ValueBinding hyperlink="file:^px/System/HVAC/HVAC.px"/>
+      <WsAnnotation name="wsAnnotation" value="10,10,8"/>
+    </ImageButton>
+
+    <Label layout="580.0,20.0,600.0,30.0" text="H&#x1ec6; TH&#x1ed0;NG C&#x1ea4;P N&#x1af;&#x1eda;C N&#xd3;NG" font="bold 18.0pt Segoe UI" foreground="#ff4040"/>
+
+    <Picture layout="190.0,150.0,80.0%,75.0%" image="file:^px/image/Background/ChilH1.png" scale="fitRatio">
+      <LayerTag name="LayerTag" layerName="lock"/>
+    </Picture>
+
+    <Picture layout="1085.0,375.0000000000001,205.00000000000023,100.0" scale="fit">
+      <ValueBinding ord="station:|slot:/Drivers/NiagaraNetwork/VCHP/points/Chiller/Baccao/HP_T_Sts">
+        <IBooleanToSimple name="image">
+          <Image name="trueValue" value="file:^px/kitPxGraphics/Chillers/Trane/Chiller_Trane_On.gif"/>
+          <Image name="falseValue" value="file:^px/kitPxGraphics/Chillers/Trane/Chiller_Trane_Off.png"/>
+        </IBooleanToSimple>
+      </ValueBinding>
+    </Picture>
+
+    <Picture layout="1080.0,580.0,205.00000000000023,100.0" scale="fit">
+      <ValueBinding ord="station:|slot:/Drivers/NiagaraNetwork/VCHP/points/Chiller/Baccao/HP_N_Sts">
+        <IBooleanToSimple name="image">
+          <Image name="trueValue" value="file:^px/kitPxGraphics/Chillers/Trane/Chiller_Trane_On.gif"/>
+          <Image name="falseValue" value="file:^px/kitPxGraphics/Chillers/Trane/Chiller_Trane_Off.png"/>
+        </IBooleanToSimple>
+      </ValueBinding>
+    </Picture>
+
+    <Picture layout="740.0,470.0,60.0,20.0" scale="fit">
+      <ValueBinding ord="station:|slot:/Drivers/NiagaraNetwork/VCHP/points/Chiller/PNN_01_Sts">
+        <IBooleanToSimple name="image">
+          <Image name="trueValue" value="file:^px/image/State/Chay.png"/>
+          <Image name="falseValue" value="file:^px/image/State/Dung.png"/>
+        </IBooleanToSimple>
+      </ValueBinding>
+    </Picture>
+
+    <Picture layout="810.0,465.0,20.0,20.0" scale="fit">
+      <ValueBinding ord="station:|slot:/Drivers/NiagaraNetwork/VCHP/points/Chiller/PNN_01_Am">
+        <IBooleanToSimple name="image">
+          <Image name="trueValue" value="file:^px/image/State/Au.png"/>
+          <Image name="falseValue" value="file:^px/image/State/Ma.png"/>
+        </IBooleanToSimple>
+      </ValueBinding>
+    </Picture>
+
+    <Picture layout="740.0,420.0,90.0,51.99999999999994" scale="fit">
+      <ValueBinding ord="station:|slot:/Drivers/NiagaraNetwork/VCHP/points/Chiller/PNN_01_Sts">
+        <IBooleanToSimple name="image">
+          <Image name="trueValue" value="file:^px/kitPxGraphics/Pumps/Pumps_Base/Pump_Base_Right/Pump_Base_Right_On.gif"/>
+          <Image name="falseValue" value="file:^px/kitPxGraphics/Pumps/Pumps_Base/Pump_Base_Right/Pump_Base_Right_Off.png"/>
+        </IBooleanToSimple>
+      </ValueBinding>
+    </Picture>
+
+    <Label layout="745.0,410.0,60.0,20.0" text="P-NN1" font="bold 14.0pt Tahoma"/>
+
+    <Picture layout="740.0,675.0,60.0,20.0" scale="fit">
+      <ValueBinding ord="station:|slot:/Drivers/NiagaraNetwork/VCHP/points/Chiller/PNN_02_Sts">
+        <IBooleanToSimple name="image">
+          <Image name="trueValue" value="file:^px/image/State/Chay.png"/>
+          <Image name="falseValue" value="file:^px/image/State/Dung.png"/>
+        </IBooleanToSimple>
+      </ValueBinding>
+    </Picture>
+
+    <Picture layout="810.0,670.0,20.0,20.0" scale="fit">
+      <ValueBinding ord="station:|slot:/Drivers/NiagaraNetwork/VCHP/points/Chiller/PNN_02_Am">
+        <IBooleanToSimple name="image">
+          <Image name="trueValue" value="file:^px/image/State/Au.png"/>
+          <Image name="falseValue" value="file:^px/image/State/Ma.png"/>
+        </IBooleanToSimple>
+      </ValueBinding>
+    </Picture>
+
+    <Picture layout="740.0,625.0,90.0,51.99999999999994" scale="fit">
+      <ValueBinding ord="station:|slot:/Drivers/NiagaraNetwork/VCHP/points/Chiller/PNN_02_Sts">
+        <IBooleanToSimple name="image">
+          <Image name="trueValue" value="file:^px/kitPxGraphics/Pumps/Pumps_Base/Pump_Base_Right/Pump_Base_Right_On.gif"/>
+          <Image name="falseValue" value="file:^px/kitPxGraphics/Pumps/Pumps_Base/Pump_Base_Right/Pump_Base_Right_Off.png"/>
+        </IBooleanToSimple>
+      </ValueBinding>
+    </Picture>
+
+    <Picture layout="755.0,640.0,24.0,24.0" scale="fit">
+      <ValueBinding ord="station:|slot:/Drivers/NiagaraNetwork/VCHP/points/Chiller/PNN_02_Tr">
+        <IBooleanToSimple name="image">
+          <Image name="trueValue" value="file:^px/image/State/Warning_Triangle.gif"/>
+          <Image name="falseValue" value="null"/>
+        </IBooleanToSimple>
+      </ValueBinding>
+    </Picture>
+
+    <Label layout="745.0,615.0,60.0,20.0" text="P-NN2" font="bold 14.0pt Tahoma"/>
+
+    <Picture layout="1530.0,410.0,60.0,20.0" scale="fit">
+      <ValueBinding ord="station:|slot:/Drivers/NiagaraNetwork/VCHP/points/Chiller/PNL_08_Sts">
+        <IBooleanToSimple name="image">
+          <Image name="trueValue" value="file:^px/image/State/Chay.png"/>
+          <Image name="falseValue" value="file:^px/image/State/Dung.png"/>
+        </IBooleanToSimple>
+      </ValueBinding>
+    </Picture>
+
+    <Label layout="1525.0,345.0,60.0,20.0" text="P-NL8" font="bold 14.0pt Tahoma"/>
+
+    <Picture layout="1500.0,360.00000000000006,90.0,51.99999999999994" scale="fit">
+      <ValueBinding ord="station:|slot:/Drivers/NiagaraNetwork/VCHP/points/Chiller/PNL_08_Sts">
+        <IBooleanToSimple name="image">
+          <Image name="trueValue" value="file:^px/kitPxGraphics/Pumps/Pumps_Base/Pump_Base_Left/Pump_Base_Left_On.gif"/>
+          <Image name="falseValue" value="file:^px/kitPxGraphics/Pumps/Pumps_Base/Pump_Base_Left/Pump_Base_Left_Off.png"/>
+        </IBooleanToSimple>
+      </ValueBinding>
+    </Picture>
+
+    <Picture layout="1500.0,400.0,20.0,20.0" scale="fit">
+      <ValueBinding ord="station:|slot:/Drivers/NiagaraNetwork/VCHP/points/Chiller/PNL_08_Am">
+        <IBooleanToSimple name="image">
+          <Image name="trueValue" value="file:^px/image/State/Au.png"/>
+          <Image name="falseValue" value="file:^px/image/State/Ma.png"/>
+        </IBooleanToSimple>
+      </ValueBinding>
+    </Picture>
+
+    <Picture layout="1550.0,375.0,24.0,24.0" scale="fit">
+      <ValueBinding ord="station:|slot:/Drivers/NiagaraNetwork/VCHP/points/Chiller/PNL_08_Tr">
+        <IBooleanToSimple name="image">
+          <Image name="trueValue" value="file:^px/image/State/Warning_Triangle.gif"/>
+          <Image name="falseValue" value="null"/>
+        </IBooleanToSimple>
+      </ValueBinding>
+    </Picture>
+
+    <Picture layout="1530.0,705.0,60.0,20.0" scale="fit">
+      <ValueBinding ord="station:|slot:/Drivers/NiagaraNetwork/VCHP/points/Chiller/PNL_09_Sts">
+        <IBooleanToSimple name="image">
+          <Image name="trueValue" value="file:^px/image/State/Chay.png"/>
+          <Image name="falseValue" value="file:^px/image/State/Dung.png"/>
+        </IBooleanToSimple>
+      </ValueBinding>
+    </Picture>
+
+    <Label layout="1525.0,640.0,60.0,20.0" text="P-NL9" font="bold 14.0pt Tahoma"/>
+
+    <Picture layout="1500.0,655.0,90.0,51.99999999999994" scale="fit">
+      <ValueBinding ord="station:|slot:/Drivers/NiagaraNetwork/VCHP/points/Chiller/PNL_09_Sts">
+        <IBooleanToSimple name="image">
+          <Image name="trueValue" value="file:^px/kitPxGraphics/Pumps/Pumps_Base/Pump_Base_Left/Pump_Base_Left_On.gif"/>
+          <Image name="falseValue" value="file:^px/kitPxGraphics/Pumps/Pumps_Base/Pump_Base_Left/Pump_Base_Left_Off.png"/>
+        </IBooleanToSimple>
+      </ValueBinding>
+    </Picture>
+
+    <Picture layout="1500.0,695.0,20.0,20.0" scale="fit">
+      <ValueBinding ord="station:|slot:/Drivers/NiagaraNetwork/VCHP/points/Chiller/PNL_09_Am">
+        <IBooleanToSimple name="image">
+          <Image name="trueValue" value="file:^px/image/State/Au.png"/>
+          <Image name="falseValue" value="file:^px/image/State/Ma.png"/>
+        </IBooleanToSimple>
+      </ValueBinding>
+    </Picture>
+
+    <Picture layout="1550.0,670.0,24.0,24.0" scale="fit">
+      <ValueBinding ord="station:|slot:/Drivers/NiagaraNetwork/VCHP/points/Chiller/PNL_09_Tr">
+        <IBooleanToSimple name="image">
+          <Image name="trueValue" value="file:^px/image/State/Warning_Triangle.gif"/>
+          <Image name="falseValue" value="null"/>
+        </IBooleanToSimple>
+      </ValueBinding>
+    </Picture>
+
+    <Picture layout="755.0,435.0,24.0,24.0" scale="fit">
+      <ValueBinding ord="station:|slot:/Drivers/NiagaraNetwork/VCHP/points/Chiller/PNN_01_Tr">
+        <IBooleanToSimple name="image">
+          <Image name="trueValue" value="file:^px/image/State/Warning_Triangle.gif"/>
+          <Image name="falseValue" value="null"/>
+        </IBooleanToSimple>
+      </ValueBinding>
+    </Picture>
+
+    <Picture layout="640.0,751.0,84.0,18.0" image="file:^px/image/State/Dk.png" scale="fit"/>
+
+    <Picture layout="640.0,771.0,84.0,18.0" image="file:^px/image/State/Ph.png" scale="fit"/>
+
+    <BoundLabel layout="665.0,750.0,60.0,20.0" font="12.0pt Tahoma" foreground="white" halign="right">
+      <BoundLabelBinding ord="station:|slot:/Drivers/NiagaraNetwork/VCHP/points/Chiller/Val_Modulating_Ctrl" statusEffect="none">
+        <ObjectToString name="text" format="%out.value%"/>
+      </BoundLabelBinding>
+    </BoundLabel>
+
+    <BoundLabel layout="665.0,770.0,60.0,20.0" font="12.0pt Tahoma" foreground="white" halign="right">
+      <BoundLabelBinding ord="station:|slot:/Drivers/NiagaraNetwork/VCHP/points/Chiller/Val_Modulating_Fb" statusEffect="none">
+        <ObjectToString name="text" format="%out.value%"/>
+      </BoundLabelBinding>
+    </BoundLabel>
+
+    <Picture layout="285.0,555.0,60.0,20.0" scale="fit">
+      <ValueBinding ord="station:|slot:/Drivers/NiagaraNetwork/VCHP/points/Chiller/PNN_03_Sts">
+        <IBooleanToSimple name="image">
+          <Image name="trueValue" value="file:^px/image/State/Chay.png"/>
+          <Image name="falseValue" value="file:^px/image/State/Dung.png"/>
+        </IBooleanToSimple>
+      </ValueBinding>
+    </Picture>
+
+    <Picture layout="355.0,550.0,20.0,20.0" scale="fit">
+      <ValueBinding ord="station:|slot:/Drivers/NiagaraNetwork/VCHP/points/Chiller/PNN_03_Am">
+        <IBooleanToSimple name="image">
+          <Image name="trueValue" value="file:^px/image/State/Au.png"/>
+          <Image name="falseValue" value="file:^px/image/State/Ma.png"/>
+        </IBooleanToSimple>
+      </ValueBinding>
+    </Picture>
+
+    <Picture layout="285.0,505.0,90.0,51.99999999999994" scale="fit">
+      <ValueBinding ord="station:|slot:/Drivers/NiagaraNetwork/VCHP/points/Chiller/PNN_03_Sts">
+        <IBooleanToSimple name="image">
+          <Image name="trueValue" value="file:^px/kitPxGraphics/Pumps/Pumps_Base/Pump_Base_Right/Pump_Base_Right_On.gif"/>
+          <Image name="falseValue" value="file:^px/kitPxGraphics/Pumps/Pumps_Base/Pump_Base_Right/Pump_Base_Right_Off.png"/>
+        </IBooleanToSimple>
+      </ValueBinding>
+    </Picture>
+
+    <Label layout="290.0,480.0,60.0,20.0" text="P-NN3" font="bold 14.0pt Tahoma"/>
+
+    <Picture layout="300.0,520.0,24.0,24.0" scale="fit">
+      <ValueBinding ord="station:|slot:/Drivers/NiagaraNetwork/VCHP/points/Chiller/PNN_03_Tr">
+        <IBooleanToSimple name="image">
+          <Image name="trueValue" value="file:^px/image/State/Warning_Triangle.gif"/>
+          <Image name="falseValue" value="null"/>
+        </IBooleanToSimple>
+      </ValueBinding>
+    </Picture>
+
+    <Picture layout="285.0,710.0,60.0,20.0" scale="fit">
+      <ValueBinding ord="station:|slot:/Drivers/NiagaraNetwork/VCHP/points/Chiller/PNN_04_Sts">
+        <IBooleanToSimple name="image">
+          <Image name="trueValue" value="file:^px/image/State/Chay.png"/>
+          <Image name="falseValue" value="file:^px/image/State/Dung.png"/>
+        </IBooleanToSimple>
+      </ValueBinding>
+    </Picture>
+
+    <Picture layout="355.0,705.0,20.0,20.0" scale="fit">
+      <ValueBinding ord="station:|slot:/Drivers/NiagaraNetwork/VCHP/points/Chiller/PNN_04_Am">
+        <IBooleanToSimple name="image">
+          <Image name="trueValue" value="file:^px/image/State/Au.png"/>
+          <Image name="falseValue" value="file:^px/image/State/Ma.png"/>
+        </IBooleanToSimple>
+      </ValueBinding>
+    </Picture>
+
+    <Picture layout="285.0,660.0,90.0,51.99999999999994" scale="fit">
+      <ValueBinding ord="station:|slot:/Drivers/NiagaraNetwork/VCHP/points/Chiller/PNN_04_Sts">
+        <IBooleanToSimple name="image">
+          <Image name="trueValue" value="file:^px/kitPxGraphics/Pumps/Pumps_Base/Pump_Base_Right/Pump_Base_Right_On.gif"/>
+          <Image name="falseValue" value="file:^px/kitPxGraphics/Pumps/Pumps_Base/Pump_Base_Right/Pump_Base_Right_Off.png"/>
+        </IBooleanToSimple>
+      </ValueBinding>
+    </Picture>
+
+    <Label layout="290.0,630.0,60.0,20.0" text="P-NN4" font="bold 14.0pt Tahoma"/>
+
+    <Picture layout="300.0,675.0,24.0,24.0" scale="fit">
+      <ValueBinding ord="station:|slot:/Drivers/NiagaraNetwork/VCHP/points/Chiller/PNN_04_Tr">
+        <IBooleanToSimple name="image">
+          <Image name="trueValue" value="file:^px/image/State/Warning_Triangle.gif"/>
+          <Image name="falseValue" value="null"/>
+        </IBooleanToSimple>
+      </ValueBinding>
+    </Picture>
+
+    <Label layout="550.0,430.0,60.0,20.0" font="14.0pt Tahoma" foreground="red" background="#66004040">
+      <ValueBinding ord="station:|slot:/Drivers/NiagaraNetwork/VCHP/points/Chiller/Hex_Stemp_03">
+        <ValueToString name="text" format="%out.value%"/>
+      </ValueBinding>
+    </Label>
+
+    <Label layout="540.0,590.0,60.0,20.0" font="14.0pt Tahoma" foreground="blue" background="#66004040">
+      <ValueBinding ord="station:|slot:/Drivers/NiagaraNetwork/VCHP/points/Chiller/Hex_Stemp_02">
+        <ValueToString name="text" format="%out.value%"/>
+      </ValueBinding>
+    </Label>
+
+    <Label layout="450.0,430.0,60.0,20.0" font="14.0pt Tahoma" foreground="red" background="#66004040">
+      <ValueBinding ord="station:|slot:/Drivers/NiagaraNetwork/VCHP/points/Chiller/Hex_Stemp_04">
+        <ValueToString name="text" format="%out.value%"/>
+      </ValueBinding>
+    </Label>
+
+    <Label layout="450.0,590.0,60.0,20.0" font="14.0pt Tahoma" foreground="blue" background="#66004040">
+      <ValueBinding ord="station:|slot:/Drivers/NiagaraNetwork/VCHP/points/Chiller/Hex_Stemp_01">
+        <ValueToString name="text" format="%out.value%"/>
+      </ValueBinding>
+    </Label>
+
+    <Picture layout="1310.0,380.0,40.0,20.0" scale="fit">
+      <ValueBinding ord="station:|slot:/Drivers/NiagaraNetwork/VCHP/points/Chiller/Val_Chil_05_Close">
+        <IBooleanToSimple name="image">
+          <Image name="trueValue" value="file:^px/image/State/Dong.png"/>
+          <Image name="falseValue" value="null"/>
+        </IBooleanToSimple>
+      </ValueBinding>
+    </Picture>
+
+    <Picture layout="1010.0,395.0,40.0,20.0" scale="fit">
+      <ValueBinding ord="station:|slot:/Drivers/NiagaraNetwork/VCHP/points/Chiller/Val_Chil_07_Close">
+        <IBooleanToSimple name="image">
+          <Image name="trueValue" value="file:^px/image/State/Dong.png"/>
+          <Image name="falseValue" value="null"/>
+        </IBooleanToSimple>
+      </ValueBinding>
+    </Picture>
+
+    <Picture layout="1150.0,400.0,24.0,24.0" scale="fit">
+      <ValueBinding ord="station:|slot:/Drivers/NiagaraNetwork/VCHP/points/Chiller/Chil_Heat_01_Tr">
+        <IBooleanToSimple name="image">
+          <Image name="trueValue" value="file:^px/image/State/Warning_Triangle.gif"/>
+          <Image name="falseValue" value="null"/>
+        </IBooleanToSimple>
+      </ValueBinding>
+    </Picture>
+
+    <Label layout="1440.0,290.0,60.0,20.0" font="14.0pt Tahoma" foreground="blue" background="#66004040">
+      <ValueBinding ord="station:|slot:/Drivers/NiagaraNetwork/VCHP/points/Chiller/PipNL_ChilHt_TempF">
+        <ValueToString name="text" format="%out.value%"/>
+      </ValueBinding>
+    </Label>
+
+    <Picture layout="1010.0,390.0,40.0,20.0" scale="fit">
+      <ValueBinding ord="station:|slot:/Drivers/NiagaraNetwork/VCHP/points/Chiller/Val_Chil_07_Open">
+        <IBooleanToSimple name="image">
+          <Image name="trueValue" value="file:^px/image/State/Mo.png"/>
+          <Image name="falseValue" value="null"/>
+        </IBooleanToSimple>
+      </ValueBinding>
+    </Picture>
+
+    <Picture layout="1310.0,385.0,40.0,20.0" scale="fit">
+      <ValueBinding ord="station:|slot:/Drivers/NiagaraNetwork/VCHP/points/Chiller/Val_Chil_05_Open">
+        <IBooleanToSimple name="image">
+          <Image name="trueValue" value="file:^px/image/State/Mo.png"/>
+          <Image name="falseValue" value="null"/>
+        </IBooleanToSimple>
+      </ValueBinding>
+    </Picture>
+
+    <Picture layout="1050.0,455.0,40.0,20.0" scale="fit">
+      <ValueBinding ord="station:|slot:/Drivers/NiagaraNetwork/VCHP/points/Chiller/Baccao/HP_T_Sts">
+        <IBooleanToSimple name="image">
+          <Image name="trueValue" value="file:^px/image/State/Mo.png"/>
+          <Image name="falseValue" value="file:^px/image/State/Dong.png"/>
+        </IBooleanToSimple>
+      </ValueBinding>
+    </Picture>
+
+    <Picture layout="1315.0,445.0,40.0,20.0" scale="fit">
+      <ValueBinding ord="station:|slot:/Drivers/NiagaraNetwork/VCHP/points/Chiller/Baccao/HP_T_Sts">
+        <IBooleanToSimple name="image">
+          <Image name="trueValue" value="file:^px/image/State/Mo.png"/>
+          <Image name="falseValue" value="file:^px/image/State/Dong.png"/>
+        </IBooleanToSimple>
+      </ValueBinding>
+    </Picture>
+
+    <Picture layout="1135.0,700.0,84.0,18.0" image="file:^px/image/State/RLA.png" scale="fit"/>
+
+    <Label layout="1280.0,445.0,35.0,20.0" text="FL" font="14.0pt Tahoma" foreground="red" background="#8080ff80"/>
+
+    <Label layout="1015.0,455.0,35.0,20.0" text="FL" font="14.0pt Tahoma" foreground="red" background="#8080ff80"/>
+
+    <BoundLabel layout="1160.0,700.0,65.0,20.0" font="14.0pt Tahoma" foreground="white" halign="right">
+      <BoundLabelBinding ord="station:|slot:/Drivers/NiagaraNetwork/VCHP/points/Chiller/Baccao/RLE_HP_N" statusEffect="none">
+        <ObjectToString name="text" format="%out.value%"/>
+      </BoundLabelBinding>
+    </BoundLabel>
+
+    <Label layout="1095.0,565.0,150.0,20.0" text="Heatpump ngo&#xe0;i" font="bold 14.0pt Tahoma"/>
+
+    <Picture layout="1120.0,675.0,60.0,20.0" scale="fit">
+      <ValueBinding ord="station:|slot:/Drivers/NiagaraNetwork/VCHP/points/Chiller/Baccao/HP_N_Sts">
+        <IBooleanToSimple name="image">
+          <Image name="trueValue" value="file:^px/image/State/Chay.png"/>
+          <Image name="falseValue" value="file:^px/image/State/Dung.png"/>
+        </IBooleanToSimple>
+      </ValueBinding>
+    </Picture>
+
+    <Picture layout="1310.0,590.0,40.0,20.0" scale="fit">
+      <ValueBinding ord="station:|slot:/Drivers/NiagaraNetwork/VCHP/points/Chiller/Val_Chil_06_Close">
+        <IBooleanToSimple name="image">
+          <Image name="trueValue" value="file:^px/image/State/Dong.png"/>
+          <Image name="falseValue" value="null"/>
+        </IBooleanToSimple>
+      </ValueBinding>
+    </Picture>
+
+    <Picture layout="1005.0,595.0,40.0,20.0" scale="fit">
+      <ValueBinding ord="station:|slot:/Drivers/NiagaraNetwork/VCHP/points/Chiller/Val_Chil_08_Close">
+        <IBooleanToSimple name="image">
+          <Image name="trueValue" value="file:^px/image/State/Dong.png"/>
+          <Image name="falseValue" value="null"/>
+        </IBooleanToSimple>
+      </ValueBinding>
+    </Picture>
+
+    <Picture layout="1150.0,610.0,24.0,24.0" scale="fit">
+      <ValueBinding ord="station:|slot:/Drivers/NiagaraNetwork/VCHP/points/Chiller/Chil_Heat_02_Tr">
+        <IBooleanToSimple name="image">
+          <Image name="trueValue" value="file:^px/image/State/Warning_Triangle.gif"/>
+          <Image name="falseValue" value="null"/>
+        </IBooleanToSimple>
+      </ValueBinding>
+    </Picture>
+
+    <Picture layout="1005.0,595.0,40.0,20.0" scale="fit">
+      <ValueBinding ord="station:|slot:/Drivers/NiagaraNetwork/VCHP/points/Chiller/Val_Chil_08_Open">
+        <IBooleanToSimple name="image">
+          <Image name="trueValue" value="file:^px/image/State/Mo.png"/>
+          <Image name="falseValue" value="null"/>
+        </IBooleanToSimple>
+      </ValueBinding>
+    </Picture>
+
+    <Picture layout="1310.0,590.0,40.0,20.0" scale="fit">
+      <ValueBinding ord="station:|slot:/Drivers/NiagaraNetwork/VCHP/points/Chiller/Val_Chil_06_Open">
+        <IBooleanToSimple name="image">
+          <Image name="trueValue" value="file:^px/image/State/Mo.png"/>
+          <Image name="falseValue" value="null"/>
+        </IBooleanToSimple>
+      </ValueBinding>
+    </Picture>
+
+    <Picture layout="1315.0,655.0,40.0,20.0" scale="fit">
+      <ValueBinding ord="station:|slot:/Drivers/NiagaraNetwork/VCHP/points/Chiller/Baccao/HP_N_Sts">
+        <IBooleanToSimple name="image">
+          <Image name="trueValue" value="file:^px/image/State/Mo.png"/>
+          <Image name="falseValue" value="file:^px/image/State/Dong.png"/>
+        </IBooleanToSimple>
+      </ValueBinding>
+    </Picture>
+
+    <Picture layout="1040.0,660.0,40.0,20.0" scale="fit">
+      <ValueBinding ord="station:|slot:/Drivers/NiagaraNetwork/VCHP/points/Chiller/Baccao/HP_N_Sts">
+        <IBooleanToSimple name="image">
+          <Image name="trueValue" value="file:^px/image/State/Mo.png"/>
+          <Image name="falseValue" value="file:^px/image/State/Dong.png"/>
+        </IBooleanToSimple>
+      </ValueBinding>
+    </Picture>
+
+    <Picture layout="1135.0,495.0,84.0,18.0" image="file:^px/image/State/RLA.png" scale="fit"/>
+
+    <Label layout="1280.0,655.0,35.0,20.0" text="FL" font="14.0pt Tahoma" foreground="red" background="#8080ff80"/>
+
+    <Label layout="1010.0,660.0,35.0,20.0" text="FL" font="14.0pt Tahoma" foreground="red" background="#8080ff80"/>
+
+    <BoundLabel layout="1170.0,495.0,60.0,20.0" font="14.0pt Tahoma" foreground="white" halign="right">
+      <BoundLabelBinding ord="station:|slot:/Drivers/NiagaraNetwork/VCHP/points/Chiller/Baccao/RLE_HP_T" statusEffect="none">
+        <ObjectToString name="text" format="%out.value%"/>
+      </BoundLabelBinding>
+    </BoundLabel>
+
+    <Label layout="1100.0,360.0,140.0,20.0" text="Heatpump trong" font="bold 14.0pt Tahoma"/>
+
+    <Picture layout="1125.0,470.0,60.0,20.0" scale="fit">
+      <ValueBinding ord="station:|slot:/Drivers/NiagaraNetwork/VCHP/points/Chiller/Baccao/HP_T_Sts">
+        <IBooleanToSimple name="image">
+          <Image name="trueValue" value="file:^px/image/State/Chay.png"/>
+          <Image name="falseValue" value="file:^px/image/State/Dung.png"/>
+        </IBooleanToSimple>
+      </ValueBinding>
+    </Picture>
+
+    <Label layout="1320.0,230.0,170.0,20.0" text="H&#x1ed3;i v&#x1ec1; Chiller n&#x1b0;&#x1edb;c" font="bold 14.0pt Tahoma"/>
+
+    <Label layout="1540.0,230.0,170.0,20.0" text="C&#x1ea5;p t&#x1eeb; Chiller n&#x1b0;&#x1edb;c" font="bold 14.0pt Tahoma"/>
+
+    <Label layout="280.0,275.0,170.0,20.0" text="B&#xea; h&#x1ed3;i n&#x1b0;&#x1edb;c n&#xf3;ng" font="bold 14.0pt Tahoma"/>
+
+    <Label layout="480.0,565.0,170.0,20.0" text="Heat Exchanger" font="bold 14.0pt Tahoma"/>
+
+    <Label layout="1290.0,545.0,80.0,20.0" text="Van 6.2" font="bold 14.0pt Tahoma"/>
+
+    <Label layout="980.0,550.0,80.0,20.0" text="Van 4.2" font="bold 14.0pt Tahoma"/>
+
+    <Label layout="990.0,345.0,80.0,20.0" text="Van 3.2" font="bold 14.0pt Tahoma"/>
+
+    <Label layout="1290.0,330.0,80.0,20.0" text="Van 5.2" font="bold 14.0pt Tahoma"/>
+
+    <Label layout="830.0,340.0,60.0,20.0" font="14.0pt Tahoma" foreground="red" background="#66004040">
+      <ValueBinding ord="station:|slot:/Drivers/NiagaraNetwork/VCHP/points/Chiller/PipNN_ChilHt_TempS">
+        <ValueToString name="text" format="%out.value%"/>
+      </ValueBinding>
+    </Label>
+
+    <Label layout="700.0,340.0,60.0,20.0" font="14.0pt Tahoma" foreground="red" background="#66004040">
+      <ValueBinding ord="station:|slot:/Drivers/NiagaraNetwork/VCHP/points/Chiller/PipNN_ChilHt_TempF">
+        <ValueToString name="text" format="%out.value%"/>
+      </ValueBinding>
+    </Label>
+
+    <Label layout="1340.0,290.0,60.0,20.0" font="14.0pt Tahoma" foreground="blue" background="#66004040">
+      <ValueBinding ord="station:|slot:/Drivers/NiagaraNetwork/VCHP/points/Chiller/PipNL_ChilHt_TempS">
+        <ValueToString name="text" format="%out.value%"/>
+      </ValueBinding>
+    </Label>
+
+    <Label layout="905.0,415.0,60.0,20.0" font="14.0pt Tahoma" foreground="red" background="#66004040">
+      <ValueBinding ord="station:|slot:/Drivers/NiagaraNetwork/VCHP/points/Chiller/Baccao/HP_T_NN_STEMP">
+        <ValueToString name="text" format="%out.value%"/>
+      </ValueBinding>
+    </Label>
+
+    <Label layout="905.0,455.0,60.0,20.0" font="14.0pt Tahoma" foreground="red" background="#66004040">
+      <ValueBinding ord="station:|slot:/Drivers/NiagaraNetwork/VCHP/points/Chiller/Baccao/HP_T_NN_FTEMP">
+        <ValueToString name="text" format="%out.value%"/>
+      </ValueBinding>
+    </Label>
+
+    <Label layout="905.0,615.0,60.0,20.0" font="14.0pt Tahoma" foreground="red" background="#66004040">
+      <ValueBinding ord="station:|slot:/Drivers/NiagaraNetwork/VCHP/points/Chiller/Baccao/HP_N_NN_STEMP">
+        <ValueToString name="text" format="%out.value%"/>
+      </ValueBinding>
+    </Label>
+
+    <Label layout="905.0,660.0,60.0,20.0" font="14.0pt Tahoma" foreground="red" background="#66004040">
+      <ValueBinding ord="station:|slot:/Drivers/NiagaraNetwork/VCHP/points/Chiller/Baccao/HP_N_NN_FTEMP1">
+        <ValueToString name="text" format="%out.value%"/>
+      </ValueBinding>
+    </Label>
+
+    <Label layout="1360.0,610.0,60.0,20.0" font="14.0pt Tahoma" foreground="blue" background="#66004040">
+      <ValueBinding ord="station:|slot:/Drivers/NiagaraNetwork/VCHP/points/Chiller/Baccao/HP_N_NL_STEMP">
+        <ValueToString name="text" format="%out.value%"/>
+      </ValueBinding>
+    </Label>
+
+    <Label layout="1360.0,405.0,60.0,20.0" font="14.0pt Tahoma" foreground="blue" background="#66004040">
+      <ValueBinding ord="station:|slot:/Drivers/NiagaraNetwork/VCHP/points/Chiller/Baccao/HP_T_NL_STEMP">
+        <ValueToString name="text" format="%out.value%"/>
+      </ValueBinding>
+    </Label>
+
+    <Label layout="1360.0,445.0,60.0,20.0" font="14.0pt Tahoma" foreground="blue" background="#66004040">
+      <ValueBinding ord="station:|slot:/Drivers/NiagaraNetwork/VCHP/points/Chiller/Baccao/HP_T_NL_FTEMP">
+        <ValueToString name="text" format="%out.value%"/>
+      </ValueBinding>
+    </Label>
+
+    <Label layout="1360.0,650.0,60.0,20.0" font="14.0pt Tahoma" foreground="blue" background="#66004040">
+      <ValueBinding ord="station:|slot:/Drivers/NiagaraNetwork/VCHP/points/Chiller/Baccao/HP_N_NL_FTEMP1">
+        <ValueToString name="text" format="%out.value%"/>
+      </ValueBinding>
+    </Label>
+
+    <ImageButton layout="240.0,525.0,45.0,20.0" font="14.0pt Tahoma">
+      <WsAnnotation name="wsAnnotation" value="6,6,8"/>
+      <ValueBinding ord="station:|slot:/Drivers/NiagaraNetwork/VCHP/points/Chiller/PNN_03_Sst">
+        <IBooleanToSimple name="text">
+          <String name="trueValue" value="B&#x1ead;t"/>
+          <String name="falseValue" value="T&#x1eaf;t"/>
+        </IBooleanToSimple>
+        <IStatusToBrush name="background"/>
+      </ValueBinding>
+    </ImageButton>
+
+    <ImageButton layout="240.0,680.0,45.0,20.0" font="14.0pt Tahoma">
+      <WsAnnotation name="wsAnnotation" value="6,6,8"/>
+      <ValueBinding ord="station:|slot:/Drivers/NiagaraNetwork/VCHP/points/Chiller/PNN_04_Sst">
+        <IBooleanToSimple name="text">
+          <String name="trueValue" value="B&#x1ead;t"/>
+          <String name="falseValue" value="T&#x1eaf;t"/>
+        </IBooleanToSimple>
+        <IStatusToBrush name="background"/>
+      </ValueBinding>
+    </ImageButton>
+
+    <ImageButton layout="700.0,643.0,45.0,20.0" font="14.0pt Tahoma">
+      <WsAnnotation name="wsAnnotation" value="6,6,8"/>
+      <ValueBinding ord="station:|slot:/Drivers/NiagaraNetwork/VCHP/points/Chiller/PNN_02_Sst">
+        <IBooleanToSimple name="text">
+          <String name="trueValue" value="B&#x1ead;t"/>
+          <String name="falseValue" value="T&#x1eaf;t"/>
+        </IBooleanToSimple>
+        <IStatusToBrush name="background"/>
+      </ValueBinding>
+    </ImageButton>
+
+    <ImageButton layout="700.0,435.0,45.0,20.0" font="14.0pt Tahoma">
+      <WsAnnotation name="wsAnnotation" value="6,6,8"/>
+      <ValueBinding ord="station:|slot:/Drivers/NiagaraNetwork/VCHP/points/Chiller/PNN_01_Sst">
+        <IBooleanToSimple name="text">
+          <String name="trueValue" value="B&#x1ead;t"/>
+          <String name="falseValue" value="T&#x1eaf;t"/>
+        </IBooleanToSimple>
+        <IStatusToBrush name="background"/>
+      </ValueBinding>
+    </ImageButton>
+
+    <ImageButton layout="1005.0,575.0,45.0,20.0" font="14.0pt Tahoma">
+      <WsAnnotation name="wsAnnotation" value="6,6,8"/>
+      <ValueBinding ord="station:|slot:/Drivers/NiagaraNetwork/VCHP/points/Chiller/Val_Chil_08_Sst">
+        <IBooleanToSimple name="text">
+          <String name="trueValue" value="B&#x1ead;t"/>
+          <String name="falseValue" value="T&#x1eaf;t"/>
+        </IBooleanToSimple>
+        <IStatusToBrush name="background"/>
+      </ValueBinding>
+    </ImageButton>
+
+    <ImageButton layout="1310.0,570.0,45.0,20.0" font="14.0pt Tahoma">
+      <WsAnnotation name="wsAnnotation" value="6,6,8"/>
+      <ValueBinding ord="station:|slot:/Drivers/NiagaraNetwork/VCHP/points/Chiller/Val_Chil_06_Sst">
+        <IBooleanToSimple name="text">
+          <String name="trueValue" value="B&#x1ead;t"/>
+          <String name="falseValue" value="T&#x1eaf;t"/>
+        </IBooleanToSimple>
+        <IStatusToBrush name="background"/>
+      </ValueBinding>
+    </ImageButton>
+
+    <ImageButton layout="1010.0,370.0,45.0,20.0" font="14.0pt Tahoma">
+      <WsAnnotation name="wsAnnotation" value="6,6,8"/>
+      <ValueBinding ord="station:|slot:/Drivers/NiagaraNetwork/VCHP/points/Chiller/Val_Chil_07_Sst">
+        <IBooleanToSimple name="text">
+          <String name="trueValue" value="B&#x1ead;t"/>
+          <String name="falseValue" value="T&#x1eaf;t"/>
+        </IBooleanToSimple>
+        <IStatusToBrush name="background"/>
+      </ValueBinding>
+    </ImageButton>
+
+    <ImageButton layout="1310.0,360.0,45.0,20.0" font="14.0pt Tahoma">
+      <WsAnnotation name="wsAnnotation" value="6,6,8"/>
+      <ValueBinding ord="station:|slot:/Drivers/NiagaraNetwork/VCHP/points/Chiller/Val_Chil_05_Sst">
+        <IBooleanToSimple name="text">
+          <String name="trueValue" value="B&#x1ead;t"/>
+          <String name="falseValue" value="T&#x1eaf;t"/>
+        </IBooleanToSimple>
+        <IStatusToBrush name="background"/>
+      </ValueBinding>
+    </ImageButton>
+
+    <ImageButton layout="1590.0,670.0,45.0,20.0" font="14.0pt Tahoma">
+      <WsAnnotation name="wsAnnotation" value="6,6,8"/>
+      <ValueBinding ord="station:|slot:/Drivers/NiagaraNetwork/VCHP/points/Chiller/PNL_09_Sst">
+        <IBooleanToSimple name="text">
+          <String name="trueValue" value="B&#x1ead;t"/>
+          <String name="falseValue" value="T&#x1eaf;t"/>
+        </IBooleanToSimple>
+        <IStatusToBrush name="background"/>
+      </ValueBinding>
+    </ImageButton>
+
+    <ImageButton layout="1590.0,380.0,45.0,20.0" font="14.0pt Tahoma">
+      <WsAnnotation name="wsAnnotation" value="6,6,8"/>
+      <ValueBinding ord="station:|slot:/Drivers/NiagaraNetwork/VCHP/points/Chiller/PNL_08_Sst">
+        <IBooleanToSimple name="text">
+          <String name="trueValue" value="B&#x1ead;t"/>
+          <String name="falseValue" value="T&#x1eaf;t"/>
+        </IBooleanToSimple>
+        <IStatusToBrush name="background"/>
+      </ValueBinding>
+    </ImageButton>
+
+    <ImageButton layout="1185.0,470.0,45.0,20.0" font="14.0pt Tahoma">
+      <WsAnnotation name="wsAnnotation" value="6,6,8"/>
+      <ValueBinding ord="station:|slot:/Drivers/NiagaraNetwork/VCHP/points/Chiller/Chil_Heat_01_Sst">
+        <IBooleanToSimple name="text">
+          <String name="trueValue" value="B&#x1ead;t"/>
+          <String name="falseValue" value="T&#x1eaf;t"/>
+        </IBooleanToSimple>
+        <IStatusToBrush name="background"/>
+      </ValueBinding>
+    </ImageButton>
+
+    <ImageButton layout="1180.0,675.0,45.0,20.0" font="14.0pt Tahoma">
+      <WsAnnotation name="wsAnnotation" value="6,6,8"/>
+      <ValueBinding ord="station:|slot:/Drivers/NiagaraNetwork/VCHP/points/Chiller/Chil_Heat_02_Sst">
+        <IBooleanToSimple name="text">
+          <String name="trueValue" value="B&#x1ead;t"/>
+          <String name="falseValue" value="T&#x1eaf;t"/>
+        </IBooleanToSimple>
+        <IStatusToBrush name="background"/>
+      </ValueBinding>
+    </ImageButton>
+
+    <Button layout="726.0,753.0,16.0,16.0" image="file:^px/image/iconAx/x16/build.png">
+      <ActionBinding ord="station:|slot:/Drivers/NiagaraNetwork/VCHP/points/Chiller/Val_Modulating_Ctrl/set" widgetEvent="actionPerformed"/>
+    </Button>
+
+    <Label layout="680.0,100.0,150.00000000000023,20.0" text="Ch&#x1ebf; &#x111;&#x1ed9; BMS" font="13.0pt Tahoma" foreground="white" background="image( source(file:^px/image/State/Frame_1_150x20_t2.png) )">
+      <LayerTag name="LayerTag" layerName="Nomal"/>
+    </Label>
+
+    <Picture layout="680.0,124.0,150.0,20.0" image="file:^px/image/State/Frame_0_150x20_t2.png" scale="fit">
+      <LayerTag name="LayerTag" layerName="Nomal"/>
+    </Picture>
+
+    <Label layout="684.0,124.0,50.0,20.0" text="Ch&#x1ebf; &#x111;&#x1ed9;" font="14.0pt Tahoma" foreground="white" halign="left">
+      <LayerTag name="LayerTag" layerName="Nomal"/>
+    </Label>
+
+    <Label layout="740.0,124.0,78.0,20.0" font="14.0pt Tahoma">
+      <ValueBinding ord="station:|slot:/Drivers/NiagaraNetwork/VCHP/points/Chiller/HP_OvrdEn">
+        <IBooleanToSimple name="text">
+          <String name="trueValue" value="T&#x1ef1; ch&#x1ecd;n"/>
+          <String name="falseValue" value="Theo l&#x1ecb;ch"/>
+        </IBooleanToSimple>
+        <IBooleanToSimple name="foreground">
+          <Brush name="trueValue" value="red"/>
+          <Brush name="falseValue" value="lime"/>
+        </IBooleanToSimple>
+        <IStatusToBrush name="background"/>
+      </ValueBinding>
+      <LayerTag name="LayerTag" layerName="Nomal"/>
+    </Label>
+
+    <Picture layout="680.0,190.0,150.0,20.0" image="file:^px/image/State/Frame_0_150x20_t2.png" scale="fit">
+      <LayerTag name="LayerTag" layerName="Nomal"/>
+    </Picture>
+
+    <Label layout="684.0,190.0,65.0,20.0" text="Theo l&#x1ecb;ch" font="14.0pt Tahoma" foreground="white" halign="left">
+      <LayerTag name="LayerTag" layerName="Nomal"/>
+    </Label>
+
+    <Label layout="760.0,190.0,58.0,20.0" font="14.0pt Tahoma" background="image( source(null) )">
+      <ValueBinding ord="station:|slot:/Home/Schedule$20HVAC/Chiller_H/out">
+        <IBooleanToSimple name="text">
+          <String name="trueValue" value="B&#x1ead;t"/>
+          <String name="falseValue" value="T&#x1eaf;t"/>
+        </IBooleanToSimple>
+        <IBooleanToSimple name="foreground">
+          <Brush name="trueValue" value="lime"/>
+          <Brush name="falseValue" value="red"/>
+        </IBooleanToSimple>
+      </ValueBinding>
+      <LayerTag name="LayerTag" layerName="Nomal"/>
+    </Label>
+
+    <Picture layout="680.0,146.0,150.0,20.0" image="file:^px/image/State/Frame_0_150x20_t2.png" scale="fit">
+      <LayerTag name="LayerTag" layerName="Nomal"/>
+    </Picture>
+
+    <Label layout="684.0,146.0,86.0,20.0" text="T.ch&#x1ecd;n CH1" font="14.0pt Tahoma" foreground="white" halign="left">
+      <LayerTag name="LayerTag" layerName="Nomal"/>
+    </Label>
+
+    <Label layout="760.0,146.0,58.0,20.0" font="14.0pt Tahoma">
+      <ValueBinding ord="station:|slot:/Drivers/NiagaraNetwork/VCHP/points/Chiller/HP01_Ovrd">
+        <IBooleanToSimple name="text">
+          <String name="trueValue" value="B&#x1ead;t"/>
+          <String name="falseValue" value="T&#x1eaf;t"/>
+        </IBooleanToSimple>
+        <IBooleanToSimple name="foreground">
+          <Brush name="trueValue" value="lime"/>
+          <Brush name="falseValue" value="red"/>
+        </IBooleanToSimple>
+        <IStatusToBrush name="background"/>
+      </ValueBinding>
+      <LayerTag name="LayerTag" layerName="Nomal"/>
+    </Label>
+
+    <Button layout="811.0,192.0,16.0,16.0" styleClasses="hyperlink" image="file:^px/image/iconAx/x16/calendar.png" buttonStyle="hyperlink">
+      <PopupBinding ord="station:|slot:/Home/Schedule$20HVAC/Chiller_H"/>
+      <LayerTag name="LayerTag" layerName="Nomal"/>
+    </Button>
+
+    <Button layout="811.0,148.0,16.0,16.0" image="file:^px/image/iconAx/x16/build.png">
+      <ActionBinding ord="station:|slot:/Drivers/NiagaraNetwork/VCHP/points/Chiller/HP01_Ovrd/set" widgetEvent="actionPerformed"/>
+      <LayerTag name="LayerTag" layerName="Nomal"/>
+    </Button>
+
+    <Picture layout="835.0,122.0,150.0,20.0" image="file:^px/image/State/Frame_0_150x20_t2.png" scale="fit">
+      <LayerTag name="LayerTag" layerName="Nomal"/>
+    </Picture>
+
+    <Label layout="839.0,122.0,76.0,20.0" text="C&#xe0;i &#x111;&#x1eb7;t" font="14.0pt Tahoma" foreground="white" halign="left">
+      <LayerTag name="LayerTag" layerName="Nomal"/>
+    </Label>
+
+    <Label layout="895.0,123.0,65.0,18.0" font="14.0pt Tahoma" foreground="lime" background="#80404040">
+      <ValueBinding ord="station:|slot:/Drivers/NiagaraNetwork/VCHP/points/Chiller/Baccao/HP_N_TempSP">
+        <ValueToString name="text" format="%out.value%"/>
+      </ValueBinding>
+      <LayerTag name="LayerTag" layerName="Nomal"/>
+    </Label>
+
+    <Label layout="835.0,100.0,150.0,20.0" text="Nhi&#x1ec7;t &#x111;&#x1ed9; n&#x1b0;&#x1edb;c n&#xf3;ng c&#x1ea5;p 1" font="13.0pt Tahoma" foreground="white" background="image( source(file:^px/image/State/Frame_1_150x20_t2.png) )">
+      <LayerTag name="LayerTag" layerName="Nomal"/>
+    </Label>
+
+    <Button layout="966.0,124.0,16.0,16.0" image="file:^px/image/iconAx/x16/build.png">
+      <ActionBinding ord="station:|slot:/Drivers/NiagaraNetwork/VCHP/points/Chiller/Baccao/HP_N_TempSP/set" widgetEvent="actionPerformed"/>
+      <LayerTag name="LayerTag" layerName="Nomal"/>
+    </Button>
+
+    <Button layout="811.0,126.0,16.0,16.0" image="file:^px/image/iconAx/x16/build.png">
+      <ActionBinding ord="station:|slot:/Drivers/NiagaraNetwork/VCHP/points/Chiller/HP_OvrdEn/set" widgetEvent="actionPerformed"/>
+      <LayerTag name="LayerTag" layerName="Nomal"/>
+    </Button>
+
+    <Picture layout="835.0,213.0,150.0,20.0" image="file:^px/image/State/Frame_0_150x20_t2.png" scale="fit">
+      <LayerTag name="LayerTag" layerName="Nomal"/>
+    </Picture>
+
+    <Label layout="839.0,212.0,76.0,20.0" text="C&#xe0;i &#x111;&#x1eb7;t" font="14.0pt Tahoma" foreground="white" halign="left">
+      <LayerTag name="LayerTag" layerName="Nomal"/>
+    </Label>
+
+    <Label layout="895.0,213.0,65.0,18.0" font="14.0pt Tahoma" foreground="lime" background="#80404040">
+      <ValueBinding ord="station:|slot:/Drivers/NiagaraNetwork/VCHP/points/Chiller/HWSTempSP">
+        <ValueToString name="text" format="%out.value%"/>
+      </ValueBinding>
+      <LayerTag name="LayerTag" layerName="Nomal"/>
+    </Label>
+
+    <Label layout="835.0,190.0,150.0,20.0" text="Nhi&#x1ec7;t &#x111;&#x1ed9; gi&#x1ea3;i nhi&#x1ec7;t h&#x1ed3;i" font="14.0pt Tahoma" foreground="white" background="image( source(file:^px/image/State/Frame_1_150x20_t2.png) )">
+      <LayerTag name="LayerTag" layerName="Nomal"/>
+    </Label>
+
+    <Button layout="966.0,214.0,16.0,16.0" image="file:^px/image/iconAx/x16/build.png">
+      <ActionBinding ord="station:|slot:/Drivers/NiagaraNetwork/VCHP/points/Chiller/HWSTempSP/set" widgetEvent="actionPerformed"/>
+      <LayerTag name="LayerTag" layerName="Nomal"/>
+    </Button>
+
+    <Picture layout="990.0,122.0,150.0,20.0" image="file:^px/image/State/Frame_0_150x20_t2.png" scale="fit">
+      <LayerTag name="LayerTag" layerName="Nomal"/>
+    </Picture>
+
+    <Label layout="994.0,122.0,76.0,20.0" text="C&#xe0;i &#x111;&#x1eb7;t" font="14.0pt Tahoma" foreground="white" halign="left">
+      <LayerTag name="LayerTag" layerName="Nomal"/>
+    </Label>
+
+    <Label layout="1050.0,123.0,65.0,18.0" font="14.0pt Tahoma" foreground="lime" background="#80404040">
+      <ValueBinding ord="station:|slot:/Drivers/NiagaraNetwork/VCHP/points/Chiller/HP_IncLoad">
+        <ValueToString name="text" format="%out.value%"/>
+      </ValueBinding>
+      <LayerTag name="LayerTag" layerName="Nomal"/>
+    </Label>
+
+    <Label layout="990.0,100.0,150.00000000000023,20.0" text="C&#xf4;ng su&#x1ea5;t g&#x1ecd;i th&#xea;m t&#x1ea3;i" font="13.0pt Tahoma" foreground="white" background="image( source(file:^px/image/State/Frame_1_150x20_t2.png) )">
+      <LayerTag name="LayerTag" layerName="Nomal"/>
+    </Label>
+
+    <Button layout="1121.0,124.0,16.0,16.0" image="file:^px/image/iconAx/x16/build.png">
+      <ActionBinding ord="station:|slot:/Drivers/NiagaraNetwork/VCHP/points/Chiller/HP_IncLoad/set" widgetEvent="actionPerformed"/>
+      <LayerTag name="LayerTag" layerName="Nomal"/>
+    </Button>
+
+    <Picture layout="990.0,172.0,150.0,20.0" image="file:^px/image/State/Frame_0_150x20_t2.png" scale="fit">
+      <LayerTag name="LayerTag" layerName="Nomal"/>
+    </Picture>
+
+    <Label layout="995.0,173.0,76.0,20.0" text="C&#xe0;i &#x111;&#x1eb7;t" font="14.0pt Tahoma" foreground="white" halign="left">
+      <LayerTag name="LayerTag" layerName="Nomal"/>
+    </Label>
+
+    <Label layout="1050.0,173.0,65.0,18.0" font="14.0pt Tahoma" foreground="lime" background="#80404040">
+      <ValueBinding ord="station:|slot:/Drivers/NiagaraNetwork/VCHP/points/Chiller/HP_DecLoad">
+        <ValueToString name="text" format="%out.value%"/>
+      </ValueBinding>
+      <LayerTag name="LayerTag" layerName="Nomal"/>
+    </Label>
+
+    <Label layout="990.0,150.0,150.0,20.0" text="C&#xf4;ng su&#x1ea5;t g&#x1ecd;i b&#x1edb;t t&#x1ea3;i" font="14.0pt Tahoma" foreground="white" background="image( source(file:^px/image/State/Frame_1_150x20_t2.png) )">
+      <LayerTag name="LayerTag" layerName="Nomal"/>
+    </Label>
+
+    <Button layout="1121.0,174.0,16.0,16.0" image="file:^px/image/iconAx/x16/build.png">
+      <ActionBinding ord="station:|slot:/Drivers/NiagaraNetwork/VCHP/points/Chiller/HP_DecLoad/set" widgetEvent="actionPerformed"/>
+      <LayerTag name="LayerTag" layerName="Nomal"/>
+    </Button>
+
+    <Picture layout="680.0,168.0,150.0,20.0" image="file:^px/image/State/Frame_0_150x20_t2.png" scale="fit">
+      <LayerTag name="LayerTag" layerName="Nomal"/>
+    </Picture>
+
+    <Label layout="684.0,168.0,86.0,20.0" text="T.ch&#x1ecd;n CH2" font="14.0pt Tahoma" foreground="white" halign="left">
+      <LayerTag name="LayerTag" layerName="Nomal"/>
+    </Label>
+
+    <Label layout="760.0,168.0,58.0,20.0" font="14.0pt Tahoma">
+      <ValueBinding ord="station:|slot:/Drivers/NiagaraNetwork/VCHP/points/Chiller/HP02_Ovrd">
+        <IBooleanToSimple name="text">
+          <String name="trueValue" value="B&#x1ead;t"/>
+          <String name="falseValue" value="T&#x1eaf;t"/>
+        </IBooleanToSimple>
+        <IBooleanToSimple name="foreground">
+          <Brush name="trueValue" value="lime"/>
+          <Brush name="falseValue" value="red"/>
+        </IBooleanToSimple>
+        <IStatusToBrush name="background"/>
+      </ValueBinding>
+      <LayerTag name="LayerTag" layerName="Nomal"/>
+    </Label>
+
+    <Button layout="811.0,170.0,16.0,16.0" image="file:^px/image/iconAx/x16/build.png">
+      <ActionBinding ord="station:|slot:/Drivers/NiagaraNetwork/VCHP/points/Chiller/HP02_Ovrd/set" widgetEvent="actionPerformed"/>
+      <LayerTag name="LayerTag" layerName="Nomal"/>
+    </Button>
+
+    <Label layout="835.0,145.0,150.0,20.0" text="Nhi&#x1ec7;t &#x111;&#x1ed9; n&#x1b0;&#x1edb;c n&#xf3;ng c&#x1ea5;p 2" font="13.0pt Tahoma" foreground="white" background="image( source(file:^px/image/State/Frame_1_150x20_t2.png) )">
+      <LayerTag name="LayerTag" layerName="Nomal"/>
+    </Label>
+
+    <Picture layout="835.0,167.0,150.0,20.0" image="file:^px/image/State/Frame_0_150x20_t2.png" scale="fit">
+      <LayerTag name="LayerTag" layerName="Nomal"/>
+    </Picture>
+
+    <Button layout="966.0,169.0,16.0,16.0" image="file:^px/image/iconAx/x16/build.png">
+      <ActionBinding ord="station:|slot:/Drivers/NiagaraNetwork/VCHP/points/Chiller/Baccao/HP_T_TempSP/set" widgetEvent="actionPerformed"/>
+      <LayerTag name="LayerTag" layerName="Nomal"/>
+    </Button>
+
+    <Label layout="895.0,168.0,65.0,18.0" font="14.0pt Tahoma" foreground="lime" background="#80404040">
+      <ValueBinding ord="station:|slot:/Drivers/NiagaraNetwork/VCHP/points/Chiller/Baccao/HP_T_TempSP">
+        <ValueToString name="text" format="%out.value%"/>
+      </ValueBinding>
+      <LayerTag name="LayerTag" layerName="Nomal"/>
+    </Label>
+
+    <Label layout="839.0,167.0,76.0,20.0" text="C&#xe0;i &#x111;&#x1eb7;t" font="14.0pt Tahoma" foreground="white" halign="left">
+      <LayerTag name="LayerTag" layerName="Nomal"/>
+    </Label>
+
+    <Picture layout="680.0,210.0,150.0,20.0" image="file:^px/image/State/Frame_0_150x20_t2.png" scale="fit">
+      <LayerTag name="LayerTag" layerName="Nomal"/>
+    </Picture>
+
+    <Label layout="684.0,210.0,66.0,20.0" text="X&#xf3;a l&#x1ed7;i" font="14.0pt Tahoma" foreground="white" halign="left">
+      <LayerTag name="LayerTag" layerName="Nomal"/>
+    </Label>
+
+    <Label layout="760.0,210.0,58.0,20.0" font="14.0pt Tahoma" background="image( source(null) )">
+      <ValueBinding ord="station:|slot:/Drivers/NiagaraNetwork/VCHP/points/Chiller/HP_RSAlm">
+        <IBooleanToSimple name="text">
+          <String name="trueValue" value="B&#x1ead;t"/>
+          <String name="falseValue" value="T&#x1eaf;t"/>
+        </IBooleanToSimple>
+        <IBooleanToSimple name="foreground">
+          <Brush name="trueValue" value="lime"/>
+          <Brush name="falseValue" value="red"/>
+        </IBooleanToSimple>
+      </ValueBinding>
+      <LayerTag name="LayerTag" layerName="Nomal"/>
+    </Label>
+
+    <Button layout="810.0,210.0,16.0,16.0" image="file:^px/image/iconAx/x16/build.png">
+      <ActionBinding ord="station:|slot:/Drivers/NiagaraNetwork/VCHP/points/Chiller/HP_RSAlm/set" widgetEvent="actionPerformed"/>
+      <LayerTag name="LayerTag" layerName="Nomal"/>
+    </Button>
+
+  </CanvasPane>
+
+</ScrollPane>
+</content>
+</px>
