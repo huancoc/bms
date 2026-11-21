@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Niagara Presentation XML -->
+<px version="1.0" media="workbench:WbPxMedia">
+<import>
+  <module name="baja"/>
+  <module name="bajaui"/>
+  <module name="converters"/>
+  <module name="gx"/>
+  <module name="kitPx"/>
+</import>
+<content>
+<ScrollPane>
+
+  <CanvasPane name="content" viewSize="210.0,125.0" background="white">
+
+    <Label layout="130.0,65.0,79.99999999999997,20.0">
+      <ValueBinding ord="station:|slot:/Drivers/NiagaraNetwork/Schedules/SCH_AHU_03">
+        <IBooleanToSimple name="text">
+          <String name="trueValue" value="L&#x1ecb;ch B&#x1ead;t"/>
+          <String name="falseValue" value="L&#x1ecb;ch T&#x1eaf;t"/>
+        </IBooleanToSimple>
+        <IBooleanToSimple name="background">
+          <Brush name="trueValue" value="#cc00ff00"/>
+          <Brush name="falseValue" value="#ccff0000"/>
+        </IBooleanToSimple>
+      </ValueBinding>
+    </Label>
+
+    <BoundLabel layout="130.0,65.0,80.0,20.0" text="  " font="18.0pt SansSerif" halign="left" border="2.0 groove black">
+      <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+      <PopupBinding ord="station:|slot:/Drivers/NiagaraNetwork/Schedules/SCH_AHU_03" title="C&#xe0;i &#x111;&#x1eb7;t l&#x1ecb;ch b&#x1ead;t t&#x1eaf;t" position="0.0,0.0" modal="true"/>
+    </BoundLabel>
+
+    <BoundLabel layout="0.0,25.0,100.0,20.0" text=" C&#xe0;i ch&#x1ebf; &#x111;&#x1ed9;" font="14.0pt Tahoma" foreground="black" background="#e0e0e0" halign="left" border="2.0 groove black">
+      <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+    </BoundLabel>
+
+    <BoundLabel layout="100.0,25.0,109.99999999999994,20.0" font="14.0pt Tahoma" halign="fill" border="2.0 solid white">
+      <BoundLabelBinding ord="station:|slot:/Drivers/NiagaraNetwork/WEB_CVI/points/AHU/Ahu03_SelectMd/out">
+        <IBooleanToSimple name="text">
+          <String name="trueValue" value="Tr&#x1ef1;c ti&#x1ebf;p"/>
+          <String name="falseValue" value="L&#x1ecb;ch"/>
+        </IBooleanToSimple>
+        <IBooleanToSimple name="background">
+          <Brush name="trueValue" value="#4d0000ff"/>
+          <Brush name="falseValue" value="#4d00ff00"/>
+        </IBooleanToSimple>
+      </BoundLabelBinding>
+      <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+    </BoundLabel>
+
+    <ImageButton layout="0.0,25.0,210.0,20.0" styleClasses="toolbar" font="bold 12.0pt SansSerif" foreground="white" halign="left" buttonStyle="toolBar">
+      <ActionBinding ord="station:|slot:/Drivers/NiagaraNetwork/WEB_CVI/points/AHU/Ahu03_SelectMd/set" widgetEvent="actionPerformed"/>
+      <WsAnnotation name="wsAnnotation" value="6,6,8"/>
+    </ImageButton>
+
+    <BoundLabel layout="0.0,85.0,130.0,20.0" text=" Bi&#x1ebf;n t&#x1ea7;n" font="14.0pt Tahoma" foreground="black" background="#e0e0e0" halign="left" border="2.0 groove black">
+      <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+    </BoundLabel>
+
+    <BoundLabel layout="130.0,85.0,80.0,20.0" font="bold 12.0pt Segoe UI" halign="right" border="2.0 groove black">
+      <BoundLabelBinding ord="station:|slot:/Drivers/NiagaraNetwork/WEB_CVI/points/AHU/Ahu03_VSD_SP/out">
+        <ObjectToString name="text" format=""/>
+        <IBooleanToSimple name="background">
+          <Brush name="trueValue" value="#ffc0ff"/>
+          <Brush name="falseValue" value="null"/>
+        </IBooleanToSimple>
+      </BoundLabelBinding>
+      <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+    </BoundLabel>
+
+    <BoundLabel layout="130.0,85.0,80.0,20.0" border="2.0 groove black">
+      <BoundLabelBinding ord="station:|slot:/Drivers/NiagaraNetwork/WEB_CVI/points/AHU/Ahu03_VSD_SP/out/value">
+        <ObjectToString name="text"/>
+      </BoundLabelBinding>
+      <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+    </BoundLabel>
+
+    <ImageButton layout="130.0,85.0,80.0,20.0" styleClasses="toolbar" font="bold 12.0pt SansSerif" foreground="white" halign="left" buttonStyle="toolBar">
+      <ActionBinding ord="station:|slot:/Drivers/NiagaraNetwork/WEB_CVI/points/AHU/Ahu03_VSD_SP/set" widgetEvent="actionPerformed"/>
+      <WsAnnotation name="wsAnnotation" value="6,6,8"/>
+    </ImageButton>
+
+    <BoundLabel layout="0.0,105.0,130.0,20.0" text=" D&#x1eeb;ng qu&#x1ea1;t sau" font="14.0pt Tahoma" foreground="black" background="#e0e0e0" halign="left" border="2.0 groove black">
+      <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+    </BoundLabel>
+
+    <BoundLabel layout="130.0,105.0,80.0,20.0" font="bold 12.0pt Segoe UI" halign="right" border="2.0 groove black">
+      <BoundLabelBinding ord="station:|slot:/Drivers/NiagaraNetwork/WEB_CVI/points/AHU/Ahu03_VSD_SP/out">
+        <ObjectToString name="text" format=""/>
+        <IBooleanToSimple name="background">
+          <Brush name="trueValue" value="#ffc0ff"/>
+          <Brush name="falseValue" value="null"/>
+        </IBooleanToSimple>
+      </BoundLabelBinding>
+      <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+    </BoundLabel>
+
+    <BoundLabel layout="130.0,105.0,80.0,20.0" border="2.0 groove black">
+      <BoundLabelBinding ord="station:|slot:/Drivers/NiagaraNetwork/WEB_CVI/points/AHU/Ahu02_DelayOff/out/value">
+        <ObjectToString name="text"/>
+      </BoundLabelBinding>
+      <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+    </BoundLabel>
+
+    <ImageButton layout="130.0,105.0,80.0,20.0" styleClasses="toolbar" font="bold 12.0pt SansSerif" foreground="white" halign="left" buttonStyle="toolBar">
+      <ActionBinding ord="station:|slot:/Drivers/NiagaraNetwork/WEB_CVI/points/AHU/Ahu02_DelayOff/set" widgetEvent="actionPerformed"/>
+      <WsAnnotation name="wsAnnotation" value="6,6,8"/>
+    </ImageButton>
+
+    <BoundLabel layout="0.0,45.0,130.0,20.0" text=" &#x110;K tr&#x1ef1;c  ti&#x1ebf;p" font="14.0pt Tahoma" foreground="black" background="#e0e0e0" halign="left" border="2.0 groove black">
+      <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+    </BoundLabel>
+
+    <BoundLabel layout="130.0,45.0,80.0,20.0" font="bold 12.0pt Segoe UI" halign="right" border="2.0 groove black">
+      <BoundLabelBinding ord="station:|slot:/Drivers/NiagaraNetwork/WEB_CVI/points/AHU/Ahu03_VSD_SP/out">
+        <ObjectToString name="text" format=""/>
+        <IBooleanToSimple name="background">
+          <Brush name="trueValue" value="#ffc0ff"/>
+          <Brush name="falseValue" value="null"/>
+        </IBooleanToSimple>
+      </BoundLabelBinding>
+      <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+    </BoundLabel>
+
+    <BoundLabel layout="130.0,45.0,80.0,20.0" border="2.0 groove black">
+      <BoundLabelBinding ord="station:|slot:/Drivers/NiagaraNetwork/WEB_CVI/points/AHU/Ahu03_Ovrd/out/value">
+        <ObjectToString name="text"/>
+        <IBooleanToSimple name="background">
+          <Brush name="trueValue" value="lime"/>
+          <Brush name="falseValue" value="red"/>
+        </IBooleanToSimple>
+      </BoundLabelBinding>
+      <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+    </BoundLabel>
+
+    <ImageButton layout="130.0,45.0,80.0,20.0" styleClasses="toolbar" font="bold 12.0pt SansSerif" foreground="white" halign="left" buttonStyle="toolBar">
+      <ActionBinding ord="station:|slot:/Drivers/NiagaraNetwork/WEB_CVI/points/AHU/Ahu03_Ovrd/set" widgetEvent="actionPerformed"/>
+      <WsAnnotation name="wsAnnotation" value="6,6,8"/>
+    </ImageButton>
+
+    <BoundLabel layout="0.0,65.0,130.0,20.0" text=" C&#xe0;i &#x111;&#x1eb7;t l&#x1ecb;ch" font="14.0pt Tahoma" foreground="black" background="#e0e0e0" halign="left" border="2.0 groove black">
+      <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+    </BoundLabel>
+
+    <BoundLabel layout="0.0,0.0,210.0,25.0" text="C&#xe0;i &#x111;&#x1eb7;t &#x111;i&#x1ec1;u khi&#x1ec3;n" font="14.0pt Tahoma" foreground="white" background="linearGradient( stop(0.0% black) stop(100.0% #727272) )" border="2.0 groove black">
+      <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+    </BoundLabel>
+
+  </CanvasPane>
+
+</ScrollPane>
+</content>
+</px>

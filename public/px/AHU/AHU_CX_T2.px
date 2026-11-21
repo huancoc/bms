@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Niagara Presentation XML -->
+<px version="1.0" media="workbench:WbPxMedia">
+<import>
+  <module name="baja"/>
+  <module name="bajaui"/>
+  <module name="converters"/>
+  <module name="gx"/>
+  <module name="kitPx"/>
+</import>
+<layers>
+  <layer name="newLayer" status="normal"/>
+  <layer name="BG_Lock" status="locked"/>
+</layers>
+<content>
+<CanvasPane viewSize="1855.0,955.0" scale="fit" background="image( source(null) )">
+
+  <BoundLabel layout="0.0,920.0,1960.0,40.0" background="linearGradient( angle(90.0) stop(0.0% black) stop(100.0% #505050) )">
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+  </BoundLabel>
+
+  <Picture layout="0.0,0.0,1855.0,930.0" image="file:/px/Backgound/BG_AHU.jpg" scale="fit">
+    <LayerTag name="LayerTag" layerName="BG_Lock"/>
+  </Picture>
+
+  <BoundLabel layout="0.0,0.0,410.0,100.0">
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+    <PopupBinding ord="file:^px/Home.px" title="BMS Home" position="0.0,0.0" size="1920.0,1055.0" modal="true"/>
+  </BoundLabel>
+
+  <BoundLabel layout="1080.0,20.0,780.0,90.0">
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+    <BoundLabelBinding hyperlink="file:^px/Home.px"/>
+  </BoundLabel>
+
+  <BoundLabel layout="1799.9999999999998,35.0,55.00000000000023,30.0" font="16.0pt Segoe UI" foreground="black" halign="left">
+    <BoundLabelBinding ord="station:|slot:/Drivers/NiagaraNetwork/WEB_LH/points/DDC_H1_1/TEMP_GEN/out/value" summary="%displayName?typeDisplayName% = %.% ">
+      <ObjectToString name="text"/>
+    </BoundLabelBinding>
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+  </BoundLabel>
+
+  <BoundLabel layout="230.0,100.0,150.0,30.0">
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+    <BoundLabelBinding hyperlink="file:^px/CHILLER.px"/>
+  </BoundLabel>
+
+  <BoundLabel layout="390.0,100.0,150.0,30.0">
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+    <BoundLabelBinding hyperlink="file:^px/AHU_Main.px"/>
+  </BoundLabel>
+
+  <BoundLabel layout="540.0,100.0,150.0,30.0">
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+    <BoundLabelBinding hyperlink="file:^px/PAU_Main.px"/>
+  </BoundLabel>
+
+  <BoundLabel layout="695.0,100.0,160.0,30.0">
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+    <BoundLabelBinding hyperlink="file:^px/FCU_Main.px"/>
+  </BoundLabel>
+
+  <BoundLabel layout="860.0,100.0,150.0,30.0">
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+    <BoundLabelBinding hyperlink="file:^px/HELP/Help.px"/>
+  </BoundLabel>
+
+  <PxInclude layout="395.0,140.0,1280.0,770.0" ord="file:^px/AHU/LAYOUT/CxT2.px">
+    <LayerTag name="LayerTag" layerName="BG_Lock"/>
+  </PxInclude>
+
+  <BoundLabel layout="5.0,140.0,190.0,40.0" text=" Chi&#x1ebf;t xu&#x1ea5;t t&#x1ea7;ng 1" font="20.0pt Tahoma" foreground="black" background="#e0e0e0" halign="left" border="2.0 groove black">
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+    <BoundLabelBinding hyperlink="file:^px/AHU/AHU_CX_T1.px"/>
+  </BoundLabel>
+
+  <BoundLabel layout="5.0,185.0,190.0,40.0" text=" Chi&#x1ebf;t xu&#x1ea5;t t&#x1ea7;ng 2" font="20.0pt Tahoma" foreground="black" background="lime" halign="left" border="2.0 groove black">
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+    <BoundLabelBinding hyperlink="file:^px/AHU/AHU_CX_T2.px"/>
+  </BoundLabel>
+
+  <Picture layout="330.0,140.0,1400.0,800.0" image="file:^px/Images/Layout/KCX.T2x.png" scale="fit" valign="top"/>
+
+  <Picture layout="850.0,590.0,120.0,70.0" scale="fit" valign="top">
+    <ValueBinding ord="station:|slot:/Drivers/NiagaraNetwork/WEB_CVI/points/DDC_CP_CX/ST_AHU_CX01">
+      <IBooleanToSimple name="image">
+        <Image name="trueValue" value="file:^px/Images/Icon/AHU_icon1.png"/>
+        <Image name="falseValue" value="file:^px/Images/Icon/AHU_icon.png"/>
+      </IBooleanToSimple>
+    </ValueBinding>
+    <PopupBinding ord="file:^px/AHU/Popup/AHU_CX_01.px" size="1400.0,550.0"/>
+  </Picture>
+
+  <Polygon stroke="black" geom="1320.0,305.0 1320.0,345.0000000000001 1340.0,345.0000000000001 1340.0,315.0 ">
+    <ValueBinding ord="station:|slot:/Drivers/Point_Demo/DO_Demo_Fan">
+      <IBooleanToSimple name="fill">
+        <Brush name="trueValue" value="lime"/>
+        <Brush name="falseValue" value="red"/>
+      </IBooleanToSimple>
+    </ValueBinding>
+  </Polygon>
+
+  <BoundLabel layout="1345.0,315.0,115.0,30.0" text=" FCU-CX-01" font="20.0pt Tahoma" foreground="black" background="#e0e0e0" halign="left" border="2.0 groove black">
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+  </BoundLabel>
+
+  <Polygon stroke="black" geom="1310.0,385.0 1310.0,425.0000000000001 1330.0,425.0000000000001 1330.0,395.0 ">
+    <ValueBinding ord="station:|slot:/Drivers/Point_Demo/DO_Demo_Fan">
+      <IBooleanToSimple name="fill">
+        <Brush name="trueValue" value="lime"/>
+        <Brush name="falseValue" value="red"/>
+      </IBooleanToSimple>
+    </ValueBinding>
+  </Polygon>
+
+  <BoundLabel layout="1335.0,395.0,114.99999999999977,30.0" text=" FCU-CX-02" font="20.0pt Tahoma" foreground="black" background="#e0e0e0" halign="left" border="2.0 groove black">
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+  </BoundLabel>
+
+  <Polygon stroke="black" geom="1420.0,770.0 1420.0,810.0000000000001 1440.0,810.0000000000001 1440.0,780.0 ">
+    <ValueBinding ord="station:|slot:/Drivers/Point_Demo/DO_Demo_Fan">
+      <IBooleanToSimple name="fill">
+        <Brush name="trueValue" value="lime"/>
+        <Brush name="falseValue" value="red"/>
+      </IBooleanToSimple>
+    </ValueBinding>
+  </Polygon>
+
+  <BoundLabel layout="1445.0,780.0,115.0,30.0" text=" FCU-CX-03" font="20.0pt Tahoma" foreground="black" background="#e0e0e0" halign="left" border="2.0 groove black">
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+  </BoundLabel>
+
+  <Picture layout="970.0,520.0,120.0,70.0" scale="fit" valign="top">
+    <ValueBinding ord="station:|slot:/Drivers/NiagaraNetwork/WEB_CVI/points/DDC_CP_CX/ST_AHU_CX02">
+      <IBooleanToSimple name="image">
+        <Image name="trueValue" value="file:^px/Images/Icon/AHU_icon1.png"/>
+        <Image name="falseValue" value="file:^px/Images/Icon/AHU_icon.png"/>
+      </IBooleanToSimple>
+    </ValueBinding>
+    <PopupBinding ord="file:^px/AHU/Popup/AHU_CX_02.px" size="1400.0,550.0"/>
+  </Picture>
+
+  <Picture layout="850.0,680.0,120.0,70.0" scale="fit" valign="top">
+    <ValueBinding ord="station:|slot:/Drivers/NiagaraNetwork/WEB_CVI/points/DDC_CP_CX/ST_AHU_CX03">
+      <IBooleanToSimple name="image">
+        <Image name="trueValue" value="file:^px/Images/Icon/AHU_icon1.png"/>
+        <Image name="falseValue" value="file:^px/Images/Icon/AHU_icon.png"/>
+      </IBooleanToSimple>
+    </ValueBinding>
+    <PopupBinding ord="file:^px/AHU/Popup/AHU_CX_04.px" size="1400.0,550.0"/>
+  </Picture>
+
+  <BoundLabel layout="505.0,650.0,150.0,169.9999999999999" font="20.0pt Tahoma" foreground="black" background="#dff3fc" halign="left">
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+  </BoundLabel>
+
+  <Picture layout="510.0,660.0,120.0,160.0" scale="fit" valign="top">
+    <ValueBinding ord="station:|slot:/Drivers/Point_Demo/DO_Demo_Fan">
+      <IBooleanToSimple name="image">
+        <Image name="trueValue" value="file:^px/kitPxGraphics/Chillers/CoolingTowers/PushThru/CoolingTower_PushThru_Left/CoolingTower_PushThru_Left_Off.png"/>
+        <Image name="falseValue" value="file:^px/kitPxGraphics/Chillers/CoolingTowers/PushThru/CoolingTower_PushThru_Left/CoolingTower_PushThru_Left_Off.png"/>
+      </IBooleanToSimple>
+    </ValueBinding>
+  </Picture>
+
+  <BoundLabel layout="380.0,700.0,129.9999999999999,30.0" text=" Th&#xe1;p GN CX" font="20.0pt Tahoma" foreground="black" background="#e0e0e0" halign="left" border="2.0 groove black">
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+  </BoundLabel>
+
+  <BoundLabel layout="970.0,600.0,109.99999999999977,30.0" text=" AHU-CX-01" font="20.0pt Tahoma" foreground="black" background="#e0e0e0" halign="left" border="2.0 groove black">
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+  </BoundLabel>
+
+  <BoundLabel layout="1090.0,530.0,109.99999999999977,30.0" text=" AHU-CX-02" font="20.0pt Tahoma" foreground="black" background="#e0e0e0" halign="left" border="2.0 groove black">
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+  </BoundLabel>
+
+  <BoundLabel layout="760.0,510.0,109.99999999999977,30.0" text=" AHU-CX-04" font="20.0pt Tahoma" foreground="black" background="#e0e0e0" halign="left" border="2.0 groove black">
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+  </BoundLabel>
+
+  <BoundLabel layout="970.0,690.0,109.99999999999977,30.0" text=" AHU-CX-03" font="20.0pt Tahoma" foreground="black" background="#e0e0e0" halign="left" border="2.0 groove black">
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+  </BoundLabel>
+
+  <Picture layout="760.0,540.0,120.0,70.0" scale="fit" valign="top">
+    <ValueBinding ord="station:|slot:/Drivers/NiagaraNetwork/WEB_CVI/points/DDC_CP_CX/ST_AHU_CX04">
+      <IBooleanToSimple name="image">
+        <Image name="trueValue" value="file:^px/Images/Icon/AHU_icon1.png"/>
+        <Image name="falseValue" value="file:^px/Images/Icon/AHU_icon.png"/>
+      </IBooleanToSimple>
+    </ValueBinding>
+    <PopupBinding ord="file:^px/AHU/Popup/AHU_CX_03.px" size="1400.0,550.0"/>
+  </Picture>
+
+</CanvasPane>
+</content>
+</px>

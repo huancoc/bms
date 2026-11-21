@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Niagara Presentation XML -->
+<px version="1.0" media="workbench:WbPxMedia">
+<import>
+  <module name="bajaui"/>
+  <module name="gx"/>
+</import>
+<layers>
+  <layer name="newLayer" status="normal"/>
+  <layer name="BG_Lock" status="normal"/>
+</layers>
+<content>
+<CanvasPane viewSize="1280.0,770.0" background="#ccffffff">
+
+  <Picture layout="0.0,0.0,1280.0,770.0" image="file:^Layout/KCX.T2.png" scale="fitRatio" halign="fill"/>
+
+</CanvasPane>
+</content>
+</px>

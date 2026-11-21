@@ -1,0 +1,555 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Niagara Presentation XML -->
+<px version="1.0" media="workbench:WbPxMedia">
+<import>
+  <module name="baja"/>
+  <module name="bajaui"/>
+  <module name="converters"/>
+  <module name="gx"/>
+  <module name="kitPx"/>
+</import>
+<layers>
+  <layer name="newLayer" status="normal"/>
+  <layer name="BG_Lock" status="locked"/>
+</layers>
+<content>
+<CanvasPane viewSize="1855.0,955.0" scale="fit" background="image( source(null) )">
+
+  <BoundLabel layout="0.0,920.0,1960.0,40.0" background="linearGradient( angle(90.0) stop(0.0% black) stop(100.0% #505050) )">
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+  </BoundLabel>
+
+  <Picture layout="0.0,0.0,1855.0,930.0" image="file:/px/Backgound/CVI_Background1.jpg" scale="fit">
+    <LayerTag name="LayerTag" layerName="BG_Lock"/>
+  </Picture>
+
+  <BoundLabel layout="0.0,0.0,410.0,100.0">
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+    <PopupBinding ord="file:^px/Home.px" title="BMS Home" position="0.0,0.0" size="1920.0,1055.0" modal="true"/>
+  </BoundLabel>
+
+  <BoundLabel layout="1080.0,20.0,780.0,90.0">
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+    <BoundLabelBinding hyperlink="file:^px/Home.px"/>
+  </BoundLabel>
+
+  <BoundLabel layout="1799.9999999999998,35.0,55.00000000000023,30.0" font="16.0pt Segoe UI" foreground="black" halign="left">
+    <BoundLabelBinding ord="station:|slot:/Drivers/NiagaraNetwork/WEB_LH/points/DDC_H1_1/TEMP_GEN/out/value" summary="%displayName?typeDisplayName% = %.% ">
+      <ObjectToString name="text"/>
+    </BoundLabelBinding>
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+  </BoundLabel>
+
+  <BoundLabel layout="230.0,100.0,150.0,30.0">
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+    <BoundLabelBinding hyperlink="file:^px/CHILLER.px"/>
+  </BoundLabel>
+
+  <BoundLabel layout="390.0,100.0,150.0,30.0">
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+    <BoundLabelBinding hyperlink="file:^px/AHU_Main.px"/>
+  </BoundLabel>
+
+  <BoundLabel layout="540.0,100.0,150.0,30.0">
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+    <BoundLabelBinding hyperlink="file:^px/PAU_Main.px"/>
+  </BoundLabel>
+
+  <BoundLabel layout="695.0,100.0,160.0,30.0">
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+    <BoundLabelBinding hyperlink="file:^px/FCU_Main.px"/>
+  </BoundLabel>
+
+  <BoundLabel layout="860.0,100.0,150.0,30.0">
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+    <BoundLabelBinding hyperlink="file:^px/HELP/Help.px"/>
+  </BoundLabel>
+
+  <BoundLabel layout="655.0,240.0,100.0,30.0" text=" AHU - LM" font="20.0pt Tahoma" foreground="black" background="#e0e0e0" halign="left" border="2.0 groove black">
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+  </BoundLabel>
+
+  <BoundLabel layout="755.0,240.0,85.0,30.0" text="Nhi&#x1ec7;t &#x111;&#x1ed9;" font="16.0pt Tahoma" border="2.0 groove black">
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+    <PopupBinding ord="history:/CVI_Supervisor/TEMPAHU$20LM" title="L&#x1ecb;ch s&#x1eed; nhi&#x1ec7;t &#x111;&#x1ed9; AHU LM"/>
+  </BoundLabel>
+
+  <BoundLabel layout="835.0,240.0,85.0,30.0" text="&#x110;&#x1ed9; &#x1ea9;m" font="16.0pt Tahoma" border="2.0 groove black">
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+    <PopupBinding ord="history:/CVI_Supervisor/HUMIDITY$20AHU$20LM" title="l&#x1ecb;ch s&#x1eed; &#x111;&#x1ed9; &#x1ea9;m AHU LM"/>
+  </BoundLabel>
+
+  <BoundLabel layout="655.0,275.0,100.0,30.0" text=" AHU - 01" font="20.0pt Tahoma" foreground="black" background="#e0e0e0" halign="left" border="2.0 groove black">
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+  </BoundLabel>
+
+  <BoundLabel layout="755.0,275.0,85.0,30.0" text="Nhi&#x1ec7;t &#x111;&#x1ed9;" font="16.0pt Tahoma" border="2.0 groove black">
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+    <PopupBinding ord="history:/CVI_Supervisor/TEMP_AHU_01" title="L&#x1ecb;ch s&#x1eed; nhi&#x1ec7;t &#x111;&#x1ed9; AHU 0"/>
+  </BoundLabel>
+
+  <BoundLabel layout="835.0,275.0,85.0,30.0" text="&#x110;&#x1ed9; &#x1ea9;m" font="16.0pt Tahoma" border="2.0 groove black">
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+    <PopupBinding ord="history:/CVI_Supervisor/HUMI_AHU_01" title="l&#x1ecb;ch s&#x1eed; &#x111;&#x1ed9; &#x1ea9;m AHU 0"/>
+  </BoundLabel>
+
+  <BoundLabel layout="655.0,310.0,100.0,30.0" text=" AHU - 02" font="20.0pt Tahoma" foreground="black" background="#e0e0e0" halign="left" border="2.0 groove black">
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+  </BoundLabel>
+
+  <BoundLabel layout="755.0,310.0,85.0,30.0" text="Nhi&#x1ec7;t &#x111;&#x1ed9;" font="16.0pt Tahoma" border="2.0 groove black">
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+    <PopupBinding ord="history:/CVI_Supervisor/TEMP_AHU_02" title="L&#x1ecb;ch s&#x1eed; nhi&#x1ec7;t &#x111;&#x1ed9; AHU 0"/>
+  </BoundLabel>
+
+  <BoundLabel layout="835.0,310.0,85.0,30.0" text="&#x110;&#x1ed9; &#x1ea9;m" font="16.0pt Tahoma" border="2.0 groove black">
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+    <PopupBinding ord="history:/CVI_Supervisor/HUMI_AHU_02" title="l&#x1ecb;ch s&#x1eed; &#x111;&#x1ed9; &#x1ea9;m AHU 02"/>
+  </BoundLabel>
+
+  <BoundLabel layout="655.0,345.0,100.0,30.0" text=" AHU - 03" font="20.0pt Tahoma" foreground="black" background="#e0e0e0" halign="left" border="2.0 groove black">
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+  </BoundLabel>
+
+  <BoundLabel layout="755.0,345.0,85.0,30.0" text="Nhi&#x1ec7;t &#x111;&#x1ed9;" font="16.0pt Tahoma" border="2.0 groove black">
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+    <PopupBinding ord="history:/CVI_Supervisor/TEMP_AHU_03" title="L&#x1ecb;ch s&#x1eed; nhi&#x1ec7;t &#x111;&#x1ed9; AHU 03"/>
+  </BoundLabel>
+
+  <BoundLabel layout="835.0,345.0,85.0,30.0" text="&#x110;&#x1ed9; &#x1ea9;m" font="16.0pt Tahoma" border="2.0 groove black">
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+    <PopupBinding ord="history:/CVI_Supervisor/HUMI_AHU_03" title="l&#x1ecb;ch s&#x1eed; &#x111;&#x1ed9; &#x1ea9;m AHU 03"/>
+  </BoundLabel>
+
+  <BoundLabel layout="655.0,380.0,100.0,30.0" text=" AHU - 04" font="20.0pt Tahoma" foreground="black" background="#e0e0e0" halign="left" border="2.0 groove black">
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+  </BoundLabel>
+
+  <BoundLabel layout="755.0,380.0,85.0,30.0" text="Nhi&#x1ec7;t &#x111;&#x1ed9;" font="16.0pt Tahoma" border="2.0 groove black">
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+    <PopupBinding ord="history:/CVI_Supervisor/TEMP_AHU_04" title="L&#x1ecb;ch s&#x1eed; nhi&#x1ec7;t &#x111;&#x1ed9; AHU 04"/>
+  </BoundLabel>
+
+  <BoundLabel layout="835.0,380.0,85.0,30.0" text="&#x110;&#x1ed9; &#x1ea9;m" font="16.0pt Tahoma" border="2.0 groove black">
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+    <PopupBinding ord="history:/CVI_Supervisor/HUMI_AHU_04" title="l&#x1ecb;ch s&#x1eed; &#x111;&#x1ed9; &#x1ea9;m AHU 04"/>
+  </BoundLabel>
+
+  <BoundLabel layout="655.0,415.0,100.0,30.0" text=" AHU - 05" font="20.0pt Tahoma" foreground="black" background="#e0e0e0" halign="left" border="2.0 groove black">
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+  </BoundLabel>
+
+  <BoundLabel layout="755.0,415.0,85.0,30.0" text="Nhi&#x1ec7;t &#x111;&#x1ed9;" font="16.0pt Tahoma" border="2.0 groove black">
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+    <PopupBinding ord="history:/CVI_Supervisor/TEMP_AHU_05" title="L&#x1ecb;ch s&#x1eed; nhi&#x1ec7;t &#x111;&#x1ed9; AHU 05"/>
+  </BoundLabel>
+
+  <BoundLabel layout="835.0,415.0,85.0,30.0" text="&#x110;&#x1ed9; &#x1ea9;m" font="16.0pt Tahoma" border="2.0 groove black">
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+    <PopupBinding ord="history:/CVI_Supervisor/HUMI_AHU_05" title="l&#x1ecb;ch s&#x1eed; &#x111;&#x1ed9; &#x1ea9;m AHU 05"/>
+  </BoundLabel>
+
+  <BoundLabel layout="835.0,450.0,85.0,30.0" text="&#x110;&#x1ed9; &#x1ea9;m" font="16.0pt Tahoma" border="2.0 groove black">
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+    <PopupBinding ord="history:/CVI_Supervisor/HUMI_AHU_06" title="l&#x1ecb;ch s&#x1eed; &#x111;&#x1ed9; &#x1ea9;m AHU 06"/>
+  </BoundLabel>
+
+  <BoundLabel layout="755.0,450.0,85.0,30.0" text="Nhi&#x1ec7;t &#x111;&#x1ed9;" font="16.0pt Tahoma" border="2.0 groove black">
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+    <PopupBinding ord="history:/CVI_Supervisor/TEMP_AHU_06" title="L&#x1ecb;ch s&#x1eed; nhi&#x1ec7;t &#x111;&#x1ed9; AHU 06"/>
+  </BoundLabel>
+
+  <BoundLabel layout="655.0,450.0,100.0,30.0" text=" AHU - 06" font="20.0pt Tahoma" foreground="black" background="#e0e0e0" halign="left" border="2.0 groove black">
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+  </BoundLabel>
+
+  <BoundLabel layout="835.0,485.0,85.0,30.0" text="&#x110;&#x1ed9; &#x1ea9;m" font="16.0pt Tahoma" border="2.0 groove black">
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+    <PopupBinding ord="history:/CVI_Supervisor/HUMI_AHU_07" title="l&#x1ecb;ch s&#x1eed; &#x111;&#x1ed9; &#x1ea9;m AHU 07"/>
+  </BoundLabel>
+
+  <BoundLabel layout="755.0,485.0,85.0,30.0" text="Nhi&#x1ec7;t &#x111;&#x1ed9;" font="16.0pt Tahoma" border="2.0 groove black">
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+    <PopupBinding ord="history:/CVI_Supervisor/TEMP_AHU_07" title="L&#x1ecb;ch s&#x1eed; nhi&#x1ec7;t &#x111;&#x1ed9; AHU 07"/>
+  </BoundLabel>
+
+  <BoundLabel layout="655.0,485.0,100.0,30.0" text=" AHU - 07" font="20.0pt Tahoma" foreground="black" background="#e0e0e0" halign="left" border="2.0 groove black">
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+  </BoundLabel>
+
+  <BoundLabel layout="835.0,520.0,85.0,30.0" text="&#x110;&#x1ed9; &#x1ea9;m" font="16.0pt Tahoma" border="2.0 groove black">
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+    <PopupBinding ord="history:/CVI_Supervisor/HUMI_AHU_08" title="l&#x1ecb;ch s&#x1eed; &#x111;&#x1ed9; &#x1ea9;m AHU 0"/>
+  </BoundLabel>
+
+  <BoundLabel layout="755.0,520.0,85.0,30.0" text="Nhi&#x1ec7;t &#x111;&#x1ed9;" font="16.0pt Tahoma" border="2.0 groove black">
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+    <PopupBinding ord="history:/CVI_Supervisor/TEMP_AHU_08" title="L&#x1ecb;ch s&#x1eed; nhi&#x1ec7;t &#x111;&#x1ed9; AHU 0"/>
+  </BoundLabel>
+
+  <BoundLabel layout="655.0,520.0,100.0,30.0" text=" AHU - 08" font="20.0pt Tahoma" foreground="black" background="#e0e0e0" halign="left" border="2.0 groove black">
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+  </BoundLabel>
+
+  <BoundLabel layout="835.0,555.0,85.0,30.0" text="&#x110;&#x1ed9; &#x1ea9;m" font="16.0pt Tahoma" border="2.0 groove black">
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+    <PopupBinding ord="history:/CVI_Supervisor/HUMI_AHU_09" title="l&#x1ecb;ch s&#x1eed; &#x111;&#x1ed9; &#x1ea9;m AHU 09"/>
+  </BoundLabel>
+
+  <BoundLabel layout="755.0,555.0,85.0,30.0" text="Nhi&#x1ec7;t &#x111;&#x1ed9;" font="16.0pt Tahoma" border="2.0 groove black">
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+    <PopupBinding ord="history:/CVI_Supervisor/TEMP_AHU_09" title="L&#x1ecb;ch s&#x1eed; nhi&#x1ec7;t &#x111;&#x1ed9; AHU 09"/>
+  </BoundLabel>
+
+  <BoundLabel layout="655.0,555.0,100.0,30.0" text=" AHU - 09" font="20.0pt Tahoma" foreground="black" background="#e0e0e0" halign="left" border="2.0 groove black">
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+  </BoundLabel>
+
+  <BoundLabel layout="835.0,590.0,85.0,30.0" text="&#x110;&#x1ed9; &#x1ea9;m" font="16.0pt Tahoma" border="2.0 groove black">
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+    <PopupBinding ord="history:/CVI_Supervisor/HUMI_AHU_010" title="l&#x1ecb;ch s&#x1eed; &#x111;&#x1ed9; &#x1ea9;m AHU 10"/>
+  </BoundLabel>
+
+  <BoundLabel layout="755.0,590.0,85.0,30.0" text="Nhi&#x1ec7;t &#x111;&#x1ed9;" font="16.0pt Tahoma" border="2.0 groove black">
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+    <PopupBinding ord="history:/CVI_Supervisor/TEMP_AHU_010" title="L&#x1ecb;ch s&#x1eed; nhi&#x1ec7;t &#x111;&#x1ed9; AHU 10"/>
+  </BoundLabel>
+
+  <BoundLabel layout="655.0,590.0,100.0,30.0" text=" AHU - 10" font="20.0pt Tahoma" foreground="black" background="#e0e0e0" halign="left" border="2.0 groove black">
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+  </BoundLabel>
+
+  <BoundLabel layout="835.0,625.0,85.0,30.0" text="&#x110;&#x1ed9; &#x1ea9;m" font="16.0pt Tahoma" border="2.0 groove black">
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+    <PopupBinding ord="history:/CVI_Supervisor/HUMI_AHU_11" title="l&#x1ecb;ch s&#x1eed; &#x111;&#x1ed9; &#x1ea9;m AHU 11"/>
+  </BoundLabel>
+
+  <BoundLabel layout="755.0,625.0,85.0,30.0" text="Nhi&#x1ec7;t &#x111;&#x1ed9;" font="16.0pt Tahoma" border="2.0 groove black">
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+    <PopupBinding ord="history:/CVI_Supervisor/TEMP_AHU_11" title="L&#x1ecb;ch s&#x1eed; nhi&#x1ec7;t &#x111;&#x1ed9; AHU 11"/>
+  </BoundLabel>
+
+  <BoundLabel layout="655.0,625.0,100.0,30.0" text=" AHU - 11" font="20.0pt Tahoma" foreground="black" background="#e0e0e0" halign="left" border="2.0 groove black">
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+  </BoundLabel>
+
+  <BoundLabel layout="835.0,660.0,85.0,30.0" text="&#x110;&#x1ed9; &#x1ea9;m" font="16.0pt Tahoma" border="2.0 groove black">
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+    <PopupBinding ord="history:/CVI_Supervisor/HUMI_AHU_12" title="l&#x1ecb;ch s&#x1eed; &#x111;&#x1ed9; &#x1ea9;m AHU 12"/>
+  </BoundLabel>
+
+  <BoundLabel layout="755.0,660.0,85.0,30.0" text="Nhi&#x1ec7;t &#x111;&#x1ed9;" font="16.0pt Tahoma" border="2.0 groove black">
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+    <PopupBinding ord="history:/CVI_Supervisor/TEMP_AHU_12" title="L&#x1ecb;ch s&#x1eed; nhi&#x1ec7;t &#x111;&#x1ed9; AHU 12"/>
+  </BoundLabel>
+
+  <BoundLabel layout="655.0,660.0,100.0,30.0" text=" AHU - 12" font="20.0pt Tahoma" foreground="black" background="#e0e0e0" halign="left" border="2.0 groove black">
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+  </BoundLabel>
+
+  <BoundLabel layout="655.0,200.0,260.0,30.0" text=" AHU Khu v&#x1ef1;c Nh&#xe0; x&#x1b0;&#x1edf;ng" font="20.0pt Tahoma" foreground="white" background="#3c0080" halign="left" border="2.0 groove black">
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+  </BoundLabel>
+
+  <BoundLabel layout="960.0,240.0,100.0,30.0" text=" AHU - KN" font="20.0pt Tahoma" foreground="black" background="#e0e0e0" halign="left" border="2.0 groove black">
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+  </BoundLabel>
+
+  <BoundLabel layout="1060.0,240.0,85.0,30.0" text="Nhi&#x1ec7;t &#x111;&#x1ed9;" font="16.0pt Tahoma" border="2.0 groove black">
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+    <PopupBinding ord="history:/CVI_Supervisor/TEMP_AHU_KN01" title="L&#x1ecb;ch s&#x1eed; nhi&#x1ec7;t &#x111;&#x1ed9; AHU Ki&#x1ec3;m nghi&#x1ec7;m"/>
+  </BoundLabel>
+
+  <BoundLabel layout="1140.0,240.0,85.0,30.0" text="&#x110;&#x1ed9; &#x1ea9;m" font="16.0pt Tahoma" border="2.0 groove black">
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+    <PopupBinding ord="history:/CVI_Supervisor/HUMI_AHU_KN01" title="l&#x1ecb;ch s&#x1eed; &#x111;&#x1ed9; &#x1ea9;m AHU Ki&#x1ec3;m nghi&#x1ec7;m"/>
+  </BoundLabel>
+
+  <BoundLabel layout="960.0,200.0,260.0,30.0" text=" AHU Khu v&#x1ef1;c ki&#x1ec3;m nghi&#x1ec7;m" font="20.0pt Tahoma" foreground="white" background="#3c0080" halign="left" border="2.0 groove black">
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+  </BoundLabel>
+
+  <BoundLabel layout="960.0,275.0,100.0,30.0" text=" AHU - QC" font="20.0pt Tahoma" foreground="black" background="#e0e0e0" halign="left" border="2.0 groove black">
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+  </BoundLabel>
+
+  <BoundLabel layout="1060.0,275.0,85.0,30.0" text="Nhi&#x1ec7;t &#x111;&#x1ed9;" font="16.0pt Tahoma" border="2.0 groove black">
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+    <PopupBinding ord="history:/CVI_Supervisor/TEMP_AHU_QC" title="L&#x1ecb;ch s&#x1eed; nhi&#x1ec7;t &#x111;&#x1ed9; AHU QC"/>
+  </BoundLabel>
+
+  <BoundLabel layout="1140.0,275.0,85.0,30.0" text="&#x110;&#x1ed9; &#x1ea9;m" font="16.0pt Tahoma" border="2.0 groove black">
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+    <PopupBinding ord="history:/CVI_Supervisor/HUMI_AHU_QC" title="l&#x1ecb;ch s&#x1eed; &#x111;&#x1ed9; &#x1ea9;m AHU QC"/>
+  </BoundLabel>
+
+  <BoundLabel layout="1265.0,240.0,100.0,30.0" text=" AHU CX1" font="20.0pt Tahoma" foreground="black" background="#e0e0e0" halign="left" border="2.0 groove black">
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+  </BoundLabel>
+
+  <BoundLabel layout="1365.0,240.0,85.0,30.0" text="Nhi&#x1ec7;t &#x111;&#x1ed9;" font="16.0pt Tahoma" border="2.0 groove black">
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+    <PopupBinding ord="history:/CVI_Supervisor/TEMP_AHU_CX01" title="L&#x1ecb;ch s&#x1eed; nhi&#x1ec7;t &#x111;&#x1ed9; AHU CX 1"/>
+  </BoundLabel>
+
+  <BoundLabel layout="1445.0,240.0,85.0,30.0" text="&#x110;&#x1ed9; &#x1ea9;m" font="16.0pt Tahoma" border="2.0 groove black">
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+    <PopupBinding ord="history:/CVI_Supervisor/HUMI_AHU_CX01" title="l&#x1ecb;ch s&#x1eed; &#x111;&#x1ed9; &#x1ea9;m AHU CX1"/>
+  </BoundLabel>
+
+  <BoundLabel layout="1265.0,200.0,260.0,30.0" text=" AHU Khu v&#x1ef1;c chi&#x1ebf;t xu&#x1ea5;t" font="20.0pt Tahoma" foreground="white" background="#3c0080" halign="left" border="2.0 groove black">
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+  </BoundLabel>
+
+  <BoundLabel layout="1265.0,275.0,100.0,30.0" text=" AHU CX2" font="20.0pt Tahoma" foreground="black" background="#e0e0e0" halign="left" border="2.0 groove black">
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+  </BoundLabel>
+
+  <BoundLabel layout="1365.0,275.0,85.0,30.0" text="Nhi&#x1ec7;t &#x111;&#x1ed9;" font="16.0pt Tahoma" border="2.0 groove black">
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+    <PopupBinding ord="history:/CVI_Supervisor/TEMP_AHU_CX02" title="L&#x1ecb;ch s&#x1eed; nhi&#x1ec7;t &#x111;&#x1ed9; AHU CX 2"/>
+  </BoundLabel>
+
+  <BoundLabel layout="1445.0,275.0,85.0,30.0" text="&#x110;&#x1ed9; &#x1ea9;m" font="16.0pt Tahoma" border="2.0 groove black">
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+    <PopupBinding ord="history:/CVI_Supervisor/HUMI_AHU_CX02" title="l&#x1ecb;ch s&#x1eed; &#x111;&#x1ed9; &#x1ea9;m AHU CX2"/>
+  </BoundLabel>
+
+  <BoundLabel layout="1265.0,310.0,100.0,30.0" text=" AHU CX3" font="20.0pt Tahoma" foreground="black" background="#e0e0e0" halign="left" border="2.0 groove black">
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+  </BoundLabel>
+
+  <BoundLabel layout="1365.0,310.0,85.0,30.0" text="Nhi&#x1ec7;t &#x111;&#x1ed9;" font="16.0pt Tahoma" border="2.0 groove black">
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+    <PopupBinding ord="history:/CVI_Supervisor/TEMP_AHU_CX03" title="L&#x1ecb;ch s&#x1eed; nhi&#x1ec7;t &#x111;&#x1ed9; AHU CX 3"/>
+  </BoundLabel>
+
+  <BoundLabel layout="1445.0,310.0,85.0,30.0" text="&#x110;&#x1ed9; &#x1ea9;m" font="16.0pt Tahoma" border="2.0 groove black">
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+    <PopupBinding ord="history:/CVI_Supervisor/HUMI_AHU_CX03" title="l&#x1ecb;ch s&#x1eed; &#x111;&#x1ed9; &#x1ea9;m AHU CX3"/>
+  </BoundLabel>
+
+  <BoundLabel layout="1265.0,345.0,100.0,30.0" text=" AHU CX4" font="20.0pt Tahoma" foreground="black" background="#e0e0e0" halign="left" border="2.0 groove black">
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+  </BoundLabel>
+
+  <BoundLabel layout="1365.0,345.0,85.0,30.0" text="Nhi&#x1ec7;t &#x111;&#x1ed9;" font="16.0pt Tahoma" border="2.0 groove black">
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+    <PopupBinding ord="history:/CVI_Supervisor/TEMP_AHU_CX04" title="L&#x1ecb;ch s&#x1eed; nhi&#x1ec7;t &#x111;&#x1ed9; AHU CX 4"/>
+  </BoundLabel>
+
+  <BoundLabel layout="1445.0,345.0,85.0,30.0" text="&#x110;&#x1ed9; &#x1ea9;m" font="16.0pt Tahoma" border="2.0 groove black">
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+    <PopupBinding ord="history:/CVI_Supervisor/HUMI_AHU_CX04" title="l&#x1ecb;ch s&#x1eed; &#x111;&#x1ed9; &#x1ea9;m AHU CX4"/>
+  </BoundLabel>
+
+  <BoundLabel layout="1555.0,240.0,100.0,30.0" text=" S PAU 01" font="20.0pt Tahoma" foreground="black" background="#e0e0e0" halign="left" border="2.0 groove black">
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+  </BoundLabel>
+
+  <BoundLabel layout="1655.0,240.0,85.0,30.0" text="Nhi&#x1ec7;t &#x111;&#x1ed9;" font="16.0pt Tahoma" border="2.0 groove black">
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+    <PopupBinding ord="history:/CVI_Supervisor/TEM_S_PAU_01" title="L&#x1ecb;ch s&#x1eed; nhi&#x1ec7;t &#x111;&#x1ed9; S PAU 01"/>
+  </BoundLabel>
+
+  <BoundLabel layout="1735.0,240.0,85.0,30.0" text="&#x110;&#x1ed9; &#x1ea9;m" font="16.0pt Tahoma" border="2.0 groove black">
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+    <PopupBinding ord="history:/CVI_Supervisor/HUMI_S_PAU_01" title="l&#x1ecb;ch s&#x1eed; &#x111;&#x1ed9; &#x1ea9;m S PAU 01"/>
+  </BoundLabel>
+
+  <BoundLabel layout="1555.0,200.0,260.0,30.0" text=" PAU" font="20.0pt Tahoma" foreground="white" background="#3c0080" halign="left" border="2.0 groove black">
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+  </BoundLabel>
+
+  <BoundLabel layout="345.0,240.0,170.0,30.0" text=" N&#x1b0;&#x1edb;c n&#xf3;ng" font="20.0pt Tahoma" foreground="black" background="#e0e0e0" halign="left" border="2.0 groove black">
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+  </BoundLabel>
+
+  <BoundLabel layout="515.0,240.0,85.0,30.0" text="&#xc1;p su&#x1ea5;t" font="16.0pt Tahoma" border="2.0 groove black">
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+    <PopupBinding ord="history:/CVI_Supervisor/WT_DIFERENT_PR02HW" title="L&#x1ecb;ch s&#x1eed; &#xe1;p su&#x1ea5;t n&#x1b0;&#x1edb;c n&#xf3;ng"/>
+  </BoundLabel>
+
+  <BoundLabel layout="345.0,200.0,260.0,30.0" text=" H&#x1ec7; n&#x1b0;&#x1edb;c n&#xf3;ng" font="20.0pt Tahoma" foreground="white" background="#3c0080" halign="left" border="2.0 groove black">
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+  </BoundLabel>
+
+  <BoundLabel layout="515.0,270.0,85.0,30.0" text="Nhi&#x1ec7;t &#x111;&#x1ed9;" font="16.0pt Tahoma" border="2.0 groove black">
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+    <PopupBinding ord="history:/CVI_Supervisor/WT_TEMP_RETURNHW" title="L&#x1ecb;ch s&#x1eed; nhi&#x1ec7;t &#x111;&#x1ed9; n&#x1b0;&#x1edb;c n&#xf3;ng h&#x1ed3;i"/>
+  </BoundLabel>
+
+  <BoundLabel layout="345.0,270.0,170.0,30.0" text=" N&#x1b0;&#x1edb;c n&#xf3;ng h&#x1ed3;i" font="20.0pt Tahoma" foreground="black" background="#e0e0e0" halign="left" border="2.0 groove black">
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+  </BoundLabel>
+
+  <BoundLabel layout="40.0,240.0,250.0,30.0" text=" Nhi&#x1ec7;t &#x111;&#x1ed9; n&#x1b0;&#x1edb;c gi&#x1ea3;i nhi&#x1ec7;t" font="20.0pt Tahoma" foreground="black" background="#80e0e0e0" halign="left" border="2.0 groove black">
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+  </BoundLabel>
+
+  <BoundLabel layout="200.0,270.0,90.0,30.0" text="Nhi&#x1ec7;t &#x111;&#x1ed9;" font="16.0pt Tahoma" border="2.0 groove black">
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+    <PopupBinding ord="history:/CVI_Supervisor/Temp_R_TGN" title="L&#x1ecb;ch s&#x1eed; nhi&#x1ec7;t &#x111;&#x1ed9; n&#x1b0;&#x1edb;c gi&#x1ea3;i nhi&#x1ec7;t &#x111;&#x1b0;&#x1edd;ng h&#x1ed3;i"/>
+  </BoundLabel>
+
+  <BoundLabel layout="40.0,200.0,260.0,30.0" text=" H&#x1ec7; chiller gi&#xe1;m s&#xe1;t t&#x1ed5;ng" font="20.0pt Tahoma" foreground="white" background="#3c0080" halign="left" border="2.0 groove black">
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+  </BoundLabel>
+
+  <BoundLabel layout="40.0,270.0,160.0,30.0" text=" &#x110;&#x1b0;&#x1edd;ng &#x1ed1;ng h&#x1ed3;i" font="20.0pt Tahoma" foreground="black" background="#e0e0e0" halign="left" border="2.0 groove black">
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+  </BoundLabel>
+
+  <BoundLabel layout="200.0,300.0,90.0,30.0" text="Nhi&#x1ec7;t &#x111;&#x1ed9;" font="16.0pt Tahoma" border="2.0 groove black">
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+    <PopupBinding ord="history:/CVI_Supervisor/Temp_S_TGN" title="L&#x1ecb;ch s&#x1eed; nhi&#x1ec7;t &#x111;&#x1ed9; n&#x1b0;&#x1edb;c gi&#x1ea3;i nhi&#x1ec7;t &#x111;&#x1b0;&#x1edd;ng c&#x1ea5;p"/>
+  </BoundLabel>
+
+  <BoundLabel layout="40.0,300.0,160.0,30.0" text=" &#x110;&#x1b0;&#x1edd;ng &#x1ed1;ng c&#x1ea5;p" font="20.0pt Tahoma" foreground="black" background="#e0e0e0" halign="left" border="2.0 groove black">
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+  </BoundLabel>
+
+  <BoundLabel layout="40.0,340.0,250.0,30.0" text=" Nhi&#x1ec7;t &#x111;&#x1ed9; n&#x1b0;&#x1edb;c sau chiller" font="20.0pt Tahoma" foreground="black" background="#80e0e0e0" halign="left" border="2.0 groove black">
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+  </BoundLabel>
+
+  <BoundLabel layout="40.0,370.0,160.0,30.0" text=" &#x110;&#x1b0;&#x1edd;ng &#x1ed1;ng h&#x1ed3;i" font="20.0pt Tahoma" foreground="black" background="#e0e0e0" halign="left" border="2.0 groove black">
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+  </BoundLabel>
+
+  <BoundLabel layout="200.0,370.0,90.0,30.0" text="Nhi&#x1ec7;t &#x111;&#x1ed9;" font="16.0pt Tahoma" border="2.0 groove black">
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+    <PopupBinding ord="history:/CVI_Supervisor/Temp_R_NL" title="L&#x1ecb;ch s&#x1eed; nhi&#x1ec7;t &#x111;&#x1ed9; n&#x1b0;&#x1edb;c l&#x1ea1;nh &#x111;&#x1b0;&#x1edd;ng h&#x1ed3;i"/>
+  </BoundLabel>
+
+  <BoundLabel layout="40.0,400.0,160.0,30.0" text=" &#x110;&#x1b0;&#x1edd;ng &#x1ed1;ng c&#x1ea5;p" font="20.0pt Tahoma" foreground="black" background="#e0e0e0" halign="left" border="2.0 groove black">
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+  </BoundLabel>
+
+  <BoundLabel layout="200.0,400.0,90.0,30.0" text="Nhi&#x1ec7;t &#x111;&#x1ed9;" font="16.0pt Tahoma" border="2.0 groove black">
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+    <PopupBinding ord="history:/CVI_Supervisor/Temp_S_NL" title="L&#x1ecb;ch s&#x1eed; nhi&#x1ec7;t &#x111;&#x1ed9; n&#x1b0;&#x1edb;c l&#x1ea1;nh &#x111;&#x1b0;&#x1edd;ng c&#x1ea5;p"/>
+  </BoundLabel>
+
+  <BoundLabel layout="1555.0,275.0,100.0,30.0" text=" S PAU 02" font="20.0pt Tahoma" foreground="black" background="#e0e0e0" halign="left" border="2.0 groove black">
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+  </BoundLabel>
+
+  <BoundLabel layout="1655.0,275.0,85.0,30.0" text="Nhi&#x1ec7;t &#x111;&#x1ed9;" font="16.0pt Tahoma" border="2.0 groove black">
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+    <PopupBinding ord="history:/CVI_Supervisor/TemP_SPAU_02" title="L&#x1ecb;ch s&#x1eed; nhi&#x1ec7;t &#x111;&#x1ed9; S PAU 02"/>
+  </BoundLabel>
+
+  <BoundLabel layout="1735.0,275.0,85.0,30.0" text="&#x110;&#x1ed9; &#x1ea9;m" font="16.0pt Tahoma" border="2.0 groove black">
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+    <PopupBinding ord="history:/CVI_Supervisor/Humi_SPAU_02" title="l&#x1ecb;ch s&#x1eed; &#x111;&#x1ed9; &#x1ea9;m S PAU 02"/>
+  </BoundLabel>
+
+  <BoundLabel layout="345.0,300.0,170.0,30.0" text=" N&#x1b0;&#x1edb;c n&#xf3;ng c&#x1ea5;p" font="20.0pt Tahoma" foreground="black" background="#e0e0e0" halign="left" border="2.0 groove black">
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+  </BoundLabel>
+
+  <BoundLabel layout="515.0,300.0,85.0,30.0" text="Nhi&#x1ec7;t &#x111;&#x1ed9;" font="16.0pt Tahoma" border="2.0 groove black">
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+    <PopupBinding ord="history:/CVI_Supervisor/WT_TEMP_SUPPLYHW" title="L&#x1ecb;ch s&#x1eed; nhi&#x1ec7;t &#x111;&#x1ed9; n&#x1b0;&#x1edb;c n&#xf3;ng c&#x1ea5;p"/>
+  </BoundLabel>
+
+  <BoundLabel layout="40.0,480.0,250.0,30.0" text=" Nhi&#x1ec7;t &#x111;&#x1ed9; n&#x1b0;&#x1edb;c gi&#x1ea3;i nhi&#x1ec7;t" font="20.0pt Tahoma" foreground="black" background="#80e0e0e0" halign="left" border="2.0 groove black">
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+  </BoundLabel>
+
+  <BoundLabel layout="200.0,510.0,90.0,30.0" text="Nhi&#x1ec7;t &#x111;&#x1ed9;" font="16.0pt Tahoma" border="2.0 groove black">
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+    <PopupBinding ord="history:/CVI_Supervisor/Condenser$20Entering$20Water$20TempCH1" title="L&#x1ecb;ch s&#x1eed; nhi&#x1ec7;t &#x111;&#x1ed9; n&#x1b0;&#x1edb;c gi&#x1ea3;i nhi&#x1ec7;t &#x111;&#x1b0;&#x1edd;ng h&#x1ed3;i"/>
+  </BoundLabel>
+
+  <BoundLabel layout="40.0,510.0,160.0,30.0" text=" &#x110;&#x1b0;&#x1edd;ng &#x1ed1;ng h&#x1ed3;i" font="20.0pt Tahoma" foreground="black" background="#e0e0e0" halign="left" border="2.0 groove black">
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+  </BoundLabel>
+
+  <BoundLabel layout="200.0,540.0,90.0,30.0" text="Nhi&#x1ec7;t &#x111;&#x1ed9;" font="16.0pt Tahoma" border="2.0 groove black">
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+    <PopupBinding ord="history:/CVI_Supervisor/Condenser$20Leaving$20Water$20TempCH1" title="L&#x1ecb;ch s&#x1eed; nhi&#x1ec7;t &#x111;&#x1ed9; n&#x1b0;&#x1edb;c gi&#x1ea3;i nhi&#x1ec7;t &#x111;&#x1b0;&#x1edd;ng c&#x1ea5;p"/>
+  </BoundLabel>
+
+  <BoundLabel layout="40.0,540.0,160.0,30.0" text=" &#x110;&#x1b0;&#x1edd;ng &#x1ed1;ng c&#x1ea5;p" font="20.0pt Tahoma" foreground="black" background="#e0e0e0" halign="left" border="2.0 groove black">
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+  </BoundLabel>
+
+  <BoundLabel layout="40.0,580.0,250.0,30.0" text=" Nhi&#x1ec7;t &#x111;&#x1ed9; n&#x1b0;&#x1edb;c sau chiller" font="20.0pt Tahoma" foreground="black" background="#80e0e0e0" halign="left" border="2.0 groove black">
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+  </BoundLabel>
+
+  <BoundLabel layout="40.0,610.0,160.0,30.0" text=" &#x110;&#x1b0;&#x1edd;ng &#x1ed1;ng h&#x1ed3;i" font="20.0pt Tahoma" foreground="black" background="#e0e0e0" halign="left" border="2.0 groove black">
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+  </BoundLabel>
+
+  <BoundLabel layout="200.0,610.0,90.0,30.0" text="Nhi&#x1ec7;t &#x111;&#x1ed9;" font="16.0pt Tahoma" border="2.0 groove black">
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+    <PopupBinding ord="history:/CVI_Supervisor/Evaporator$20Entering$20Water$20TempCH1" title="L&#x1ecb;ch s&#x1eed; nhi&#x1ec7;t &#x111;&#x1ed9; n&#x1b0;&#x1edb;c l&#x1ea1;nh &#x111;&#x1b0;&#x1edd;ng h&#x1ed3;i"/>
+  </BoundLabel>
+
+  <BoundLabel layout="40.0,640.0,160.0,30.0" text=" &#x110;&#x1b0;&#x1edd;ng &#x1ed1;ng c&#x1ea5;p" font="20.0pt Tahoma" foreground="black" background="#e0e0e0" halign="left" border="2.0 groove black">
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+  </BoundLabel>
+
+  <BoundLabel layout="200.0,640.0,90.0,30.0" text="Nhi&#x1ec7;t &#x111;&#x1ed9;" font="16.0pt Tahoma" border="2.0 groove black">
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+    <PopupBinding ord="history:/CVI_Supervisor/Evaporator$20Leaving$20Water$20TempCH1" title="L&#x1ecb;ch s&#x1eed; nhi&#x1ec7;t &#x111;&#x1ed9; n&#x1b0;&#x1edb;c l&#x1ea1;nh &#x111;&#x1b0;&#x1edd;ng c&#x1ea5;p"/>
+  </BoundLabel>
+
+  <BoundLabel layout="40.0,440.0,260.0,30.0" text=" Chiller 1" font="20.0pt Tahoma" foreground="white" background="#3c0080" halign="left" border="2.0 groove black">
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+  </BoundLabel>
+
+  <BoundLabel layout="40.0,720.0,250.0,30.0" text=" Nhi&#x1ec7;t &#x111;&#x1ed9; n&#x1b0;&#x1edb;c gi&#x1ea3;i nhi&#x1ec7;t" font="20.0pt Tahoma" foreground="black" background="#80e0e0e0" halign="left" border="2.0 groove black">
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+  </BoundLabel>
+
+  <BoundLabel layout="200.0,750.0,90.0,30.0" text="Nhi&#x1ec7;t &#x111;&#x1ed9;" font="16.0pt Tahoma" border="2.0 groove black">
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+    <PopupBinding ord="history:/CVI_Supervisor/Condenser$20Entering$20Water$20TempCH2" title="L&#x1ecb;ch s&#x1eed; nhi&#x1ec7;t &#x111;&#x1ed9; n&#x1b0;&#x1edb;c gi&#x1ea3;i nhi&#x1ec7;t &#x111;&#x1b0;&#x1edd;ng h&#x1ed3;i"/>
+  </BoundLabel>
+
+  <BoundLabel layout="40.0,750.0,160.0,30.0" text=" &#x110;&#x1b0;&#x1edd;ng &#x1ed1;ng h&#x1ed3;i" font="20.0pt Tahoma" foreground="black" background="#e0e0e0" halign="left" border="2.0 groove black">
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+  </BoundLabel>
+
+  <BoundLabel layout="200.0,780.0,90.0,30.0" text="Nhi&#x1ec7;t &#x111;&#x1ed9;" font="16.0pt Tahoma" border="2.0 groove black">
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+    <PopupBinding ord="history:/CVI_Supervisor/Condenser$20Leaving$20Water$20TempCH2" title="L&#x1ecb;ch s&#x1eed; nhi&#x1ec7;t &#x111;&#x1ed9; n&#x1b0;&#x1edb;c gi&#x1ea3;i nhi&#x1ec7;t &#x111;&#x1b0;&#x1edd;ng c&#x1ea5;p"/>
+  </BoundLabel>
+
+  <BoundLabel layout="40.0,780.0,160.0,30.0" text=" &#x110;&#x1b0;&#x1edd;ng &#x1ed1;ng c&#x1ea5;p" font="20.0pt Tahoma" foreground="black" background="#e0e0e0" halign="left" border="2.0 groove black">
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+  </BoundLabel>
+
+  <BoundLabel layout="40.0,820.0,250.0,30.0" text=" Nhi&#x1ec7;t &#x111;&#x1ed9; n&#x1b0;&#x1edb;c sau chiller" font="20.0pt Tahoma" foreground="black" background="#80e0e0e0" halign="left" border="2.0 groove black">
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+  </BoundLabel>
+
+  <BoundLabel layout="40.0,850.0,160.0,30.0" text=" &#x110;&#x1b0;&#x1edd;ng &#x1ed1;ng h&#x1ed3;i" font="20.0pt Tahoma" foreground="black" background="#e0e0e0" halign="left" border="2.0 groove black">
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+  </BoundLabel>
+
+  <BoundLabel layout="200.0,850.0,90.0,30.0" text="Nhi&#x1ec7;t &#x111;&#x1ed9;" font="16.0pt Tahoma" border="2.0 groove black">
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+    <PopupBinding ord="history:/CVI_Supervisor/Evaporator$20Entering$20Water$20TempCH2" title="L&#x1ecb;ch s&#x1eed; nhi&#x1ec7;t &#x111;&#x1ed9; n&#x1b0;&#x1edb;c l&#x1ea1;nh &#x111;&#x1b0;&#x1edd;ng h&#x1ed3;i"/>
+  </BoundLabel>
+
+  <BoundLabel layout="40.0,880.0,160.0,30.0" text=" &#x110;&#x1b0;&#x1edd;ng &#x1ed1;ng c&#x1ea5;p" font="20.0pt Tahoma" foreground="black" background="#e0e0e0" halign="left" border="2.0 groove black">
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+  </BoundLabel>
+
+  <BoundLabel layout="200.0,880.0,90.0,30.0" text="Nhi&#x1ec7;t &#x111;&#x1ed9;" font="16.0pt Tahoma" border="2.0 groove black">
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+    <PopupBinding ord="history:/CVI_Supervisor/Evaporator$20Leaving$20Water$20TempCH2" title="L&#x1ecb;ch s&#x1eed; nhi&#x1ec7;t &#x111;&#x1ed9; n&#x1b0;&#x1edb;c l&#x1ea1;nh &#x111;&#x1b0;&#x1edd;ng c&#x1ea5;p"/>
+  </BoundLabel>
+
+  <BoundLabel layout="40.0,680.0,260.0,30.0" text=" Chiller 2" font="20.0pt Tahoma" foreground="white" background="#3c0080" halign="left" border="2.0 groove black">
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+  </BoundLabel>
+
+</CanvasPane>
+</content>
+</px>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Niagara Presentation XML -->
+<px version="1.0" media="workbench:WbPxMedia">
+<import>
+  <module name="baja"/>
+  <module name="bajaui"/>
+  <module name="converters"/>
+  <module name="gx"/>
+  <module name="kitPx"/>
+</import>
+<layers>
+  <layer name="newLayer" status="normal"/>
+  <layer name="BG_Lock" status="locked"/>
+</layers>
+<content>
+<CanvasPane viewSize="1400.0,550.0" scale="fit" background="image( source(null) )">
+
+  <Rect fill="white" stroke="black" geom="0.0,0.0,1400.0,550.0">
+    <LayerTag name="LayerTag" layerName="BG_Lock"/>
+  </Rect>
+
+  <BoundLabel layout="0.0,0.0,1400.0,40.0" text="  AHU-Chi&#x1ebf;t xu&#x1ea5;t 01" font="24.0pt Tahoma" foreground="white" background="linearGradient( angle(90.0) stop(0.0% black) stop(100.0% #505050) )" halign="left">
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+  </BoundLabel>
+
+  <PxInclude layout="1000.0,410.0,210.0,70.0" ord="file:^px/AHU/Panel/Panel_AHU_CX_01.px"/>
+
+  <PxInclude layout="1010.0,420.0,210.0,70.0" ord="file:^px/AHU/Panel/Panel_AHU_CX_01.px"/>
+
+</CanvasPane>
+</content>
+</px>

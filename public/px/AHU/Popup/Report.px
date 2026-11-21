@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Niagara Presentation XML -->
+<px version="1.0" media="workbench:WbPxMedia">
+<import>
+  <module name="baja"/>
+  <module name="bajaui"/>
+  <module name="converters"/>
+  <module name="gx"/>
+  <module name="kitPx"/>
+</import>
+<layers>
+  <layer name="newLayer" status="normal"/>
+  <layer name="BG_Lock" status="locked"/>
+</layers>
+<content>
+<CanvasPane viewSize="1400.0,550.0" scale="fit" background="image( source(null) )">
+
+  <Rect fill="white" stroke="black" geom="0.0,0.0,1400.0,550.0">
+    <LayerTag name="LayerTag" layerName="BG_Lock"/>
+  </Rect>
+
+  <BoundLabel layout="625.0,150.0,175.0,103.0" image="file:^px/kitPxGraphics/Ductwork/Duct_Horz_Short.png">
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+  </BoundLabel>
+
+  <BoundLabel layout="505.0,150.0,175.0,103.0">
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+    <ValueBinding ord="station:|slot:/Drivers/NiagaraNetwork/WEB_CVI/points/DDC_CP_02_4/BI_DPS_PAU_02">
+      <IBooleanToSimple name="image">
+        <Image name="trueValue" value="file:^px/kitPxGraphics/Filters/Filter_Single_Dp/Filter_Single_DP_4.png"/>
+        <Image name="falseValue" value="file:^px/kitPxGraphics/Filters/Filter_Single_Dp/Filter_Single_DP_0.png"/>
+      </IBooleanToSimple>
+    </ValueBinding>
+  </BoundLabel>
+
+  <BoundLabel layout="885.0,150.0,175.0,105.0" image="file:^px/kitPxGraphics/Ductwork/Duct_Horz_Short.png">
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+  </BoundLabel>
+
+  <BoundLabel layout="640.0,150.0,96.0,162.0">
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+    <ValueBinding ord="station:|slot:/Drivers/NiagaraNetwork/WEB_CVI/points/DDC_CP_02_4/VAL_PAU_02">
+      <INumericToSimple name="image" map="gx:Image -inf:20.0=file:^px/kitPxGraphics/Coils/Coils_Cooling_2Way_Bottom/Coils_Cooling_2Way_Bottom_0.png;20.0:40.0=file:^px/kitPxGraphics/Coils/Coils_Cooling_2Way_Bottom/Coils_Cooling_2Way_Bottom_1.png;40.0:60.0=file:^px/kitPxGraphics/Coils/Coils_Cooling_2Way_Bottom/Coils_Cooling_2Way_Bottom_2.png;60.0:80.0=file:^px/kitPxGraphics/Coils/Coils_Cooling_2Way_Bottom/Coils_Cooling_2Way_Bottom_3.png;80.0:+inf=file:^px/kitPxGraphics/Coils/Coils_Cooling_2Way_Bottom/Coils_Cooling_2Way_Bottom_4.png;default=file:^px/kitPxGraphics/Coils/Coils_Cooling_2Way_Bottom/Coils_Cooling_2Way_Bottom_0.png;"/>
+    </ValueBinding>
+  </BoundLabel>
+
+  <BoundLabel layout="960.0,150.0,130.0,105.0" image="file:^px/kitPxGraphics/Ductwork/Duct_Horz_End_Right.png">
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+  </BoundLabel>
+
+  <BoundLabel layout="530.0,100.0,120.0,20.0" text="B&#xe1;o b&#x1ea9;n" font="14.0pt Tahoma" foreground="black" background="#e0e0e0" border="2.0 groove black">
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+  </BoundLabel>
+
+  <BoundLabel layout="530.0,120.0,120.0,20.0" border="2.0 groove black">
+    <BoundLabelBinding ord="station:|slot:/Drivers/NiagaraNetwork/WEB_CVI/points/DDC_CP_02_4/BI_DPS_PAU_02">
+      <IBooleanToSimple name="text">
+        <String name="trueValue" value="B&#x1ea9;n"/>
+        <String name="falseValue" value="S&#x1ea1;ch"/>
+      </IBooleanToSimple>
+    </BoundLabelBinding>
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+  </BoundLabel>
+
+  <BoundLabel layout="745.0,100.0,120.0,20.0" text="Bi&#x1ebf;n t&#x1ea7;n" font="14.0pt Tahoma" foreground="black" background="#e0e0e0" border="2.0 groove black">
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+  </BoundLabel>
+
+  <BoundLabel layout="745.0,120.0,120.0,20.0" border="2.0 groove black">
+    <BoundLabelBinding ord="station:|slot:/Drivers/NiagaraNetwork/WEB_CVI/points/DDC_CP_02_4/AI_FBVSD_PAU_02/out/value">
+      <ObjectToString name="text"/>
+    </BoundLabelBinding>
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+  </BoundLabel>
+
+  <BoundLabel layout="1060.0,170.0,50.0,50.0" image="file:^px/kitPxGraphics/Misc/Arrows/arrowRight.png">
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+  </BoundLabel>
+
+  <BoundLabel layout="1110.0,190.0,120.0,20.0" text="Gi&#xf3; c&#x1ea5;p" font="bold 16.0pt Tahoma" foreground="black">
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+  </BoundLabel>
+
+  <BoundLabel layout="565.0,335.0,229.9999999999999,20.0" text="C&#xe0;i &#x111;&#x1eb7;t &#x111;i&#x1ec1;u khi&#x1ec3;n" font="14.0pt Tahoma" foreground="white" background="linearGradient( stop(0.0% black) stop(100.0% #727272) )" border="2.0 groove black">
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+  </BoundLabel>
+
+  <BoundLabel layout="565.0,355.0,120.0,20.0" text="Valve l&#x1ea1;nh" font="14.0pt Tahoma" foreground="black" background="#e0e0e0" border="2.0 groove black">
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+  </BoundLabel>
+
+  <BoundLabel layout="435.0,335.0,120.0,20.0" text="Ch&#x1ebf; &#x111;&#x1ed9; t&#x1ee7;" font="14.0pt Tahoma" foreground="black" background="#e0e0e0" border="2.0 groove black">
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+  </BoundLabel>
+
+  <BoundLabel layout="435.0,355.0,120.0,80.00000000000011" font="14.0pt Tahoma" foreground="black" border="2.0 groove black">
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+  </BoundLabel>
+
+  <BoundLabel layout="565.0,375.0,120.0,20.0" text="Nhi&#x1ec7;t &#x111;&#x1ed9; SP" font="14.0pt Tahoma" foreground="black" background="#e0e0e0" border="2.0 groove black">
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+  </BoundLabel>
+
+  <BoundLabel layout="745.0,150.0,175.0,105.0">
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+    <ValueBinding ord="station:|slot:/Drivers/NiagaraNetwork/WEB_CVI/points/DDC_CP_02_4/BI_ST_PAU_02">
+      <IBooleanToSimple name="image">
+        <Image name="trueValue" value="file:^px/kitPxGraphics/Fans/Fans_Horz/Fans_Horz/Fans_Horz_Right/Fans_Horz_Right_On.gif"/>
+        <Image name="falseValue" value="file:^px/kitPxGraphics/Fans/Fans_Horz/Fans_Horz/Fans_Horz_Right/Fans_Horz_Right_Off.png"/>
+      </IBooleanToSimple>
+    </ValueBinding>
+  </BoundLabel>
+
+  <BoundLabel layout="0.0,0.0,1400.0,40.0" text="  S-PAU-02" font="24.0pt Tahoma" foreground="white" background="linearGradient( angle(90.0) stop(0.0% black) stop(100.0% #505050) )" halign="left">
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+  </BoundLabel>
+
+  <BoundLabel layout="415.0,150.0,130.0,105.0" image="file:^px/kitPxGraphics/Ductwork/Duct_Horz_Long.png">
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+  </BoundLabel>
+
+  <BoundLabel layout="315.0,150.0,130.0,105.0" image="file:^px/kitPxGraphics/Ductwork/Duct_Horz_End_Left.png">
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+  </BoundLabel>
+
+  <BoundLabel layout="445.0,150.0,40.0,105.0" image="file:^px/kitPxGraphics/Sensors/sensor_duct_pressurealrm_top.png">
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+  </BoundLabel>
+
+  <BoundLabel layout="230.0,200.0,120.0,20.0" text="Gi&#xf3; m&#x1edb;i" font="bold 16.0pt Tahoma" foreground="black">
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+  </BoundLabel>
+
+  <BoundLabel layout="330.0,185.0,50.0,50.0" image="file:^px/kitPxGraphics/Misc/Arrows/cArrowRight.png">
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+  </BoundLabel>
+
+  <BoundLabel layout="385.0,100.0,120.0,20.0" text="Nhi&#x1ec7;t &#x111;&#x1ed9;/ &#x111;&#x1ed9; &#x1ea9;m" font="14.0pt Tahoma" foreground="black" background="#e0e0e0" border="2.0 groove black">
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+  </BoundLabel>
+
+  <BoundLabel layout="385.0,120.0,60.0,20.0" border="2.0 groove black">
+    <BoundLabelBinding ord="station:|slot:/Drivers/NiagaraNetwork/WEB_CVI/points/DDC_CP_02_4/TEMP_OUTS_PAU_02/out/value">
+      <ObjectToString name="text"/>
+    </BoundLabelBinding>
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+  </BoundLabel>
+
+  <BoundLabel layout="445.0,120.0,60.0,20.0" border="2.0 groove black">
+    <BoundLabelBinding ord="station:|slot:/Drivers/NiagaraNetwork/WEB_CVI/points/DDC_CP_02_4/HUMI_OUTS_PAU_02/out/value">
+      <ObjectToString name="text"/>
+    </BoundLabelBinding>
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+  </BoundLabel>
+
+  <BoundLabel layout="445.0,355.0000000000001,99.99999999999997,79.99999999999989">
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+    <ValueBinding ord="station:|slot:/Drivers/NiagaraNetwork/WEB_CVI/points/DDC_CP_02_4/BI_AM_PAU_02">
+      <IBooleanToSimple name="image">
+        <Image name="trueValue" value="file:^px/Image/Buttons/switch_auto_a.png"/>
+        <Image name="falseValue" value="file:^px/Image/Buttons/switch_man_a.png"/>
+      </IBooleanToSimple>
+    </ValueBinding>
+  </BoundLabel>
+
+  <BoundLabel layout="955.0,150.0,40.0,105.0" image="file:^px/kitPxGraphics/Sensors/sensor_duct_sp_top.png">
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+  </BoundLabel>
+
+  <BoundLabel layout="920.0,100.0,120.0,20.0" text="V&#x1ead;n t&#x1ed1;c gi&#xf3;" font="14.0pt Tahoma" foreground="black" background="#e0e0e0" border="2.0 groove black">
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+  </BoundLabel>
+
+  <BoundLabel layout="920.0,120.0,120.0,20.0" border="2.0 groove black">
+    <BoundLabelBinding ord="station:|slot:/Drivers/NiagaraNetwork/WEB_CVI/points/DDC_CP_02_3/AIR_VEL_AHU_03/out/value">
+      <ObjectToString name="text"/>
+    </BoundLabelBinding>
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+  </BoundLabel>
+
+  <Picture layout="845.0,220.0,32.0,32.0" scale="fitRatio">
+    <ValueBinding ord="station:|slot:/Drivers/NiagaraNetwork/WEB_CVI/points/DDC_CP_02_4/BI_TR_PAU_02">
+      <IBooleanToSimple name="image">
+        <Image name="trueValue" value="file:^px/Images/Icon/Trip_On.png"/>
+        <Image name="falseValue" value="file:^px/Images/Icon/Trip_Off.png"/>
+      </IBooleanToSimple>
+    </ValueBinding>
+  </Picture>
+
+  <BoundLabel layout="685.0,355.0,110.0,20.0" font="bold 12.0pt Segoe UI" halign="right" border="2.0 groove black">
+    <BoundLabelBinding ord="station:|slot:/Drivers/NiagaraNetwork/WEB_CVI/points/DDC_CP_02_4/VAL_PAU_02/out">
+      <ObjectToString name="text" format=""/>
+      <IBooleanToSimple name="background">
+        <Brush name="trueValue" value="#ffc0ff"/>
+        <Brush name="falseValue" value="null"/>
+      </IBooleanToSimple>
+    </BoundLabelBinding>
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+  </BoundLabel>
+
+  <BoundLabel layout="685.0,375.0,110.0,20.0" font="bold 12.0pt Segoe UI" halign="right" border="2.0 groove black">
+    <BoundLabelBinding ord="station:|slot:/Drivers/NiagaraNetwork/WEB_CVI/points/DDC_CP_02_4/PAU02_Temp_SP/out">
+      <ObjectToString name="text" format=""/>
+      <IBooleanToSimple name="background">
+        <Brush name="trueValue" value="#ffc0ff"/>
+        <Brush name="falseValue" value="null"/>
+      </IBooleanToSimple>
+    </BoundLabelBinding>
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+  </BoundLabel>
+
+  <BoundLabel layout="685.0,355.0,110.0,20.0" border="2.0 groove black">
+    <BoundLabelBinding ord="station:|slot:/Drivers/NiagaraNetwork/WEB_CVI/points/DDC_CP_02_4/VAL_PAU_02/out/value">
+      <ObjectToString name="text"/>
+    </BoundLabelBinding>
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+  </BoundLabel>
+
+  <BoundLabel layout="685.0,375.0,110.0,20.0" border="2.0 groove black">
+    <BoundLabelBinding ord="station:|slot:/Drivers/NiagaraNetwork/WEB_CVI/points/DDC_CP_02_4/PAU02_Temp_SP/out/value">
+      <ObjectToString name="text"/>
+    </BoundLabelBinding>
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+  </BoundLabel>
+
+  <PxInclude layout="805.0,335.0,210.0,125.0" ord="file:^px/AHU/Panel1/Spau02.px"/>
+
+  <BoundLabel layout="90.0,360.0,250.0,30.0" text=" Nhi&#x1ec7;t &#x111;&#x1ed9; FCU" font="20.0pt Tahoma" foreground="black" background="#80e0e0e0" halign="left" border="2.0 groove black">
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+  </BoundLabel>
+
+  <BoundLabel layout="250.0,390.0,90.0,30.0" text="Nhi&#x1ec7;t &#x111;&#x1ed9;" font="16.0pt Tahoma" border="2.0 groove black">
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+    <PopupBinding ord="history:/CVI_Supervisor/Room_TempFCU_01" title="L&#x1ecb;ch s&#x1eed; nhi&#x1ec7;t &#x111;&#x1ed9; n&#x1b0;&#x1edb;c gi&#x1ea3;i nhi&#x1ec7;t &#x111;&#x1b0;&#x1edd;ng h&#x1ed3;i"/>
+  </BoundLabel>
+
+  <BoundLabel layout="90.0,320.0,260.0,30.0" text=" H&#x1ec7; chiller gi&#xe1;m s&#xe1;t t&#x1ed5;ng" font="20.0pt Tahoma" foreground="white" background="#3c0080" halign="left" border="2.0 groove black">
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+  </BoundLabel>
+
+  <BoundLabel layout="90.0,390.0,160.0,30.0" text=" FCU-01" font="20.0pt Tahoma" foreground="black" background="#e0e0e0" halign="left" border="2.0 groove black">
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+  </BoundLabel>
+
+</CanvasPane>
+</content>
+</px>

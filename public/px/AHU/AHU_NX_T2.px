@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Niagara Presentation XML -->
+<px version="1.0" media="workbench:WbPxMedia">
+<import>
+  <module name="baja"/>
+  <module name="bajaui"/>
+  <module name="converters"/>
+  <module name="gx"/>
+  <module name="kitPx"/>
+</import>
+<layers>
+  <layer name="newLayer" status="normal"/>
+  <layer name="BG_Lock" status="normal"/>
+</layers>
+<content>
+<CanvasPane viewSize="1855.0,955.0" scale="fit" background="image( source(null) )">
+
+  <BoundLabel layout="-100.0,920.0,1960.0,40.0" background="linearGradient( angle(90.0) stop(0.0% black) stop(100.0% #505050) )">
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+  </BoundLabel>
+
+  <Picture layout="0.0,0.0,1855.0,930.0" image="file:/px/Backgound/BG_AHU.jpg" scale="fit">
+    <LayerTag name="LayerTag" layerName="BG_Lock"/>
+  </Picture>
+
+  <BoundLabel layout="0.0,0.0,410.0,100.0">
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+    <PopupBinding ord="file:^px/Home.px" title="BMS Home" position="0.0,0.0" size="1920.0,1055.0" modal="true"/>
+  </BoundLabel>
+
+  <BoundLabel layout="1080.0,20.0,780.0,90.0">
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+    <BoundLabelBinding hyperlink="file:^px/Home.px"/>
+  </BoundLabel>
+
+  <BoundLabel layout="1799.9999999999998,35.0,55.00000000000023,30.0" font="16.0pt Segoe UI" foreground="black" halign="left">
+    <BoundLabelBinding ord="station:|slot:/Drivers/NiagaraNetwork/WEB_LH/points/DDC_H1_1/TEMP_GEN/out/value" summary="%displayName?typeDisplayName% = %.% ">
+      <ObjectToString name="text"/>
+    </BoundLabelBinding>
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+  </BoundLabel>
+
+  <BoundLabel layout="230.0,100.0,150.0,30.0">
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+    <BoundLabelBinding hyperlink="file:^px/CHILLER.px"/>
+  </BoundLabel>
+
+  <BoundLabel layout="390.0,100.0,150.0,30.0">
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+    <BoundLabelBinding hyperlink="file:^px/AHU_Main.px"/>
+  </BoundLabel>
+
+  <BoundLabel layout="540.0,100.0,150.0,30.0">
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+    <BoundLabelBinding hyperlink="file:^px/PAU_Main.px"/>
+  </BoundLabel>
+
+  <BoundLabel layout="695.0,100.0,160.0,30.0">
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+    <BoundLabelBinding hyperlink="file:^px/FCU_Main.px"/>
+  </BoundLabel>
+
+  <BoundLabel layout="860.0,100.0,150.0,30.0">
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+    <BoundLabelBinding hyperlink="file:^px/HELP/Help.px"/>
+  </BoundLabel>
+
+  <PxInclude layout="340.0,140.0,1200.0,808.0" ord="file:^px/AHU/LAYOUT/NxT2.px"/>
+
+  <BoundLabel layout="5.0,185.0,190.0,40.0" text=" Nh&#xe0; x&#x1b0;&#x1edf;ng t&#x1ea7;ng 2" font="20.0pt Tahoma" foreground="black" background="lime" halign="left" border="2.0 groove black">
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+    <BoundLabelBinding hyperlink="file:^px/AHU/AHU_NX_T2.px"/>
+  </BoundLabel>
+
+  <BoundLabel layout="5.0,140.0,190.0,40.0" text=" Nh&#xe0; x&#x1b0;&#x1edf;ng t&#x1ea7;ng 1" font="20.0pt Tahoma" foreground="black" background="#e0e0e0" halign="left" border="2.0 groove black">
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+    <BoundLabelBinding hyperlink="file:^px/AHU/AHU_NX_T1.px"/>
+  </BoundLabel>
+
+  <BoundLabel layout="5.0,230.0,190.0,40.0" text=" Nh&#xe0; x&#x1b0;&#x1edf;ng t&#x1ea7;ng m&#xe1;i" font="20.0pt Tahoma" foreground="black" background="#e0e0e0" halign="left" border="2.0 groove black">
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+    <BoundLabelBinding hyperlink="file:^px/AHU/AHU_NX_TM.px"/>
+  </BoundLabel>
+
+  <BoundLabel layout="0.0,900.0,220.00000000000006,40.000000000000114" text="Click here open popup">
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+    <PopupBinding ord="file:^px/AHU/AHU_NX_T2.px" title="BMS Home" position="0.0,0.0" size="1920.0,1055.0" modal="true"/>
+  </BoundLabel>
+
+  <Picture layout="300.0,129.99999999999997,1410.0,820.0" image="file:^px/Images/Layout/KNX_T1x.png" scale="fit" valign="top">
+    <LayerTag name="LayerTag" layerName="BG_Lock"/>
+  </Picture>
+
+  <Polygon stroke="black" geom="810.0,840.0 810.0,880.0000000000001 830.0,880.0000000000001 830.0,850.0 ">
+    <ValueBinding ord="station:|slot:/Drivers/Point_Demo/DO_Demo_Fan">
+      <IBooleanToSimple name="fill">
+        <Brush name="trueValue" value="lime"/>
+        <Brush name="falseValue" value="red"/>
+      </IBooleanToSimple>
+    </ValueBinding>
+  </Polygon>
+
+  <BoundLabel layout="835.0,850.0,100.0,30.0" text=" FCU" font="20.0pt Tahoma" foreground="black" background="#e0e0e0" halign="left" border="2.0 groove black">
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+  </BoundLabel>
+
+  <Picture layout="395.0,430.0,39.99999999999994,100.0" image="file:^px/kitPxGraphics/Chillers/Trane/Chiller_Trane_Off_1.png" scale="fit" valign="top"/>
+
+  <Picture layout="355.0,430.0,39.99999999999994,100.0" image="file:^px/kitPxGraphics/Chillers/Trane/Chiller_Trane_Off_1.png" scale="fit" valign="top"/>
+
+  <BoundLabel layout="360.0,530.0,59.99999999999994,30.0" text="Chiller" font="20.0pt Tahoma" foreground="black" background="#e0e0e0" halign="left" border="2.0 groove black">
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+  </BoundLabel>
+
+  <BoundLabel layout="350.0,420.0,90.0,140.0">
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+    <BoundLabelBinding hyperlink="file:^px/CHILLER.px"/>
+  </BoundLabel>
+
+  <Ellipse stroke="black" geom="370.0,450.0,20.0,20.0">
+    <ValueBinding ord="station:|slot:/Drivers/Point_Demo/DO_Demo_Fan">
+      <IBooleanToSimple name="fill">
+        <Brush name="trueValue" value="lime"/>
+        <Brush name="falseValue" value="red"/>
+      </IBooleanToSimple>
+    </ValueBinding>
+  </Ellipse>
+
+  <Ellipse stroke="black" geom="410.0,450.0,20.0,20.0">
+    <ValueBinding ord="station:|slot:/Drivers/Point_Demo/DO_Demo_Fan1">
+      <IBooleanToSimple name="fill">
+        <Brush name="trueValue" value="lime"/>
+        <Brush name="falseValue" value="red"/>
+      </IBooleanToSimple>
+    </ValueBinding>
+  </Ellipse>
+
+  <BoundLabel layout="1250.0,220.0,85.0,20.0" text="FCU-01" font="14.0pt Tahoma" foreground="black" background="#e0e0e0" border="2.0 groove black">
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+    <PopupBinding ord="file:^px/FCU/Popup/FCU_01.px" title="FCU1" size="1000.0,400.0"/>
+  </BoundLabel>
+
+  <BoundLabel layout="1520.0,440.0,80.0,20.0" text="FCU-02" font="14.0pt Tahoma" foreground="black" background="#e0e0e0" border="2.0 groove black">
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+    <PopupBinding ord="file:^px/FCU/Popup/FCU_02.px" title="FCU2" size="1000.0,400.0"/>
+  </BoundLabel>
+
+  <BoundLabel layout="1520.0,215.0,80.0,20.0" text="FCU-04" font="14.0pt Tahoma" foreground="black" background="#e0e0e0" border="2.0 groove black">
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+    <PopupBinding ord="file:^px/FCU/Popup/FCU_04.px" title="FCU4" size="1000.0,400.0"/>
+  </BoundLabel>
+
+  <BoundLabel layout="1520.0,680.0,90.0,20.0" text="FCU-03" font="14.0pt Tahoma" foreground="black" background="#e0e0e0" border="2.0 groove black">
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+    <PopupBinding ord="file:^px/FCU/Popup/FCU_03.px" title="FCU3" size="1000.0,400.0"/>
+  </BoundLabel>
+
+  <Picture layout="1250.0,240.0,89.99999999999977,40.0" scale="fitRatio">
+    <ValueBinding ord="station:|slot:/Drivers/FCU_Status/Status_FCU_01">
+      <IBooleanToSimple name="image">
+        <Image name="trueValue" value="file:^px/Images/Icon/FCU_On.png"/>
+        <Image name="falseValue" value="file:^px/Images/Icon/FCU_Off.png"/>
+      </IBooleanToSimple>
+    </ValueBinding>
+    <PopupBinding ord="file:^px/FCU/Popup/FCU_01.px" title="FCU-01" size="1000.0,400.0"/>
+  </Picture>
+
+  <Picture layout="1515.0,460.0,89.99999999999977,40.0" scale="fitRatio">
+    <ValueBinding ord="station:|slot:/Drivers/FCU_Status/Status_FCU_02">
+      <IBooleanToSimple name="image">
+        <Image name="trueValue" value="file:^px/Images/Icon/FCU_On.png"/>
+        <Image name="falseValue" value="file:^px/Images/Icon/FCU_Off.png"/>
+      </IBooleanToSimple>
+    </ValueBinding>
+    <PopupBinding ord="file:^px/FCU/Popup/FCU_02.px" title="FCU-02" size="1000.0,400.0"/>
+  </Picture>
+
+  <Picture layout="1520.0,700.0,89.99999999999977,40.0" scale="fitRatio">
+    <ValueBinding ord="station:|slot:/Drivers/FCU_Status/Status_FCU_03">
+      <IBooleanToSimple name="image">
+        <Image name="trueValue" value="file:^px/Images/Icon/FCU_On.png"/>
+        <Image name="falseValue" value="file:^px/Images/Icon/FCU_Off.png"/>
+      </IBooleanToSimple>
+    </ValueBinding>
+    <PopupBinding ord="file:^px/FCU/Popup/FCU_03.px" title="FCU-03" size="1000.0,400.0"/>
+  </Picture>
+
+  <Picture layout="1515.0,235.0,89.99999999999977,40.0" scale="fitRatio">
+    <ValueBinding ord="station:|slot:/Drivers/FCU_Status/Status_FCU_04">
+      <IBooleanToSimple name="image">
+        <Image name="trueValue" value="file:^px/Images/Icon/FCU_On.png"/>
+        <Image name="falseValue" value="file:^px/Images/Icon/FCU_Off.png"/>
+      </IBooleanToSimple>
+    </ValueBinding>
+    <PopupBinding ord="file:^px/FCU/Popup/FCU_04.px" title="FCU-04" size="1000.0,400.0"/>
+  </Picture>
+
+</CanvasPane>
+</content>
+</px>
