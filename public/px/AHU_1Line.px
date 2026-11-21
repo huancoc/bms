@@ -1,0 +1,417 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Niagara Presentation XML -->
+<px version="1.0" media="workbench:WbPxMedia">
+<import>
+  <module name="baja"/>
+  <module name="bajaui"/>
+  <module name="converters"/>
+  <module name="gx"/>
+  <module name="kitPx"/>
+</import>
+<layers>
+  <layer name="newLayer" status="normal"/>
+  <layer name="BG_Lock" status="locked"/>
+</layers>
+<content>
+<CanvasPane viewSize="1855.0,955.0" scale="fit" background="image( source(null) )">
+
+  <BoundLabel layout="0.0,920.0,1960.0,40.0" background="linearGradient( angle(90.0) stop(0.0% black) stop(100.0% #505050) )">
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+  </BoundLabel>
+
+  <Picture layout="0.0,0.0,1855.0,930.0" image="file:/Backgound/CVI_Background1.jpg" scale="fit">
+    <LayerTag name="LayerTag" layerName="BG_Lock"/>
+  </Picture>
+
+  <BoundLabel layout="0.0,0.0,410.0,100.0">
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+    <PopupBinding ord="file:^px/Home.px" title="BMS Home" position="0.0,0.0" size="1920.0,1055.0" modal="true"/>
+  </BoundLabel>
+
+  <BoundLabel layout="1080.0,20.0,780.0,90.0">
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+    <BoundLabelBinding hyperlink="file:^px/Home.px"/>
+  </BoundLabel>
+
+  <BoundLabel layout="1799.9999999999998,35.0,55.00000000000023,30.0" font="16.0pt Segoe UI" foreground="black" halign="left">
+    <BoundLabelBinding ord="station:|slot:/Drivers/NiagaraNetwork/WEB_LH/points/DDC_H1_1/TEMP_GEN/out/value" summary="%displayName?typeDisplayName% = %.% ">
+      <ObjectToString name="text"/>
+    </BoundLabelBinding>
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+  </BoundLabel>
+
+  <PxInclude layout="800.0,635.0,210.0,70.0" ord="file:^px/Panel/PN_Chiller/PanelBNL.px"/>
+
+  <BoundLabel layout="230.0,100.0,150.0,30.0">
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+    <BoundLabelBinding hyperlink="file:^px/CHILLER.px"/>
+  </BoundLabel>
+
+  <BoundLabel layout="390.0,100.0,150.0,30.0">
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+    <BoundLabelBinding hyperlink="file:^px/AHU_Main.px"/>
+  </BoundLabel>
+
+  <BoundLabel layout="540.0,100.0,150.0,30.0">
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+    <BoundLabelBinding hyperlink="file:^px/PAU_Main.px"/>
+  </BoundLabel>
+
+  <BoundLabel layout="695.0,100.0,160.0,30.0">
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+    <BoundLabelBinding hyperlink="file:^px/FCU_Main.px"/>
+  </BoundLabel>
+
+  <BoundLabel layout="860.0,100.0,150.0,30.0">
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+    <BoundLabelBinding hyperlink="file:^px/HELP/Help.px"/>
+  </BoundLabel>
+
+  <BoundLabel layout="45.0,335.0,80.0,20.0" text=" PAU-01" font="14.0pt Tahoma" foreground="black" background="#e0e0e0" halign="left" border="2.0 groove black">
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+    <BoundLabelBinding hyperlink="file:^px/AHU/AHU_NX_T1.px"/>
+  </BoundLabel>
+
+  <BoundLabel layout="170.0,310.0,920.0,10.0" font="20.0pt Tahoma" foreground="black" background="lime" halign="left" border="2.0 groove black">
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+  </BoundLabel>
+
+  <Picture layout="0.0,245.0,170.0,100.0" image="file:^px/Images/Icon/PAU_icon.png" scale="fitRatio">
+    <PopupBinding ord="file:^px/AHU/Popup/S_PAU_01.px" title="SPAU-01"/>
+  </Picture>
+
+  <Picture layout="270.0,345.0,150.0,65.0" image="file:^px/Images/Icon/AHU_150x65.png" scale="fitRatio">
+    <PopupBinding ord="file:^px/AHU/Popup/AHU_01.px" title="AHU-01"/>
+  </Picture>
+
+  <BoundLabel layout="305.0,410.0,80.0,15.0" text=" AHU-01" font="14.0pt Tahoma" foreground="black" background="#e0e0e0" halign="left" border="2.0 groove black">
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+    <BoundLabelBinding hyperlink="file:^px/AHU/Popup/AHU_01.px"/>
+  </BoundLabel>
+
+  <BoundLabel layout="555.0,410.0,80.0,15.0" text=" AHU-02" font="14.0pt Tahoma" foreground="black" background="#e0e0e0" halign="left" border="2.0 groove black">
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+    <BoundLabelBinding hyperlink="file:^px/AHU/Popup/AHU_02.px"/>
+  </BoundLabel>
+
+  <Picture layout="520.0,345.0,150.0,65.0" image="file:^px/Images/Icon/AHU_150x65.png" scale="fitRatio">
+    <PopupBinding ord="file:^px/AHU/Popup/AHU_02.px" title="AHU-02"/>
+  </Picture>
+
+  <BoundLabel layout="795.0,410.0,80.0,15.0" text=" AHU-03" font="14.0pt Tahoma" foreground="black" background="#e0e0e0" halign="left" border="2.0 groove black">
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+    <BoundLabelBinding hyperlink="file:^px/AHU/Popup/AHU_03.px"/>
+  </BoundLabel>
+
+  <Picture layout="760.0,345.0,150.0,65.0" image="file:^px/Images/Icon/AHU_150x65.png" scale="fitRatio">
+    <PopupBinding ord="file:^px/AHU/Popup/AHU_03.px" title="AHU-03"/>
+  </Picture>
+
+  <BoundLabel layout="1035.0,410.0,80.0,15.0" text=" AHU-06" font="14.0pt Tahoma" foreground="black" background="#e0e0e0" halign="left" border="2.0 groove black">
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+    <BoundLabelBinding hyperlink="file:^px/AHU/AHU_NX_T1.px"/>
+  </BoundLabel>
+
+  <Picture layout="1000.0,345.0,150.0,65.0" image="file:^px/Images/Icon/AHU_150x65.png" scale="fitRatio">
+    <PopupBinding ord="file:^px/AHU/Popup/AHU_06.px" title="AHU-06"/>
+  </Picture>
+
+  <BoundLabel layout="1080.0,315.0,9.999999999999773,30.0" font="20.0pt Tahoma" foreground="black" background="lime" halign="left" border="2.0 groove black">
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+  </BoundLabel>
+
+  <BoundLabel layout="835.0,315.0,9.999999999999773,30.0" font="20.0pt Tahoma" foreground="black" background="lime" halign="left" border="2.0 groove black">
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+  </BoundLabel>
+
+  <BoundLabel layout="595.0,320.0,9.999999999999773,30.0" font="20.0pt Tahoma" foreground="black" background="lime" halign="left" border="2.0 groove black">
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+  </BoundLabel>
+
+  <BoundLabel layout="350.0,320.0,9.999999999999773,30.0" font="20.0pt Tahoma" foreground="black" background="lime" halign="left" border="2.0 groove black">
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+  </BoundLabel>
+
+  <Picture layout="270.0,595.0,150.0,65.0" image="file:^px/Images/Icon/AHU_150x65.png" scale="fitRatio">
+    <PopupBinding ord="file:^px/AHU/Popup/AHU_07.px" title="AHU-07"/>
+  </Picture>
+
+  <BoundLabel layout="305.0,660.0,80.0,15.0" text=" AHU-07" font="14.0pt Tahoma" foreground="black" background="#e0e0e0" halign="left" border="2.0 groove black">
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+    <BoundLabelBinding hyperlink="file:^px/AHU/AHU_NX_T1.px"/>
+  </BoundLabel>
+
+  <BoundLabel layout="555.0,660.0,80.0,15.0" text=" AHU-09" font="14.0pt Tahoma" foreground="black" background="#e0e0e0" halign="left" border="2.0 groove black">
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+    <BoundLabelBinding hyperlink="file:^px/AHU/AHU_NX_T1.px"/>
+  </BoundLabel>
+
+  <Picture layout="520.0,595.0,150.0,65.0" image="file:^px/Images/Icon/AHU_150x65.png" scale="fitRatio">
+    <PopupBinding ord="file:^px/AHU/Popup/AHU_09.px" title="AHU-09"/>
+  </Picture>
+
+  <BoundLabel layout="795.0,660.0,80.0,15.0" text=" AHU-10" font="14.0pt Tahoma" foreground="black" background="#e0e0e0" halign="left" border="2.0 groove black">
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+    <BoundLabelBinding hyperlink="file:^px/AHU/AHU_NX_T1.px"/>
+  </BoundLabel>
+
+  <Picture layout="760.0,595.0,150.0,65.0" image="file:^px/Images/Icon/AHU_150x65.png" scale="fitRatio">
+    <PopupBinding ord="file:^px/AHU/Popup/AHU_10.px" title="AHU-10"/>
+  </Picture>
+
+  <BoundLabel layout="1035.0,660.0,80.0,15.0" text=" AHU-11" font="14.0pt Tahoma" foreground="black" background="#e0e0e0" halign="left" border="2.0 groove black">
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+    <BoundLabelBinding hyperlink="file:^px/AHU/AHU_NX_T1.px"/>
+  </BoundLabel>
+
+  <Picture layout="1000.0,595.0,150.0,65.0" image="file:^px/Images/Icon/AHU_150x65.png" scale="fitRatio">
+    <PopupBinding ord="file:^px/AHU/Popup/AHU_11.px" title="AHU-11"/>
+  </Picture>
+
+  <BoundLabel layout="1080.0,565.0,9.999999999999773,30.0" font="20.0pt Tahoma" foreground="black" background="lime" halign="left" border="2.0 groove black">
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+  </BoundLabel>
+
+  <BoundLabel layout="835.0,565.0,9.999999999999773,30.0" font="20.0pt Tahoma" foreground="black" background="lime" halign="left" border="2.0 groove black">
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+  </BoundLabel>
+
+  <BoundLabel layout="595.0,570.0,9.999999999999773,30.0" font="20.0pt Tahoma" foreground="black" background="lime" halign="left" border="2.0 groove black">
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+  </BoundLabel>
+
+  <BoundLabel layout="350.0,570.0,9.999999999999773,30.0" font="20.0pt Tahoma" foreground="black" background="lime" halign="left" border="2.0 groove black">
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+  </BoundLabel>
+
+  <BoundLabel layout="1290.0,660.0,80.0,15.0" text=" AHU-12" font="14.0pt Tahoma" foreground="black" background="#e0e0e0" halign="left" border="2.0 groove black">
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+    <BoundLabelBinding hyperlink="file:^px/AHU/AHU_NX_T1.px"/>
+  </BoundLabel>
+
+  <Picture layout="1255.0,595.0,150.0,65.0" image="file:^px/Images/Icon/AHU_150x65.png" scale="fitRatio">
+    <PopupBinding ord="file:^px/AHU/Popup/AHU_12.px" title="AHU-12"/>
+  </Picture>
+
+  <BoundLabel layout="1335.0,565.0,9.999999999999773,30.0" font="20.0pt Tahoma" foreground="black" background="lime" halign="left" border="2.0 groove black">
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+  </BoundLabel>
+
+  <BoundLabel layout="220.0,560.0,1125.0,10.0" font="20.0pt Tahoma" foreground="black" background="lime" halign="left" border="2.0 groove black">
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+  </BoundLabel>
+
+  <BoundLabel layout="220.0,315.00000000000006,9.999999999999773,499.99999999999994" font="20.0pt Tahoma" foreground="black" background="lime" halign="left" border="2.0 groove black">
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+  </BoundLabel>
+
+  <Picture layout="275.0,835.0,150.0,65.0" image="file:^px/Images/Icon/FCU_Off.png" scale="fitRatio"/>
+
+  <BoundLabel layout="310.0,900.0,89.99999999999994,15.0" text=" FCU-DG2.01" font="14.0pt Tahoma" foreground="black" background="#e0e0e0" halign="left" border="2.0 groove black">
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+    <BoundLabelBinding hyperlink="file:^px/AHU/AHU_NX_T1.px"/>
+  </BoundLabel>
+
+  <BoundLabel layout="560.0,900.0,90.0,15.0" text=" FCU-DG2.02" font="14.0pt Tahoma" foreground="black" background="#e0e0e0" halign="left" border="2.0 groove black">
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+    <BoundLabelBinding hyperlink="file:^px/AHU/AHU_NX_T1.px"/>
+  </BoundLabel>
+
+  <Picture layout="525.0,835.0,150.0,65.0" image="file:^px/Images/Icon/FCU_Off.png" scale="fitRatio"/>
+
+  <BoundLabel layout="800.0,900.0,89.99999999999989,15.0" text=" FCU-DG2.03" font="14.0pt Tahoma" foreground="black" background="#e0e0e0" halign="left" border="2.0 groove black">
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+    <BoundLabelBinding hyperlink="file:^px/AHU/AHU_NX_T1.px"/>
+  </BoundLabel>
+
+  <Picture layout="765.0,835.0,150.0,65.0" image="file:^px/Images/Icon/FCU_Off.png" scale="fitRatio"/>
+
+  <BoundLabel layout="840.0,805.0,9.999999999999773,30.0" font="20.0pt Tahoma" foreground="black" background="lime" halign="left" border="2.0 groove black">
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+  </BoundLabel>
+
+  <BoundLabel layout="600.0,810.0,9.999999999999773,30.0" font="20.0pt Tahoma" foreground="black" background="lime" halign="left" border="2.0 groove black">
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+  </BoundLabel>
+
+  <BoundLabel layout="355.0,810.0,9.999999999999773,30.0" font="20.0pt Tahoma" foreground="black" background="lime" halign="left" border="2.0 groove black">
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+  </BoundLabel>
+
+  <BoundLabel layout="220.0,805.0,630.0,10.0" font="20.0pt Tahoma" foreground="black" background="lime" halign="left" border="2.0 groove black">
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+  </BoundLabel>
+
+  <Picture layout="60.0,140.0,110.0,90.0" image="file:^px/Images/Icon/FAN_150x111_L.png" scale="fitRatio"/>
+
+  <BoundLabel layout="165.0,195.0,100.0,10.0" font="20.0pt Tahoma" foreground="black" background="red" halign="left" border="2.0 groove black">
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+  </BoundLabel>
+
+  <BoundLabel layout="255.0,200.0,10.0,510.0" font="20.0pt Tahoma" foreground="black" background="red" halign="left" border="2.0 groove black">
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+  </BoundLabel>
+
+  <BoundLabel layout="260.0,460.0,825.0,10.0" font="20.0pt Tahoma" foreground="black" background="red" halign="left" border="2.0 groove black">
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+  </BoundLabel>
+
+  <BoundLabel layout="350.0,465.0,9.999999999999773,30.0" font="20.0pt Tahoma" foreground="black" background="red" halign="left" border="2.0 groove black">
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+  </BoundLabel>
+
+  <BoundLabel layout="595.0,465.0,9.999999999999773,30.0" font="20.0pt Tahoma" foreground="black" background="red" halign="left" border="2.0 groove black">
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+  </BoundLabel>
+
+  <BoundLabel layout="835.0,460.0,9.999999999999773,30.0" font="20.0pt Tahoma" foreground="black" background="red" halign="left" border="2.0 groove black">
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+  </BoundLabel>
+
+  <Picture layout="345.0,485.0,70.0,50.0" image="file:^px/Images/Icon/FAN_150x111_L.png" scale="fitRatio"/>
+
+  <Picture layout="585.0,485.0,70.0,50.0" image="file:^px/Images/Icon/FAN_150x111_L.png" scale="fitRatio"/>
+
+  <Picture layout="830.0,485.0,70.0,50.0" image="file:^px/Images/Icon/FAN_150x111_L.png" scale="fitRatio"/>
+
+  <BoundLabel layout="335.0,535.0,90.0,15.0" text=" EAF-AHU-01" font="14.0pt Tahoma" foreground="black" background="#e0e0e0" halign="left" border="2.0 groove black">
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+    <BoundLabelBinding hyperlink="file:^px/AHU/AHU_NX_T1.px"/>
+  </BoundLabel>
+
+  <BoundLabel layout="575.0,535.0,90.0,15.0" text=" EAF-AHU-02" font="14.0pt Tahoma" foreground="black" background="#e0e0e0" halign="left" border="2.0 groove black">
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+    <BoundLabelBinding hyperlink="file:^px/AHU/AHU_NX_T1.px"/>
+  </BoundLabel>
+
+  <BoundLabel layout="815.0,535.0,90.0,15.0" text=" EAF-AHU-03" font="14.0pt Tahoma" foreground="black" background="#e0e0e0" halign="left" border="2.0 groove black">
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+    <BoundLabelBinding hyperlink="file:^px/AHU/AHU_NX_T1.px"/>
+  </BoundLabel>
+
+  <BoundLabel layout="1055.0,535.0,90.0,15.0" text=" EAF-AHU-06" font="14.0pt Tahoma" foreground="black" background="#e0e0e0" halign="left" border="2.0 groove black">
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+    <BoundLabelBinding hyperlink="file:^px/AHU/AHU_NX_T1.px"/>
+  </BoundLabel>
+
+  <Picture layout="1070.0,485.0,70.0,50.0" image="file:^px/Images/Icon/FAN_150x111_L.png" scale="fitRatio"/>
+
+  <BoundLabel layout="1075.0,460.0,9.999999999999773,30.0" font="20.0pt Tahoma" foreground="black" background="red" halign="left" border="2.0 groove black">
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+  </BoundLabel>
+
+  <BoundLabel layout="265.0,700.0,1080.0,10.0" font="20.0pt Tahoma" foreground="black" background="red" halign="left" border="2.0 groove black">
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+  </BoundLabel>
+
+  <BoundLabel layout="355.0,705.0,9.999999999999773,30.0" font="20.0pt Tahoma" foreground="black" background="red" halign="left" border="2.0 groove black">
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+  </BoundLabel>
+
+  <BoundLabel layout="600.0,705.0,9.999999999999773,30.0" font="20.0pt Tahoma" foreground="black" background="red" halign="left" border="2.0 groove black">
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+  </BoundLabel>
+
+  <BoundLabel layout="840.0,700.0,9.999999999999773,30.0" font="20.0pt Tahoma" foreground="black" background="red" halign="left" border="2.0 groove black">
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+  </BoundLabel>
+
+  <Picture layout="350.0,725.0,70.0,50.0" image="file:^px/Images/Icon/FAN_150x111_L.png" scale="fitRatio"/>
+
+  <Picture layout="590.0,725.0,70.0,50.0" image="file:^px/Images/Icon/FAN_150x111_L.png" scale="fitRatio"/>
+
+  <Picture layout="835.0,725.0,70.0,50.0" image="file:^px/Images/Icon/FAN_150x111_L.png" scale="fitRatio"/>
+
+  <Picture layout="1075.0,725.0,70.0,50.0" image="file:^px/Images/Icon/FAN_150x111_L.png" scale="fitRatio"/>
+
+  <BoundLabel layout="1080.0,700.0,9.999999999999773,30.0" font="20.0pt Tahoma" foreground="black" background="red" halign="left" border="2.0 groove black">
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+  </BoundLabel>
+
+  <BoundLabel layout="340.0,775.0,90.0,15.0" text=" EAF-AHU-07" font="14.0pt Tahoma" foreground="black" background="#e0e0e0" halign="left" border="2.0 groove black">
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+    <BoundLabelBinding hyperlink="file:^px/AHU/AHU_NX_T1.px"/>
+  </BoundLabel>
+
+  <BoundLabel layout="580.0,775.0,90.0,15.0" text=" EAF-AHU-09" font="14.0pt Tahoma" foreground="black" background="#e0e0e0" halign="left" border="2.0 groove black">
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+    <BoundLabelBinding hyperlink="file:^px/AHU/AHU_NX_T1.px"/>
+  </BoundLabel>
+
+  <BoundLabel layout="820.0,775.0,90.0,15.0" text=" EAF-AHU-10" font="14.0pt Tahoma" foreground="black" background="#e0e0e0" halign="left" border="2.0 groove black">
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+    <BoundLabelBinding hyperlink="file:^px/AHU/AHU_NX_T1.px"/>
+  </BoundLabel>
+
+  <BoundLabel layout="1060.0,775.0,90.0,15.0" text=" EAF-AHU-11" font="14.0pt Tahoma" foreground="black" background="#e0e0e0" halign="left" border="2.0 groove black">
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+    <BoundLabelBinding hyperlink="file:^px/AHU/AHU_NX_T1.px"/>
+  </BoundLabel>
+
+  <Picture layout="1330.0,725.0,70.0,50.0" image="file:^px/Images/Icon/FAN_150x111_L.png" scale="fitRatio"/>
+
+  <BoundLabel layout="1335.0,700.0,9.999999999999773,30.0" font="20.0pt Tahoma" foreground="black" background="red" halign="left" border="2.0 groove black">
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+  </BoundLabel>
+
+  <BoundLabel layout="1315.0,775.0,90.0,15.0" text=" EAF-AHU-12" font="14.0pt Tahoma" foreground="black" background="#e0e0e0" halign="left" border="2.0 groove black">
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+    <BoundLabelBinding hyperlink="file:^px/AHU/AHU_NX_T1.px"/>
+  </BoundLabel>
+
+  <Picture layout="1210.0,235.0,170.0,100.0" image="file:^px/Images/Icon/PAU_icon.png" scale="fitRatio">
+    <PopupBinding ord="file:^px/AHU/Popup/S_PAU_02.px" title="SPAU-02"/>
+  </Picture>
+
+  <BoundLabel layout="1255.0,325.0,80.0,20.0" text=" PAU-02" font="14.0pt Tahoma" foreground="black" background="#e0e0e0" halign="left" border="2.0 groove black">
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+    <BoundLabelBinding hyperlink="file:^px/AHU/AHU_NX_T1.px"/>
+  </BoundLabel>
+
+  <BoundLabel layout="1380.0,305.0,410.0,10.0" font="20.0pt Tahoma" foreground="black" background="lime" halign="left" border="2.0 groove black">
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+  </BoundLabel>
+
+  <BoundLabel layout="1455.0,410.0,80.0,15.0" text=" DHU-01" font="14.0pt Tahoma" foreground="black" background="#e0e0e0" halign="left" border="2.0 groove black">
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+    <BoundLabelBinding hyperlink="file:^px/AHU/AHU_NX_T1.px"/>
+  </BoundLabel>
+
+  <BoundLabel layout="1490.0,315.0,9.999999999999773,30.0" font="20.0pt Tahoma" foreground="black" background="lime" halign="left" border="2.0 groove black">
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+  </BoundLabel>
+
+  <Picture layout="1455.0,345.0,80.0,65.0" image="file:^px/Images/Icon/DHU.png" scale="fitRatio"/>
+
+  <BoundLabel layout="1575.0,410.0,80.0,15.0" text=" DHU-02" font="14.0pt Tahoma" foreground="black" background="#e0e0e0" halign="left" border="2.0 groove black">
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+    <BoundLabelBinding hyperlink="file:^px/AHU/AHU_NX_T1.px"/>
+  </BoundLabel>
+
+  <Picture layout="1575.0,345.0,80.0,65.0" image="file:^px/Images/Icon/DHU.png" scale="fitRatio"/>
+
+  <BoundLabel layout="1610.0,315.0,9.999999999999773,30.0" font="20.0pt Tahoma" foreground="black" background="lime" halign="left" border="2.0 groove black">
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+  </BoundLabel>
+
+  <Picture layout="1700.0,345.0,150.0,65.0" image="file:^px/Images/Icon/AHU_150x65.png" scale="fitRatio">
+    <PopupBinding ord="file:^px/AHU/Popup/AHU_08.px" title="AHU-08"/>
+  </Picture>
+
+  <BoundLabel layout="1735.0,410.0,80.0,15.0" text=" AHU-08" font="14.0pt Tahoma" foreground="black" background="#e0e0e0" halign="left" border="2.0 groove black">
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+    <BoundLabelBinding hyperlink="file:^px/AHU/AHU_NX_T1.px"/>
+  </BoundLabel>
+
+  <BoundLabel layout="1780.0,315.0,9.999999999999773,30.0" font="20.0pt Tahoma" foreground="black" background="lime" halign="left" border="2.0 groove black">
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+  </BoundLabel>
+
+  <BoundLabel layout="90.0,220.0,80.0,20.0" text=" EA" font="14.0pt Tahoma" foreground="black" background="#e0e0e0" halign="left" border="2.0 groove black">
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+    <BoundLabelBinding hyperlink="file:^px/AHU/AHU_NX_T1.px"/>
+  </BoundLabel>
+
+</CanvasPane>
+</content>
+</px>

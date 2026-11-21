@@ -1,0 +1,477 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Niagara Presentation XML -->
+<px version="1.0" media="workbench:WbPxMedia">
+<import>
+  <module name="baja"/>
+  <module name="bajaui"/>
+  <module name="converters"/>
+  <module name="gx"/>
+  <module name="kitPx"/>
+</import>
+<layers>
+  <layer name="newLayer" status="normal"/>
+  <layer name="BG_Lock" status="normal"/>
+</layers>
+<content>
+<CanvasPane viewSize="1855.0,955.0" scale="fit" background="image( source(null) )">
+
+  <BoundLabel layout="0.0,920.0,1960.0,40.0" background="linearGradient( angle(90.0) stop(0.0% black) stop(100.0% #505050) )">
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+  </BoundLabel>
+
+  <Picture layout="0.0,0.0,1855.0,930.0" image="file:/px/Backgound/BG_FCU.jpg" scale="fit">
+    <LayerTag name="LayerTag" layerName="BG_Lock"/>
+  </Picture>
+
+  <BoundLabel layout="0.0,0.0,209.99999999999994,130.0">
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+    <PopupBinding ord="file:^px/FCU_Main.px" title="BMS Home" position="0.0,0.0" size="1920.0,1055.0" modal="true"/>
+  </BoundLabel>
+
+  <BoundLabel layout="1040.0,20.0,780.0,90.0">
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+    <BoundLabelBinding hyperlink="file:^px/Home.px"/>
+  </BoundLabel>
+
+  <BoundLabel layout="1799.9999999999998,35.0,55.00000000000023,30.0" font="16.0pt Segoe UI" foreground="black" halign="left">
+    <BoundLabelBinding ord="station:|slot:/Drivers/NiagaraNetwork/WEB_LH/points/DDC_H1_1/TEMP_GEN/out/value" summary="%displayName?typeDisplayName% = %.% ">
+      <ObjectToString name="text"/>
+    </BoundLabelBinding>
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+  </BoundLabel>
+
+  <BoundLabel layout="240.0,100.0,150.0,30.0">
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+    <BoundLabelBinding hyperlink="file:^px/CHILLER.px"/>
+  </BoundLabel>
+
+  <BoundLabel layout="400.0,100.0,150.0,30.0">
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+    <BoundLabelBinding hyperlink="file:^px/AHU_Main.px"/>
+  </BoundLabel>
+
+  <BoundLabel layout="550.0,100.0,150.0,30.0">
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+    <BoundLabelBinding hyperlink="file:^px/PAU_Main.px"/>
+  </BoundLabel>
+
+  <BoundLabel layout="705.0,100.0,160.0,30.0">
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+    <BoundLabelBinding hyperlink="file:^px/FCU_Main.px"/>
+  </BoundLabel>
+
+  <BoundLabel layout="870.0,100.0,150.0,30.0">
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+    <BoundLabelBinding hyperlink="file:^px/HELP/Help.px"/>
+  </BoundLabel>
+
+  <BoundLabel layout="5.0,890.0,190.0,40.0" text=" History" font="20.0pt Tahoma" foreground="red" background="yellow" border="2.0 groove black">
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+    <BoundLabelBinding hyperlink="file:^px/AHU/CVI_History.px"/>
+  </BoundLabel>
+
+  <BoundLabel layout="180.0,230.0,249.99999999999994,20.0" text="Kh&#x1ed1;i FCU - khu nh&#xe0; x&#x1b0;&#x1edf;ng t&#x1ea7;ng KT" font="14.0pt Tahoma" foreground="white" background="linearGradient( stop(0.0% black) stop(100.0% #727272) )" halign="left" border="2.0 groove black">
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+  </BoundLabel>
+
+  <BoundLabel layout="180.0,250.0,250.0,180.0" font="14.0pt Tahoma" background="#66ffffff" border="2.0 groove black">
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+  </BoundLabel>
+
+  <BoundLabel layout="180.0,250.0,159.99999999999997,40.0" text="  FCU-01 (TRC01)" font="14.0pt Tahoma" foreground="black" background="#e0e0e0" halign="left" border="2.0 groove black">
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+    <PopupBinding ord="file:^px/FCU/Popup/FCU_01.px" title="FCU1" size="1000.0,400.0"/>
+  </BoundLabel>
+
+  <BoundLabel layout="180.0,290.0,160.0,40.0" text="  FCU-02 (DG02)" font="14.0pt Tahoma" foreground="black" background="#e0e0e0" halign="left" border="2.0 groove black">
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+    <PopupBinding ord="file:^px/FCU/Popup/FCU_02.px" title="FCU2" size="1000.0,400.0"/>
+  </BoundLabel>
+
+  <BoundLabel layout="180.0,370.0,160.0,40.0" text="  FCU-04 (DG01)" font="14.0pt Tahoma" foreground="black" background="#e0e0e0" halign="left" border="2.0 groove black">
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+    <PopupBinding ord="file:^px/FCU/Popup/FCU_04.px" title="FCU4" size="1000.0,400.0"/>
+  </BoundLabel>
+
+  <BoundLabel layout="180.0,330.0,160.0,40.0" text="  FCU-03 (DG03)" font="14.0pt Tahoma" foreground="black" background="#e0e0e0" halign="left" border="2.0 groove black">
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+    <PopupBinding ord="file:^px/FCU/Popup/FCU_03.px" title="FCU3" size="1000.0,400.0"/>
+  </BoundLabel>
+
+  <BoundLabel layout="680.0,250.0,250.0,420.0" font="14.0pt Tahoma" background="#66ffffff" border="2.0 groove black">
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+  </BoundLabel>
+
+  <BoundLabel layout="680.0,230.0,249.99999999999994,20.0" text="Kh&#x1ed1;i FCU - khu nh&#xe0; x&#x1b0;&#x1edf;ng t&#x1ea7;ng 1" font="14.0pt Tahoma" foreground="white" background="linearGradient( stop(0.0% black) stop(100.0% #727272) )" halign="left" border="2.0 groove black">
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+  </BoundLabel>
+
+  <BoundLabel layout="680.0,250.0,159.99999999999994,40.0" text="  FCU-05 (NL1)" font="14.0pt Tahoma" foreground="black" background="#e0e0e0" halign="left" border="2.0 groove black">
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+    <PopupBinding ord="file:^px/FCU/Popup/FCU_05.px" title="FCU5" size="1000.0,400.0"/>
+  </BoundLabel>
+
+  <BoundLabel layout="680.0,290.0,159.99999999999994,40.0" text="  FCU-06 (NL2)" font="14.0pt Tahoma" foreground="black" background="#e0e0e0" halign="left" border="2.0 groove black">
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+    <PopupBinding ord="file:^px/FCU/Popup/FCU_06.px" title="FCU6" size="1000.0,400.0"/>
+  </BoundLabel>
+
+  <BoundLabel layout="680.0,370.0,160.0,40.0" text="  FCU-08 (TP2)" font="14.0pt Tahoma" foreground="black" background="#e0e0e0" halign="left" border="2.0 groove black">
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+    <PopupBinding ord="file:^px/FCU/Popup/FCU_08.px" title="FCU8" size="1000.0,400.0"/>
+  </BoundLabel>
+
+  <BoundLabel layout="680.0,330.0,160.0,40.0" text="  FCU-07 (TP1)" font="14.0pt Tahoma" foreground="black" background="#e0e0e0" halign="left" border="2.0 groove black">
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+    <PopupBinding ord="file:^px/FCU/Popup/FCU_07.px" title="FCU7" size="1000.0,400.0"/>
+  </BoundLabel>
+
+  <BoundLabel layout="680.0,410.0,159.99999999999994,40.0" text="  FCU-09 (TP3)" font="14.0pt Tahoma" foreground="black" background="#e0e0e0" halign="left" border="2.0 groove black">
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+    <PopupBinding ord="file:^px/FCU/Popup/FCU_09.px" title="FCU9" size="1000.0,400.0"/>
+  </BoundLabel>
+
+  <BoundLabel layout="680.0,450.0,159.99999999999994,40.0" text="  FCU-10 (VPK)" font="14.0pt Tahoma" foreground="black" background="#e0e0e0" halign="left" border="2.0 groove black">
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+    <PopupBinding ord="file:^px/FCU/Popup/FCU_10.px" title="FCU10" size="1000.0,400.0"/>
+  </BoundLabel>
+
+  <BoundLabel layout="680.0,490.0,159.99999999999994,40.0" text="  FCU-11 (KDL02)" font="14.0pt Tahoma" foreground="black" background="#e0e0e0" halign="left" border="2.0 groove black">
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+    <PopupBinding ord="file:^px/FCU/Popup/FCU_11.px" title="FCU11" size="1000.0,400.0"/>
+  </BoundLabel>
+
+  <BoundLabel layout="680.0,530.0,160.0,40.0" text="  FCU-12 (RH)" font="14.0pt Tahoma" foreground="black" background="#e0e0e0" halign="left" border="2.0 groove black">
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+    <PopupBinding ord="file:^px/FCU/Popup/FCU_12.px" title="FCU12" size="1000.0,400.0"/>
+  </BoundLabel>
+
+  <BoundLabel layout="680.0,610.0,160.00000000000006,40.0" text="  FCU-14 (VPSX)" font="14.0pt Tahoma" foreground="black" background="#e0e0e0" halign="left" border="2.0 groove black">
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+    <PopupBinding ord="file:^px/FCU/Popup/FCU_14.px" title="FCU14" size="1000.0,400.0"/>
+  </BoundLabel>
+
+  <BoundLabel layout="680.0,570.0,159.99999999999994,40.0" text="  FCU-13 (KDL1)" font="14.0pt Tahoma" foreground="black" background="#e0e0e0" halign="left" border="2.0 groove black">
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+    <PopupBinding ord="file:^px/FCU/Popup/FCU_13.px" title="FCU13" size="1000.0,400.0"/>
+  </BoundLabel>
+
+  <BoundLabel layout="1060.0,230.0,249.99999999999994,20.0" text="Kh&#x1ed1;i FCU - Khu chi&#x1ebf;t xu&#x1ea5;t t&#x1ea7;ng 1" font="14.0pt Tahoma" foreground="white" background="linearGradient( stop(0.0% black) stop(100.0% #727272) )" halign="left" border="2.0 groove black">
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+  </BoundLabel>
+
+  <BoundLabel layout="1060.0,250.0,250.0,145.0" font="14.0pt Tahoma" background="#66ffffff" border="2.0 groove black">
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+  </BoundLabel>
+
+  <BoundLabel layout="1060.0,250.0,160.0,40.0" text="  FCU-15 (CX02)" font="14.0pt Tahoma" foreground="black" background="#e0e0e0" halign="left" border="2.0 groove black">
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+    <PopupBinding ord="file:^px/FCU/Popup/FCU_15.px" title="FCU" size="1000.0,400.0"/>
+  </BoundLabel>
+
+  <BoundLabel layout="1060.0,290.0,160.0,40.0" text="  FCU-16 (CX01)" font="14.0pt Tahoma" foreground="black" background="#e0e0e0" halign="left" border="2.0 groove black">
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+    <PopupBinding ord="file:^px/FCU/Popup/FCU_16.px" title="FCU" size="1000.0,400.0"/>
+  </BoundLabel>
+
+  <BoundLabel layout="1060.0,330.0,160.0,40.0" text="  FCU-17 (CX03)" font="14.0pt Tahoma" foreground="black" background="#e0e0e0" halign="left" border="2.0 groove black">
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+    <PopupBinding ord="file:^px/FCU/Popup/FCU_17.px" title="FCU" size="1000.0,400.0"/>
+  </BoundLabel>
+
+  <Picture layout="340.0,250.0,89.99999999999977,40.0" scale="fitRatio">
+    <ValueBinding ord="station:|slot:/Drivers/FCU_Status/Status_FCU_01">
+      <IBooleanToSimple name="image">
+        <Image name="trueValue" value="file:^px/Images/Icon/FCU_On.png"/>
+        <Image name="falseValue" value="file:^px/Images/Icon/FCU_Off.png"/>
+      </IBooleanToSimple>
+    </ValueBinding>
+    <PopupBinding ord="file:^px/FCU/Popup/FCU_01.px" title="FCU-01" size="1000.0,400.0"/>
+  </Picture>
+
+  <Picture layout="340.0,370.0,89.99999999999977,40.0" scale="fitRatio">
+    <ValueBinding ord="station:|slot:/Drivers/FCU_Status/Status_FCU_04">
+      <IBooleanToSimple name="image">
+        <Image name="trueValue" value="file:^px/Images/Icon/FCU_On.png"/>
+        <Image name="falseValue" value="file:^px/Images/Icon/FCU_Off.png"/>
+      </IBooleanToSimple>
+    </ValueBinding>
+    <PopupBinding ord="file:^px/FCU/Popup/FCU_04.px" title="FCU-04" size="1000.0,400.0"/>
+  </Picture>
+
+  <Picture layout="340.0,290.0,89.99999999999977,40.0" scale="fitRatio">
+    <ValueBinding ord="station:|slot:/Drivers/FCU_Status/Status_FCU_02">
+      <IBooleanToSimple name="image">
+        <Image name="trueValue" value="file:^px/Images/Icon/FCU_On.png"/>
+        <Image name="falseValue" value="file:^px/Images/Icon/FCU_Off.png"/>
+      </IBooleanToSimple>
+    </ValueBinding>
+    <PopupBinding ord="file:^px/FCU/Popup/FCU_02.px" title="FCU-02" size="1000.0,400.0"/>
+  </Picture>
+
+  <Picture layout="340.0,330.0,89.99999999999977,40.0" scale="fitRatio">
+    <ValueBinding ord="station:|slot:/Drivers/FCU_Status/Status_FCU_03">
+      <IBooleanToSimple name="image">
+        <Image name="trueValue" value="file:^px/Images/Icon/FCU_On.png"/>
+        <Image name="falseValue" value="file:^px/Images/Icon/FCU_Off.png"/>
+      </IBooleanToSimple>
+    </ValueBinding>
+    <PopupBinding ord="file:^px/FCU/Popup/FCU_03.px" title="FCU-03" size="1000.0,400.0"/>
+  </Picture>
+
+  <Picture layout="840.0,250.0,90.0,40.00000000000003" scale="fitRatio">
+    <ValueBinding ord="station:|slot:/Drivers/FCU_Status/Status_FCU_05">
+      <IBooleanToSimple name="image">
+        <Image name="trueValue" value="file:^px/Images/Icon/FCU_On.png"/>
+        <Image name="falseValue" value="file:^px/Images/Icon/FCU_Off.png"/>
+      </IBooleanToSimple>
+    </ValueBinding>
+    <PopupBinding ord="file:^px/FCU/Popup/FCU_05.px" title="FCU-05" size="1000.0,400.0"/>
+  </Picture>
+
+  <Picture layout="840.0,290.0,90.0,40.00000000000003" scale="fitRatio">
+    <ValueBinding ord="station:|slot:/Drivers/FCU_Status/Status_FCU_06">
+      <IBooleanToSimple name="image">
+        <Image name="trueValue" value="file:^px/Images/Icon/FCU_On.png"/>
+        <Image name="falseValue" value="file:^px/Images/Icon/FCU_Off.png"/>
+      </IBooleanToSimple>
+    </ValueBinding>
+    <PopupBinding ord="file:^px/FCU/Popup/FCU_06.px" title="FCU-06" size="1000.0,400.0"/>
+  </Picture>
+
+  <Picture layout="840.0,330.0,90.0,40.0" scale="fitRatio">
+    <ValueBinding ord="station:|slot:/Drivers/FCU_Status/Status_FCU_07">
+      <IBooleanToSimple name="image">
+        <Image name="trueValue" value="file:^px/Images/Icon/FCU_On.png"/>
+        <Image name="falseValue" value="file:^px/Images/Icon/FCU_Off.png"/>
+      </IBooleanToSimple>
+    </ValueBinding>
+    <PopupBinding ord="file:^px/FCU/Popup/FCU_07.px" title="FCU-07" size="1000.0,400.0"/>
+  </Picture>
+
+  <Picture layout="840.0,370.0,90.0,40.0" scale="fitRatio">
+    <ValueBinding ord="station:|slot:/Drivers/FCU_Status/Status_FCU_08">
+      <IBooleanToSimple name="image">
+        <Image name="trueValue" value="file:^px/Images/Icon/FCU_On.png"/>
+        <Image name="falseValue" value="file:^px/Images/Icon/FCU_Off.png"/>
+      </IBooleanToSimple>
+    </ValueBinding>
+    <PopupBinding ord="file:^px/FCU/Popup/FCU_08.px" title="FCU-08" size="1000.0,400.0"/>
+  </Picture>
+
+  <Picture layout="840.0,410.0,90.0,40.0" scale="fitRatio">
+    <ValueBinding ord="station:|slot:/Drivers/FCU_Status/Status_FCU_09">
+      <IBooleanToSimple name="image">
+        <Image name="trueValue" value="file:^px/Images/Icon/FCU_On.png"/>
+        <Image name="falseValue" value="file:^px/Images/Icon/FCU_Off.png"/>
+      </IBooleanToSimple>
+    </ValueBinding>
+    <PopupBinding ord="file:^px/FCU/Popup/FCU_09.px" title="FCU-09" size="1000.0,400.0"/>
+  </Picture>
+
+  <Picture layout="840.0,450.0,90.00000000000006,40.0" scale="fitRatio">
+    <ValueBinding ord="station:|slot:/Drivers/FCU_Status/Status_FCU_10">
+      <IBooleanToSimple name="image">
+        <Image name="trueValue" value="file:^px/Images/Icon/FCU_On.png"/>
+        <Image name="falseValue" value="file:^px/Images/Icon/FCU_Off.png"/>
+      </IBooleanToSimple>
+    </ValueBinding>
+    <PopupBinding ord="file:^px/FCU/Popup/FCU_10.px" title="FCU-10" size="1000.0,400.0"/>
+  </Picture>
+
+  <Picture layout="840.0,490.0,90.0,40.0" scale="fitRatio">
+    <ValueBinding ord="station:|slot:/Drivers/FCU_Status/Status_FCU_11">
+      <IBooleanToSimple name="image">
+        <Image name="trueValue" value="file:^px/Images/Icon/FCU_On.png"/>
+        <Image name="falseValue" value="file:^px/Images/Icon/FCU_Off.png"/>
+      </IBooleanToSimple>
+    </ValueBinding>
+    <PopupBinding ord="file:^px/FCU/Popup/FCU_11.px" title="FCU-11" size="1000.0,400.0"/>
+  </Picture>
+
+  <Picture layout="840.0,530.0,90.0,40.0" scale="fitRatio">
+    <ValueBinding ord="station:|slot:/Drivers/FCU_Status/Status_FCU_12">
+      <IBooleanToSimple name="image">
+        <Image name="trueValue" value="file:^px/Images/Icon/FCU_On.png"/>
+        <Image name="falseValue" value="file:^px/Images/Icon/FCU_Off.png"/>
+      </IBooleanToSimple>
+    </ValueBinding>
+    <PopupBinding ord="file:^px/FCU/Popup/FCU_12.px" title="FCU-12" size="1000.0,400.0"/>
+  </Picture>
+
+  <Picture layout="840.0,570.0,90.0,40.0" scale="fitRatio">
+    <ValueBinding ord="station:|slot:/Drivers/FCU_Status/Status_FCU_13">
+      <IBooleanToSimple name="image">
+        <Image name="trueValue" value="file:^px/Images/Icon/FCU_On.png"/>
+        <Image name="falseValue" value="file:^px/Images/Icon/FCU_Off.png"/>
+      </IBooleanToSimple>
+    </ValueBinding>
+    <PopupBinding ord="file:^px/FCU/Popup/FCU_13.px" title="FCU-13" size="1000.0,400.0"/>
+  </Picture>
+
+  <Picture layout="840.0,610.0,90.0,40.0" scale="fitRatio">
+    <ValueBinding ord="station:|slot:/Drivers/FCU_Status/Status_FCU_14">
+      <IBooleanToSimple name="image">
+        <Image name="trueValue" value="file:^px/Images/Icon/FCU_On.png"/>
+        <Image name="falseValue" value="file:^px/Images/Icon/FCU_Off.png"/>
+      </IBooleanToSimple>
+    </ValueBinding>
+    <PopupBinding ord="file:^px/FCU/Popup/FCU_14.px" title="FCU-14" size="1000.0,400.0"/>
+  </Picture>
+
+  <Picture layout="1220.0,330.0,90.0,40.00000000000003" scale="fitRatio">
+    <ValueBinding ord="station:|slot:/Drivers/FCU_Status/Status_FCU_17">
+      <IBooleanToSimple name="image">
+        <Image name="trueValue" value="file:^px/Images/Icon/FCU_On.png"/>
+        <Image name="falseValue" value="file:^px/Images/Icon/FCU_Off.png"/>
+      </IBooleanToSimple>
+    </ValueBinding>
+    <PopupBinding ord="file:^px/FCU/Popup/FCU_17.px" title="FCU-17" size="1000.0,400.0"/>
+  </Picture>
+
+  <Picture layout="1220.0,250.0,90.0,40.00000000000003" scale="fitRatio">
+    <ValueBinding ord="station:|slot:/Drivers/FCU_Status/Status_FCU_15">
+      <IBooleanToSimple name="image">
+        <Image name="trueValue" value="file:^px/Images/Icon/FCU_On.png"/>
+        <Image name="falseValue" value="file:^px/Images/Icon/FCU_Off.png"/>
+      </IBooleanToSimple>
+    </ValueBinding>
+    <PopupBinding ord="file:^px/FCU/Popup/FCU_15.px" title="FCU-15" size="1000.0,400.0"/>
+  </Picture>
+
+  <Picture layout="1220.0,290.0,90.0,40.00000000000003" scale="fitRatio">
+    <ValueBinding ord="station:|slot:/Drivers/FCU_Status/Status_FCU_16">
+      <IBooleanToSimple name="image">
+        <Image name="trueValue" value="file:^px/Images/Icon/FCU_On.png"/>
+        <Image name="falseValue" value="file:^px/Images/Icon/FCU_Off.png"/>
+      </IBooleanToSimple>
+    </ValueBinding>
+    <PopupBinding ord="file:^px/FCU/Popup/FCU_16.px" title="FCU-16" size="1000.0,400.0"/>
+  </Picture>
+
+  <BoundLabel layout="180.0,430.0,250.0,40.0" text=" MB Nh&#xe0; x&#x1b0;&#x1edf;ng t&#x1ea7;ng 2" font="20.0pt Tahoma" foreground="black" background="#e0e0e0" halign="left" border="2.0 groove black">
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+    <BoundLabelBinding hyperlink="file:^px/AHU/AHU_NX_T2.px"/>
+  </BoundLabel>
+
+  <BoundLabel layout="680.0,670.0,250.0,40.0" text=" MB Nh&#xe0; x&#x1b0;&#x1edf;ng t&#x1ea7;ng 1" font="20.0pt Tahoma" foreground="black" background="#e0e0e0" halign="left" border="2.0 groove black">
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+    <BoundLabelBinding hyperlink="file:^px/AHU/AHU_NX_T1.px"/>
+  </BoundLabel>
+
+  <BoundLabel layout="1060.0,390.0,250.0,40.0" text=" MB Chi&#x1ebf;t xu&#x1ea5;t t&#x1ea7;ng 1" font="20.0pt Tahoma" foreground="black" background="#e0e0e0" halign="left" border="2.0 groove black">
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+    <BoundLabelBinding hyperlink="file:^px/AHU/AHU_CX_T1.px"/>
+  </BoundLabel>
+
+  <Label layout="430.0,230.0,80.0,20.0" text=" Nhi&#x1ec7;t &#x111;&#x1ed9;" font="14.0pt Tahoma" foreground="white" background="black" halign="left"/>
+
+  <Label layout="430.0,250.0,80.0,40.0" font="14.0pt Tahoma" foreground="lime" background="#80000068">
+    <ValueBinding ord="station:|slot:/Drivers/ModbusTcpNetwork/FCU_01/points/Room_Temp">
+      <ValueToString name="text" format="%out.value%"/>
+    </ValueBinding>
+  </Label>
+
+  <Label layout="430.0,290.0,80.0,40.0" font="14.0pt Tahoma" foreground="lime" background="#80000068">
+    <ValueBinding ord="station:|slot:/Drivers/ModbusTcpNetwork/FCU_02/points/Room_Temp">
+      <ValueToString name="text" format="%out.value%"/>
+    </ValueBinding>
+  </Label>
+
+  <Label layout="430.0,330.0,80.0,40.0" font="14.0pt Tahoma" foreground="lime" background="#80000068">
+    <ValueBinding ord="station:|slot:/Drivers/ModbusTcpNetwork/FCU_03/points/Room_Temp">
+      <ValueToString name="text" format="%out.value%"/>
+    </ValueBinding>
+  </Label>
+
+  <Label layout="430.0,370.0,80.0,40.0" font="14.0pt Tahoma" foreground="lime" background="#80000068">
+    <ValueBinding ord="station:|slot:/Drivers/ModbusTcpNetwork/FCU_04/points/Room_Temp">
+      <ValueToString name="text" format="%out.value%"/>
+    </ValueBinding>
+  </Label>
+
+  <Label layout="930.0,250.0,80.0,40.0" font="14.0pt Tahoma" foreground="lime" background="#80000068">
+    <ValueBinding ord="station:|slot:/Drivers/ModbusTcpNetwork/FCU_05/points/Room_Temp">
+      <ValueToString name="text" format="%out.value%"/>
+    </ValueBinding>
+  </Label>
+
+  <Label layout="930.0,230.0,80.0,20.0" text=" Nhi&#x1ec7;t &#x111;&#x1ed9;" font="14.0pt Tahoma" foreground="white" background="black" halign="left"/>
+
+  <Label layout="930.0,290.0,80.0,40.0" font="14.0pt Tahoma" foreground="lime" background="#80000068">
+    <ValueBinding ord="station:|slot:/Drivers/ModbusTcpNetwork/FCU_06/points/Room_Temp">
+      <ValueToString name="text" format="%out.value%"/>
+    </ValueBinding>
+  </Label>
+
+  <Label layout="930.0,330.0,80.0,40.0" font="14.0pt Tahoma" foreground="lime" background="#80000068">
+    <ValueBinding ord="station:|slot:/Drivers/ModbusTcpNetwork/FCU_07/points/Room_Temp">
+      <ValueToString name="text" format="%out.value%"/>
+    </ValueBinding>
+  </Label>
+
+  <Label layout="930.0,370.0,80.0,40.0" font="14.0pt Tahoma" foreground="lime" background="#80000068">
+    <ValueBinding ord="station:|slot:/Drivers/ModbusTcpNetwork/FCU_08/points/Room_Temp">
+      <ValueToString name="text" format="%out.value%"/>
+    </ValueBinding>
+  </Label>
+
+  <Label layout="930.0,410.0,80.0,40.0" font="14.0pt Tahoma" foreground="lime" background="#80000068">
+    <ValueBinding ord="station:|slot:/Drivers/ModbusTcpNetwork/FCU_09/points/Room_Temp">
+      <ValueToString name="text" format="%out.value%"/>
+    </ValueBinding>
+  </Label>
+
+  <Label layout="930.0,450.0,80.0,40.0" font="14.0pt Tahoma" foreground="lime" background="#80000068">
+    <ValueBinding ord="station:|slot:/Drivers/ModbusTcpNetwork/FCU_10/points/Room_Temp">
+      <ValueToString name="text" format="%out.value%"/>
+    </ValueBinding>
+  </Label>
+
+  <Label layout="930.0,490.0,80.0,40.0" font="14.0pt Tahoma" foreground="lime" background="#80000068">
+    <ValueBinding ord="station:|slot:/Drivers/ModbusTcpNetwork/FCU_11/points/Room_Temp">
+      <ValueToString name="text" format="%out.value%"/>
+    </ValueBinding>
+  </Label>
+
+  <Label layout="930.0,530.0,80.0,40.0" font="14.0pt Tahoma" foreground="lime" background="#80000068">
+    <ValueBinding ord="station:|slot:/Drivers/ModbusTcpNetwork/FCU_12/points/Room_Temp">
+      <ValueToString name="text" format="%out.value%"/>
+    </ValueBinding>
+  </Label>
+
+  <Label layout="930.0,570.0,80.0,40.0" font="14.0pt Tahoma" foreground="lime" background="#80000068">
+    <ValueBinding ord="station:|slot:/Drivers/ModbusTcpNetwork/FCU_13/points/Room_Temp">
+      <ValueToString name="text" format="%out.value%"/>
+    </ValueBinding>
+  </Label>
+
+  <Label layout="930.0,610.0,80.0,40.0" font="14.0pt Tahoma" foreground="lime" background="#80000068">
+    <ValueBinding ord="station:|slot:/Drivers/ModbusTcpNetwork/FCU_14/points/Room_Temp">
+      <ValueToString name="text" format="%out.value%"/>
+    </ValueBinding>
+  </Label>
+
+  <Label layout="1310.0,250.0,80.0,40.0" font="14.0pt Tahoma" foreground="lime" background="#80000068">
+    <ValueBinding ord="station:|slot:/Drivers/ModbusTcpNetwork/FCU_15/points/Room_Temp">
+      <ValueToString name="text" format="%out.value%"/>
+    </ValueBinding>
+  </Label>
+
+  <Label layout="1310.0,290.0,80.0,40.0" font="14.0pt Tahoma" foreground="lime" background="#80000068">
+    <ValueBinding ord="station:|slot:/Drivers/ModbusTcpNetwork/FCU_16/points/Room_Temp">
+      <ValueToString name="text" format="%out.value%"/>
+    </ValueBinding>
+  </Label>
+
+  <Label layout="1310.0,330.0,80.0,40.0" font="14.0pt Tahoma" foreground="lime" background="#80000068">
+    <ValueBinding ord="station:|slot:/Drivers/ModbusTcpNetwork/FCU_17/points/Room_Temp">
+      <ValueToString name="text" format="%out.value%"/>
+    </ValueBinding>
+  </Label>
+
+  <Label layout="1310.0,230.0,80.0,20.0" text=" Nhi&#x1ec7;t &#x111;&#x1ed9;" font="14.0pt Tahoma" foreground="white" background="black" halign="left"/>
+
+</CanvasPane>
+</content>
+</px>

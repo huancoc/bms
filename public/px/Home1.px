@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Niagara Presentation XML -->
+<px version="1.0" media="workbench:WbPxMedia">
+<import>
+  <module name="baja"/>
+  <module name="bajaui"/>
+  <module name="converters"/>
+  <module name="gx"/>
+  <module name="kitPx"/>
+</import>
+<layers>
+  <layer name="newLayer" status="normal"/>
+  <layer name="BG_Lock" status="locked"/>
+</layers>
+<content>
+<CanvasPane viewSize="1855.0,955.0" scale="fit" background="image( source(null) )">
+
+  <Picture layout="0.0,0.0,1855.0,930.0" image="file:/Backgound/CVI_Background1.jpg" scale="fit">
+    <LayerTag name="LayerTag" layerName="BG_Lock"/>
+  </Picture>
+
+  <BoundLabel layout="0.0,0.0,410.0,100.0">
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+    <PopupBinding ord="file:^px/Home.px" title="BMS Home" position="0.0,0.0" size="1920.0,1055.0" modal="true"/>
+  </BoundLabel>
+
+  <BoundLabel layout="1040.0,20.0,780.0,90.0">
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+    <BoundLabelBinding hyperlink="file:^px/Home.px"/>
+  </BoundLabel>
+
+  <BoundLabel layout="550.0,100.0,150.0,30.0">
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+    <BoundLabelBinding hyperlink="file:^px/PAU_Main.px"/>
+  </BoundLabel>
+
+  <BoundLabel layout="705.0,100.0,160.0,30.0">
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+    <BoundLabelBinding hyperlink="file:^px/FCU_Main.px"/>
+  </BoundLabel>
+
+  <BoundLabel layout="870.0,100.0,150.0,30.0">
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+    <BoundLabelBinding hyperlink="file:^px/HELP/Help.px"/>
+  </BoundLabel>
+
+  <ImageButton layout="40.0,190.0,1080.0,680.0" font="bold 18.0pt SansSerif" foreground="white" background="#66404040" halign="left">
+    <WsAnnotation name="wsAnnotation" value="6,6,8"/>
+  </ImageButton>
+
+  <ImageButton layout="100.0,270.0,900.0,30.0" text="H&#x1ec7; th&#x1ed1;ng BMS l&#xe0; m&#x1ed9;t h&#x1ec7; th&#x1ed1;ng cho ph&#xe9;p &#x111;i&#x1ec1;u khi&#x1ec3;n v&#xe0; qu&#x1ea3;n l&#xfd; m&#x1ecd;i h&#x1ec7; th&#x1ed1;ng k&#x1ef9; thu&#x1ead;t" font="24.0pt Arial" foreground="white" background="#cc000040" halign="left" buttonStyle="none">
+    <WsAnnotation name="wsAnnotation" value="6,6,8"/>
+  </ImageButton>
+
+  <ImageButton layout="100.0,310.0,900.0,30.0" text="trong t&#xf2;a nh&#xe0; nh&#x1b0; h&#x1ec7; th&#x1ed1;ng &#x111;i&#x1ec7;n, h&#x1ec7; th&#x1ed1;ng cung c&#x1ea5;p n&#x1b0;&#x1edb;c sinh ho&#x1ea1;t, &#x111;i&#x1ec1;u h&#xf2;a th&#xf4;ng" font="24.0pt Arial" foreground="white" background="#cc000040" halign="left" buttonStyle="none">
+    <WsAnnotation name="wsAnnotation" value="6,6,8"/>
+  </ImageButton>
+
+  <ImageButton layout="100.0,350.0,930.0,30.0" text="gi&#xf3;, c&#x1ea3;nh b&#xe1;o m&#xf4;i tr&#x1b0;&#x1edd;ng, an ninh, b&#xe1;o ch&#xe1;y, ch&#x1eef;a ch&#xe1;y,... &#x111;&#x1ea3;m b&#x1ea3;o cho vi&#x1ec7;c v&#x1ead;n h&#xe0;nh" font="24.0pt Arial" foreground="white" background="#cc000040" halign="left" buttonStyle="none">
+    <WsAnnotation name="wsAnnotation" value="6,6,8"/>
+  </ImageButton>
+
+  <ImageButton layout="100.0,390.0,930.0,30.0" text="c&#xe1;c thi&#x1ebf;t b&#x1ecb; trong t&#xf2;a nh&#xe0; &#x111;&#x1b0;&#x1ee3;c ch&#xed;nh x&#xe1;c, k&#x1ecb;p th&#x1edd;i v&#x1edb;i chi ph&#xed; v&#x1ead;n h&#xe0;nh, b&#x1ea3;o tr&#xec;, b&#x1ea3;o" font="24.0pt Arial" foreground="white" background="#cc000040" halign="left" buttonStyle="none">
+    <WsAnnotation name="wsAnnotation" value="6,6,8"/>
+  </ImageButton>
+
+  <ImageButton layout="100.0,435.0,930.0,30.0" text="d&#x1b0;&#x1ee1;ng th&#x1ea5;p nh&#x1ea5;t" font="24.0pt Arial" foreground="white" background="#cc000040" halign="left" buttonStyle="none">
+    <WsAnnotation name="wsAnnotation" value="6,6,8"/>
+  </ImageButton>
+
+  <ImageButton layout="100.0,490.0,805.0,30.0" text="C&#xe1;c h&#x1ea1;ng m&#x1ee5;c t&#xed;ch h&#x1ee3;p trong h&#x1ec7; th&#x1ed1;ng qu&#x1ea3;n tr&#x1ecb; t&#xf2;a nh&#xe0; th&#xf4;ng minh BMS t&#x1ea1;i" font="24.0pt Arial" foreground="white" background="#cc000040" halign="left" buttonStyle="none">
+    <WsAnnotation name="wsAnnotation" value="6,6,8"/>
+  </ImageButton>
+
+  <ImageButton layout="115.0,520.0,389.9999999999998,30.0" text="CVI H&#xf2;a L&#x1ea1;c" font="bold 28.0pt Arial" foreground="lime" background="#cc000040" halign="left" buttonStyle="none">
+    <WsAnnotation name="wsAnnotation" value="6,6,8"/>
+  </ImageButton>
+
+  <ImageButton layout="130.0,565.0,805.0,30.0" text="- H&#x1ec7; th&#x1ed1;ng Chiller" font="24.0pt Arial" foreground="white" background="#cc000040" halign="left" buttonStyle="none">
+    <WsAnnotation name="wsAnnotation" value="6,6,8"/>
+  </ImageButton>
+
+  <ImageButton layout="130.0,605.0,805.0,30.0" text="- H&#x1ec7; th&#x1ed1;ng AHU" font="24.0pt Arial" foreground="white" background="#cc000040" halign="left" buttonStyle="none">
+    <WsAnnotation name="wsAnnotation" value="6,6,8"/>
+  </ImageButton>
+
+  <ImageButton layout="130.0,645.0,805.0,30.0" text="- H&#x1ec7; th&#x1ed1;ng PAU" font="24.0pt Arial" foreground="white" background="#cc000040" halign="left" buttonStyle="none">
+    <WsAnnotation name="wsAnnotation" value="6,6,8"/>
+  </ImageButton>
+
+  <ImageButton layout="130.0,720.0,890.0,30.0" text="N&#x1ebf;u g&#x1eb7;p kh&#xf3; kh&#x103;n trong qu&#xe1; tr&#xec;nh s&#x1eed; d&#x1ee5;ng, vui l&#xf2;ng &#x111;&#x1ecd;c h&#x1b0;&#x1edb;ng d&#x1eab;n t&#x1ea1;i m&#x1ee5;c HELP." font="24.0pt Arial" foreground="white" background="#cc000040" halign="left" buttonStyle="none">
+    <WsAnnotation name="wsAnnotation" value="6,6,8"/>
+  </ImageButton>
+
+  <ImageButton layout="130.0,755.0,870.0,30.0" text="Xin c&#x1ea3;m &#x1a1;n!" font="24.0pt Arial" foreground="white" background="#cc000040" halign="left" buttonStyle="none">
+    <WsAnnotation name="wsAnnotation" value="6,6,8"/>
+  </ImageButton>
+
+  <ImageButton layout="420.0,220.0,300.0,30.0" text="L&#x1edc;I GI&#x1eda;I THI&#x1ec6;U" font="bold 28.0pt Arial" foreground="white" background="#cc000040" buttonStyle="none">
+    <WsAnnotation name="wsAnnotation" value="6,6,8"/>
+  </ImageButton>
+
+  <ImageButton layout="300.0,520.0,160.0,30.0" text="bao g&#x1ed3;m:" font="24.0pt Arial" foreground="white" background="#cc000040" halign="left" buttonStyle="none">
+    <WsAnnotation name="wsAnnotation" value="6,6,8"/>
+  </ImageButton>
+
+  <BoundLabel layout="1799.9999999999998,35.0,55.00000000000023,30.0" font="16.0pt Segoe UI" foreground="black" halign="left">
+    <BoundLabelBinding ord="station:|slot:/Drivers/NiagaraNetwork/WEB_LH/points/DDC_H1_1/TEMP_GEN/out/value" summary="%displayName?typeDisplayName% = %.% ">
+      <ObjectToString name="text"/>
+    </BoundLabelBinding>
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+  </BoundLabel>
+
+  <BoundLabel layout="400.0,100.0,150.0,30.0">
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+    <BoundLabelBinding hyperlink="file:^px/AHU_Main.px"/>
+  </BoundLabel>
+
+  <BoundLabel layout="240.0,100.0,150.0,30.0">
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+    <BoundLabelBinding hyperlink="file:^px/CHILLER.px"/>
+  </BoundLabel>
+
+  <PxInclude layout="1250.0,135.0,600.0,800.0" ord="file:^px/HOME/AnimationCVI.px"/>
+
+  <BoundLabel layout="0.0,930.0,1960.0,40.0" background="linearGradient( angle(90.0) stop(0.0% black) stop(100.0% #505050) )">
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+  </BoundLabel>
+
+  <ImageButton layout="130.0,680.0,805.0,30.0" text="- H&#x1ec7; th&#x1ed1;ng FCU" font="24.0pt Arial" foreground="white" background="#cc000040" halign="left" buttonStyle="none">
+    <WsAnnotation name="wsAnnotation" value="6,6,8"/>
+  </ImageButton>
+
+</CanvasPane>
+</content>
+</px>

@@ -1,0 +1,1246 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Niagara Presentation XML -->
+<px version="1.0" media="workbench:WbPxMedia">
+<import>
+  <module name="baja"/>
+  <module name="bajaui"/>
+  <module name="converters"/>
+  <module name="gx"/>
+  <module name="kitPx"/>
+</import>
+<layers>
+  <layer name="newLayer" status="normal"/>
+  <layer name="BG_Lock" status="locked"/>
+</layers>
+<content>
+<CanvasPane viewSize="1855.0,955.0" scale="fit" background="image( source(null) )">
+
+  <BoundLabel layout="0.0,920.0,1960.0,40.0" background="linearGradient( angle(90.0) stop(0.0% black) stop(100.0% #505050) )">
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+  </BoundLabel>
+
+  <Picture layout="0.0,0.0,1855.0,930.0" image="file:/px/Backgound/BG_Chiller.jpg" scale="fit">
+    <LayerTag name="LayerTag" layerName="BG_Lock"/>
+  </Picture>
+
+  <BoundLabel layout="0.0,0.0,219.99999999999994,130.0">
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+    <PopupBinding ord="file:^px/CHILLER.px" title="Chiller Monitoring" position="0.0,0.0" size="1920.0,1055.0" modal="true"/>
+  </BoundLabel>
+
+  <BoundLabel layout="1040.0,20.0,780.0,90.0">
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+    <BoundLabelBinding hyperlink="file:^px/Home.px"/>
+  </BoundLabel>
+
+  <BoundLabel layout="1799.9999999999998,35.0,55.00000000000023,30.0" font="16.0pt Segoe UI" foreground="black" halign="left">
+    <BoundLabelBinding ord="station:|slot:/Drivers/NiagaraNetwork/WEB_LH/points/DDC_H1_1/TEMP_GEN/out/value" summary="%displayName?typeDisplayName% = %.% ">
+      <ObjectToString name="text"/>
+    </BoundLabelBinding>
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+  </BoundLabel>
+
+  <BoundLabel layout="215.0,140.0,1570.0,810.0" image="file:^px/Layout/Chillerx.PNG">
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+    <LayerTag name="LayerTag" layerName="BG_Lock"/>
+  </BoundLabel>
+
+  <BoundLabel layout="320.0,520.0,175.0,105.0">
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+    <ValueBinding ord="station:|slot:/Drivers/NiagaraNetwork/WEB_CVI/points/DDC_CP_CH/CTWP_ST_01">
+      <IBooleanToSimple name="image">
+        <Image name="trueValue" value="file:^px/kitPxGraphics/Pumps/Pumps_Base/Pump_Base_Right/Pump_Base_Right_On.gif"/>
+        <Image name="falseValue" value="file:^px/kitPxGraphics/Pumps/Pumps_Base/Pump_Base_Right/Pump_Base_Right_Off.png"/>
+      </IBooleanToSimple>
+    </ValueBinding>
+  </BoundLabel>
+
+  <BoundLabel layout="320.0,805.0,175.0,105.0">
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+    <ValueBinding ord="station:|slot:/Drivers/NiagaraNetwork/WEB_CVI/points/DDC_CP_CH/CTWP_ST_02">
+      <IBooleanToSimple name="image">
+        <Image name="trueValue" value="file:^px/kitPxGraphics/Pumps/Pumps_Base/Pump_Base_Right/Pump_Base_Right_On.gif"/>
+        <Image name="falseValue" value="file:^px/kitPxGraphics/Pumps/Pumps_Base/Pump_Base_Right/Pump_Base_Right_Off.png"/>
+      </IBooleanToSimple>
+    </ValueBinding>
+  </BoundLabel>
+
+  <BoundLabel layout="1215.0,805.0,175.0,105.0">
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+    <ValueBinding ord="station:|slot:/Drivers/NiagaraNetwork/WEB_CVI/points/DDC_CP_CH/CHWP_ST_02">
+      <IBooleanToSimple name="image">
+        <Image name="trueValue" value="file:^px/kitPxGraphics/Pumps/Pumps_Base/Pump_Base_Right/Pump_Base_Right_On.gif"/>
+        <Image name="falseValue" value="file:^px/kitPxGraphics/Pumps/Pumps_Base/Pump_Base_Right/Pump_Base_Right_Off.png"/>
+      </IBooleanToSimple>
+    </ValueBinding>
+  </BoundLabel>
+
+  <BoundLabel layout="1215.0,520.0,175.0,105.0">
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+    <ValueBinding ord="station:|slot:/Drivers/NiagaraNetwork/WEB_CVI/points/DDC_CP_CH/CHWP_ST_01">
+      <IBooleanToSimple name="image">
+        <Image name="trueValue" value="file:^px/kitPxGraphics/Pumps/Pumps_Base/Pump_Base_Right/Pump_Base_Right_On.gif"/>
+        <Image name="falseValue" value="file:^px/kitPxGraphics/Pumps/Pumps_Base/Pump_Base_Right/Pump_Base_Right_Off.png"/>
+      </IBooleanToSimple>
+    </ValueBinding>
+  </BoundLabel>
+
+  <BoundLabel layout="795.0,520.0,175.0,105.0">
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+    <ValueBinding ord="station:|slot:/Drivers/NiagaraNetwork/WEB_CVI/points/CHILLER/CHILLER_01/Chiller$20Running$20State">
+      <IBooleanToSimple name="image">
+        <Image name="trueValue" value="file:^px/kitPxGraphics/Chillers/Mcquay/Chiller_Mcquay_On.gif"/>
+        <Image name="falseValue" value="file:^px/kitPxGraphics/Chillers/Mcquay/Chiller_Mcquay_Off.png"/>
+      </IBooleanToSimple>
+    </ValueBinding>
+    <PopupBinding ord="file:^px/CHILLER/Popup_Chiller_01.px" title="B&#x1ea3;ng th&#xf4;ng s&#x1ed1; Chiller 1" position="50.0,50.0" size="1100.0,500.0"/>
+  </BoundLabel>
+
+  <BoundLabel layout="795.0,810.0,175.0,105.0">
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+    <ValueBinding ord="station:|slot:/Drivers/NiagaraNetwork/WEB_CVI/points/CHILLER/CHILLER_02/Chiller$20Running$20State">
+      <IBooleanToSimple name="image">
+        <Image name="trueValue" value="file:^px/kitPxGraphics/Chillers/Mcquay/Chiller_Mcquay_On.gif"/>
+        <Image name="falseValue" value="file:^px/kitPxGraphics/Chillers/Mcquay/Chiller_Mcquay_Off.png"/>
+      </IBooleanToSimple>
+    </ValueBinding>
+    <PopupBinding ord="file:^px/CHILLER/Popup_Chiller_02.px" title="B&#x1ea3;ng th&#xf4;ng s&#x1ed1; Chiller 2" position="800.0,100.0" size="1100.0,500.0"/>
+  </BoundLabel>
+
+  <BoundLabel layout="405.0,210.0,190.0,115.0">
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+    <ValueBinding ord="station:|slot:/Drivers/NiagaraNetwork/WEB_CVI/points/DDC_CP_CH/CT_ST_01">
+      <IBooleanToSimple name="image">
+        <Image name="trueValue" value="file:^px/kitPxGraphics/Chillers/CoolingTowers/DrawThru/CoolingTower_DrawThru_Right/CoolingTower_DrawThru_Right_On1.gif"/>
+        <Image name="falseValue" value="null"/>
+      </IBooleanToSimple>
+    </ValueBinding>
+  </BoundLabel>
+
+  <BoundLabel layout="335.0,210.0,190.0,115.0">
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+    <ValueBinding ord="station:|slot:/Drivers/NiagaraNetwork/WEB_CVI/points/DDC_CP_CH/CT_ST_01">
+      <IBooleanToSimple name="image">
+        <Image name="trueValue" value="file:^px/kitPxGraphics/Chillers/CoolingTowers/DrawThru/CoolingTower_DrawThru_Right/CoolingTower_DrawThru_Right_On1.gif"/>
+        <Image name="falseValue" value="null"/>
+      </IBooleanToSimple>
+    </ValueBinding>
+  </BoundLabel>
+
+  <BoundLabel layout="980.0,210.0,190.0,115.0">
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+    <ValueBinding ord="station:|slot:/Drivers/NiagaraNetwork/WEB_CVI/points/DDC_CP_CH/CT_ST_02">
+      <IBooleanToSimple name="image">
+        <Image name="trueValue" value="file:^px/kitPxGraphics/Chillers/CoolingTowers/DrawThru/CoolingTower_DrawThru_Right/CoolingTower_DrawThru_Right_On1.gif"/>
+        <Image name="falseValue" value="null"/>
+      </IBooleanToSimple>
+    </ValueBinding>
+  </BoundLabel>
+
+  <BoundLabel layout="1050.0,210.0,190.0,115.0">
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+    <ValueBinding ord="station:|slot:/Drivers/NiagaraNetwork/WEB_CVI/points/DDC_CP_CH/CT_ST_02">
+      <IBooleanToSimple name="image">
+        <Image name="trueValue" value="file:^px/kitPxGraphics/Chillers/CoolingTowers/DrawThru/CoolingTower_DrawThru_Right/CoolingTower_DrawThru_Right_On1.gif"/>
+        <Image name="falseValue" value="null"/>
+      </IBooleanToSimple>
+    </ValueBinding>
+  </BoundLabel>
+
+  <Label layout="715.0,510.0,65.0,30.0" font="14.0pt Tahoma">
+    <ValueBinding ord="station:|slot:/Drivers/NiagaraNetwork/Schedules/SCH_B1_SF_01">
+      <IBooleanToSimple name="text">
+        <String name="trueValue" value="FS M&#x1edf;"/>
+        <String name="falseValue" value="FS &#x110;&#xf3;ng"/>
+      </IBooleanToSimple>
+      <IBooleanToSimple name="background">
+        <Brush name="trueValue" value="#cc00ff00"/>
+        <Brush name="falseValue" value="#ccff4040"/>
+      </IBooleanToSimple>
+    </ValueBinding>
+  </Label>
+
+  <Label layout="980.0,520.0,65.0,30.0" font="14.0pt Tahoma">
+    <ValueBinding ord="station:|slot:/Drivers/NiagaraNetwork/Schedules/SCH_B1_SF_01">
+      <IBooleanToSimple name="text">
+        <String name="trueValue" value="FS M&#x1edf;"/>
+        <String name="falseValue" value="FS &#x110;&#xf3;ng"/>
+      </IBooleanToSimple>
+      <IBooleanToSimple name="background">
+        <Brush name="trueValue" value="#cc00ff00"/>
+        <Brush name="falseValue" value="#ccff4040"/>
+      </IBooleanToSimple>
+    </ValueBinding>
+  </Label>
+
+  <Label layout="985.0,800.0,65.0,30.0" font="14.0pt Tahoma">
+    <ValueBinding ord="station:|slot:/Drivers/NiagaraNetwork/Schedules/SCH_B1_SF_01">
+      <IBooleanToSimple name="text">
+        <String name="trueValue" value="FS M&#x1edf;"/>
+        <String name="falseValue" value="FS &#x110;&#xf3;ng"/>
+      </IBooleanToSimple>
+      <IBooleanToSimple name="background">
+        <Brush name="trueValue" value="#cc00ff00"/>
+        <Brush name="falseValue" value="#ccff4040"/>
+      </IBooleanToSimple>
+    </ValueBinding>
+  </Label>
+
+  <Label layout="720.0,790.0,65.0,30.0" font="14.0pt Tahoma">
+    <ValueBinding ord="station:|slot:/Drivers/NiagaraNetwork/Schedules/SCH_B1_SF_01">
+      <IBooleanToSimple name="text">
+        <String name="trueValue" value="FS M&#x1edf;"/>
+        <String name="falseValue" value="FS &#x110;&#xf3;ng"/>
+      </IBooleanToSimple>
+      <IBooleanToSimple name="background">
+        <Brush name="trueValue" value="#cc00ff00"/>
+        <Brush name="falseValue" value="#ccff4040"/>
+      </IBooleanToSimple>
+    </ValueBinding>
+  </Label>
+
+  <PxInclude layout="1190.0,425.0,210.0,70.0" ord="file:^px/Panel/PN_Chiller/PanelBNL1.px"/>
+
+  <PxInclude layout="1190.0,710.0,210.0,70.0" ord="file:^px/Panel/PN_Chiller/PanelBNL2.px"/>
+
+  <PxInclude layout="340.0,610.0,150.0,50.0" ord="file:^px/Panel/PN_Chiller/PanelBGN1.px"/>
+
+  <PxInclude layout="340.0,890.0,150.0,50.0" ord="file:^px/Panel/PN_Chiller/PanelBGN2.px"/>
+
+  <PxInclude layout="390.0,325.0,150.0,50.0" ord="file:^px/Panel/PN_ThapGN/PanelThap1_1.px"/>
+
+  <BoundLabel layout="240.0,100.0,150.0,30.0">
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+    <BoundLabelBinding hyperlink="file:^px/CHILLER.px"/>
+  </BoundLabel>
+
+  <BoundLabel layout="400.0,100.0,150.0,30.0">
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+    <BoundLabelBinding hyperlink="file:^px/AHU_Main.px"/>
+  </BoundLabel>
+
+  <BoundLabel layout="550.0,100.0,150.0,30.0">
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+    <BoundLabelBinding hyperlink="file:^px/PAU_Main.px"/>
+  </BoundLabel>
+
+  <BoundLabel layout="705.0,100.0,160.0,30.0">
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+    <BoundLabelBinding hyperlink="file:^px/FCU_Main.px"/>
+  </BoundLabel>
+
+  <BoundLabel layout="870.0,100.0,150.0,30.0">
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+    <BoundLabelBinding hyperlink="file:^px/HELP/Help.px"/>
+  </BoundLabel>
+
+  <PxInclude layout="1040.0,325.0,150.0,50.0" ord="file:^px/Panel/PN_ThapGN/PanelThap1_2.px"/>
+
+  <BoundLabel layout="300.0,420.0,70.0,20.0" background="white" border="2.0 groove black">
+    <BoundLabelBinding ord="station:|slot:/Drivers/NiagaraNetwork/WEB_CVI/points/DDC_CP_CH/TEMP_01/out/value">
+      <ObjectToString name="text"/>
+    </BoundLabelBinding>
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+    <PopupBinding ord="history:/CVI_Supervisor/Temp_R_TGN" title="L&#x1ecb;ch s&#x1eed; nhi&#x1ec7;t &#x111;&#x1ed9; n&#x1b0;&#x1edb;c gi&#x1ea3;i nhi&#x1ec7;t &#x111;&#x1b0;&#x1edd;ng h&#x1ed3;i"/>
+  </BoundLabel>
+
+  <BoundLabel layout="1390.0,400.0,70.0,20.0" background="white" border="2.0 groove black">
+    <BoundLabelBinding ord="station:|slot:/Drivers/NiagaraNetwork/WEB_CVI/points/DDC_CP_CH/TEMP_02/out/value">
+      <ObjectToString name="text"/>
+    </BoundLabelBinding>
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+    <PopupBinding ord="history:/CVI_Supervisor/Temp_R_NL" title="L&#x1ecb;ch s&#x1eed; nhi&#x1ec7;t &#x111;&#x1ed9; n&#x1b0;&#x1edb;c l&#x1ea1;nh &#x111;&#x1b0;&#x1edd;ng h&#x1ed3;i"/>
+  </BoundLabel>
+
+  <BoundLabel layout="180.0,420.0,70.0,20.0" background="white" border="2.0 groove black">
+    <BoundLabelBinding ord="station:|slot:/Drivers/NiagaraNetwork/WEB_CVI/points/DDC_CP_CH/TEMP_03/out/value">
+      <ObjectToString name="text"/>
+    </BoundLabelBinding>
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+    <PopupBinding ord="history:/CVI_Supervisor/Temp_S_TGN" title="L&#x1ecb;ch s&#x1eed; nhi&#x1ec7;t &#x111;&#x1ed9; n&#x1b0;&#x1edb;c gi&#x1ea3;i nhi&#x1ec7;t &#x111;&#x1b0;&#x1edd;ng c&#x1ea5;p"/>
+  </BoundLabel>
+
+  <BoundLabel layout="1510.0,400.0,70.0,20.0" background="white" border="2.0 groove black">
+    <BoundLabelBinding ord="station:|slot:/Drivers/NiagaraNetwork/WEB_CVI/points/DDC_CP_CH/TEMP_04/out/value">
+      <ObjectToString name="text"/>
+    </BoundLabelBinding>
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+    <PopupBinding ord="history:/CVI_Supervisor/Temp_S_NL" title="L&#x1ecb;ch s&#x1eed; nhi&#x1ec7;t &#x111;&#x1ed9; n&#x1b0;&#x1edb;c l&#x1ea1;nh &#x111;&#x1b0;&#x1edd;ng c&#x1ea5;p"/>
+  </BoundLabel>
+
+  <BoundLabel layout="1530.0,240.0,60.0,20.0" background="white" border="2.0 groove black">
+    <BoundLabelBinding ord="station:|slot:/Drivers/NiagaraNetwork/WEB_CVI/points/DDC_CP_CH/BYPASS_VSD/out/value">
+      <ObjectToString name="text"/>
+    </BoundLabelBinding>
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+  </BoundLabel>
+
+  <PxInclude layout="800.0,620.0,150.0,50.0" ord="file:^px/Panel/PN_Chiller/PanelCH1.px"/>
+
+  <PxInclude layout="800.0,750.0,150.0,50.0" ord="file:^px/Panel/PN_Chiller/PanelCH2.px"/>
+
+  <BoundLabel layout="720.0,590.0,70.0,20.0" border="2.0 groove black">
+    <BoundLabelBinding ord="station:|slot:/Drivers/NiagaraNetwork/WEB_CVI/points/CHILLER/CHILLER_01/Condenser$20Water$20Flow$20Status">
+      <IBooleanToSimple name="background">
+        <Brush name="trueValue" value="lime"/>
+        <Brush name="falseValue" value="red"/>
+      </IBooleanToSimple>
+      <IBooleanToSimple name="text">
+        <String name="trueValue" value="FS M&#x1edf;"/>
+        <String name="falseValue" value="FS &#x110;&#xf3;ng"/>
+      </IBooleanToSimple>
+    </BoundLabelBinding>
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+  </BoundLabel>
+
+  <BoundLabel layout="980.0,600.0,70.0,20.0" border="2.0 groove black">
+    <BoundLabelBinding ord="station:|slot:/Drivers/NiagaraNetwork/WEB_CVI/points/CHILLER/CHILLER_01/Evaporator$20Water$20Flow$20Status">
+      <IBooleanToSimple name="background">
+        <Brush name="trueValue" value="lime"/>
+        <Brush name="falseValue" value="red"/>
+      </IBooleanToSimple>
+      <IBooleanToSimple name="text">
+        <String name="trueValue" value="FS M&#x1edf;"/>
+        <String name="falseValue" value="FS &#x110;&#xf3;ng"/>
+      </IBooleanToSimple>
+    </BoundLabelBinding>
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+  </BoundLabel>
+
+  <BoundLabel layout="710.0,875.0,70.0,20.0" border="2.0 groove black">
+    <BoundLabelBinding ord="station:|slot:/Drivers/NiagaraNetwork/WEB_CVI/points/CHILLER/CHILLER_02/Condenser$20Water$20Flow$20Status">
+      <IBooleanToSimple name="background">
+        <Brush name="trueValue" value="lime"/>
+        <Brush name="falseValue" value="red"/>
+      </IBooleanToSimple>
+      <IBooleanToSimple name="text">
+        <String name="trueValue" value="FS M&#x1edf;"/>
+        <String name="falseValue" value="FS &#x110;&#xf3;ng"/>
+      </IBooleanToSimple>
+    </BoundLabelBinding>
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+  </BoundLabel>
+
+  <BoundLabel layout="980.0,890.0,70.0,20.0" border="2.0 groove black">
+    <BoundLabelBinding ord="station:|slot:/Drivers/NiagaraNetwork/WEB_CVI/points/CHILLER/CHILLER_02/Evaporator$20Water$20Flow$20Status">
+      <IBooleanToSimple name="background">
+        <Brush name="trueValue" value="lime"/>
+        <Brush name="falseValue" value="red"/>
+      </IBooleanToSimple>
+      <IBooleanToSimple name="text">
+        <String name="trueValue" value="FS M&#x1edf;"/>
+        <String name="falseValue" value="FS &#x110;&#xf3;ng"/>
+      </IBooleanToSimple>
+    </BoundLabelBinding>
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+  </BoundLabel>
+
+  <BoundLabel layout="800.0,620.0,28.0,28.0" font="bold 16.0pt Tahoma" border="2.0 groove black">
+    <BoundLabelBinding ord="station:|slot:/Drivers/NiagaraNetwork/WEB_CVI/points/DDC_CP_CH/CHILLER_AM_01">
+      <IBooleanToSimple name="background">
+        <Brush name="trueValue" value="lime"/>
+        <Brush name="falseValue" value="red"/>
+      </IBooleanToSimple>
+      <IBooleanToSimple name="text">
+        <String name="trueValue" value="A"/>
+        <String name="falseValue" value="M"/>
+      </IBooleanToSimple>
+    </BoundLabelBinding>
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+  </BoundLabel>
+
+  <PxInclude layout="645.0,160.0,150.0,50.0" ord="file:^px/Panel/PN_Chiller/PanelValTGN1.px"/>
+
+  <PxInclude layout="1290.0,160.0,150.0,50.0" ord="file:^px/Panel/PN_Chiller/PanelValTGN2.px"/>
+
+  <PxInclude layout="930.0,470.0,150.0,50.0" ord="file:^px/Panel/PN_Chiller/PanelValNL1.px"/>
+
+  <PxInclude layout="960.0,770.0,150.0,50.0" ord="file:^px/Panel/PN_Chiller/PanelValNL2.px"/>
+
+  <PxInclude layout="660.0,480.0,150.0,50.0" ord="file:^px/Panel/PN_Chiller/PanelValGN1.px"/>
+
+  <PxInclude layout="650.0,770.0,150.0,50.0" ord="file:^px/Panel/PN_Chiller/PanelValGN2.px"/>
+
+  <BoundLabel layout="600.0,160.0,20.0,20.0" border="2.0 groove black">
+    <BoundLabelBinding ord="station:|slot:/Drivers/NiagaraNetwork/WEB_CVI/points/DDC_CP_CH/VAL_OP_TGN_01">
+      <IBooleanToSimple name="background">
+        <Brush name="trueValue" value="lime"/>
+        <Brush name="falseValue" value="null"/>
+      </IBooleanToSimple>
+    </BoundLabelBinding>
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+  </BoundLabel>
+
+  <BoundLabel layout="800.0,750.0,28.0,28.0" font="bold 16.0pt Tahoma" border="2.0 groove black">
+    <BoundLabelBinding ord="station:|slot:/Drivers/NiagaraNetwork/WEB_CVI/points/DDC_CP_CH/CHILLER_AM_02">
+      <IBooleanToSimple name="background">
+        <Brush name="trueValue" value="lime"/>
+        <Brush name="falseValue" value="red"/>
+      </IBooleanToSimple>
+      <IBooleanToSimple name="text">
+        <String name="trueValue" value="A"/>
+        <String name="falseValue" value="M"/>
+      </IBooleanToSimple>
+    </BoundLabelBinding>
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+  </BoundLabel>
+
+  <BoundLabel layout="1370.0,425.0,28.0,28.0" font="bold 16.0pt Tahoma" border="2.0 groove black">
+    <BoundLabelBinding ord="station:|slot:/Drivers/NiagaraNetwork/WEB_CVI/points/DDC_CP_CH/CHWP_AM_01">
+      <IBooleanToSimple name="background">
+        <Brush name="trueValue" value="lime"/>
+        <Brush name="falseValue" value="red"/>
+      </IBooleanToSimple>
+      <IBooleanToSimple name="text">
+        <String name="trueValue" value="A"/>
+        <String name="falseValue" value="M"/>
+      </IBooleanToSimple>
+    </BoundLabelBinding>
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+  </BoundLabel>
+
+  <BoundLabel layout="1370.0,710.0,28.0,28.0" font="bold 16.0pt Tahoma" border="2.0 groove black">
+    <BoundLabelBinding ord="station:|slot:/Drivers/NiagaraNetwork/WEB_CVI/points/DDC_CP_CH/CHWP_AM_02">
+      <IBooleanToSimple name="background">
+        <Brush name="trueValue" value="lime"/>
+        <Brush name="falseValue" value="red"/>
+      </IBooleanToSimple>
+      <IBooleanToSimple name="text">
+        <String name="trueValue" value="A"/>
+        <String name="falseValue" value="M"/>
+      </IBooleanToSimple>
+    </BoundLabelBinding>
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+  </BoundLabel>
+
+  <BoundLabel layout="310.0,610.0,28.0,28.0" font="bold 16.0pt Tahoma" border="2.0 groove black">
+    <BoundLabelBinding ord="station:|slot:/Drivers/NiagaraNetwork/WEB_CVI/points/DDC_CP_CH/CTWP_AM_01">
+      <IBooleanToSimple name="background">
+        <Brush name="trueValue" value="lime"/>
+        <Brush name="falseValue" value="red"/>
+      </IBooleanToSimple>
+      <IBooleanToSimple name="text">
+        <String name="trueValue" value="A"/>
+        <String name="falseValue" value="M"/>
+      </IBooleanToSimple>
+    </BoundLabelBinding>
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+  </BoundLabel>
+
+  <BoundLabel layout="310.0,890.0,28.0,28.0" font="bold 16.0pt Tahoma" border="2.0 groove black">
+    <BoundLabelBinding ord="station:|slot:/Drivers/NiagaraNetwork/WEB_CVI/points/DDC_CP_CH/CTWP_AM_02">
+      <IBooleanToSimple name="background">
+        <Brush name="trueValue" value="lime"/>
+        <Brush name="falseValue" value="red"/>
+      </IBooleanToSimple>
+      <IBooleanToSimple name="text">
+        <String name="trueValue" value="A"/>
+        <String name="falseValue" value="M"/>
+      </IBooleanToSimple>
+    </BoundLabelBinding>
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+  </BoundLabel>
+
+  <BoundLabel layout="365.0,325.0,25.0,25.0" font="bold 16.0pt Tahoma" border="2.0 groove black">
+    <BoundLabelBinding ord="station:|slot:/Drivers/NiagaraNetwork/WEB_CVI/points/DDC_CP_CH/CT_AM_01">
+      <IBooleanToSimple name="background">
+        <Brush name="trueValue" value="lime"/>
+        <Brush name="falseValue" value="red"/>
+      </IBooleanToSimple>
+      <IBooleanToSimple name="text">
+        <String name="trueValue" value="A"/>
+        <String name="falseValue" value="M"/>
+      </IBooleanToSimple>
+    </BoundLabelBinding>
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+  </BoundLabel>
+
+  <BoundLabel layout="1015.0,325.0,25.0,25.0" font="bold 16.0pt Tahoma" border="2.0 groove black">
+    <BoundLabelBinding ord="station:|slot:/Drivers/NiagaraNetwork/WEB_CVI/points/DDC_CP_CH/CT_AM_02">
+      <IBooleanToSimple name="background">
+        <Brush name="trueValue" value="lime"/>
+        <Brush name="falseValue" value="red"/>
+      </IBooleanToSimple>
+      <IBooleanToSimple name="text">
+        <String name="trueValue" value="A"/>
+        <String name="falseValue" value="M"/>
+      </IBooleanToSimple>
+    </BoundLabelBinding>
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+  </BoundLabel>
+
+  <BoundLabel layout="1240.0,160.0,20.0,20.0" border="2.0 groove black">
+    <BoundLabelBinding ord="station:|slot:/Drivers/NiagaraNetwork/WEB_CVI/points/DDC_CP_CH/VAL_OP_TGN_02">
+      <IBooleanToSimple name="background">
+        <Brush name="trueValue" value="lime"/>
+        <Brush name="falseValue" value="null"/>
+      </IBooleanToSimple>
+    </BoundLabelBinding>
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+  </BoundLabel>
+
+  <BoundLabel layout="1220.0,160.0,20.0,20.0" border="2.0 groove black">
+    <BoundLabelBinding ord="station:|slot:/Drivers/NiagaraNetwork/WEB_CVI/points/DDC_CP_CH/VAL_CL_TGN_02">
+      <IBooleanToSimple name="background">
+        <Brush name="trueValue" value="red"/>
+        <Brush name="falseValue" value="null"/>
+      </IBooleanToSimple>
+    </BoundLabelBinding>
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+  </BoundLabel>
+
+  <BoundLabel layout="580.0,160.0,20.0,20.0" border="2.0 groove black">
+    <BoundLabelBinding ord="station:|slot:/Drivers/NiagaraNetwork/WEB_CVI/points/DDC_CP_CH/VAL_CL_TGN_01">
+      <IBooleanToSimple name="background">
+        <Brush name="trueValue" value="red"/>
+        <Brush name="falseValue" value="null"/>
+      </IBooleanToSimple>
+    </BoundLabelBinding>
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+  </BoundLabel>
+
+  <BoundLabel layout="995.0,550.0,20.0,20.0" border="2.0 groove black">
+    <BoundLabelBinding ord="station:|slot:/Drivers/NiagaraNetwork/WEB_CVI/points/DDC_CP_CH/VAL_NL_CL_01">
+      <IBooleanToSimple name="background">
+        <Brush name="trueValue" value="red"/>
+        <Brush name="falseValue" value="null"/>
+      </IBooleanToSimple>
+    </BoundLabelBinding>
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+  </BoundLabel>
+
+  <BoundLabel layout="1015.0,550.0,20.0,20.0" border="2.0 groove black">
+    <BoundLabelBinding ord="station:|slot:/Drivers/NiagaraNetwork/WEB_CVI/points/DDC_CP_CH/VAL_NL_OP_01">
+      <IBooleanToSimple name="background">
+        <Brush name="trueValue" value="lime"/>
+        <Brush name="falseValue" value="null"/>
+      </IBooleanToSimple>
+    </BoundLabelBinding>
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+  </BoundLabel>
+
+  <BoundLabel layout="1015.0,830.0,20.0,20.0" border="2.0 groove black">
+    <BoundLabelBinding ord="station:|slot:/Drivers/NiagaraNetwork/WEB_CVI/points/DDC_CP_CH/VAL_OP_NL_02">
+      <IBooleanToSimple name="background">
+        <Brush name="trueValue" value="lime"/>
+        <Brush name="falseValue" value="null"/>
+      </IBooleanToSimple>
+    </BoundLabelBinding>
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+  </BoundLabel>
+
+  <BoundLabel layout="995.0,830.0,20.0,20.0" border="2.0 groove black">
+    <BoundLabelBinding ord="station:|slot:/Drivers/NiagaraNetwork/WEB_CVI/points/DDC_CP_CH/VAL_NL_CL_02">
+      <IBooleanToSimple name="background">
+        <Brush name="trueValue" value="red"/>
+        <Brush name="falseValue" value="null"/>
+      </IBooleanToSimple>
+    </BoundLabelBinding>
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+  </BoundLabel>
+
+  <BoundLabel layout="750.0,530.0,20.0,20.0" border="2.0 groove black">
+    <BoundLabelBinding ord="station:|slot:/Drivers/NiagaraNetwork/WEB_CVI/points/DDC_CP_CH/VAL_OP_GN_01">
+      <IBooleanToSimple name="background">
+        <Brush name="trueValue" value="lime"/>
+        <Brush name="falseValue" value="null"/>
+      </IBooleanToSimple>
+    </BoundLabelBinding>
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+  </BoundLabel>
+
+  <BoundLabel layout="730.0,530.0,20.0,20.0" border="2.0 groove black">
+    <BoundLabelBinding ord="station:|slot:/Drivers/NiagaraNetwork/WEB_CVI/points/DDC_CP_CH/VAL_GN_CL_01">
+      <IBooleanToSimple name="background">
+        <Brush name="trueValue" value="red"/>
+        <Brush name="falseValue" value="null"/>
+      </IBooleanToSimple>
+    </BoundLabelBinding>
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+  </BoundLabel>
+
+  <BoundLabel layout="750.0,820.0,20.0,20.0" border="2.0 groove black">
+    <BoundLabelBinding ord="station:|slot:/Drivers/NiagaraNetwork/WEB_CVI/points/DDC_CP_CH/VAL_GN_OP_02">
+      <IBooleanToSimple name="background">
+        <Brush name="trueValue" value="lime"/>
+        <Brush name="falseValue" value="null"/>
+      </IBooleanToSimple>
+    </BoundLabelBinding>
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+  </BoundLabel>
+
+  <BoundLabel layout="730.0,820.0,20.0,20.0" border="2.0 groove black">
+    <BoundLabelBinding ord="station:|slot:/Drivers/NiagaraNetwork/WEB_CVI/points/DDC_CP_CH/VAL_GN_CL_02">
+      <IBooleanToSimple name="background">
+        <Brush name="trueValue" value="red"/>
+        <Brush name="falseValue" value="null"/>
+      </IBooleanToSimple>
+    </BoundLabelBinding>
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+  </BoundLabel>
+
+  <BoundLabel layout="1580.0,550.0,210.0,25.0" text="&#x110;&#x1eb6;T L&#x1eca;CH CH&#x1ea0;Y CHILLER" font="12.0pt Tahoma" foreground="lime" background="#251b1b" halign="left" valign="fill" textToIconAlign="center" border="1.0 solid #988383">
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+  </BoundLabel>
+
+  <BoundLabel layout="1580.0,575.0,125.0,20.0" text=" L&#x1eca;CH Chiller " font="14.0pt Tahoma" foreground="black" background="#e0e0e0" halign="left" border="2.0 groove black">
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+  </BoundLabel>
+
+  <BoundLabel layout="1580.0,680.0,218.0,25.0" text=" ALARM H&#x1ec6; TH&#x1ed0;NG" font="12.0pt Tahoma" foreground="lime" background="#251b1b" halign="left" valign="fill" textToIconAlign="center" border="1.0 solid #988383">
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+  </BoundLabel>
+
+  <BoundLabel layout="1580.0,705.0,125.0,20.0" text=" CHILLER 1 ALARM" font="14.0pt Tahoma" foreground="black" background="#e0e0e0" halign="left" border="2.0 groove black">
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+  </BoundLabel>
+
+  <BoundLabel layout="1580.0,725.0,125.0,20.0" text=" CHILLER 2 ALARM" font="14.0pt Tahoma" foreground="black" background="#e0e0e0" halign="left" border="2.0 groove black">
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+  </BoundLabel>
+
+  <BoundLabel layout="1700.0,620.0,89.99999999999977,20.0" font="bold 14.0pt Segoe UI" halign="fill" textToIconAlign="center" border="2.0 solid white">
+    <BoundLabelBinding ord="station:|slot:/Drivers/NiagaraNetwork/WEB_CVI/points/CHILLER/CH01_Ovrd/out/value">
+      <IBooleanToSimple name="text">
+        <String name="trueValue" value="ON"/>
+        <String name="falseValue" value="OFF"/>
+      </IBooleanToSimple>
+      <IBooleanToSimple name="foreground">
+        <Brush name="trueValue" value="lime"/>
+        <Brush name="falseValue" value="null"/>
+      </IBooleanToSimple>
+    </BoundLabelBinding>
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+  </BoundLabel>
+
+  <BoundLabel layout="1580.0,620.0,125.0,20.0" text=" MANUAL CH1" font="14.0pt Tahoma" foreground="black" background="#e0e0e0" halign="left" border="2.0 groove black">
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+  </BoundLabel>
+
+  <BoundLabel layout="1580.0,640.0,125.0,20.0" text=" MANUAL CH2" font="14.0pt Tahoma" foreground="black" background="#e0e0e0" halign="left" border="2.0 groove black">
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+  </BoundLabel>
+
+  <BoundLabel layout="1700.0,640.0,89.99999999999977,20.0" font="bold 14.0pt Segoe UI" halign="fill" textToIconAlign="center" border="2.0 solid white">
+    <BoundLabelBinding ord="station:|slot:/Drivers/NiagaraNetwork/WEB_CVI/points/CHILLER/CH02_Ovrd/out/value">
+      <IBooleanToSimple name="text">
+        <String name="trueValue" value="ON"/>
+        <String name="falseValue" value="OFF"/>
+      </IBooleanToSimple>
+      <IBooleanToSimple name="foreground">
+        <Brush name="trueValue" value="lime"/>
+        <Brush name="falseValue" value="null"/>
+      </IBooleanToSimple>
+    </BoundLabelBinding>
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+  </BoundLabel>
+
+  <BoundLabel layout="1700.0,575.0,89.99999999999977,20.0" font="bold 14.0pt Segoe UI" halign="fill" textToIconAlign="center" border="2.0 solid white">
+    <BoundLabelBinding ord="station:|slot:/Drivers/NiagaraNetwork/Schedules/SCHE_CH/out/value">
+      <IBooleanToSimple name="text">
+        <String name="trueValue" value="ON"/>
+        <String name="falseValue" value="OFF"/>
+      </IBooleanToSimple>
+    </BoundLabelBinding>
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+  </BoundLabel>
+
+  <ImageButton layout="1700.0,575.0,85.0,20.0" styleClasses="toolbar" buttonStyle="toolBar">
+    <WsAnnotation name="wsAnnotation" value="6,6,8"/>
+    <PopupBinding ord="station:|slot:/Drivers/NiagaraNetwork/Schedules/SCHE_CH" title="TH&#x1edc;I GIAN CH&#x1ea0;Y H&#x1ec6; TH&#x1ed0;NG CHILLER"/>
+  </ImageButton>
+
+  <ImageButton layout="1700.0,620.0,85.0,20.0" styleClasses="toolbar" font="bold 12.0pt SansSerif" foreground="white" halign="left" buttonStyle="toolBar">
+    <ActionBinding ord="station:|slot:/Drivers/NiagaraNetwork/WEB_CVI/points/CHILLER/CH01_Ovrd/set" widgetEvent="actionPerformed"/>
+    <WsAnnotation name="wsAnnotation" value="6,6,8"/>
+  </ImageButton>
+
+  <ImageButton layout="1700.0,640.0,85.0,20.0" styleClasses="toolbar" font="bold 12.0pt SansSerif" foreground="white" halign="left" buttonStyle="toolBar">
+    <ActionBinding ord="station:|slot:/Drivers/NiagaraNetwork/WEB_CVI/points/CHILLER/CH02_Ovrd/set" widgetEvent="actionPerformed"/>
+    <WsAnnotation name="wsAnnotation" value="6,6,8"/>
+  </ImageButton>
+
+  <BoundLabel layout="1580.0,595.0,210.00000000000023,25.0" text=" B&#x1eac;T T&#x1eae;T TR&#x1ef0;C TI&#x1ebe;P CHILLER" font="12.0pt Tahoma" foreground="lime" background="#251b1b" halign="left" valign="fill" textToIconAlign="center" border="1.0 solid #988383">
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+  </BoundLabel>
+
+  <BoundLabel layout="1580.0,510.0,210.00000000000023,20.0" text=" C&#xc0;I &#x110;&#x1eb6;T CH&#x1ebe; &#x110;&#x1ed8; BMS" font="14.0pt Tahoma" foreground="black" background="yellow" halign="left" border="2.0 groove black">
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+  </BoundLabel>
+
+  <BoundLabel layout="1700.0,705.0,100.00000000000023,20.0" border="2.0 groove black">
+    <BoundLabelBinding ord="station:|slot:/Drivers/NiagaraNetwork/WEB_CVI/points/CHILLER/CHILLER_01/Alarm$20Present/out/value">
+      <ObjectToString name="text"/>
+      <IBooleanToSimple name="background">
+        <Brush name="trueValue" value="yellow"/>
+        <Brush name="falseValue" value="null"/>
+      </IBooleanToSimple>
+    </BoundLabelBinding>
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+  </BoundLabel>
+
+  <BoundLabel layout="1700.0,725.0,100.00000000000023,20.0" border="2.0 groove black">
+    <BoundLabelBinding ord="station:|slot:/Drivers/NiagaraNetwork/WEB_CVI/points/CHILLER/CHILLER_02/Alarm$20Present/out/value">
+      <ObjectToString name="text"/>
+      <IBooleanToSimple name="background">
+        <Brush name="trueValue" value="yellow"/>
+        <Brush name="falseValue" value="null"/>
+      </IBooleanToSimple>
+    </BoundLabelBinding>
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+  </BoundLabel>
+
+  <BoundLabel layout="0.0,240.0,150.0,30.0" text="Cool Chiller" font="18.0pt Tahoma" background="#80ff80">
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+    <BoundLabelBinding hyperlink="file:^px/CHILLER.px"/>
+  </BoundLabel>
+
+  <BoundLabel layout="0.0,270.0,150.0,30.0" text="Hot Chiller" font="18.0pt Tahoma" background="#80ffffff">
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+    <BoundLabelBinding hyperlink="file:^px/CHILLER/CHILLER_Hot.px"/>
+  </BoundLabel>
+
+  <Picture layout="1700.0,135.0,150.0,40.0" image="file:^px/image/Background/IntechLogo.jpg" scale="fit"/>
+
+  <BoundLabel layout="1530.0,220.0,60.0,20.0" font="bold 12.0pt Segoe UI" halign="right" border="2.0 groove black">
+    <BoundLabelBinding ord="station:|slot:/Drivers/NiagaraNetwork/WEB_CVI/points/DDC_CP_CH/BYPASS_VSD/out">
+      <ObjectToString name="text" format=""/>
+      <IBooleanToSimple name="background">
+        <Brush name="trueValue" value="#ffc0ff"/>
+        <Brush name="falseValue" value="null"/>
+      </IBooleanToSimple>
+    </BoundLabelBinding>
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+  </BoundLabel>
+
+  <BoundLabel layout="1050.0,600.0,60.0,20.0" border="2.0 groove black">
+    <BoundLabelBinding ord="station:|slot:/Drivers/NiagaraNetwork/WEB_CVI/points/CHILLER/CHILLER_01/Evaporator$20Entering$20Water$20Temp/out/value">
+      <ObjectToString name="text"/>
+    </BoundLabelBinding>
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+    <PopupBinding ord="history:/CVI_Supervisor/Evaporator$20Leaving$20Water$20TempCH1" title="L&#x1ecb;ch s&#x1eed; nhi&#x1ec7;t &#x111;&#x1ed9; n&#x1b0;&#x1edb;c l&#x1ea1;nh &#x111;&#x1b0;&#x1edd;ng c&#x1ea5;p"/>
+  </BoundLabel>
+
+  <BoundLabel layout="1050.0,555.0,60.0,20.0" border="2.0 groove black">
+    <BoundLabelBinding ord="station:|slot:/Drivers/NiagaraNetwork/WEB_CVI/points/CHILLER/CHILLER_01/Evaporator$20Leaving$20Water$20Temp/out/value">
+      <ObjectToString name="text"/>
+    </BoundLabelBinding>
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+    <PopupBinding ord="history:/CVI_Supervisor/Evaporator$20Entering$20Water$20TempCH1" title="L&#x1ecb;ch s&#x1eed; nhi&#x1ec7;t &#x111;&#x1ed9; n&#x1b0;&#x1edb;c l&#x1ea1;nh &#x111;&#x1b0;&#x1edd;ng c&#x1ea5;p ra t&#x1ea3;i"/>
+  </BoundLabel>
+
+  <BoundLabel layout="1650.0,240.0,60.0,20.0" background="white" border="2.0 groove black">
+    <BoundLabelBinding ord="station:|slot:/Drivers/NiagaraNetwork/WEB_CVI/points/DDC_CP_CH/WT_PRESSURE/out/value">
+      <ObjectToString name="text"/>
+    </BoundLabelBinding>
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+  </BoundLabel>
+
+  <BoundLabel layout="1650.0,220.0,70.00000000000023,20.0" text=" Ch&#xea;nh &#xe1;p" font="14.0pt Tahoma" foreground="black" background="#e0e0e0" halign="left" border="2.0 groove black">
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+  </BoundLabel>
+
+  <BoundLabel layout="1580.0,530.0,100.00000000000023,20.0" text=" C&#xe0;i ch&#x1ebf; &#x111;&#x1ed9;" font="14.0pt Tahoma" foreground="black" background="#e0e0e0" halign="left" border="2.0 groove black">
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+  </BoundLabel>
+
+  <BoundLabel layout="1680.0,530.0,110.00000000000023,20.0" font="14.0pt Tahoma" halign="fill" textToIconAlign="center" border="2.0 solid white">
+    <BoundLabelBinding ord="station:|slot:/Drivers/NiagaraNetwork/WEB_CVI/points/CHILLER/CH_OvrdEn/out/value">
+      <IBooleanToSimple name="text">
+        <String name="trueValue" value="TR&#x1ef0;C TI&#x1ebe;P"/>
+        <String name="falseValue" value="L&#x1eca;CH"/>
+      </IBooleanToSimple>
+      <IBooleanToSimple name="foreground">
+        <Brush name="trueValue" value="white"/>
+        <Brush name="falseValue" value="black"/>
+      </IBooleanToSimple>
+      <IBooleanToSimple name="background">
+        <Brush name="trueValue" value="#80bb80ff"/>
+        <Brush name="falseValue" value="#8000ff00"/>
+      </IBooleanToSimple>
+    </BoundLabelBinding>
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+  </BoundLabel>
+
+  <ImageButton layout="1900.0,520.0,85.0,20.0" styleClasses="toolbar" font="bold 12.0pt SansSerif" foreground="white" halign="left" buttonStyle="toolBar">
+    <ActionBinding ord="station:|slot:/Drivers/NiagaraNetwork/WEB_CVI/points/Program_Chiller/CH_Auto$2eMan/set" widgetEvent="actionPerformed"/>
+    <WsAnnotation name="wsAnnotation" value="6,6,8"/>
+  </ImageButton>
+
+  <ImageButton layout="1680.0,530.0,110.00000000000023,20.0" styleClasses="toolbar" font="bold 12.0pt SansSerif" foreground="white" halign="left" buttonStyle="toolBar">
+    <ActionBinding ord="station:|slot:/Drivers/NiagaraNetwork/WEB_CVI/points/CHILLER/CH_OvrdEn/set" widgetEvent="actionPerformed"/>
+    <WsAnnotation name="wsAnnotation" value="6,6,8"/>
+  </ImageButton>
+
+  <BoundLabel layout="1580.0,745.0,220.0,25.0" text=" ALARM CH&#x1af;&#x1a0;NG TR&#xcc;NH" font="12.0pt Tahoma" foreground="lime" background="#251b1b" halign="left" valign="fill" textToIconAlign="center" border="1.0 solid #988383">
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+  </BoundLabel>
+
+  <BoundLabel layout="1580.0,770.0,125.0,20.0" text=" CHILLER 1 ALARM" font="14.0pt Tahoma" foreground="black" background="#e0e0e0" halign="left" border="2.0 groove black">
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+  </BoundLabel>
+
+  <BoundLabel layout="1580.0,790.0,125.0,20.0" text=" CHILLER 2 ALARM" font="14.0pt Tahoma" foreground="black" background="#e0e0e0" halign="left" border="2.0 groove black">
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+  </BoundLabel>
+
+  <BoundLabel layout="1700.0,770.0,100.00000000000023,20.0" border="2.0 groove black">
+    <BoundLabelBinding ord="station:|slot:/Drivers/NiagaraNetwork/WEB_CVI/points/Program_Chiller/CH01_LOCK/out/value">
+      <IBooleanToSimple name="background">
+        <Brush name="trueValue" value="yellow"/>
+        <Brush name="falseValue" value="null"/>
+      </IBooleanToSimple>
+      <IBooleanToSimple name="text">
+        <String name="trueValue" value="Alarm"/>
+        <String name="falseValue" value="Nomal"/>
+      </IBooleanToSimple>
+    </BoundLabelBinding>
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+  </BoundLabel>
+
+  <BoundLabel layout="1700.0,790.0,100.00000000000023,20.0" border="2.0 groove black">
+    <BoundLabelBinding ord="station:|slot:/Drivers/NiagaraNetwork/WEB_CVI/points/Program_Chiller/CH02_LOCK/out/value">
+      <IBooleanToSimple name="background">
+        <Brush name="trueValue" value="yellow"/>
+        <Brush name="falseValue" value="null"/>
+      </IBooleanToSimple>
+      <IBooleanToSimple name="text">
+        <String name="trueValue" value="Alarm"/>
+        <String name="falseValue" value="Nomal"/>
+      </IBooleanToSimple>
+    </BoundLabelBinding>
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+  </BoundLabel>
+
+  <BoundLabel layout="1580.0,815.0,125.0,20.0" text=" Reset Alarm" font="14.0pt Tahoma" foreground="black" background="#e0e0e0" halign="left" border="2.0 groove black">
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+  </BoundLabel>
+
+  <BoundLabel layout="1700.0,815.0,100.00000000000023,20.0" border="2.0 groove black">
+    <BoundLabelBinding ord="station:|slot:/Drivers/NiagaraNetwork/WEB_CVI/points/Program_Chiller/CH_RSAlm/out/value">
+      <ObjectToString name="text"/>
+      <IBooleanToSimple name="background">
+        <Brush name="trueValue" value="yellow"/>
+        <Brush name="falseValue" value="null"/>
+      </IBooleanToSimple>
+    </BoundLabelBinding>
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+  </BoundLabel>
+
+  <ImageButton layout="1700.0,815.0,94.99999999999977,20.0" styleClasses="toolbar" font="bold 12.0pt SansSerif" foreground="white" halign="left" buttonStyle="toolBar">
+    <ActionBinding ord="station:|slot:/Drivers/NiagaraNetwork/WEB_CVI/points/Program_Chiller/CH_RSAlm/active" widgetEvent="actionPerformed"/>
+    <WsAnnotation name="wsAnnotation" value="6,6,8"/>
+  </ImageButton>
+
+  <Picture layout="550.0,270.0,32.0,32.0" scale="fitRatio">
+    <ValueBinding ord="station:|slot:/Drivers/NiagaraNetwork/WEB_CVI/points/DDC_CP_CH/CT_TR_01">
+      <IBooleanToSimple name="image">
+        <Image name="trueValue" value="file:^px/Images/Icon/Trip_On.png"/>
+        <Image name="falseValue" value="file:^px/Images/Icon/Trip_Off.png"/>
+      </IBooleanToSimple>
+    </ValueBinding>
+  </Picture>
+
+  <Picture layout="1190.0,270.0,32.0,32.0" scale="fitRatio">
+    <ValueBinding ord="station:|slot:/Drivers/NiagaraNetwork/WEB_CVI/points/DDC_CP_CH/CT_TR_02">
+      <IBooleanToSimple name="image">
+        <Image name="trueValue" value="file:^px/Images/Icon/Trip_On.png"/>
+        <Image name="falseValue" value="file:^px/Images/Icon/Trip_Off.png"/>
+      </IBooleanToSimple>
+    </ValueBinding>
+  </Picture>
+
+  <Picture layout="1345.0,530.0,32.0,32.0" scale="fitRatio">
+    <ValueBinding ord="station:|slot:/Drivers/NiagaraNetwork/WEB_CVI/points/DDC_CP_CH/CHWP_TR_01">
+      <IBooleanToSimple name="image">
+        <Image name="trueValue" value="file:^px/Images/Icon/Trip_On.png"/>
+        <Image name="falseValue" value="file:^px/Images/Icon/Trip_Off.png"/>
+      </IBooleanToSimple>
+    </ValueBinding>
+  </Picture>
+
+  <Picture layout="1350.0,815.0,32.0,32.0" scale="fitRatio">
+    <ValueBinding ord="station:|slot:/Drivers/NiagaraNetwork/WEB_CVI/points/DDC_CP_CH/CHWP_TR_02">
+      <IBooleanToSimple name="image">
+        <Image name="trueValue" value="file:^px/Images/Icon/Trip_On.png"/>
+        <Image name="falseValue" value="file:^px/Images/Icon/Trip_Off.png"/>
+      </IBooleanToSimple>
+    </ValueBinding>
+  </Picture>
+
+  <Picture layout="450.0,530.0,32.0,32.0" scale="fitRatio">
+    <ValueBinding ord="station:|slot:/Drivers/NiagaraNetwork/WEB_CVI/points/DDC_CP_CH/CTWP_TR_01">
+      <IBooleanToSimple name="image">
+        <Image name="trueValue" value="file:^px/Images/Icon/Trip_On.png"/>
+        <Image name="falseValue" value="file:^px/Images/Icon/Trip_Off.png"/>
+      </IBooleanToSimple>
+    </ValueBinding>
+  </Picture>
+
+  <Picture layout="450.0,815.0,32.0,32.0" scale="fitRatio">
+    <ValueBinding ord="station:|slot:/Drivers/NiagaraNetwork/WEB_CVI/points/DDC_CP_CH/CTWP_TR_02">
+      <IBooleanToSimple name="image">
+        <Image name="trueValue" value="file:^px/Images/Icon/Trip_On.png"/>
+        <Image name="falseValue" value="file:^px/Images/Icon/Trip_Off.png"/>
+      </IBooleanToSimple>
+    </ValueBinding>
+  </Picture>
+
+  <Picture layout="930.0,520.0,32.0,32.0" scale="fitRatio">
+    <ValueBinding ord="station:|slot:/Drivers/NiagaraNetwork/WEB_CVI/points/CHILLER/CHILLER_01/Alarm$20Present">
+      <IBooleanToSimple name="image">
+        <Image name="trueValue" value="file:^px/Images/Icon/Trip_On.png"/>
+        <Image name="falseValue" value="file:^px/Images/Icon/Trip_Off.png"/>
+      </IBooleanToSimple>
+    </ValueBinding>
+  </Picture>
+
+  <Picture layout="920.0,810.0,32.0,32.0" scale="fitRatio">
+    <ValueBinding ord="station:|slot:/Drivers/NiagaraNetwork/WEB_CVI/points/CHILLER/CHILLER_02/Alarm$20Present">
+      <IBooleanToSimple name="image">
+        <Image name="trueValue" value="file:^px/Images/Icon/Trip_On.png"/>
+        <Image name="falseValue" value="file:^px/Images/Icon/Trip_Off.png"/>
+      </IBooleanToSimple>
+    </ValueBinding>
+  </Picture>
+
+  <BoundLabel layout="5.0,890.0,190.0,40.0" text=" History" font="20.0pt Tahoma" foreground="red" background="yellow" border="2.0 groove black">
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+    <BoundLabelBinding hyperlink="file:^px/AHU/CVI_History.px"/>
+  </BoundLabel>
+
+  <BoundLabel layout="645.0,585.0,60.0,20.0" border="2.0 groove black">
+    <BoundLabelBinding ord="station:|slot:/Drivers/NiagaraNetwork/WEB_CVI/points/CHILLER/CHILLER_01/Condenser$20Entering$20Water$20Temp/out/value">
+      <ObjectToString name="text"/>
+    </BoundLabelBinding>
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+    <PopupBinding ord="history:/CVI_Supervisor/Condenser$20Entering$20Water$20TempCH1" title=" &#x110;&#x1b0;&#x1edd;ng &#x1ed1;ng h&#x1ed3;i"/>
+  </BoundLabel>
+
+  <BoundLabel layout="645.0,540.0,60.0,20.0" border="2.0 groove black">
+    <BoundLabelBinding ord="station:|slot:/Drivers/NiagaraNetwork/WEB_CVI/points/CHILLER/CHILLER_01/Condenser$20Leaving$20Water$20Temp/out/value">
+      <ObjectToString name="text"/>
+    </BoundLabelBinding>
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+    <PopupBinding ord="history:/CVI_Supervisor/Condenser$20Leaving$20Water$20TempCH1" title="&#x110;&#x1b0;&#x1edd;ng &#x1ed1;ng c&#x1ea5;p l&#xea;n th&#xe1;p"/>
+  </BoundLabel>
+
+  <BoundLabel layout="645.0,875.0,60.0,20.0" border="2.0 groove black">
+    <BoundLabelBinding ord="station:|slot:/Drivers/NiagaraNetwork/WEB_CVI/points/CHILLER/CHILLER_02/Condenser$20Entering$20Water$20Temp/out/value">
+      <ObjectToString name="text"/>
+    </BoundLabelBinding>
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+    <PopupBinding ord="history:/CVI_Supervisor/Condenser$20Entering$20Water$20TempCH2" title=" &#x110;&#x1b0;&#x1edd;ng &#x1ed1;ng h&#x1ed3;i"/>
+  </BoundLabel>
+
+  <BoundLabel layout="645.0,830.0,60.0,20.0" border="2.0 groove black">
+    <BoundLabelBinding ord="station:|slot:/Drivers/NiagaraNetwork/WEB_CVI/points/CHILLER/CHILLER_02/Condenser$20Leaving$20Water$20Temp/out/value">
+      <ObjectToString name="text"/>
+    </BoundLabelBinding>
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+    <PopupBinding ord="history:/CVI_Supervisor/Condenser$20Leaving$20Water$20TempCH2" title="&#x110;&#x1b0;&#x1edd;ng &#x1ed1;ng c&#x1ea5;p l&#xea;n th&#xe1;p"/>
+  </BoundLabel>
+
+  <BoundLabel layout="1050.0,890.0,60.0,20.0" border="2.0 groove black">
+    <BoundLabelBinding ord="station:|slot:/Drivers/NiagaraNetwork/WEB_CVI/points/CHILLER/CHILLER_02/Evaporator$20Entering$20Water$20Temp/out/value">
+      <ObjectToString name="text"/>
+    </BoundLabelBinding>
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+    <PopupBinding ord="history:/CVI_Supervisor/Evaporator$20Leaving$20Water$20TempCH2" title="L&#x1ecb;ch s&#x1eed; nhi&#x1ec7;t &#x111;&#x1ed9; n&#x1b0;&#x1edb;c l&#x1ea1;nh &#x111;&#x1b0;&#x1edd;ng c&#x1ea5;p"/>
+  </BoundLabel>
+
+  <BoundLabel layout="1055.0,840.0,60.0,20.0" border="2.0 groove black">
+    <BoundLabelBinding ord="station:|slot:/Drivers/NiagaraNetwork/WEB_CVI/points/CHILLER/CHILLER_02/Evaporator$20Leaving$20Water$20Temp/out/value">
+      <ObjectToString name="text"/>
+    </BoundLabelBinding>
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+    <PopupBinding ord="history:/CVI_Supervisor/Evaporator$20Entering$20Water$20TempCH2" title="L&#x1ecb;ch s&#x1eed; nhi&#x1ec7;t &#x111;&#x1ed9; n&#x1b0;&#x1edb;c l&#x1ea1;nh &#x111;&#x1b0;&#x1edd;ng c&#x1ea5;p ra t&#x1ea3;i"/>
+  </BoundLabel>
+
+  <BoundLabel layout="190.0,460.0,60.0,20.0" border="2.0 groove black">
+    <BoundLabelBinding ord="station:|slot:/Drivers/NiagaraNetwork/WEB_CVI/points/Program_Chiller/CH1_Current$20$28$25RLA$29$20$2d$20Compressor$201A1$20TrungBinh/out/value">
+      <ObjectToString name="text"/>
+      <IBooleanToSimple name="background">
+        <Brush name="trueValue" value="yellow"/>
+        <Brush name="falseValue" value="null"/>
+      </IBooleanToSimple>
+    </BoundLabelBinding>
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+  </BoundLabel>
+
+  <BoundLabel layout="0.0,460.0,189.99999999999997,20.0" text="(%RLA) - Compressor 1A" font="14.0pt Tahoma" foreground="black" background="#e0e0e0" halign="left" border="2.0 groove black">
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+  </BoundLabel>
+
+  <BoundLabel layout="0.0,440.0,250.0,20.0" text="Th&#xf4;ng s&#x1ed1; RLA m&#xe1;y n&#xe9;n chiller 1" font="14.0pt Tahoma" foreground="white" background="#4040ff" halign="left" border="2.0 groove black">
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+  </BoundLabel>
+
+  <BoundLabel layout="190.0,480.0,60.0,20.0" border="2.0 groove black">
+    <BoundLabelBinding ord="station:|slot:/Drivers/NiagaraNetwork/WEB_CVI/points/Program_Chiller/CH1_Current$20$28$25RLA$29$20$2d$20Compressor$201B$20TrungBinh/out/value">
+      <ObjectToString name="text"/>
+      <IBooleanToSimple name="background">
+        <Brush name="trueValue" value="yellow"/>
+        <Brush name="falseValue" value="null"/>
+      </IBooleanToSimple>
+    </BoundLabelBinding>
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+  </BoundLabel>
+
+  <BoundLabel layout="0.0,480.0,189.99999999999997,20.0" text="(%RLA) - Compressor 1B" font="14.0pt Tahoma" foreground="black" background="#e0e0e0" halign="left" border="2.0 groove black">
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+  </BoundLabel>
+
+  <BoundLabel layout="190.0,520.0,60.0,20.0" border="2.0 groove black">
+    <BoundLabelBinding ord="station:|slot:/Drivers/NiagaraNetwork/WEB_CVI/points/Program_Chiller/CH2_Current$20$28$25RLA$29$20$2d$20Compressor$201A1$20TrungBinh1/out/value">
+      <ObjectToString name="text"/>
+      <IBooleanToSimple name="background">
+        <Brush name="trueValue" value="yellow"/>
+        <Brush name="falseValue" value="null"/>
+      </IBooleanToSimple>
+    </BoundLabelBinding>
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+  </BoundLabel>
+
+  <BoundLabel layout="0.0,520.0,189.99999999999997,20.0" text="(%RLA) - Compressor 1A" font="14.0pt Tahoma" foreground="black" background="#e0e0e0" halign="left" border="2.0 groove black">
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+  </BoundLabel>
+
+  <BoundLabel layout="0.0,500.0,250.0,20.0" text="Th&#xf4;ng s&#x1ed1; RLA m&#xe1;y n&#xe9;n chiller 2" font="14.0pt Tahoma" foreground="white" background="#4040ff" halign="left" border="2.0 groove black">
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+  </BoundLabel>
+
+  <BoundLabel layout="190.0,540.0,60.0,20.0" border="2.0 groove black">
+    <BoundLabelBinding ord="station:|slot:/Drivers/NiagaraNetwork/WEB_CVI/points/Program_Chiller/CH2_Current$20$28$25RLA$29$20$2d$20Compressor$201B$20TrungBinh1/out/value">
+      <ObjectToString name="text"/>
+      <IBooleanToSimple name="background">
+        <Brush name="trueValue" value="yellow"/>
+        <Brush name="falseValue" value="null"/>
+      </IBooleanToSimple>
+    </BoundLabelBinding>
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+  </BoundLabel>
+
+  <BoundLabel layout="0.0,540.0,189.99999999999997,20.0" text="(%RLA) - Compressor 1B" font="14.0pt Tahoma" foreground="black" background="#e0e0e0" halign="left" border="2.0 groove black">
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+  </BoundLabel>
+
+  <BoundLabel layout="1250.0,520.0,70.0,20.0" background="white" border="2.0 groove black">
+    <BoundLabelBinding ord="station:|slot:/Drivers/NiagaraNetwork/WEB_CVI/points/DDC_CP_CH/CHWP_FBVSD_01/out/value">
+      <ObjectToString name="text"/>
+    </BoundLabelBinding>
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+  </BoundLabel>
+
+  <BoundLabel layout="1250.0,800.0,70.0,20.0" background="white" border="2.0 groove black">
+    <BoundLabelBinding ord="station:|slot:/Drivers/NiagaraNetwork/WEB_CVI/points/DDC_CP_CH/CHWP_FBVSD_02/out/value">
+      <ObjectToString name="text"/>
+    </BoundLabelBinding>
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+  </BoundLabel>
+
+  <BoundLabel layout="1420.0,220.0,110.0,20.0" text=" DK Valve Bypass" font="14.0pt Tahoma" foreground="black" background="#e0e0e0" halign="left" border="2.0 groove black">
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+  </BoundLabel>
+
+  <BoundLabel layout="1640.0,195.0,110.0,20.0" text=" Ch&#xea;nh &#xe1;p SP" font="14.0pt Tahoma" foreground="black" background="#e0e0e0" halign="left" border="2.0 groove black">
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+  </BoundLabel>
+
+  <BoundLabel layout="1750.0,195.0,60.00000000000023,20.0" font="14.0pt Tahoma" foreground="black" background="#80e0e0e0" halign="left" border="2.0 groove black">
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+  </BoundLabel>
+
+  <BoundLabel layout="1750.0,195.0,60.0,20.0" border="2.0 groove black">
+    <BoundLabelBinding ord="station:|slot:/Drivers/NiagaraNetwork/WEB_CVI/points/Program_Chiller/DiffPressureSP/out/value">
+      <ObjectToString name="text"/>
+    </BoundLabelBinding>
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+  </BoundLabel>
+
+  <BoundLabel layout="1530.0,220.0,60.00000000000023,20.0" font="14.0pt Tahoma" foreground="black" background="#80e0e0e0" halign="left" border="2.0 groove black">
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+  </BoundLabel>
+
+  <BoundLabel layout="1530.0,220.0,60.0,20.0" border="2.0 groove black">
+    <BoundLabelBinding ord="station:|slot:/Drivers/NiagaraNetwork/WEB_CVI/points/DDC_CP_CH/BYPASS_VSD/out/value">
+      <ObjectToString name="text"/>
+    </BoundLabelBinding>
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+  </BoundLabel>
+
+  <BoundLabel layout="1500.0,240.0,30.0,20.0" text=" FB" font="14.0pt Tahoma" foreground="black" background="#e0e0e0" halign="left" border="2.0 groove black">
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+  </BoundLabel>
+
+  <BoundLabel layout="0.0,580.0,190.0,20.0" text=" %RLA g&#x1ecd;i th&#xea;m chiller[90]" font="14.0pt Tahoma" foreground="black" background="#e0e0e0" halign="left" border="2.0 groove black">
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+  </BoundLabel>
+
+  <BoundLabel layout="190.0,580.0,60.00000000000023,20.0" font="14.0pt Tahoma" foreground="black" background="#80e0e0e0" halign="left" border="2.0 groove black">
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+  </BoundLabel>
+
+  <BoundLabel layout="190.0,580.0,60.0,20.0" border="2.0 groove black">
+    <BoundLabelBinding ord="station:|slot:/Drivers/NiagaraNetwork/WEB_CVI/points/Program_Chiller/CH_IncLoad/out/value">
+      <ObjectToString name="text"/>
+    </BoundLabelBinding>
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+  </BoundLabel>
+
+  <ImageButton layout="185.0,580.0,60.00000000000006,20.0" styleClasses="toolbar" font="bold 12.0pt SansSerif" foreground="white" halign="left" buttonStyle="toolBar">
+    <ActionBinding ord="station:|slot:/Drivers/NiagaraNetwork/WEB_CVI/points/Program_Chiller/CH_IncLoad/set" widgetEvent="actionPerformed"/>
+    <WsAnnotation name="wsAnnotation" value="6,6,8"/>
+  </ImageButton>
+
+  <BoundLabel layout="0.0,600.0,190.0,20.0" text=" %RLA gi&#x1ea3;m b&#x1edb;t chiller[40]" font="14.0pt Tahoma" foreground="black" background="#e0e0e0" halign="left" border="2.0 groove black">
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+  </BoundLabel>
+
+  <BoundLabel layout="190.0,600.0,60.00000000000023,20.0" font="14.0pt Tahoma" foreground="black" background="#80e0e0e0" halign="left" border="2.0 groove black">
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+  </BoundLabel>
+
+  <BoundLabel layout="190.0,600.0,60.0,20.0" border="2.0 groove black">
+    <BoundLabelBinding ord="station:|slot:/Drivers/NiagaraNetwork/WEB_CVI/points/Program_Chiller/CH_DecLoad/out/value">
+      <ObjectToString name="text"/>
+    </BoundLabelBinding>
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+  </BoundLabel>
+
+  <ImageButton layout="190.0,600.0,60.00000000000006,20.0" styleClasses="toolbar" font="bold 12.0pt SansSerif" foreground="white" halign="left" buttonStyle="toolBar">
+    <ActionBinding ord="station:|slot:/Drivers/NiagaraNetwork/WEB_CVI/points/Program_Chiller/CH_DecLoad/set" widgetEvent="actionPerformed"/>
+    <WsAnnotation name="wsAnnotation" value="6,6,8"/>
+  </ImageButton>
+
+  <BoundLabel layout="0.0,620.0,190.0,20.0" text=" Th&#x1edd;i gian g&#x1ecd;i th&#xea;m chiller[10]" font="14.0pt Tahoma" foreground="black" background="#e0e0e0" halign="left" border="2.0 groove black">
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+  </BoundLabel>
+
+  <BoundLabel layout="190.0,620.0,60.00000000000023,20.0" font="14.0pt Tahoma" foreground="black" background="#80e0e0e0" halign="left" border="2.0 groove black">
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+  </BoundLabel>
+
+  <BoundLabel layout="190.0,620.0,60.0,20.0" border="2.0 groove black">
+    <BoundLabelBinding ord="station:|slot:/Drivers/NiagaraNetwork/WEB_CVI/points/Program_Chiller/CH_CallOnDl/out/value">
+      <ObjectToString name="text"/>
+    </BoundLabelBinding>
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+  </BoundLabel>
+
+  <ImageButton layout="190.0,620.0,60.00000000000006,20.0" styleClasses="toolbar" font="bold 12.0pt SansSerif" foreground="white" halign="left" buttonStyle="toolBar">
+    <ActionBinding ord="station:|slot:/Drivers/NiagaraNetwork/WEB_CVI/points/Program_Chiller/CH_CallOnDl/set" widgetEvent="actionPerformed"/>
+    <WsAnnotation name="wsAnnotation" value="6,6,8"/>
+  </ImageButton>
+
+  <BoundLabel layout="0.0,640.0,190.0,20.0" text=" Th&#x1edd;i gian t&#x1eaf;t b&#x1edb;t chiller[5]" font="14.0pt Tahoma" foreground="black" background="#e0e0e0" halign="left" border="2.0 groove black">
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+  </BoundLabel>
+
+  <BoundLabel layout="190.0,640.0,60.00000000000023,20.0" font="14.0pt Tahoma" foreground="black" background="#80e0e0e0" halign="left" border="2.0 groove black">
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+  </BoundLabel>
+
+  <BoundLabel layout="190.0,640.0,60.0,20.0" border="2.0 groove black">
+    <BoundLabelBinding ord="station:|slot:/Drivers/NiagaraNetwork/WEB_CVI/points/Program_Chiller/CH_CallOffDl/out/value">
+      <ObjectToString name="text"/>
+    </BoundLabelBinding>
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+  </BoundLabel>
+
+  <ImageButton layout="190.0,640.0,60.00000000000006,20.0" styleClasses="toolbar" font="bold 12.0pt SansSerif" foreground="white" halign="left" buttonStyle="toolBar">
+    <ActionBinding ord="station:|slot:/Drivers/NiagaraNetwork/WEB_CVI/points/Program_Chiller/CH_CallOffDl/set" widgetEvent="actionPerformed"/>
+    <WsAnnotation name="wsAnnotation" value="6,6,8"/>
+  </ImageButton>
+
+  <BoundLabel layout="690.0,250.0,185.0,20.0" text=" Nhi&#x1ec7;t &#x111;&#x1ed9; b&#x1ead;t 1 th&#xe1;p [25]" font="14.0pt Tahoma" foreground="black" background="#e0e0e0" halign="left" border="2.0 groove black">
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+  </BoundLabel>
+
+  <BoundLabel layout="875.0,250.0,60.00000000000023,20.0" font="14.0pt Tahoma" foreground="black" background="#80e0e0e0" halign="left" border="2.0 groove black">
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+  </BoundLabel>
+
+  <BoundLabel layout="875.0,250.0,60.0,20.0" border="2.0 groove black">
+    <BoundLabelBinding ord="station:|slot:/Drivers/NiagaraNetwork/WEB_CVI/points/Program_Chiller/CDWRTempSP2/out/value">
+      <ObjectToString name="text"/>
+    </BoundLabelBinding>
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+  </BoundLabel>
+
+  <ImageButton layout="875.0,250.0,60.00000000000006,20.0" styleClasses="toolbar" font="bold 12.0pt SansSerif" foreground="white" halign="left" buttonStyle="toolBar">
+    <ActionBinding ord="station:|slot:/Drivers/NiagaraNetwork/WEB_CVI/points/Program_Chiller/CDWRTempSP2/set" widgetEvent="actionPerformed"/>
+    <WsAnnotation name="wsAnnotation" value="6,6,8"/>
+  </ImageButton>
+
+  <BoundLabel layout="690.0,270.0,185.0,20.0" text=" Nhi&#x1ec7;t &#x111;&#x1ed9; t&#x1eaf;t b&#x1edb;t 1 th&#xe1;p [30]" font="14.0pt Tahoma" foreground="black" background="#e0e0e0" halign="left" border="2.0 groove black">
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+  </BoundLabel>
+
+  <BoundLabel layout="875.0,270.0,60.00000000000023,20.0" font="14.0pt Tahoma" foreground="black" background="#80e0e0e0" halign="left" border="2.0 groove black">
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+  </BoundLabel>
+
+  <BoundLabel layout="875.0,270.0,60.0,20.0" border="2.0 groove black">
+    <BoundLabelBinding ord="station:|slot:/Drivers/NiagaraNetwork/WEB_CVI/points/Program_Chiller/CDWRTempSP3/out/value">
+      <ObjectToString name="text"/>
+    </BoundLabelBinding>
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+  </BoundLabel>
+
+  <ImageButton layout="875.0,270.0,60.00000000000006,20.0" styleClasses="toolbar" font="bold 12.0pt SansSerif" foreground="white" halign="left" buttonStyle="toolBar">
+    <ActionBinding ord="station:|slot:/Drivers/NiagaraNetwork/WEB_CVI/points/Program_Chiller/CDWRTempSP3/set" widgetEvent="actionPerformed"/>
+    <WsAnnotation name="wsAnnotation" value="6,6,8"/>
+  </ImageButton>
+
+  <BoundLabel layout="690.0,290.0,185.0,20.0" text=" Nhi&#x1ec7;t &#x111;&#x1ed9; d&#x1eeb;ng 2 th&#xe1;p [20]" font="14.0pt Tahoma" foreground="black" background="#e0e0e0" halign="left" border="2.0 groove black">
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+  </BoundLabel>
+
+  <BoundLabel layout="875.0,290.0,60.00000000000023,20.0" font="14.0pt Tahoma" foreground="black" background="#80e0e0e0" halign="left" border="2.0 groove black">
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+  </BoundLabel>
+
+  <BoundLabel layout="875.0,290.0,60.0,20.0" border="2.0 groove black">
+    <BoundLabelBinding ord="station:|slot:/Drivers/NiagaraNetwork/WEB_CVI/points/Program_Chiller/CDWRTempSP1/out/value">
+      <ObjectToString name="text"/>
+    </BoundLabelBinding>
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+  </BoundLabel>
+
+  <ImageButton layout="875.0,290.0,60.00000000000006,20.0" styleClasses="toolbar" font="bold 12.0pt SansSerif" foreground="white" halign="left" buttonStyle="toolBar">
+    <ActionBinding ord="station:|slot:/Drivers/NiagaraNetwork/WEB_CVI/points/Program_Chiller/CDWRTempSP1/set" widgetEvent="actionPerformed"/>
+    <WsAnnotation name="wsAnnotation" value="6,6,8"/>
+  </ImageButton>
+
+  <BoundLabel layout="690.0,310.0,185.0,20.0" text=" Nhi&#x1ec7;t &#x111;&#x1ed9; b&#x1ead;t 2 th&#xe1;p [35]" font="14.0pt Tahoma" foreground="black" background="#e0e0e0" halign="left" border="2.0 groove black">
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+  </BoundLabel>
+
+  <BoundLabel layout="875.0,310.0,60.00000000000023,20.0" font="14.0pt Tahoma" foreground="black" background="#80e0e0e0" halign="left" border="2.0 groove black">
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+  </BoundLabel>
+
+  <BoundLabel layout="875.0,310.0,60.0,20.0" border="2.0 groove black">
+    <BoundLabelBinding ord="station:|slot:/Drivers/NiagaraNetwork/WEB_CVI/points/Program_Chiller/CDWRTempSP4/out/value">
+      <ObjectToString name="text"/>
+    </BoundLabelBinding>
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+  </BoundLabel>
+
+  <ImageButton layout="875.0,310.0,60.00000000000006,20.0" styleClasses="toolbar" font="bold 12.0pt SansSerif" foreground="white" halign="left" buttonStyle="toolBar">
+    <ActionBinding ord="station:|slot:/Drivers/NiagaraNetwork/WEB_CVI/points/Program_Chiller/CDWRTempSP4/set" widgetEvent="actionPerformed"/>
+    <WsAnnotation name="wsAnnotation" value="6,6,8"/>
+  </ImageButton>
+
+  <BoundLabel layout="690.0,230.0,250.0,20.0" text=" C&#xe0;i &#x111;&#x1eb7;t t&#x1ef1; &#x111;&#x1ed9;ng b&#x1ead;t th&#xe1;p gi&#x1ea3;i nhi&#x1ec7;t" font="14.0pt Tahoma" foreground="white" background="#4040ff" halign="left" border="2.0 groove black">
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+  </BoundLabel>
+
+  <BoundLabel layout="0.0,560.0,250.0,20.0" text=" C&#xe0;i &#x111;&#x1eb7;t g&#x1ecd;i th&#xea;m chiller t&#x1ef1; &#x111;&#x1ed9;ng" font="14.0pt Tahoma" foreground="white" background="#4040ff" halign="left" border="2.0 groove black">
+    <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+  </BoundLabel>
+
+</CanvasPane>
+</content>
+</px>
