@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Niagara Presentation XML -->
+<px version="1.0" media="workbench:WbPxMedia">
+<import>
+  <module name="baja"/>
+  <module name="bajaui"/>
+  <module name="converters"/>
+  <module name="gx"/>
+  <module name="kitPx"/>
+</import>
+<content>
+<ScrollPane>
+
+  <CanvasPane name="content" viewSize="150.0,50.0">
+
+    <BoundLabel layout="0.0,0.0,150.0,30.0" text="Valve TGN 1" font="bold 12.0pt Tahoma" foreground="white" background="linearGradient( stop(0.0% black) stop(100.0% grey) )" border="2.0 groove black">
+      <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+    </BoundLabel>
+
+    <BoundLabel layout="0.0,30.0,50.0,20.0" font="bold 12.0pt Segoe UI" textToIconAlign="center" border="2.0 groove black">
+      <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+      <ValueBinding ord="station:|slot:/Drivers/NiagaraNetwork/WEB_CVI/points/DDC_CP_CH/VAL_TGN_CM_01/out">
+        <IBooleanToSimple name="background">
+          <Brush name="trueValue" value="lime"/>
+          <Brush name="falseValue" value="null"/>
+        </IBooleanToSimple>
+      </ValueBinding>
+    </BoundLabel>
+
+    <BoundLabel layout="50.0,30.0,50.0,20.0" font="bold 12.0pt Segoe UI" halign="right" border="2.0 groove black">
+      <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+      <ValueBinding ord="station:|slot:/Drivers/NiagaraNetwork/WEB_CVI/points/DDC_CP_CH/VAL_TGN_CM_01/out">
+        <IBooleanToSimple name="background">
+          <Brush name="trueValue" value="null"/>
+          <Brush name="falseValue" value="red"/>
+        </IBooleanToSimple>
+      </ValueBinding>
+    </BoundLabel>
+
+    <BoundLabel layout="100.0,30.0,50.0,20.0" font="bold 12.0pt Segoe UI" halign="right" border="2.0 groove black">
+      <BoundLabelBinding ord="station:|slot:/Drivers/NiagaraNetwork/WEB_CVI/points/DDC_CP_CH/VAL_TGN_CM_01/out">
+        <ObjectToString name="text" format=""/>
+      </BoundLabelBinding>
+      <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+    </BoundLabel>
+
+    <ImageButton layout="0.0,30.0,50.0,20.0" text="ON" font="14.0pt Tahoma" foreground="black" buttonStyle="none">
+      <ActionBinding ord="station:|slot:/Drivers/NiagaraNetwork/WEB_CVI/points/DDC_CP_CH/VAL_TGN_CM_01/active" widgetEvent="actionPerformed"/>
+      <WsAnnotation name="wsAnnotation" value="6,6,8"/>
+    </ImageButton>
+
+    <ImageButton layout="50.0,30.0,50.0,20.0" text="OFF" font="14.0pt Tahoma" foreground="black" buttonStyle="none">
+      <ActionBinding ord="station:|slot:/Drivers/NiagaraNetwork/WEB_CVI/points/DDC_CP_CH/VAL_TGN_CM_01/inactive" widgetEvent="actionPerformed"/>
+      <WsAnnotation name="wsAnnotation" value="6,6,8"/>
+    </ImageButton>
+
+    <ImageButton layout="100.0,30.0,50.0,20.0" text="AUTO" font="14.0pt Tahoma" foreground="black" buttonStyle="none">
+      <ActionBinding ord="station:|slot:/Drivers/NiagaraNetwork/WEB_CVI/points/DDC_CP_CH/VAL_TGN_CM_01/auto" widgetEvent="actionPerformed"/>
+      <WsAnnotation name="wsAnnotation" value="6,6,8"/>
+    </ImageButton>
+
+  </CanvasPane>
+
+</ScrollPane>
+</content>
+</px>

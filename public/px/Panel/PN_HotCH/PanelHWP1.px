@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Niagara Presentation XML -->
+<px version="1.0" media="workbench:WbPxMedia">
+<import>
+  <module name="baja"/>
+  <module name="bajaui"/>
+  <module name="converters"/>
+  <module name="gx"/>
+  <module name="kitPx"/>
+</import>
+<content>
+<ScrollPane>
+
+  <CanvasPane name="content" viewSize="210.0,70.0" background="white">
+
+    <BoundLabel layout="0.0,0.0,210.0,30.0" text="B&#x1a1;m n&#x1b0;&#x1edb;c n&#xf3;ng 1" font="bold 12.0pt Tahoma" foreground="white" background="linearGradient( stop(0.0% black) stop(100.0% grey) )" border="2.0 groove black">
+      <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+    </BoundLabel>
+
+    <BoundLabel layout="0.0,30.0,50.0,20.0" font="bold 12.0pt Segoe UI" textToIconAlign="center" border="2.0 groove black">
+      <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+      <ValueBinding ord="station:|slot:/Drivers/NiagaraNetwork/WEB_CVI/points/DDC_CP_HWP/CM_HWP_01/out">
+        <IBooleanToSimple name="background">
+          <Brush name="trueValue" value="lime"/>
+          <Brush name="falseValue" value="null"/>
+        </IBooleanToSimple>
+      </ValueBinding>
+    </BoundLabel>
+
+    <BoundLabel layout="50.0,30.0,50.0,20.0" font="bold 12.0pt Segoe UI" halign="right" border="2.0 groove black">
+      <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+      <ValueBinding ord="station:|slot:/Drivers/NiagaraNetwork/WEB_CVI/points/DDC_CP_HWP/CM_HWP_01/out">
+        <IBooleanToSimple name="background">
+          <Brush name="trueValue" value="null"/>
+          <Brush name="falseValue" value="red"/>
+        </IBooleanToSimple>
+      </ValueBinding>
+    </BoundLabel>
+
+    <BoundLabel layout="100.0,30.0,50.0,20.0" font="bold 12.0pt Segoe UI" halign="right" border="2.0 groove black">
+      <BoundLabelBinding ord="station:|slot:/Drivers/NiagaraNetwork/WEB_CVI/points/DDC_CP_HWP/CM_HWP_01/out">
+        <ObjectToString name="text" format=""/>
+      </BoundLabelBinding>
+      <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+    </BoundLabel>
+
+    <ImageButton layout="0.0,30.0,50.0,20.0" text="ON" font="14.0pt Tahoma" foreground="black" buttonStyle="none">
+      <ActionBinding ord="station:|slot:/Drivers/NiagaraNetwork/WEB_CVI/points/DDC_CP_HWP/CM_HWP_01/active" widgetEvent="actionPerformed"/>
+      <WsAnnotation name="wsAnnotation" value="6,6,8"/>
+    </ImageButton>
+
+    <ImageButton layout="50.0,30.0,50.0,20.0" text="OFF" font="14.0pt Tahoma" foreground="black" buttonStyle="none">
+      <ActionBinding ord="station:|slot:/Drivers/NiagaraNetwork/WEB_CVI/points/DDC_CP_HWP/CM_HWP_01/inactive" widgetEvent="actionPerformed"/>
+      <WsAnnotation name="wsAnnotation" value="6,6,8"/>
+    </ImageButton>
+
+    <ImageButton layout="100.0,30.0,50.0,20.0" text="AUTO" font="14.0pt Tahoma" foreground="black" buttonStyle="none">
+      <ActionBinding ord="station:|slot:/Drivers/NiagaraNetwork/WEB_CVI/points/DDC_CP_HWP/CM_HWP_01/auto" widgetEvent="actionPerformed"/>
+      <WsAnnotation name="wsAnnotation" value="6,6,8"/>
+    </ImageButton>
+
+    <BoundLabel layout="0.0,50.0,150.0,20.0" text=" C&#xe0;i t&#x1ea7;n s&#x1ed1; bi&#x1ebf;n t&#x1ea7;n" font="bold 14.0pt Tahoma" foreground="white" background="grey" halign="left" border="2.0 groove black">
+      <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+    </BoundLabel>
+
+    <BoundLabel layout="150.0,50.0,60.0,20.0" font="bold 12.0pt Segoe UI" halign="right" border="2.0 groove black">
+      <BoundLabelBinding ord="station:|slot:/Drivers/NiagaraNetwork/WEB_CVI/points/DDC_CP_HWP/HWP1_VSD_SP/out">
+        <ObjectToString name="text" format=""/>
+        <IBooleanToSimple name="background">
+          <Brush name="trueValue" value="#ffc0ff"/>
+          <Brush name="falseValue" value="null"/>
+        </IBooleanToSimple>
+      </BoundLabelBinding>
+      <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+    </BoundLabel>
+
+    <BoundLabel layout="150.0,50.0,60.0,20.0" border="2.0 groove black">
+      <BoundLabelBinding ord="station:|slot:/Drivers/NiagaraNetwork/WEB_CVI/points/DDC_CP_HWP/HWP1_VSD_SP/out/value">
+        <ObjectToString name="text"/>
+      </BoundLabelBinding>
+      <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+    </BoundLabel>
+
+  </CanvasPane>
+
+</ScrollPane>
+</content>
+</px>
