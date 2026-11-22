@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module name="kitPxGraphics-wb" bajaVersion="0" vendor="Tridium" vendorVersion="1.1.1" description="kitPx Graphics Library" preferredSymbol="kitPxGraphics" buildDate="05-Aug-14 09:41 EDT" buildMillis="1407246067698" buildHost="VA51LTCJCMBS1" reloadable="true" moduleName="kitPxGraphics" runtimeProfile="wb" releaseDate='2015-12-01'>
+ <dirs>
+  <dir name="/Boilers" install="ui"/>
+  <dir name="/Chillers" install="ui"/>
+  <dir name="/Coils" install="ui"/>
+  <dir name="/CoolingTowers" install="ui"/>
+  <dir name="/Dampers" install="ui"/>
+  <dir name="/Ductwork" install="ui"/>
+  <dir name="/Electrical" install="ui"/>
+  <dir name="/Fans" install="ui"/>
+  <dir name="/Filters" install="ui"/>
+  <dir name="/Fire" install="ui"/>
+  <dir name="/Generators" install="ui"/>
+  <dir name="/HeatExchangers" install="ui"/>
+  <dir name="/Labs" install="ui"/>
+  <dir name="/Lighting" install="ui"/>
+  <dir name="/Misc" install="ui"/>
+  <dir name="/Piping" install="ui"/>
+  <dir name="/Pumps" install="ui"/>
+  <dir name="/RTU" install="ui"/>
+  <dir name="/Security" install="ui"/>
+  <dir name="/Sensors" install="ui"/>
+  <dir name="/Tanks" install="ui"/>
+  <dir name="/TerminalUnits" install="ui"/>
+  <dir name="/Valves" install="ui"/>
+ </dirs>
+ <dependencies>
+  <dependency name="kitPx-wb" vendor="Tridium" vendorVersion="4.0.0"/>
+ </dependencies>
+</module>
