@@ -1,23 +1,39 @@
 .app-shell {
+  position: relative;
   display: flex;
   flex-direction: column;
+  width: 100%;
   min-height: 100dvh;
   background: #0f1720;
   color: #e6edf3;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  box-sizing: border-box;
+}
+
+.app-shell *,
+.app-shell *::before,
+.app-shell *::after,
+.modal-backdrop,
+.modal-backdrop *,
+.modal-backdrop *::before,
+.modal-backdrop *::after {
+  box-sizing: border-box;
 }
 
 .compact-header {
+  position: relative;
+  z-index: 50;
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 8px;
+  width: 100%;
   height: 40px;
   min-height: 40px;
   max-height: 40px;
   padding: 0 10px;
   background: #141f2b;
   border-bottom: 1px solid #263648;
-  z-index: 20;
 }
 
 .compact-brand {
@@ -25,6 +41,7 @@
   align-items: center;
   gap: 6px;
   font-size: 13px;
+  font-weight: 700;
   letter-spacing: 0.04em;
   color: #f0f6fc;
   flex-shrink: 0;
@@ -34,6 +51,7 @@
   width: 16px;
   height: 16px;
   color: #2dd4bf;
+  flex-shrink: 0;
 }
 
 .compact-nav {
@@ -49,6 +67,9 @@
 }
 
 .compact-nav-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   height: 28px;
   padding: 0 9px;
   border: 1px solid transparent;
@@ -108,6 +129,7 @@
   width: 13px;
   height: 13px;
   color: #fbbf24;
+  flex-shrink: 0;
 }
 
 .compact-drawer-btn {
@@ -124,30 +146,38 @@
   font-weight: 700;
   cursor: pointer;
   white-space: nowrap;
+  transition: border-color 0.15s ease, color 0.15s ease, background-color 0.15s ease;
 }
 
 .compact-drawer-btn svg {
   width: 13px;
   height: 13px;
+  flex-shrink: 0;
 }
 
 .compact-drawer-btn.selected,
 .compact-drawer-btn:hover {
   border-color: #2dd4bf;
   color: #5eead4;
+  background: #203245;
 }
 
 .workspace {
+  position: relative;
   display: flex;
+  flex-direction: row;
   flex: 1;
   height: calc(100dvh - 40px);
   width: 100%;
   overflow: hidden;
+  background: #0d141c;
 }
 
 .graphic-wrap {
-  flex: 1;
+  position: relative;
+  flex: 1 1 auto;
   min-width: 0;
+  height: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -208,11 +238,17 @@
   pointer-events: none;
 }
 
+.schematic-title,
+.canvas-footer {
+  display: none;
+}
+
 .equipment-node {
   position: absolute;
-  z-index: 3;
+  z-index: 4;
   display: block;
   padding: 0;
+  margin: 0;
   overflow: visible;
   transform: none;
   border: 0;
@@ -222,11 +258,12 @@
   box-shadow: none;
   cursor: pointer;
   touch-action: manipulation;
+  user-select: none;
   transition: filter 0.16s ease;
 }
 
 .equipment-node:hover {
-  z-index: 5;
+  z-index: 8;
   transform: none;
   box-shadow: none;
   filter: brightness(1.08);
@@ -243,7 +280,7 @@
 }
 
 .equipment-node.is-selected {
-  z-index: 6;
+  z-index: 10;
   border: 2px dashed #2563eb !important;
   background: rgba(37, 99, 235, 0.08);
 }
@@ -252,7 +289,7 @@
   position: absolute;
   right: -5px;
   bottom: -5px;
-  z-index: 10;
+  z-index: 15;
   width: 11px;
   height: 11px;
   border-radius: 2px;
@@ -285,7 +322,7 @@
   padding: 3px 5px;
   border: 1px solid #b3c0c5;
   border-radius: 3px;
-  background: #e4e9e8ed;
+  background: rgba(228, 233, 232, 0.94);
   color: #243947;
   font-size: clamp(6px, 0.5vw, 9px);
   font-weight: 700;
@@ -338,7 +375,7 @@
 
 .equipment-node.sensor,
 .equipment-node.flow {
-  z-index: 4;
+  z-index: 5;
   cursor: default;
 }
 
@@ -391,7 +428,6 @@
   flex-shrink: 0;
 }
 
-/* Status Light Indicators */
 .status-light {
   display: inline-block;
   width: 7px;
@@ -416,7 +452,6 @@
   box-shadow: 0 0 6px rgba(245, 158, 11, 0.8);
 }
 
-/* AHU Overlay Badges */
 .ahu-badge {
   z-index: 4;
 }
@@ -457,7 +492,6 @@
   font-size: 0.92em;
 }
 
-/* PAU Overlay Units */
 .pau-overlay-unit {
   z-index: 4;
   display: flex;
@@ -498,7 +532,6 @@
   flex-shrink: 0;
 }
 
-/* FCU Overlay Horizontal Badges */
 .fcu-overlay-badge {
   z-index: 4;
 }
@@ -541,7 +574,6 @@
   font-weight: 700;
 }
 
-/* Home & Help Welcome Card */
 .welcome-card {
   position: absolute;
   left: 2.2%;
@@ -550,12 +582,100 @@
   height: 71%;
   z-index: 3;
   padding: 2.6%;
+  border-radius: 10px;
+  background: rgba(15, 23, 32, 0.9);
+  border: 1px solid rgba(148, 163, 184, 0.35);
+  color: #f1f5f9;
   overflow: auto;
+}
+
+.welcome-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+  border-radius: 8px;
+  background: rgba(45, 212, 191, 0.16);
+  color: #2dd4bf;
+  margin-bottom: 10px;
+}
+
+.welcome-card .eyebrow {
+  display: block;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  color: #2dd4bf;
+}
+
+.welcome-card h2 {
+  margin: 6px 0 8px;
+  font-size: 20px;
+  font-weight: 700;
+  color: #f8fafc;
+}
+
+.welcome-card > p {
+  margin: 0;
+  font-size: 13px;
+  line-height: 1.5;
+  color: #cbd5e1;
+}
+
+.welcome-cards {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+  margin-top: 14px;
+}
+
+.welcome-cards button {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 12px;
+  border-radius: 8px;
+  border: 1px solid #2b3e52;
+  background: #162230;
+  color: #f1f5f9;
+  text-align: left;
+  cursor: pointer;
+}
+
+.welcome-cards button:hover {
+  border-color: #2dd4bf;
+}
+
+.welcome-cards button span {
+  font-size: 11px;
+  font-weight: 800;
+  color: #2dd4bf;
+}
+
+.welcome-cards button b {
+  font-size: 13px;
+}
+
+.welcome-cards button small {
+  color: #94a3b8;
+  font-size: 11px;
+  margin-left: auto;
+}
+
+.welcome-cards button svg {
+  width: 14px;
+  height: 14px;
+  color: #64748b;
+  flex-shrink: 0;
 }
 
 /* Right Control Drawer */
 .control-drawer {
-  width: 340px;
+  position: relative;
+  z-index: 40;
+  width: 344px;
+  min-width: 344px;
   max-width: 92vw;
   height: 100%;
   display: flex;
@@ -564,7 +684,7 @@
   border-left: 1px solid #263648;
   color: #e6edf3;
   flex-shrink: 0;
-  z-index: 15;
+  overflow: hidden;
 }
 
 .drawer-head {
@@ -574,6 +694,7 @@
   padding: 12px 14px;
   border-bottom: 1px solid #263648;
   background: #172330;
+  flex-shrink: 0;
 }
 
 .drawer-head .eyebrow {
@@ -602,6 +723,7 @@
   background: #1b2836;
   color: #cbd5e1;
   cursor: pointer;
+  flex-shrink: 0;
 }
 
 .icon-button:hover {
@@ -615,8 +737,10 @@
 }
 
 .drawer-scroll {
-  flex: 1;
+  flex: 1 1 auto;
+  min-height: 0;
   overflow-y: auto;
+  overflow-x: hidden;
   padding: 12px;
   display: flex;
   flex-direction: column;
@@ -631,6 +755,7 @@
   display: flex;
   flex-direction: column;
   gap: 8px;
+  flex-shrink: 0;
 }
 
 .section-label {
@@ -648,6 +773,7 @@
   width: 13px;
   height: 13px;
   color: #64748b;
+  flex-shrink: 0;
 }
 
 .count-pill {
@@ -657,6 +783,7 @@
   color: #5eead4;
   font-size: 10px;
   font-weight: 700;
+  white-space: nowrap;
 }
 
 .live-mini {
@@ -666,6 +793,7 @@
   color: #4ade80;
   font-size: 10px;
   font-weight: 700;
+  white-space: nowrap;
 }
 
 .live-dot {
@@ -675,9 +803,9 @@
   border-radius: 50%;
   background: #22c55e;
   box-shadow: 0 0 6px #22c55e;
+  flex-shrink: 0;
 }
 
-/* Area 1: Scenarios */
 .scenario-list {
   display: flex;
   flex-direction: column;
@@ -759,7 +887,6 @@
   color: #fbbf24;
 }
 
-/* Area 2: Equipment Switches */
 .point-list {
   display: flex;
   flex-direction: column;
@@ -828,9 +955,10 @@
   color: #94a3b8;
 }
 
-/* Toggle Switch */
 .switch {
   position: relative;
+  display: inline-flex;
+  align-items: center;
   width: 38px;
   height: 21px;
   padding: 2px;
@@ -861,7 +989,6 @@
   background: #2dd4bf;
 }
 
-/* Area 3: Sensor Sliders */
 .range-row {
   display: flex;
   flex-direction: column;
@@ -891,20 +1018,23 @@
   width: 13px;
   height: 13px;
   color: #38bdf8;
+  flex-shrink: 0;
 }
 
 .range-row-head b {
   font-size: 11.5px;
   color: #5eead4;
+  white-space: nowrap;
 }
 
 .range-row input[type='range'] {
+  display: block;
   width: 100%;
+  margin: 0;
   accent-color: #2dd4bf;
   cursor: pointer;
 }
 
-/* Area 4: Coordinate Editor Tools */
 .edit-toggle-row {
   display: flex;
   align-items: center;
@@ -975,6 +1105,7 @@
 }
 
 .inspector-select-row select {
+  width: 100%;
   padding: 5px 7px;
   border-radius: 6px;
   border: 1px solid #33485e;
@@ -1044,6 +1175,7 @@
 .secondary-action-btn svg {
   width: 13px;
   height: 13px;
+  flex-shrink: 0;
 }
 
 .copy-json-btn {
@@ -1065,6 +1197,7 @@
 .copy-json-btn svg {
   width: 13px;
   height: 13px;
+  flex-shrink: 0;
 }
 
 .copy-json-btn:hover {
@@ -1085,6 +1218,7 @@
   font-size: 12px;
   font-weight: 700;
   cursor: pointer;
+  flex-shrink: 0;
 }
 
 .export-button:hover {
@@ -1095,6 +1229,7 @@
 .export-button svg {
   width: 14px;
   height: 14px;
+  flex-shrink: 0;
 }
 
 .drawer-foot {
@@ -1106,6 +1241,7 @@
   background: #111923;
   font-size: 11px;
   color: #94a3b8;
+  flex-shrink: 0;
 }
 
 .drawer-foot span:first-child {
@@ -1118,22 +1254,27 @@
 .modal-backdrop {
   position: fixed;
   inset: 0;
-  z-index: 50;
+  z-index: 9999;
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 16px;
-  background: rgba(7, 12, 18, 0.72);
+  background: rgba(7, 12, 18, 0.76);
   backdrop-filter: blur(3px);
+  overflow-y: auto;
 }
 
 .unit-modal {
+  position: relative;
+  z-index: 9999;
   width: 100%;
-  max-width: 430px;
+  max-width: 440px;
+  max-height: calc(100dvh - 32px);
+  overflow-y: auto;
   border-radius: 12px;
   background: #141f2c;
   border: 1px solid #2d4056;
-  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6);
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.72);
   padding: 16px;
   color: #f1f5f9;
   display: flex;
@@ -1162,6 +1303,7 @@
   margin: 3px 0 0;
   font-size: 17px;
   font-weight: 700;
+  color: #f8fafc;
 }
 
 .modal-status {
@@ -1264,7 +1406,9 @@
 }
 
 .faceplate-slider-card input[type='range'] {
+  display: block;
   width: 100%;
+  margin: 0;
   accent-color: #2dd4bf;
   cursor: pointer;
 }
@@ -1351,6 +1495,7 @@
 .trip-sim-btn svg {
   width: 15px;
   height: 15px;
+  flex-shrink: 0;
 }
 
 .modal-range,
@@ -1370,6 +1515,7 @@
 }
 
 .modal-select select {
+  width: 100%;
   padding: 6px 8px;
   border-radius: 6px;
   border: 1px solid #33485e;
@@ -1397,6 +1543,15 @@
 @media (max-width: 760px) {
   .compact-stat {
     display: none;
+  }
+
+  .control-drawer {
+    position: fixed;
+    top: 40px;
+    right: 0;
+    bottom: 0;
+    height: calc(100dvh - 40px);
+    z-index: 90;
   }
 
   .welcome-card {
