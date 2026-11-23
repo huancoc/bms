@@ -239,13 +239,6 @@ function ChillerDiagram({
   return (
     <>
       <AssetImage className="chiller-layout" src="/px/Layout/Chillerx.PNG" />
-      <div className="schematic-title">
-        <span className="eyebrow">SƠ ĐỒ NGUYÊN LÝ</span>
-        <strong>Hệ thống Chiller trung tâm</strong>
-        <span className="system-state">
-          <i className="status-light running" /> ĐANG VẬN HÀNH
-        </span>
-      </div>
       {points.map((point) => (
         <ChillerNode
           key={point.id}
@@ -259,10 +252,6 @@ function ChillerDiagram({
           onResizePointerDown={onResizePointerDown}
         />
       ))}
-      <div className="canvas-footer">
-        <span>CHILLER PLANT · CENTRAL COOLING</span>
-        <span>CẬP NHẬT VỪA XONG</span>
-      </div>
     </>
   )
 }
@@ -270,38 +259,33 @@ function ChillerDiagram({
 function AhuDiagram({
   points,
   unitStatus,
+  faultedPoints,
   editMode,
   selectedEditId,
   setSelectedEditId,
-  setSelectedUnit,
+  onSelectEquipment,
   onPointerDown,
   onResizePointerDown,
 }: Pick<
   Props,
   | 'points'
   | 'unitStatus'
+  | 'faultedPoints'
   | 'editMode'
   | 'selectedEditId'
   | 'setSelectedEditId'
-  | 'setSelectedUnit'
+  | 'onSelectEquipment'
   | 'onPointerDown'
   | 'onResizePointerDown'
 >) {
   return (
     <>
-      <div className="schematic-title">
-        <span className="eyebrow">THIẾT BỊ XỬ LÝ KHÔNG KHÍ</span>
-        <strong>Giám sát hệ thống AHU</strong>
-        <span className="system-state">
-          <i className="status-light running" /> {points.length} THIẾT BỊ
-        </span>
-      </div>
-
       {points.map((item) => {
         const overrideState = unitStatus[item.label]
         const isWarning = overrideState === undefined && item.status === 'warning'
         const isOn = overrideState !== undefined ? overrideState : item.on
-        const lightClass = isWarning ? 'warning' : isOn ? 'running' : 'stopped'
+        const isFaulted = faultedPoints.includes(item.id)
+        const lightClass = isFaulted || isWarning ? 'warning' : isOn ? 'running' : 'stopped'
         const isSelected = editMode && selectedEditId === item.id
 
         const style: CSSProperties = {
@@ -324,13 +308,13 @@ function AhuDiagram({
                 setSelectedEditId(item.id)
                 return
               }
-              setSelectedUnit(item.label)
+              onSelectEquipment(item.id)
             }}
             onKeyDown={(e) => {
               if (!editMode && (e.key === 'Enter' || e.key === ' ')) {
                 e.preventDefault()
                 e.stopPropagation()
-                setSelectedUnit(item.label)
+                onSelectEquipment(item.id)
               }
             }}
             onPointerDown={(event) => {
@@ -339,7 +323,7 @@ function AhuDiagram({
               setSelectedEditId(item.id)
               onPointerDown(event, item.id)
             }}
-            aria-label={`${item.label}, ${isWarning ? 'mất kết nối' : isOn ? 'đang chạy' : 'đã dừng'}`}
+            aria-label={`${item.label}, ${isFaulted ? 'lỗi Trip' : isWarning ? 'mất kết nối' : isOn ? 'đang chạy' : 'đã dừng'}`}
             title={editMode ? `${item.label} · kéo để chỉnh tọa độ/kích thước` : `${item.label} · Nhấn để xem thông số`}
           >
             <span className="ahu-badge-inner">
@@ -366,35 +350,30 @@ function AhuDiagram({
 function PauDiagram({
   points,
   unitStatus,
+  faultedPoints,
   editMode,
   selectedEditId,
   setSelectedEditId,
-  setSelectedUnit,
+  onSelectEquipment,
   onPointerDown,
   onResizePointerDown,
 }: Pick<
   Props,
   | 'points'
   | 'unitStatus'
+  | 'faultedPoints'
   | 'editMode'
   | 'selectedEditId'
   | 'setSelectedEditId'
-  | 'setSelectedUnit'
+  | 'onSelectEquipment'
   | 'onPointerDown'
   | 'onResizePointerDown'
 >) {
   return (
     <>
-      <div className="schematic-title">
-        <span className="eyebrow">CẤP GIÓ TƯƠI & HÚT ẨM</span>
-        <strong>Hệ thống PAU / DHU</strong>
-        <span className="system-state">
-          <i className="status-light running" /> {points.length} THIẾT BỊ
-        </span>
-      </div>
-
       {points.map((item) => {
         const isOn = unitStatus[item.label] !== undefined ? unitStatus[item.label] : item.on
+        const isFaulted = faultedPoints.includes(item.id)
         const isSelected = editMode && selectedEditId === item.id
 
         const src =
@@ -424,7 +403,7 @@ function PauDiagram({
             key={item.id}
             role="button"
             tabIndex={0}
-            className={`equipment-node pau-overlay-unit ${isOn ? 'is-on' : 'is-off'} ${editMode ? 'is-editable' : ''} ${isSelected ? 'is-selected' : ''}`}
+            className={`equipment-node pau-overlay-unit ${isOn ? 'is-on' : 'is-off'} ${editMode ? 'is-editable' : ''} ${isSelected ? 'is-selected' : ''} ${isFaulted ? 'is-faulted' : ''}`}
             style={style}
             onClick={(event) => {
               event.stopPropagation()
@@ -432,13 +411,13 @@ function PauDiagram({
                 setSelectedEditId(item.id)
                 return
               }
-              setSelectedUnit(item.label)
+              onSelectEquipment(item.id)
             }}
             onKeyDown={(e) => {
               if (!editMode && (e.key === 'Enter' || e.key === ' ')) {
                 e.preventDefault()
                 e.stopPropagation()
-                setSelectedUnit(item.label)
+                onSelectEquipment(item.id)
               }
             }}
             onPointerDown={(event) => {
@@ -447,12 +426,12 @@ function PauDiagram({
               setSelectedEditId(item.id)
               onPointerDown(event, item.id)
             }}
-            aria-label={`${item.label}, ${isOn ? 'đang chạy' : 'đã dừng'}`}
+            aria-label={`${item.label}, ${isFaulted ? 'lỗi Trip' : isOn ? 'đang chạy' : 'đã dừng'}`}
             title={editMode ? `${item.label} · kéo để chỉnh tọa độ/kích thước` : `${item.label} · Nhấn để điều khiển`}
           >
             <AssetImage className="pau-overlay-art" src={src} />
             <span className="pau-overlay-tag">
-              <i className={`status-light ${isOn ? 'running' : 'stopped'}`} />
+              <i className={`status-light ${isFaulted ? 'warning' : isOn ? 'running' : 'stopped'}`} />
               <b>{item.label}</b>
             </span>
 
@@ -474,35 +453,30 @@ function PauDiagram({
 function FcuDiagram({
   points,
   unitStatus,
+  faultedPoints,
   editMode,
   selectedEditId,
   setSelectedEditId,
-  setSelectedUnit,
+  onSelectEquipment,
   onPointerDown,
   onResizePointerDown,
 }: Pick<
   Props,
   | 'points'
   | 'unitStatus'
+  | 'faultedPoints'
   | 'editMode'
   | 'selectedEditId'
   | 'setSelectedEditId'
-  | 'setSelectedUnit'
+  | 'onSelectEquipment'
   | 'onPointerDown'
   | 'onResizePointerDown'
 >) {
   return (
     <>
-      <div className="schematic-title">
-        <span className="eyebrow">THIẾT BỊ ĐIỀU HÒA KHU VỰC</span>
-        <strong>Giám sát hệ thống FCU</strong>
-        <span className="system-state">
-          <i className="status-light running" /> {points.length} THIẾT BỊ
-        </span>
-      </div>
-
       {points.map((item) => {
         const isOn = unitStatus[item.label] !== undefined ? unitStatus[item.label] : item.on
+        const isFaulted = faultedPoints.includes(item.id)
         const isSelected = editMode && selectedEditId === item.id
 
         const style: CSSProperties = {
@@ -517,7 +491,7 @@ function FcuDiagram({
             key={item.id}
             role="button"
             tabIndex={0}
-            className={`equipment-node fcu-overlay-badge ${isOn ? 'is-on' : 'is-off'} ${editMode ? 'is-editable' : ''} ${isSelected ? 'is-selected' : ''}`}
+            className={`equipment-node fcu-overlay-badge ${isOn ? 'is-on' : 'is-off'} ${editMode ? 'is-editable' : ''} ${isSelected ? 'is-selected' : ''} ${isFaulted ? 'is-faulted' : ''}`}
             style={style}
             onClick={(event) => {
               event.stopPropagation()
@@ -525,13 +499,13 @@ function FcuDiagram({
                 setSelectedEditId(item.id)
                 return
               }
-              setSelectedUnit(item.label)
+              onSelectEquipment(item.id)
             }}
             onKeyDown={(e) => {
               if (!editMode && (e.key === 'Enter' || e.key === ' ')) {
                 e.preventDefault()
                 e.stopPropagation()
-                setSelectedUnit(item.label)
+                onSelectEquipment(item.id)
               }
             }}
             onPointerDown={(event) => {
@@ -540,7 +514,7 @@ function FcuDiagram({
               setSelectedEditId(item.id)
               onPointerDown(event, item.id)
             }}
-            aria-label={`${item.label}, ${isOn ? 'đang chạy' : 'đã dừng'}`}
+            aria-label={`${item.label}, ${isFaulted ? 'lỗi Trip' : isOn ? 'đang chạy' : 'đã dừng'}`}
             title={editMode ? `${item.label} · kéo để chỉnh tọa độ/kích thước` : `${item.label} · Nhấn để chỉnh nhiệt độ & quạt`}
           >
             <span className="fcu-badge-inner">
@@ -642,10 +616,11 @@ export default function BmsDiagram(props: Props) {
         <AhuDiagram
           points={props.points}
           unitStatus={props.unitStatus}
+          faultedPoints={props.faultedPoints}
           editMode={props.editMode}
           selectedEditId={props.selectedEditId}
           setSelectedEditId={props.setSelectedEditId}
-          setSelectedUnit={props.setSelectedUnit}
+          onSelectEquipment={props.onSelectEquipment}
           onPointerDown={props.onPointerDown}
           onResizePointerDown={props.onResizePointerDown}
         />
@@ -654,10 +629,11 @@ export default function BmsDiagram(props: Props) {
         <PauDiagram
           points={props.points}
           unitStatus={props.unitStatus}
+          faultedPoints={props.faultedPoints}
           editMode={props.editMode}
           selectedEditId={props.selectedEditId}
           setSelectedEditId={props.setSelectedEditId}
-          setSelectedUnit={props.setSelectedUnit}
+          onSelectEquipment={props.onSelectEquipment}
           onPointerDown={props.onPointerDown}
           onResizePointerDown={props.onResizePointerDown}
         />
@@ -666,10 +642,11 @@ export default function BmsDiagram(props: Props) {
         <FcuDiagram
           points={props.points}
           unitStatus={props.unitStatus}
+          faultedPoints={props.faultedPoints}
           editMode={props.editMode}
           selectedEditId={props.selectedEditId}
           setSelectedEditId={props.setSelectedEditId}
-          setSelectedUnit={props.setSelectedUnit}
+          onSelectEquipment={props.onSelectEquipment}
           onPointerDown={props.onPointerDown}
           onResizePointerDown={props.onResizePointerDown}
         />
