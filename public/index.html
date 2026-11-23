@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#0b1422">
+    <meta name="description" content="BMS layout editor for arranging Chiller, AHU, PAU and FCU indicators and exporting coordinates.">
+    <title>BMS Coordinate Studio</title>
+    <link rel="stylesheet" href="/editor.css">
+    <script src="/editor.js" defer></script>
+  </head>
+  <body>
+    <main class="app-shell">
+      <header class="topbar">
+        <a class="brand" href="/" aria-label="BMS Coordinate Studio home">
+          <span class="brand-mark" aria-hidden="true">B</span>
+          <span class="brand-copy"><strong>BMS</strong><span>COORDINATE STUDIO</span></span>
+        </a>
+        <div class="topbar-meta">
+          <span class="connection-dot" aria-hidden="true"></span>
+          <span>Layout preview</span>
+          <span class="meta-divider" aria-hidden="true"></span>
+          <span class="source-badge">Niagara PX</span>
+        </div>
+      </header>
+
+      <section class="workspace" aria-label="BMS layout editor">
+        <div class="workspace-heading">
+          <div>
+            <p class="eyebrow">FACILITY CONTROLS / LAYOUT</p>
+            <h1>Coordinate editor</h1>
+          </div>
+          <div class="workspace-state"><span class="state-light"></span><span id="page-status">Loading layouts…</span></div>
+        </div>
+
+        <nav class="page-tabs" aria-label="Choose a BMS page" role="tablist">
+          <button class="page-tab is-active" type="button" role="tab" aria-selected="true" data-page="chiller">Chiller <span>01</span></button>
+          <button class="page-tab" type="button" role="tab" aria-selected="false" data-page="ahu">AHU <span>02</span></button>
+          <button class="page-tab" type="button" role="tab" aria-selected="false" data-page="pau">PAU <span>03</span></button>
+          <button class="page-tab" type="button" role="tab" aria-selected="false" data-page="fcu">FCU <span>04</span></button>
+        </nav>
+
+        <div class="toolbar" role="toolbar" aria-label="Layout tools">
+          <div class="tool-group">
+            <button class="tool-button" id="virtual-toggle" type="button" aria-pressed="true">
+              <span class="tool-icon virtual-icon" aria-hidden="true">◉</span><span>Điểm ảo</span><span class="toggle-track" aria-hidden="true"><span></span></span>
+            </button>
+            <button class="tool-button edit-toggle" id="edit-toggle" type="button" aria-pressed="false">
+              <span class="tool-icon move-icon" aria-hidden="true">↕</span><span>Chỉnh tọa độ</span><span class="toggle-track" aria-hidden="true"><span></span></span>
+            </button>
+          </div>
+          <div class="toolbar-actions">
+            <span class="edit-hint" id="edit-hint">Bật chỉnh tọa độ để kéo thả phần tử</span>
+            <button class="button-quiet" id="reset-page" type="button" title="Khôi phục tọa độ ban đầu của trang này">Đặt lại</button>
+            <button class="button-primary" id="copy-coordinates" type="button"><span aria-hidden="true">⧉</span> Copy tọa độ</button>
+          </div>
+        </div>
+
+        <div class="editor-layout">
+          <aside class="element-panel panel" aria-label="Elements on the current page">
+            <div class="panel-heading"><div><p class="eyebrow">PAGE ELEMENTS</p><h2>Phần tử</h2></div><span class="item-count" id="item-count">—</span></div>
+            <label class="search-box"><span class="sr-only">Tìm phần tử</span><span aria-hidden="true">⌕</span><input id="element-search" type="search" placeholder="Tìm phần tử…" autocomplete="off"></label>
+            <div class="element-list" id="element-list" role="listbox" aria-label="Select a diagram element"></div>
+            <p class="panel-footnote"><span class="keycap">⌘</span> + click chọn phần tử trên sơ đồ</p>
+          </aside>
+
+          <section class="canvas-panel panel" aria-label="Diagram canvas">
+            <div class="canvas-toolbar">
+              <div class="canvas-title"><span class="canvas-live-dot"></span><strong id="canvas-page-title">Chiller</strong><span class="canvas-subtitle">/ Sơ đồ thiết bị</span></div>
+              <div class="canvas-tools"><span class="canvas-size" id="canvas-size">1855 × 955</span><span class="zoom-label">FIT</span></div>
+            </div>
+            <div class="stage-wrap" id="stage-wrap">
+              <div class="stage" id="stage" role="application" aria-label="BMS sơ đồ. Bật chỉnh tọa độ để kéo các phần tử.">
+                <img class="stage-background" id="stage-background" alt="">
+                <div class="stage-overlay" id="stage-overlay"></div>
+                <div class="stage-elements" id="stage-elements"></div>
+              </div>
+              <div class="canvas-loading" id="canvas-loading"><span class="spinner"></span><span>Đang tải sơ đồ…</span></div>
+            </div>
+            <div class="canvas-footer"><span><span class="footer-dot"></span> Dữ liệu mô phỏng để căn chỉnh giao diện</span><span id="canvas-element-count">0 phần tử</span></div>
+          </section>
+
+          <aside class="inspector-panel panel" aria-label="Selected element coordinates">
+            <div class="panel-heading"><div><p class="eyebrow">INSPECTOR</p><h2>Thuộc tính</h2></div><span class="inspect-icon" aria-hidden="true">⌗</span></div>
+            <div class="empty-inspector" id="empty-inspector"><span class="empty-icon" aria-hidden="true">⌖</span><strong>Chưa chọn phần tử</strong><p>Chọn một phần tử trên sơ đồ hoặc trong danh sách để xem tọa độ.</p></div>
+            <div class="inspector-content" id="inspector-content" hidden>
+              <div class="selected-element"><span class="selected-icon" id="selected-icon" aria-hidden="true">◇</span><div><span class="selected-label" id="selected-type">ELEMENT</span><strong id="selected-name">—</strong></div></div>
+              <div class="coordinate-fields">
+                <label><span>Vị trí X</span><span class="coordinate-input"><input id="coord-x" type="number" min="0" max="100" step="0.1"><em>%</em></span></label>
+                <label><span>Vị trí Y</span><span class="coordinate-input"><input id="coord-y" type="number" min="0" max="100" step="0.1"><em>%</em></span></label>
+              </div>
+              <div class="dimensions-row"><span>Kích thước gốc</span><strong id="element-size">—</strong></div>
+              <div class="status-row" id="status-row" hidden><span>Trạng thái thiết bị</span><button class="status-toggle" id="status-toggle" type="button" aria-pressed="true"><span></span><strong>Đang chạy</strong></button></div>
+              <p class="inspector-tip"><span aria-hidden="true">i</span> Tọa độ được xuất theo phần trăm khung sơ đồ, thích ứng với mọi kích thước màn hình.</p>
+            </div>
+            <div class="export-divider"></div>
+            <div class="export-heading"><div><p class="eyebrow">EXPORT</p><h3>JSON tọa độ</h3></div><span class="json-braces" aria-hidden="true">{ }</span></div>
+            <pre class="json-preview" id="json-preview" aria-label="Coordinate JSON preview"><code>Chọn Copy tọa độ để tạo JSON.</code></pre>
+            <button class="button-copy" id="copy-json" type="button" disabled><span aria-hidden="true">⧉</span> Sao chép JSON</button>
+          </aside>
+        </div>
+        <p class="mobile-help">Trên màn hình nhỏ, kéo ngang để xem toàn bộ sơ đồ. Bật <strong>Chỉnh tọa độ</strong> trước khi di chuyển phần tử.</p>
+      </section>
+      <div class="toast" id="toast" role="status" aria-live="polite"></div>
+    </main>
+  </body>
+</html>
