@@ -20,6 +20,10 @@ export type Equipment = {
   unit?: string
   status?: 'running' | 'stopped' | 'warning'
   iconType?: 'spau' | 'fan' | 'dhu' | 'ahu'
+  mode?: 'auto' | 'manual'
+  hz?: number
+  setpoint?: number
+  runHours?: number
 }
 
 type Props = {
@@ -30,7 +34,7 @@ type Props = {
   editMode: boolean
   selectedEditId: string | null
   setSelectedEditId: (id: string | null) => void
-  setPoint: (id: string, on: boolean) => void
+  onSelectEquipment: (id: string) => void
   setSelectedUnit: (name: string) => void
   setActivePage: (page: PageKey) => void
   onPointerDown: (event: ReactPointerEvent<HTMLDivElement>, id: string) => void
@@ -97,8 +101,8 @@ function ChillerNode({
   faulted,
   editMode,
   isSelected,
-  onSelect,
-  onToggle,
+  onSelectEdit,
+  onOpenFaceplate,
   onPointerDown,
   onResizePointerDown,
 }: {
@@ -106,8 +110,8 @@ function ChillerNode({
   faulted: boolean
   editMode: boolean
   isSelected: boolean
-  onSelect: () => void
-  onToggle: () => void
+  onSelectEdit: () => void
+  onOpenFaceplate: () => void
   onPointerDown: Props['onPointerDown']
   onResizePointerDown: Props['onResizePointerDown']
 }) {
@@ -120,6 +124,8 @@ function ChillerNode({
 
   const isEquipmentUnit = item.kind === 'chiller' || item.kind === 'pump' || item.kind === 'tower'
   const isSensorBadge = item.kind === 'sensor' || item.kind === 'flow'
+  const isInteractiveSensor = item.id === 'SENS_DP' || item.id === 'FLOW_BYPASS_VSD'
+  const isClickable = editMode || isEquipmentUnit || isInteractiveSensor
 
   const activeGif =
     item.kind === 'chiller'
@@ -130,49 +136,56 @@ function ChillerNode({
 
   const handleClick = () => {
     if (editMode) {
-      onSelect()
+      onSelectEdit()
       return
     }
-    if (isEquipmentUnit) {
-      onToggle()
+    if (isEquipmentUnit || isInteractiveSensor) {
+      onOpenFaceplate()
     }
   }
 
   const handlePointerDown = (event: ReactPointerEvent<HTMLDivElement>) => {
     if (!editMode) return
-    onSelect()
+    onSelectEdit()
     onPointerDown(event, item.id)
   }
 
   return (
     <div
-      role={isEquipmentUnit || editMode ? 'button' : undefined}
-      tabIndex={isEquipmentUnit || editMode ? 0 : undefined}
-      className={`equipment-node ${item.kind} ${item.on ? 'is-on' : 'is-off'} ${editMode ? 'is-editable' : ''} ${isSelected ? 'is-selected' : ''}`}
+      role={isClickable ? 'button' : undefined}
+      tabIndex={isClickable ? 0 : undefined}
+      className={`equipment-node ${item.kind} ${item.on ? 'is-on' : 'is-off'} ${faulted ? 'is-faulted' : ''} ${isInteractiveSensor ? 'is-interactive-sensor' : ''} ${editMode ? 'is-editable' : ''} ${isSelected ? 'is-selected' : ''}`}
       style={style}
       onClick={handleClick}
       onKeyDown={(e) => {
-        if (!editMode && isEquipmentUnit && (e.key === 'Enter' || e.key === ' ')) {
+        if (!editMode && isClickable && (e.key === 'Enter' || e.key === ' ')) {
           e.preventDefault()
-          onToggle()
+          onOpenFaceplate()
         }
       }}
       onPointerDown={handlePointerDown}
       aria-label={
         isEquipmentUnit
-          ? `${item.label}, ${item.on ? 'đang chạy' : 'đã dừng'}`
+          ? `${item.label}, ${faulted ? 'đang báo lỗi Trip' : item.on ? 'đang chạy' : 'đã dừng'}`
           : `${item.label}: ${item.value ?? ''}${item.unit ?? ''}`
       }
       title={
         editMode
           ? `${item.label} · kéo để di chuyển, kéo góc dưới phải để đổi kích thước`
-          : item.label
+          : isEquipmentUnit || isInteractiveSensor
+            ? `${item.label} · Nhấn để mở bảng điều khiển & cài đặt`
+            : item.label
       }
     >
       {isEquipmentUnit && (
         <>
           {item.on && <AssetImage className="equipment-art" src={activeGif} />}
-          <span className="equipment-name">{item.label}</span>
+          <span className="equipment-name">
+            {item.label}
+            {typeof item.hz === 'number' && (item.kind === 'pump' || item.kind === 'tower')
+              ? ` · ${item.on ? item.hz.toFixed(1) : '0.0'}Hz`
+              : ''}
+          </span>
           <TripIcon faulted={faulted} />
           <span className="run-dot" />
         </>
@@ -206,7 +219,7 @@ function ChillerDiagram({
   editMode,
   selectedEditId,
   setSelectedEditId,
-  setPoint,
+  onSelectEquipment,
   onPointerDown,
   onResizePointerDown,
 }: Pick<
@@ -216,7 +229,7 @@ function ChillerDiagram({
   | 'editMode'
   | 'selectedEditId'
   | 'setSelectedEditId'
-  | 'setPoint'
+  | 'onSelectEquipment'
   | 'onPointerDown'
   | 'onResizePointerDown'
 >) {
@@ -237,8 +250,8 @@ function ChillerDiagram({
           faulted={faultedPoints.includes(point.id)}
           editMode={editMode}
           isSelected={editMode && selectedEditId === point.id}
-          onSelect={() => setSelectedEditId(point.id)}
-          onToggle={() => setPoint(point.id, !point.on)}
+          onSelectEdit={() => setSelectedEditId(point.id)}
+          onOpenFaceplate={() => onSelectEquipment(point.id)}
           onPointerDown={onPointerDown}
           onResizePointerDown={onResizePointerDown}
         />
@@ -608,7 +621,7 @@ export default function BmsDiagram(props: Props) {
           editMode={props.editMode}
           selectedEditId={props.selectedEditId}
           setSelectedEditId={props.setSelectedEditId}
-          setPoint={props.setPoint}
+          onSelectEquipment={props.onSelectEquipment}
           onPointerDown={props.onPointerDown}
           onResizePointerDown={props.onResizePointerDown}
         />
