@@ -177,29 +177,36 @@
   position: relative;
   flex: 1 1 auto;
   min-width: 0;
+  min-height: 0;
   height: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 4px;
+  padding: 6px;
   background: #0d141c;
-  overflow: auto;
+  overflow: hidden;
+  transition: flex-basis 0.24s ease;
 }
 
 .graphic-canvas {
   position: relative;
   width: 100%;
+  height: auto;
   max-width: 100%;
-  max-height: calc(100dvh - 48px);
+  max-height: 100%;
   aspect-ratio: 1855 / 955;
   isolation: isolate;
   background: #9da8af;
   color: #172734;
   overflow: hidden;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.45);
 }
 
-.graphic-canvas::before,
-.graphic-canvas.home-canvas::before {
+.graphic-canvas.home-canvas {
+  background: #0f1720;
+}
+
+.graphic-canvas::before {
   content: none;
 }
 
@@ -670,12 +677,11 @@
   flex-shrink: 0;
 }
 
-/* Right Control Drawer */
 .control-drawer {
   position: relative;
   z-index: 40;
-  width: 344px;
-  min-width: 344px;
+  width: 340px;
+  min-width: 340px;
   max-width: 92vw;
   height: 100%;
   display: flex;
@@ -685,6 +691,22 @@
   color: #e6edf3;
   flex-shrink: 0;
   overflow: hidden;
+  transition: width 0.24s ease, min-width 0.24s ease, opacity 0.2s ease, border-color 0.2s ease;
+}
+
+.control-drawer.is-collapsed {
+  width: 0;
+  min-width: 0;
+  border-left-color: transparent;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.control-drawer.is-open {
+  width: 340px;
+  min-width: 340px;
+  opacity: 1;
+  pointer-events: auto;
 }
 
 .drawer-head {
@@ -804,6 +826,47 @@
   background: #22c55e;
   box-shadow: 0 0 6px #22c55e;
   flex-shrink: 0;
+}
+
+.page-quick-list {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 6px;
+}
+
+.page-quick-btn {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+  align-items: flex-start;
+  padding: 6px 8px;
+  border-radius: 6px;
+  border: 1px solid #2b3c4e;
+  background: #131c26;
+  color: #f1f5f9;
+  cursor: pointer;
+  text-align: left;
+}
+
+.page-quick-btn:hover {
+  border-color: #2dd4bf;
+}
+
+.page-quick-btn.active {
+  border-color: #2dd4bf;
+  background: rgba(20, 184, 166, 0.16);
+  color: #5eead4;
+}
+
+.page-quick-btn span {
+  font-size: 10.5px;
+  font-weight: 800;
+  letter-spacing: 0.03em;
+}
+
+.page-quick-btn small {
+  font-size: 9.5px;
+  color: #94a3b8;
 }
 
 .scenario-list {
@@ -1250,7 +1313,6 @@
   gap: 6px;
 }
 
-/* Modal & Equipment Faceplate Popup */
 .modal-backdrop {
   position: fixed;
   inset: 0;
@@ -1268,7 +1330,7 @@
   position: relative;
   z-index: 9999;
   width: 100%;
-  max-width: 440px;
+  max-width: 460px;
   max-height: calc(100dvh - 32px);
   overflow-y: auto;
   border-radius: 12px;
@@ -1545,6 +1607,10 @@
     display: none;
   }
 
+  .compact-drawer-btn span {
+    display: none;
+  }
+
   .control-drawer {
     position: fixed;
     top: 40px;
@@ -1552,6 +1618,11 @@
     bottom: 0;
     height: calc(100dvh - 40px);
     z-index: 90;
+  }
+
+  .control-drawer.is-collapsed {
+    width: 0;
+    min-width: 0;
   }
 
   .welcome-card {
