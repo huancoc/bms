@@ -19,6 +19,7 @@ import {
   X,
 } from 'lucide-react'
 import BmsDiagram, { type Equipment, type PageKey } from './bms-diagram'
+import './bms-diagram.css'
 
 const pages: { id: PageKey; label: string; short: string }[] = [
   { id: 'home', label: 'Tổng quan', short: 'HOME' },
@@ -141,7 +142,6 @@ export default function BmsSimulator() {
   const [selectedEditId, setSelectedEditId] = useState<string | null>(initialPoints[0]?.id ?? null)
   const [copiedJson, setCopiedJson] = useState(false)
 
-  // Sensor & Setpoint States
   const [outdoorTemp, setOutdoorTemp] = useState(27.5)
   const [supplyTemp, setSupplyTemp] = useState(7.1)
   const [returnTemp, setReturnTemp] = useState(12.4)
@@ -257,6 +257,11 @@ export default function BmsSimulator() {
     window.addEventListener('keydown', handleKeyDown)
     return () => window.removeEventListener('keydown', handleKeyDown)
   }, [editMode, selectedEditId, activePage])
+
+  const handleOpenEquipmentFaceplate = (id: string) => {
+    if (editMode) return
+    setSelectedEquipmentId(id)
+  }
 
   const setPoint = (id: string, on: boolean) => {
     if (on && faultedPoints.includes(id)) {
@@ -572,7 +577,7 @@ export default function BmsSimulator() {
             editMode={editMode}
             selectedEditId={selectedEditId}
             setSelectedEditId={setSelectedEditId}
-            onSelectEquipment={(id) => setSelectedEquipmentId(id)}
+            onSelectEquipment={handleOpenEquipmentFaceplate}
             setSelectedUnit={(name) => setSelectedUnit(name)}
             setActivePage={setActivePage}
             onPointerDown={onPointerDown}
@@ -598,7 +603,6 @@ export default function BmsSimulator() {
             </div>
 
             <div className="drawer-scroll">
-              {/* KHU VỰC 1: KỊCH BẢN TRÌNH DIỄN NHANH */}
               <section className="drawer-card-section">
                 <div className="section-label">
                   <span>1. KỊCH BẢN TRÌNH DIỄN NHANH</span>
@@ -638,7 +642,6 @@ export default function BmsSimulator() {
                 </div>
               </section>
 
-              {/* KHU VỰC 2: CÔNG TẮC BẬT/TẮT NHANH TOÀN BỘ THIẾT BỊ */}
               <section className="drawer-card-section">
                 <div className="section-label">
                   <span>2. CÔNG TẮC THIẾT BỊ CHILLER</span>
@@ -696,7 +699,6 @@ export default function BmsSimulator() {
                 </div>
               </section>
 
-              {/* KHU VỰC 3: THANH TRƯỢT GIẢ LẬP CẢM BIẾN */}
               <section className="drawer-card-section">
                 <div className="section-label">
                   <span>3. THANH TRƯỢT GIẢ LẬP CẢM BIẾN</span>
@@ -808,7 +810,6 @@ export default function BmsSimulator() {
                 </label>
               </section>
 
-              {/* KHU VỰC 4: CÔNG CỤ CHỈNH SỬA TỌA ĐỘ */}
               <section className="drawer-card-section">
                 <div className="section-label">
                   <span>4. CÔNG CỤ CHỈNH SỬA TỌA ĐỘ</span>
@@ -938,13 +939,12 @@ export default function BmsSimulator() {
               <span>
                 <i className="live-dot" /> Mô phỏng đang hoạt động
               </span>
-              <span>v1.5.0</span>
+              <span>v1.5.1</span>
             </div>
           </aside>
         )}
       </div>
 
-      {/* FACEPLATE POPUP KHI BẤM TRỰC TIẾP VÀO THIẾT BỊ TRÊN SƠ ĐỒ CHILLER */}
       {activeFaceplateItem && (
         <div className="modal-backdrop" onClick={() => setSelectedEquipmentId(null)}>
           <section
@@ -975,7 +975,6 @@ export default function BmsSimulator() {
               </button>
             </div>
 
-            {/* FACEPLATE CHO CHILLER 1 & CHILLER 2 */}
             {activeFaceplateItem.kind === 'chiller' && (
               <div className="faceplate-body">
                 <div className="faceplate-status-bar">
@@ -1108,7 +1107,6 @@ export default function BmsSimulator() {
               </div>
             )}
 
-            {/* FACEPLATE CHO BƠM (CTWP/CHWP) VÀ THÁP GIẢI NHIỆT (CT) */}
             {(activeFaceplateItem.kind === 'pump' || activeFaceplateItem.kind === 'tower') && (
               <div className="faceplate-body">
                 <div className="faceplate-status-bar">
@@ -1246,7 +1244,6 @@ export default function BmsSimulator() {
               </div>
             )}
 
-            {/* FACEPLATE CHO Ô CHÊNH ÁP ĐƯỜNG ỐNG (SENS_DP) */}
             {activeFaceplateItem.id === 'SENS_DP' && (
               <div className="faceplate-body">
                 <div className="faceplate-slider-card">
@@ -1294,7 +1291,6 @@ export default function BmsSimulator() {
               </div>
             )}
 
-            {/* FACEPLATE CHO VAN BYPASS VSD (FLOW_BYPASS_VSD) */}
             {activeFaceplateItem.id === 'FLOW_BYPASS_VSD' && (
               <div className="faceplate-body">
                 <div className="faceplate-slider-card">
@@ -1338,7 +1334,6 @@ export default function BmsSimulator() {
         </div>
       )}
 
-      {/* POPUP CHO AHU / PAU / FCU */}
       {selectedUnit && (
         <div className="modal-backdrop" onClick={() => setSelectedUnit(null)}>
           <section
