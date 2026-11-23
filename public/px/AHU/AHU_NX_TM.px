@@ -96,22 +96,22 @@
   <Picture layout="565.0,890.0,70.0,40.0" scale="fit" valign="top">
     <ValueBinding ord="station:|slot:/Drivers/Point_Demo/DO_Demo_Fan">
       <IBooleanToSimple name="image">
-        <Image name="trueValue" value="file:^px/Images/Icon/PAU_icon1.png"/>
-        <Image name="falseValue" value="file:^px/Images/Icon/PAU_icon.png"/>
+        <Image name="trueValue" value="file:^px/image/Icon/PAU_icon1.png"/>
+        <Image name="falseValue" value="file:^px/image/Icon/PAU_icon.png"/>
       </IBooleanToSimple>
     </ValueBinding>
     <PopupBinding ord="file:^px/AHU/Popup/S_PAU_01.px" size="1400.0,550.0"/>
   </Picture>
 
-  <Picture layout="285.0,135.0,1450.0,819.9999999999999" image="file:^px/Images/Layout/KNX_TMx.png" scale="fit" valign="top">
+  <Picture layout="285.0,135.0,1450.0,819.9999999999999" image="file:^px/image/Layout/KNX_TMx.png" scale="fit" valign="top">
     <LayerTag name="LayerTag" layerName="BG_Lock"/>
   </Picture>
 
   <Picture layout="480.0,240.0,70.0,40.0" scale="fit" valign="top">
     <ValueBinding ord="station:|slot:/Drivers/DO1">
       <IBooleanToSimple name="image">
-        <Image name="trueValue" value="file:^px/Images/Icon/PAU_icon1.png"/>
-        <Image name="falseValue" value="file:^px/Images/Icon/PAU_icon.png"/>
+        <Image name="trueValue" value="file:^px/image/Icon/PAU_icon1.png"/>
+        <Image name="falseValue" value="file:^px/image/Icon/PAU_icon.png"/>
       </IBooleanToSimple>
     </ValueBinding>
     <PopupBinding ord="file:^px/AHU/Popup/S_PAU_02.px" size="1400.0,550.0"/>
@@ -198,8 +198,8 @@
   <Picture layout="480.0,390.0,90.0,40.0" scale="fit" valign="top">
     <ValueBinding ord="station:|slot:/Drivers/DO1">
       <IBooleanToSimple name="image">
-        <Image name="trueValue" value="file:^px/Images/Icon/AHU_icon1.png"/>
-        <Image name="falseValue" value="file:^px/Images/Icon/AHU_icon.png"/>
+        <Image name="trueValue" value="file:^px/image/Icon/AHU_icon1.png"/>
+        <Image name="falseValue" value="file:^px/image/Icon/AHU_icon.png"/>
       </IBooleanToSimple>
     </ValueBinding>
     <PopupBinding ord="file:^px/AHU/Popup/AHU_02.px" size="1400.0,550.0"/>
@@ -208,8 +208,8 @@
   <Picture layout="480.0,330.0,90.0,40.0" scale="fit" valign="top">
     <ValueBinding ord="station:|slot:/Drivers/DO1">
       <IBooleanToSimple name="image">
-        <Image name="trueValue" value="file:^px/Images/Icon/AHU_icon1.png"/>
-        <Image name="falseValue" value="file:^px/Images/Icon/AHU_icon.png"/>
+        <Image name="trueValue" value="file:^px/image/Icon/AHU_icon1.png"/>
+        <Image name="falseValue" value="file:^px/image/Icon/AHU_icon.png"/>
       </IBooleanToSimple>
     </ValueBinding>
     <PopupBinding ord="file:^px/AHU/Popup/AHU_03.px" size="1400.0,550.0"/>
@@ -218,8 +218,8 @@
   <Picture layout="485.0,515.0,90.0,40.0" scale="fit" valign="top">
     <ValueBinding ord="station:|slot:/Drivers/DO1">
       <IBooleanToSimple name="image">
-        <Image name="trueValue" value="file:^px/Images/Icon/AHU_icon1.png"/>
-        <Image name="falseValue" value="file:^px/Images/Icon/AHU_icon.png"/>
+        <Image name="trueValue" value="file:^px/image/Icon/AHU_icon1.png"/>
+        <Image name="falseValue" value="file:^px/image/Icon/AHU_icon.png"/>
       </IBooleanToSimple>
     </ValueBinding>
     <PopupBinding ord="file:^px/AHU/Popup/AHU_06.px" size="1400.0,550.0"/>
@@ -228,8 +228,8 @@
   <Picture layout="480.0,655.0,90.0,40.0" scale="fit" valign="top">
     <ValueBinding ord="station:|slot:/Drivers/DO1">
       <IBooleanToSimple name="image">
-        <Image name="trueValue" value="file:^px/Images/Icon/AHU_icon1.png"/>
-        <Image name="falseValue" value="file:^px/Images/Icon/AHU_icon.png"/>
+        <Image name="trueValue" value="file:^px/image/Icon/AHU_icon1.png"/>
+        <Image name="falseValue" value="file:^px/image/Icon/AHU_icon.png"/>
       </IBooleanToSimple>
     </ValueBinding>
     <PopupBinding ord="file:^px/AHU/Popup/AHU_08.px" size="1400.0,550.0"/>
@@ -238,8 +238,8 @@
   <Picture layout="480.0,745.0,90.0,40.0" scale="fit" valign="top">
     <ValueBinding ord="station:|slot:/Drivers/DO1">
       <IBooleanToSimple name="image">
-        <Image name="trueValue" value="file:^px/Images/Icon/AHU_icon1.png"/>
-        <Image name="falseValue" value="file:^px/Images/Icon/AHU_icon.png"/>
+        <Image name="trueValue" value="file:^px/image/Icon/AHU_icon1.png"/>
+        <Image name="falseValue" value="file:^px/image/Icon/AHU_icon.png"/>
       </IBooleanToSimple>
     </ValueBinding>
     <PopupBinding ord="file:^px/AHU/Popup/AHU_09.px" size="1400.0,550.0"/>
@@ -248,8 +248,8 @@
   <Picture layout="485.0,690.0,90.0,40.0" scale="fit" valign="top">
     <ValueBinding ord="station:|slot:/Drivers/DO1">
       <IBooleanToSimple name="image">
-        <Image name="trueValue" value="file:^px/Images/Icon/AHU_icon1.png"/>
-        <Image name="falseValue" value="file:^px/Images/Icon/AHU_icon.png"/>
+        <Image name="trueValue" value="file:^px/image/Icon/AHU_icon1.png"/>
+        <Image name="falseValue" value="file:^px/image/Icon/AHU_icon.png"/>
       </IBooleanToSimple>
     </ValueBinding>
     <PopupBinding ord="file:^px/AHU/Popup/AHU_10.px" size="1400.0,550.0"/>
@@ -258,8 +258,8 @@
   <Picture layout="485.0,820.0,90.0,40.0" scale="fit" valign="top">
     <ValueBinding ord="station:|slot:/Drivers/DO1">
       <IBooleanToSimple name="image">
-        <Image name="trueValue" value="file:^px/Images/Icon/AHU_icon1.png"/>
-        <Image name="falseValue" value="file:^px/Images/Icon/AHU_icon.png"/>
+        <Image name="trueValue" value="file:^px/image/Icon/AHU_icon1.png"/>
+        <Image name="falseValue" value="file:^px/image/Icon/AHU_icon.png"/>
       </IBooleanToSimple>
     </ValueBinding>
     <PopupBinding ord="file:^px/AHU/Popup/AHU_12.px" size="1400.0,550.0"/>
@@ -268,8 +268,8 @@
   <Picture layout="505.0,860.0,90.0,40.0" scale="fit" valign="top">
     <ValueBinding ord="station:|slot:/Drivers/DO1">
       <IBooleanToSimple name="image">
-        <Image name="trueValue" value="file:^px/Images/Icon/AHU_icon1.png"/>
-        <Image name="falseValue" value="file:^px/Images/Icon/AHU_icon.png"/>
+        <Image name="trueValue" value="file:^px/image/Icon/AHU_icon1.png"/>
+        <Image name="falseValue" value="file:^px/image/Icon/AHU_icon.png"/>
       </IBooleanToSimple>
     </ValueBinding>
     <PopupBinding ord="file:^px/AHU/Popup/AHU_11.px" size="1400.0,550.0"/>
@@ -278,8 +278,8 @@
   <Picture layout="480.0,190.0,90.0,40.0" scale="fit" valign="top">
     <ValueBinding ord="station:|slot:/Drivers/DO1">
       <IBooleanToSimple name="image">
-        <Image name="trueValue" value="file:^px/Images/Icon/AHU_icon1.png"/>
-        <Image name="falseValue" value="file:^px/Images/Icon/AHU_icon.png"/>
+        <Image name="trueValue" value="file:^px/image/Icon/AHU_icon1.png"/>
+        <Image name="falseValue" value="file:^px/image/Icon/AHU_icon.png"/>
       </IBooleanToSimple>
     </ValueBinding>
     <PopupBinding ord="file:^px/AHU/Popup/AHU_04.px" size="1400.0,550.0"/>
@@ -288,8 +288,8 @@
   <Picture layout="480.0,465.0,90.0,40.0" scale="fit" valign="top">
     <ValueBinding ord="station:|slot:/Drivers/DO1">
       <IBooleanToSimple name="image">
-        <Image name="trueValue" value="file:^px/Images/Icon/AHU_icon1.png"/>
-        <Image name="falseValue" value="file:^px/Images/Icon/AHU_icon.png"/>
+        <Image name="trueValue" value="file:^px/image/Icon/AHU_icon1.png"/>
+        <Image name="falseValue" value="file:^px/image/Icon/AHU_icon.png"/>
       </IBooleanToSimple>
     </ValueBinding>
     <PopupBinding ord="file:^px/AHU/Popup/AHU_05.px" size="1400.0,550.0"/>
@@ -298,8 +298,8 @@
   <Picture layout="480.0,575.0,90.0,40.0" scale="fit" valign="top">
     <ValueBinding ord="station:|slot:/Drivers/DO1">
       <IBooleanToSimple name="image">
-        <Image name="trueValue" value="file:^px/Images/Icon/AHU_icon1.png"/>
-        <Image name="falseValue" value="file:^px/Images/Icon/AHU_icon.png"/>
+        <Image name="trueValue" value="file:^px/image/Icon/AHU_icon1.png"/>
+        <Image name="falseValue" value="file:^px/image/Icon/AHU_icon.png"/>
       </IBooleanToSimple>
     </ValueBinding>
     <PopupBinding ord="file:^px/AHU/Popup/AHU_07.px" size="1400.0,550.0"/>
@@ -308,8 +308,8 @@
   <Picture layout="480.0,285.0,90.0,40.0" scale="fit" valign="top">
     <ValueBinding ord="station:|slot:/Drivers/DO1">
       <IBooleanToSimple name="image">
-        <Image name="trueValue" value="file:^px/Images/Icon/AHU_icon1.png"/>
-        <Image name="falseValue" value="file:^px/Images/Icon/AHU_icon.png"/>
+        <Image name="trueValue" value="file:^px/image/Icon/AHU_icon1.png"/>
+        <Image name="falseValue" value="file:^px/image/Icon/AHU_icon.png"/>
       </IBooleanToSimple>
     </ValueBinding>
     <PopupBinding ord="file:^px/AHU/Popup/AHU_01.px" size="1400.0,550.0"/>

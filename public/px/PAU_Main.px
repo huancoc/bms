@@ -79,8 +79,8 @@
     <PopupBinding ord="file:^px/AHU/Popup/S_PAU_01.px" title="SPAU-01" size="1400.0,550.0"/>
     <ValueBinding ord="station:|slot:/Drivers/NiagaraNetwork/WEB_CVI/points/DDC_CP_02_1/S_PAU_ST_01">
       <IBooleanToSimple name="image">
-        <Image name="trueValue" value="file:^px/Images/Icon/PAU_icon1.png"/>
-        <Image name="falseValue" value="file:^px/Images/Icon/PAU_icon.png"/>
+        <Image name="trueValue" value="file:^px/image/Icon/PAU_icon1.png"/>
+        <Image name="falseValue" value="file:^px/image/Icon/PAU_icon.png"/>
       </IBooleanToSimple>
     </ValueBinding>
   </Picture>
@@ -89,8 +89,8 @@
     <PopupBinding ord="file:^px/AHU/Popup/AHU_01.px" title="AHU-01" size="1400.0,550.0"/>
     <ValueBinding ord="station:|slot:/Drivers/NiagaraNetwork/WEB_CVI/points/DDC_CP_02_3/ST_AHU_01">
       <IBooleanToSimple name="image">
-        <Image name="trueValue" value="file:^px/Images/Icon/AHU_150x65.gif"/>
-        <Image name="falseValue" value="file:^px/Images/Icon/AHU_150x65.png"/>
+        <Image name="trueValue" value="file:^px/image/Icon/AHU_150x65.gif"/>
+        <Image name="falseValue" value="file:^px/image/Icon/AHU_150x65.png"/>
       </IBooleanToSimple>
     </ValueBinding>
   </Picture>
@@ -159,8 +159,8 @@
     <PopupBinding ord="file:^px/AHU/Popup/R_PAU_01.px" title="RPAU_01" size="1400.0,550.0"/>
     <ValueBinding ord="station:|slot:/Drivers/NiagaraNetwork/WEB_CVI/points/DDC_CP_02_1/R_PAU_ST_01">
       <IBooleanToSimple name="image">
-        <Image name="trueValue" value="file:^px/Images/Icon/FAN_150x111_L_on.gif"/>
-        <Image name="falseValue" value="file:^px/Images/Icon/FAN_150x111_L.png"/>
+        <Image name="trueValue" value="file:^px/image/Icon/FAN_150x111_L_on.gif"/>
+        <Image name="falseValue" value="file:^px/image/Icon/FAN_150x111_L.png"/>
       </IBooleanToSimple>
     </ValueBinding>
   </Picture>
@@ -184,8 +184,8 @@
   <Picture layout="345.0,500.0,70.0,50.0" scale="fitRatio">
     <ValueBinding ord="station:|slot:/Drivers/NiagaraNetwork/WEB_CVI/points/DDC_CP_02_3/ST_AHU_01">
       <IBooleanToSimple name="image">
-        <Image name="trueValue" value="file:^px/Images/Icon/FAN_150x111_L_on.png"/>
-        <Image name="falseValue" value="file:^px/Images/Icon/FAN_150x111_L.png"/>
+        <Image name="trueValue" value="file:^px/image/Icon/FAN_150x111_L_on.png"/>
+        <Image name="falseValue" value="file:^px/image/Icon/FAN_150x111_L.png"/>
       </IBooleanToSimple>
     </ValueBinding>
   </Picture>
@@ -276,14 +276,14 @@
     <WsAnnotation name="wsAnnotation" value="2,2,8"/>
   </BoundLabel>
 
-  <Picture layout="1455.0,360.0,80.0,65.0" image="file:^px/Images/Icon/DHU.png" scale="fitRatio"/>
+  <Picture layout="1455.0,360.0,80.0,65.0" image="file:^px/image/Icon/DHU.png" scale="fitRatio"/>
 
   <BoundLabel layout="1575.0,425.0,80.0,15.0" text=" DHU-05" font="14.0pt Tahoma" foreground="black" background="#e0e0e0" halign="left" border="2.0 groove black">
     <WsAnnotation name="wsAnnotation" value="2,2,8"/>
     <BoundLabelBinding hyperlink="file:^px/AHU/AHU_NX_T1.px"/>
   </BoundLabel>
 
-  <Picture layout="1575.0,360.0,80.0,65.0" image="file:^px/Images/Icon/DHU.png" scale="fitRatio"/>
+  <Picture layout="1575.0,360.0,80.0,65.0" image="file:^px/image/Icon/DHU.png" scale="fitRatio"/>
 
   <BoundLabel layout="1610.0,330.0,9.999999999999773,30.0" font="20.0pt Tahoma" foreground="black" background="lime" halign="left" border="2.0 groove black">
     <WsAnnotation name="wsAnnotation" value="2,2,8"/>
@@ -428,8 +428,8 @@
     <PopupBinding ord="file:^px/AHU/Popup/AHU_12.px" title="AHU-01" size="1400.0,550.0"/>
     <ValueBinding ord="station:|slot:/Drivers/NiagaraNetwork/WEB_CVI/points/DDC_CP_02_1/ST_AHU_12">
       <IBooleanToSimple name="image">
-        <Image name="trueValue" value="file:^px/Images/Icon/AHU_150x65.gif"/>
-        <Image name="falseValue" value="file:^px/Images/Icon/AHU_150x65.png"/>
+        <Image name="trueValue" value="file:^px/image/Icon/AHU_150x65.gif"/>
+        <Image name="falseValue" value="file:^px/image/Icon/AHU_150x65.png"/>
       </IBooleanToSimple>
     </ValueBinding>
   </Picture>
@@ -438,8 +438,8 @@
     <PopupBinding ord="file:^px/AHU/Popup/AHU_02.px" title="AHU-02" size="1400.0,550.0"/>
     <ValueBinding ord="station:|slot:/Drivers/NiagaraNetwork/WEB_CVI/points/DDC_CP_02_3/ST_AHU_02">
       <IBooleanToSimple name="image">
-        <Image name="trueValue" value="file:^px/Images/Icon/AHU_150x65.gif"/>
-        <Image name="falseValue" value="file:^px/Images/Icon/AHU_150x65.png"/>
+        <Image name="trueValue" value="file:^px/image/Icon/AHU_150x65.gif"/>
+        <Image name="falseValue" value="file:^px/image/Icon/AHU_150x65.png"/>
       </IBooleanToSimple>
     </ValueBinding>
   </Picture>
@@ -448,8 +448,8 @@
     <PopupBinding ord="file:^px/AHU/Popup/AHU_03.px" title="AHU-03" size="1400.0,550.0"/>
     <ValueBinding ord="station:|slot:/Drivers/NiagaraNetwork/WEB_CVI/points/DDC_CP_02_3/ST_AHU_03">
       <IBooleanToSimple name="image">
-        <Image name="trueValue" value="file:^px/Images/Icon/AHU_150x65.gif"/>
-        <Image name="falseValue" value="file:^px/Images/Icon/AHU_150x65.png"/>
+        <Image name="trueValue" value="file:^px/image/Icon/AHU_150x65.gif"/>
+        <Image name="falseValue" value="file:^px/image/Icon/AHU_150x65.png"/>
       </IBooleanToSimple>
     </ValueBinding>
   </Picture>
@@ -458,8 +458,8 @@
     <PopupBinding ord="file:^px/AHU/Popup/AHU_06.px" title="AHU-06" size="1400.0,550.0"/>
     <ValueBinding ord="station:|slot:/Drivers/NiagaraNetwork/WEB_CVI/points/DDC_CP_02_2/ST_AHU_06">
       <IBooleanToSimple name="image">
-        <Image name="trueValue" value="file:^px/Images/Icon/AHU_150x65.gif"/>
-        <Image name="falseValue" value="file:^px/Images/Icon/AHU_150x65.png"/>
+        <Image name="trueValue" value="file:^px/image/Icon/AHU_150x65.gif"/>
+        <Image name="falseValue" value="file:^px/image/Icon/AHU_150x65.png"/>
       </IBooleanToSimple>
     </ValueBinding>
   </Picture>
@@ -468,8 +468,8 @@
     <PopupBinding ord="file:^px/AHU/Popup/AHU_07.px" title="AHU-07" size="1400.0,550.0"/>
     <ValueBinding ord="station:|slot:/Drivers/NiagaraNetwork/WEB_CVI/points/DDC_CP_02_2/ST_AHU_07">
       <IBooleanToSimple name="image">
-        <Image name="trueValue" value="file:^px/Images/Icon/AHU_150x65.gif"/>
-        <Image name="falseValue" value="file:^px/Images/Icon/AHU_150x65.png"/>
+        <Image name="trueValue" value="file:^px/image/Icon/AHU_150x65.gif"/>
+        <Image name="falseValue" value="file:^px/image/Icon/AHU_150x65.png"/>
       </IBooleanToSimple>
     </ValueBinding>
   </Picture>
@@ -478,8 +478,8 @@
     <PopupBinding ord="file:^px/AHU/Popup/AHU_09.px" title="AHU-09" size="1400.0,550.0"/>
     <ValueBinding ord="station:|slot:/Drivers/NiagaraNetwork/WEB_CVI/points/DDC_CP_02_1/ST_AHU_09">
       <IBooleanToSimple name="image">
-        <Image name="trueValue" value="file:^px/Images/Icon/AHU_150x65.gif"/>
-        <Image name="falseValue" value="file:^px/Images/Icon/AHU_150x65.png"/>
+        <Image name="trueValue" value="file:^px/image/Icon/AHU_150x65.gif"/>
+        <Image name="falseValue" value="file:^px/image/Icon/AHU_150x65.png"/>
       </IBooleanToSimple>
     </ValueBinding>
   </Picture>
@@ -488,8 +488,8 @@
     <PopupBinding ord="file:^px/AHU/Popup/AHU_10.px" title="AHU-10" size="1400.0,550.0"/>
     <ValueBinding ord="station:|slot:/Drivers/NiagaraNetwork/WEB_CVI/points/DDC_CP_02_1/ST_AHU_10">
       <IBooleanToSimple name="image">
-        <Image name="trueValue" value="file:^px/Images/Icon/AHU_150x65.gif"/>
-        <Image name="falseValue" value="file:^px/Images/Icon/AHU_150x65.png"/>
+        <Image name="trueValue" value="file:^px/image/Icon/AHU_150x65.gif"/>
+        <Image name="falseValue" value="file:^px/image/Icon/AHU_150x65.png"/>
       </IBooleanToSimple>
     </ValueBinding>
   </Picture>
@@ -498,8 +498,8 @@
     <PopupBinding ord="file:^px/AHU/Popup/AHU_11.px" title="AHU-11" size="1400.0,550.0"/>
     <ValueBinding ord="station:|slot:/Drivers/NiagaraNetwork/WEB_CVI/points/DDC_CP_02_1/ST_AHU11">
       <IBooleanToSimple name="image">
-        <Image name="trueValue" value="file:^px/Images/Icon/AHU_150x65.gif"/>
-        <Image name="falseValue" value="file:^px/Images/Icon/AHU_150x65.png"/>
+        <Image name="trueValue" value="file:^px/image/Icon/AHU_150x65.gif"/>
+        <Image name="falseValue" value="file:^px/image/Icon/AHU_150x65.png"/>
       </IBooleanToSimple>
     </ValueBinding>
   </Picture>
@@ -508,8 +508,8 @@
     <PopupBinding ord="file:^px/AHU/Popup/AHU_08.px" title="AHU-08" size="1400.0,550.0"/>
     <ValueBinding ord="station:|slot:/Drivers/NiagaraNetwork/WEB_CVI/points/DDC_CP_02_1/ST_AHU_08">
       <IBooleanToSimple name="image">
-        <Image name="trueValue" value="file:^px/Images/Icon/AHU_150x65.gif"/>
-        <Image name="falseValue" value="file:^px/Images/Icon/AHU_150x65.png"/>
+        <Image name="trueValue" value="file:^px/image/Icon/AHU_150x65.gif"/>
+        <Image name="falseValue" value="file:^px/image/Icon/AHU_150x65.png"/>
       </IBooleanToSimple>
     </ValueBinding>
   </Picture>
@@ -518,13 +518,13 @@
     <PopupBinding ord="file:^px/AHU/Popup/S_PAU_02.px" title="SPAU-02" size="1400.0,550.0"/>
     <ValueBinding ord="station:|slot:/Drivers/NiagaraNetwork/WEB_CVI/points/DDC_CP_02_4/BI_ST_PAU_02">
       <IBooleanToSimple name="image">
-        <Image name="trueValue" value="file:^px/Images/Icon/PAU_icon1.png"/>
-        <Image name="falseValue" value="file:^px/Images/Icon/PAU_icon.png"/>
+        <Image name="trueValue" value="file:^px/image/Icon/PAU_icon1.png"/>
+        <Image name="falseValue" value="file:^px/image/Icon/PAU_icon.png"/>
       </IBooleanToSimple>
     </ValueBinding>
   </Picture>
 
-  <Picture layout="1500.0,510.0,170.0,100.0" image="file:^px/Images/Icon/PAU_icon1.png" scale="fitRatio"/>
+  <Picture layout="1500.0,510.0,170.0,100.0" image="file:^px/image/Icon/PAU_icon1.png" scale="fitRatio"/>
 
   <BoundLabel layout="1450.0,480.0,290.0,20.0" text="Ch&#xfa; th&#xed;ch:" font="18.0pt Tahoma" foreground="white" background="#4d000000" halign="left">
     <WsAnnotation name="wsAnnotation" value="2,2,8"/>
@@ -534,13 +534,13 @@
     <WsAnnotation name="wsAnnotation" value="2,2,8"/>
   </BoundLabel>
 
-  <Picture layout="1500.0,610.0,170.0,100.0" image="file:^px/Images/Icon/PAU_icon.png" scale="fitRatio"/>
+  <Picture layout="1500.0,610.0,170.0,100.0" image="file:^px/image/Icon/PAU_icon.png" scale="fitRatio"/>
 
   <BoundLabel layout="1670.0,640.0,170.0,20.0" text="PAU &#x111;ang t&#x1eaf;t" font="18.0pt Tahoma" foreground="white" background="#4d000000" halign="left">
     <WsAnnotation name="wsAnnotation" value="2,2,8"/>
   </BoundLabel>
 
-  <Picture layout="1500.0,720.0,150.0,65.0" image="file:^px/Images/Icon/AHU_150x65.gif" scale="fitRatio"/>
+  <Picture layout="1500.0,720.0,150.0,65.0" image="file:^px/image/Icon/AHU_150x65.gif" scale="fitRatio"/>
 
   <BoundLabel layout="1660.0,740.0,170.0,20.0" text="AHU &#x111;ang ho&#x1ea1;t &#x111;&#x1ed9;ng" font="18.0pt Tahoma" foreground="white" background="#4d000000" halign="left">
     <WsAnnotation name="wsAnnotation" value="2,2,8"/>
@@ -550,13 +550,13 @@
     <WsAnnotation name="wsAnnotation" value="2,2,8"/>
   </BoundLabel>
 
-  <Picture layout="1500.0,790.0,150.0,65.0" image="file:^px/Images/Icon/AHU_150x65.png" scale="fitRatio"/>
+  <Picture layout="1500.0,790.0,150.0,65.0" image="file:^px/image/Icon/AHU_150x65.png" scale="fitRatio"/>
 
   <Picture layout="320.0,850.0,90.0,40.00000000000003" scale="fitRatio">
     <ValueBinding ord="station:|slot:/Drivers/FCU_Status/Status_FCU_15">
       <IBooleanToSimple name="image">
-        <Image name="trueValue" value="file:^px/Images/Icon/FCU_On.png"/>
-        <Image name="falseValue" value="file:^px/Images/Icon/FCU_Off.png"/>
+        <Image name="trueValue" value="file:^px/image/Icon/FCU_On.png"/>
+        <Image name="falseValue" value="file:^px/image/Icon/FCU_Off.png"/>
       </IBooleanToSimple>
     </ValueBinding>
     <PopupBinding ord="file:^px/FCU/Popup/FCU_15.px" title="FCU-15" size="1000.0,400.0"/>
@@ -565,8 +565,8 @@
   <Picture layout="565.0,850.0,90.0,40.00000000000003" scale="fitRatio">
     <ValueBinding ord="station:|slot:/Drivers/FCU_Status/Status_FCU_16">
       <IBooleanToSimple name="image">
-        <Image name="trueValue" value="file:^px/Images/Icon/FCU_On.png"/>
-        <Image name="falseValue" value="file:^px/Images/Icon/FCU_Off.png"/>
+        <Image name="trueValue" value="file:^px/image/Icon/FCU_On.png"/>
+        <Image name="falseValue" value="file:^px/image/Icon/FCU_Off.png"/>
       </IBooleanToSimple>
     </ValueBinding>
     <PopupBinding ord="file:^px/FCU/Popup/FCU_16.px" title="FCU-16" size="1000.0,400.0"/>
@@ -575,8 +575,8 @@
   <Picture layout="805.0,850.0,90.0,40.00000000000003" scale="fitRatio">
     <ValueBinding ord="station:|slot:/Drivers/FCU_Status/Status_FCU_17">
       <IBooleanToSimple name="image">
-        <Image name="trueValue" value="file:^px/Images/Icon/FCU_On.png"/>
-        <Image name="falseValue" value="file:^px/Images/Icon/FCU_Off.png"/>
+        <Image name="trueValue" value="file:^px/image/Icon/FCU_On.png"/>
+        <Image name="falseValue" value="file:^px/image/Icon/FCU_Off.png"/>
       </IBooleanToSimple>
     </ValueBinding>
     <PopupBinding ord="file:^px/FCU/Popup/FCU_17.px" title="FCU-17" size="1000.0,400.0"/>
@@ -600,8 +600,8 @@
   <Picture layout="595.0,500.0,70.0,50.0" scale="fitRatio">
     <ValueBinding ord="station:|slot:/Drivers/NiagaraNetwork/WEB_CVI/points/DDC_CP_02_3/ST_AHU_02">
       <IBooleanToSimple name="image">
-        <Image name="trueValue" value="file:^px/Images/Icon/FAN_150x111_L_on.png"/>
-        <Image name="falseValue" value="file:^px/Images/Icon/FAN_150x111_L.png"/>
+        <Image name="trueValue" value="file:^px/image/Icon/FAN_150x111_L_on.png"/>
+        <Image name="falseValue" value="file:^px/image/Icon/FAN_150x111_L.png"/>
       </IBooleanToSimple>
     </ValueBinding>
   </Picture>
@@ -609,8 +609,8 @@
   <Picture layout="835.0,500.0,70.0,50.0" scale="fitRatio">
     <ValueBinding ord="station:|slot:/Drivers/NiagaraNetwork/WEB_CVI/points/DDC_CP_02_3/ST_AHU_03">
       <IBooleanToSimple name="image">
-        <Image name="trueValue" value="file:^px/Images/Icon/FAN_150x111_L_on.png"/>
-        <Image name="falseValue" value="file:^px/Images/Icon/FAN_150x111_L.png"/>
+        <Image name="trueValue" value="file:^px/image/Icon/FAN_150x111_L_on.png"/>
+        <Image name="falseValue" value="file:^px/image/Icon/FAN_150x111_L.png"/>
       </IBooleanToSimple>
     </ValueBinding>
   </Picture>
@@ -618,8 +618,8 @@
   <Picture layout="1075.0,500.0,70.0,50.0" scale="fitRatio">
     <ValueBinding ord="station:|slot:/Drivers/NiagaraNetwork/WEB_CVI/points/DDC_CP_02_2/ST_AHU_06">
       <IBooleanToSimple name="image">
-        <Image name="trueValue" value="file:^px/Images/Icon/FAN_150x111_L_on.png"/>
-        <Image name="falseValue" value="file:^px/Images/Icon/FAN_150x111_L.png"/>
+        <Image name="trueValue" value="file:^px/image/Icon/FAN_150x111_L_on.png"/>
+        <Image name="falseValue" value="file:^px/image/Icon/FAN_150x111_L.png"/>
       </IBooleanToSimple>
     </ValueBinding>
   </Picture>
@@ -627,8 +627,8 @@
   <Picture layout="600.0,740.0,70.0,50.0" scale="fitRatio">
     <ValueBinding ord="station:|slot:/Drivers/NiagaraNetwork/WEB_CVI/points/DDC_CP_02_1/ST_AHU_09">
       <IBooleanToSimple name="image">
-        <Image name="trueValue" value="file:^px/Images/Icon/FAN_150x111_L_on.png"/>
-        <Image name="falseValue" value="file:^px/Images/Icon/FAN_150x111_L.png"/>
+        <Image name="trueValue" value="file:^px/image/Icon/FAN_150x111_L_on.png"/>
+        <Image name="falseValue" value="file:^px/image/Icon/FAN_150x111_L.png"/>
       </IBooleanToSimple>
     </ValueBinding>
   </Picture>
@@ -636,8 +636,8 @@
   <Picture layout="840.0,740.0,70.0,50.0" scale="fitRatio">
     <ValueBinding ord="station:|slot:/Drivers/NiagaraNetwork/WEB_CVI/points/DDC_CP_02_1/ST_AHU_10">
       <IBooleanToSimple name="image">
-        <Image name="trueValue" value="file:^px/Images/Icon/FAN_150x111_L_on.png"/>
-        <Image name="falseValue" value="file:^px/Images/Icon/FAN_150x111_L.png"/>
+        <Image name="trueValue" value="file:^px/image/Icon/FAN_150x111_L_on.png"/>
+        <Image name="falseValue" value="file:^px/image/Icon/FAN_150x111_L.png"/>
       </IBooleanToSimple>
     </ValueBinding>
   </Picture>
@@ -645,8 +645,8 @@
   <Picture layout="1075.0,740.0,70.0,50.0" scale="fitRatio">
     <ValueBinding ord="station:|slot:/Drivers/NiagaraNetwork/WEB_CVI/points/DDC_CP_02_1/ST_AHU11">
       <IBooleanToSimple name="image">
-        <Image name="trueValue" value="file:^px/Images/Icon/FAN_150x111_L_on.png"/>
-        <Image name="falseValue" value="file:^px/Images/Icon/FAN_150x111_L.png"/>
+        <Image name="trueValue" value="file:^px/image/Icon/FAN_150x111_L_on.png"/>
+        <Image name="falseValue" value="file:^px/image/Icon/FAN_150x111_L.png"/>
       </IBooleanToSimple>
     </ValueBinding>
   </Picture>
@@ -654,8 +654,8 @@
   <Picture layout="1330.0,740.0,70.0,50.0" scale="fitRatio">
     <ValueBinding ord="station:|slot:/Drivers/NiagaraNetwork/WEB_CVI/points/DDC_CP_02_1/ST_AHU_12">
       <IBooleanToSimple name="image">
-        <Image name="trueValue" value="file:^px/Images/Icon/FAN_150x111_L_on.png"/>
-        <Image name="falseValue" value="file:^px/Images/Icon/FAN_150x111_L.png"/>
+        <Image name="trueValue" value="file:^px/image/Icon/FAN_150x111_L_on.png"/>
+        <Image name="falseValue" value="file:^px/image/Icon/FAN_150x111_L.png"/>
       </IBooleanToSimple>
     </ValueBinding>
   </Picture>
@@ -663,8 +663,8 @@
   <Picture layout="355.0,740.0,70.0,50.0" scale="fitRatio">
     <ValueBinding ord="station:|slot:/Drivers/NiagaraNetwork/WEB_CVI/points/DDC_CP_02_2/ST_AHU_07">
       <IBooleanToSimple name="image">
-        <Image name="trueValue" value="file:^px/Images/Icon/FAN_150x111_L_on.png"/>
-        <Image name="falseValue" value="file:^px/Images/Icon/FAN_150x111_L.png"/>
+        <Image name="trueValue" value="file:^px/image/Icon/FAN_150x111_L_on.png"/>
+        <Image name="falseValue" value="file:^px/image/Icon/FAN_150x111_L.png"/>
       </IBooleanToSimple>
     </ValueBinding>
   </Picture>

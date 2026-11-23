@@ -19,7 +19,7 @@
     <WsAnnotation name="wsAnnotation" value="2,2,8"/>
   </BoundLabel>
 
-  <Picture layout="0.0,0.0,1855.0,930.0" image="file:/px/Backgound/BG_Chiller.jpg" scale="fit">
+  <Picture layout="0.0,0.0,1855.0,955.0" image="file:/px/Backgound/BG_Chiller.jpg" scale="fit">
     <LayerTag name="LayerTag" layerName="BG_Lock"/>
   </Picture>
 
@@ -835,8 +835,8 @@
   <Picture layout="550.0,270.0,32.0,32.0" scale="fitRatio">
     <ValueBinding ord="station:|slot:/Drivers/NiagaraNetwork/WEB_CVI/points/DDC_CP_CH/CT_TR_01">
       <IBooleanToSimple name="image">
-        <Image name="trueValue" value="file:^px/Images/Icon/Trip_On.png"/>
-        <Image name="falseValue" value="file:^px/Images/Icon/Trip_Off.png"/>
+        <Image name="trueValue" value="file:^px/image/Icon/Trip_On.png"/>
+        <Image name="falseValue" value="file:^px/image/Icon/Trip_Off.png"/>
       </IBooleanToSimple>
     </ValueBinding>
   </Picture>
@@ -844,8 +844,8 @@
   <Picture layout="1190.0,270.0,32.0,32.0" scale="fitRatio">
     <ValueBinding ord="station:|slot:/Drivers/NiagaraNetwork/WEB_CVI/points/DDC_CP_CH/CT_TR_02">
       <IBooleanToSimple name="image">
-        <Image name="trueValue" value="file:^px/Images/Icon/Trip_On.png"/>
-        <Image name="falseValue" value="file:^px/Images/Icon/Trip_Off.png"/>
+        <Image name="trueValue" value="file:^px/image/Icon/Trip_On.png"/>
+        <Image name="falseValue" value="file:^px/image/Icon/Trip_Off.png"/>
       </IBooleanToSimple>
     </ValueBinding>
   </Picture>
@@ -853,8 +853,8 @@
   <Picture layout="1345.0,530.0,32.0,32.0" scale="fitRatio">
     <ValueBinding ord="station:|slot:/Drivers/NiagaraNetwork/WEB_CVI/points/DDC_CP_CH/CHWP_TR_01">
       <IBooleanToSimple name="image">
-        <Image name="trueValue" value="file:^px/Images/Icon/Trip_On.png"/>
-        <Image name="falseValue" value="file:^px/Images/Icon/Trip_Off.png"/>
+        <Image name="trueValue" value="file:^px/image/Icon/Trip_On.png"/>
+        <Image name="falseValue" value="file:^px/image/Icon/Trip_Off.png"/>
       </IBooleanToSimple>
     </ValueBinding>
   </Picture>
@@ -862,8 +862,8 @@
   <Picture layout="1350.0,815.0,32.0,32.0" scale="fitRatio">
     <ValueBinding ord="station:|slot:/Drivers/NiagaraNetwork/WEB_CVI/points/DDC_CP_CH/CHWP_TR_02">
       <IBooleanToSimple name="image">
-        <Image name="trueValue" value="file:^px/Images/Icon/Trip_On.png"/>
-        <Image name="falseValue" value="file:^px/Images/Icon/Trip_Off.png"/>
+        <Image name="trueValue" value="file:^px/image/Icon/Trip_On.png"/>
+        <Image name="falseValue" value="file:^px/image/Icon/Trip_Off.png"/>
       </IBooleanToSimple>
     </ValueBinding>
   </Picture>
@@ -871,8 +871,8 @@
   <Picture layout="450.0,530.0,32.0,32.0" scale="fitRatio">
     <ValueBinding ord="station:|slot:/Drivers/NiagaraNetwork/WEB_CVI/points/DDC_CP_CH/CTWP_TR_01">
       <IBooleanToSimple name="image">
-        <Image name="trueValue" value="file:^px/Images/Icon/Trip_On.png"/>
-        <Image name="falseValue" value="file:^px/Images/Icon/Trip_Off.png"/>
+        <Image name="trueValue" value="file:^px/image/Icon/Trip_On.png"/>
+        <Image name="falseValue" value="file:^px/image/Icon/Trip_Off.png"/>
       </IBooleanToSimple>
     </ValueBinding>
   </Picture>
@@ -880,8 +880,8 @@
   <Picture layout="450.0,815.0,32.0,32.0" scale="fitRatio">
     <ValueBinding ord="station:|slot:/Drivers/NiagaraNetwork/WEB_CVI/points/DDC_CP_CH/CTWP_TR_02">
       <IBooleanToSimple name="image">
-        <Image name="trueValue" value="file:^px/Images/Icon/Trip_On.png"/>
-        <Image name="falseValue" value="file:^px/Images/Icon/Trip_Off.png"/>
+        <Image name="trueValue" value="file:^px/image/Icon/Trip_On.png"/>
+        <Image name="falseValue" value="file:^px/image/Icon/Trip_Off.png"/>
       </IBooleanToSimple>
     </ValueBinding>
   </Picture>
@@ -889,8 +889,8 @@
   <Picture layout="930.0,520.0,32.0,32.0" scale="fitRatio">
     <ValueBinding ord="station:|slot:/Drivers/NiagaraNetwork/WEB_CVI/points/CHILLER/CHILLER_01/Alarm$20Present">
       <IBooleanToSimple name="image">
-        <Image name="trueValue" value="file:^px/Images/Icon/Trip_On.png"/>
-        <Image name="falseValue" value="file:^px/Images/Icon/Trip_Off.png"/>
+        <Image name="trueValue" value="file:^px/image/Icon/Trip_On.png"/>
+        <Image name="falseValue" value="file:^px/image/Icon/Trip_Off.png"/>
       </IBooleanToSimple>
     </ValueBinding>
   </Picture>
@@ -898,8 +898,8 @@
   <Picture layout="920.0,810.0,32.0,32.0" scale="fitRatio">
     <ValueBinding ord="station:|slot:/Drivers/NiagaraNetwork/WEB_CVI/points/CHILLER/CHILLER_02/Alarm$20Present">
       <IBooleanToSimple name="image">
-        <Image name="trueValue" value="file:^px/Images/Icon/Trip_On.png"/>
-        <Image name="falseValue" value="file:^px/Images/Icon/Trip_Off.png"/>
+        <Image name="trueValue" value="file:^px/image/Icon/Trip_On.png"/>
+        <Image name="falseValue" value="file:^px/image/Icon/Trip_Off.png"/>
       </IBooleanToSimple>
     </ValueBinding>
   </Picture>

@@ -107,11 +107,11 @@
     <WsAnnotation name="wsAnnotation" value="6,6,8"/>
   </ImageButton>
 
-  <Picture layout="20.0,185.0,110.0,80.0" image="file:^px/Images/Electric/PM2.png" scale="fitRatio" halign="fill">
+  <Picture layout="20.0,185.0,110.0,80.0" image="file:^px/image/Electric/PM2.png" scale="fitRatio" halign="fill">
     <PopupBinding ord="file:^px/ELECTRIC/PM01.px" title="&#x110;&#x1ed3;ng h&#x1ed3; &#x111;i&#x1ec7;n t&#x1ed5;ng"/>
   </Picture>
 
-  <Picture layout="15.0,265.0,160.0,100.0" image="file:^px/Images/Electric/may phat.PNG" scale="fitRatio" halign="fill">
+  <Picture layout="15.0,265.0,160.0,100.0" image="file:^px/image/Electric/may phat.PNG" scale="fitRatio" halign="fill">
     <PopupBinding ord="file:^px/ELECTRIC/GEN.px" title="M&#xe1;y ph&#xe1;t &#x111;i&#x1ec7;n 1"/>
   </Picture>
 
@@ -141,15 +141,15 @@
     <WsAnnotation name="wsAnnotation" value="6,6,8"/>
   </ImageButton>
 
-  <BoundLabel layout="45.0,510.0,55.0,30.0" image="file:^px/Images/Icon/1463731501_Circle_Green.png"/>
+  <BoundLabel layout="45.0,510.0,55.0,30.0" image="file:^px/image/Icon/1463731501_Circle_Green.png"/>
 
-  <BoundLabel layout="50.0,590.0,40.0,30.0" image="file:^px/Images/Icon/1463731515_Circle_Yellow.png"/>
+  <BoundLabel layout="50.0,590.0,40.0,30.0" image="file:^px/image/Icon/1463731515_Circle_Yellow.png"/>
 
   <BoundLabel layout="100.0,505.0,290.00000000000006,40.00000000000006" text="Tr&#x1ea1;ng th&#xe1;i b&#x1ead;t" font="18.0pt SansSerif" halign="left" textToIconAlign="center">
     <WsAnnotation name="wsAnnotation" value="2,2,8"/>
   </BoundLabel>
 
-  <BoundLabel layout="45.0,550.0,55.0,30.0" image="file:^px/Images/Icon/1463731422_Circle_Red.png"/>
+  <BoundLabel layout="45.0,550.0,55.0,30.0" image="file:^px/image/Icon/1463731422_Circle_Red.png"/>
 
   <BoundLabel layout="100.0,545.0,290.00000000000006,40.00000000000006" text="Tr&#x1ea1;ng th&#xe1;i t&#x1eaf;t" font="18.0pt SansSerif" halign="left" textToIconAlign="center">
     <WsAnnotation name="wsAnnotation" value="2,2,8"/>
@@ -163,7 +163,7 @@
     <WsAnnotation name="wsAnnotation" value="2,2,8"/>
   </BoundLabel>
 
-  <BoundLabel layout="50.0,630.0,40.0,30.0" image="file:^px/Images/Icon/1463731583_Circle_Grey.png"/>
+  <BoundLabel layout="50.0,630.0,40.0,30.0" image="file:^px/image/Icon/1463731583_Circle_Grey.png"/>
 
 </CanvasPane>
 </content>

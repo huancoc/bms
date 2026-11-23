@@ -234,8 +234,8 @@
   <Picture layout="960.0,260.0,32.0,32.0" scale="fitRatio">
     <ValueBinding ord="station:|slot:/Drivers/NiagaraNetwork/WEB_CVI/points/DDC_CP_02_1/TR_AHU_08">
       <IBooleanToSimple name="image">
-        <Image name="trueValue" value="file:^px/Images/Icon/Trip_On.png"/>
-        <Image name="falseValue" value="file:^px/Images/Icon/Trip_Off.png"/>
+        <Image name="trueValue" value="file:^px/image/Icon/Trip_On.png"/>
+        <Image name="falseValue" value="file:^px/image/Icon/Trip_Off.png"/>
       </IBooleanToSimple>
     </ValueBinding>
   </Picture>

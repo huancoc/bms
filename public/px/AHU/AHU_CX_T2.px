@@ -79,13 +79,13 @@
     <BoundLabelBinding hyperlink="file:^px/AHU/AHU_CX_T2.px"/>
   </BoundLabel>
 
-  <Picture layout="330.0,140.0,1400.0,800.0" image="file:^px/Images/Layout/KCX.T2x.png" scale="fit" valign="top"/>
+  <Picture layout="330.0,140.0,1400.0,800.0" image="file:^px/image/Layout/KCX.T2x.png" scale="fit" valign="top"/>
 
   <Picture layout="850.0,590.0,120.0,70.0" scale="fit" valign="top">
     <ValueBinding ord="station:|slot:/Drivers/NiagaraNetwork/WEB_CVI/points/DDC_CP_CX/ST_AHU_CX01">
       <IBooleanToSimple name="image">
-        <Image name="trueValue" value="file:^px/Images/Icon/AHU_icon1.png"/>
-        <Image name="falseValue" value="file:^px/Images/Icon/AHU_icon.png"/>
+        <Image name="trueValue" value="file:^px/image/Icon/AHU_icon1.png"/>
+        <Image name="falseValue" value="file:^px/image/Icon/AHU_icon.png"/>
       </IBooleanToSimple>
     </ValueBinding>
     <PopupBinding ord="file:^px/AHU/Popup/AHU_CX_01.px" size="1400.0,550.0"/>
@@ -133,8 +133,8 @@
   <Picture layout="970.0,520.0,120.0,70.0" scale="fit" valign="top">
     <ValueBinding ord="station:|slot:/Drivers/NiagaraNetwork/WEB_CVI/points/DDC_CP_CX/ST_AHU_CX02">
       <IBooleanToSimple name="image">
-        <Image name="trueValue" value="file:^px/Images/Icon/AHU_icon1.png"/>
-        <Image name="falseValue" value="file:^px/Images/Icon/AHU_icon.png"/>
+        <Image name="trueValue" value="file:^px/image/Icon/AHU_icon1.png"/>
+        <Image name="falseValue" value="file:^px/image/Icon/AHU_icon.png"/>
       </IBooleanToSimple>
     </ValueBinding>
     <PopupBinding ord="file:^px/AHU/Popup/AHU_CX_02.px" size="1400.0,550.0"/>
@@ -143,8 +143,8 @@
   <Picture layout="850.0,680.0,120.0,70.0" scale="fit" valign="top">
     <ValueBinding ord="station:|slot:/Drivers/NiagaraNetwork/WEB_CVI/points/DDC_CP_CX/ST_AHU_CX03">
       <IBooleanToSimple name="image">
-        <Image name="trueValue" value="file:^px/Images/Icon/AHU_icon1.png"/>
-        <Image name="falseValue" value="file:^px/Images/Icon/AHU_icon.png"/>
+        <Image name="trueValue" value="file:^px/image/Icon/AHU_icon1.png"/>
+        <Image name="falseValue" value="file:^px/image/Icon/AHU_icon.png"/>
       </IBooleanToSimple>
     </ValueBinding>
     <PopupBinding ord="file:^px/AHU/Popup/AHU_CX_04.px" size="1400.0,550.0"/>
@@ -186,8 +186,8 @@
   <Picture layout="760.0,540.0,120.0,70.0" scale="fit" valign="top">
     <ValueBinding ord="station:|slot:/Drivers/NiagaraNetwork/WEB_CVI/points/DDC_CP_CX/ST_AHU_CX04">
       <IBooleanToSimple name="image">
-        <Image name="trueValue" value="file:^px/Images/Icon/AHU_icon1.png"/>
-        <Image name="falseValue" value="file:^px/Images/Icon/AHU_icon.png"/>
+        <Image name="trueValue" value="file:^px/image/Icon/AHU_icon1.png"/>
+        <Image name="falseValue" value="file:^px/image/Icon/AHU_icon.png"/>
       </IBooleanToSimple>
     </ValueBinding>
     <PopupBinding ord="file:^px/AHU/Popup/AHU_CX_03.px" size="1400.0,550.0"/>

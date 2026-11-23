@@ -249,15 +249,15 @@
     <WsAnnotation name="wsAnnotation" value="6,6,8"/>
   </ImageButton>
 
-  <BoundLabel layout="60.0,805.0,55.0,30.0" image="file:^px/Images/Icon/1463731501_Circle_Green.png"/>
+  <BoundLabel layout="60.0,805.0,55.0,30.0" image="file:^px/image/Icon/1463731501_Circle_Green.png"/>
 
-  <BoundLabel layout="65.0,885.0,40.0,30.0" image="file:^px/Images/Icon/1463731515_Circle_Yellow.png"/>
+  <BoundLabel layout="65.0,885.0,40.0,30.0" image="file:^px/image/Icon/1463731515_Circle_Yellow.png"/>
 
   <BoundLabel layout="110.0,800.0,290.00000000000006,40.00000000000006" text="Tr&#x1ea1;ng th&#xe1;i ho&#x1ea1;t &#x111;&#x1ed9;ng b&#x1ead;t" font="18.0pt SansSerif" halign="left" textToIconAlign="center">
     <WsAnnotation name="wsAnnotation" value="2,2,8"/>
   </BoundLabel>
 
-  <BoundLabel layout="60.0,845.0,55.0,30.0" image="file:^px/Images/Icon/1463731422_Circle_Red.png"/>
+  <BoundLabel layout="60.0,845.0,55.0,30.0" image="file:^px/image/Icon/1463731422_Circle_Red.png"/>
 
   <BoundLabel layout="110.0,840.0,290.00000000000006,40.00000000000006" text="Tr&#x1ea1;ng th&#xe1;i ho&#x1ea1;t &#x111;&#x1ed9;ng t&#x1eaf;t" font="18.0pt SansSerif" halign="left" textToIconAlign="center">
     <WsAnnotation name="wsAnnotation" value="2,2,8"/>
@@ -271,9 +271,9 @@
     <WsAnnotation name="wsAnnotation" value="2,2,8"/>
   </BoundLabel>
 
-  <BoundLabel layout="65.0,925.0,40.0,30.0" image="file:^px/Images/Icon/1463731583_Circle_Grey.png"/>
+  <BoundLabel layout="65.0,925.0,40.0,30.0" image="file:^px/image/Icon/1463731583_Circle_Grey.png"/>
 
-  <Picture layout="580.0,640.0,80.0,80.0" image="file:^px/Images/Icon Delta/Pressure-well.png" scale="fitRatio" halign="fill"/>
+  <Picture layout="580.0,640.0,80.0,80.0" image="file:^px/image/Icon Delta/Pressure-well.png" scale="fitRatio" halign="fill"/>
 
   <ImageButton layout="665.0,655.0,295.0,30.0" text="C&#x1ea3;m bi&#x1ebf;n &#xe1;p su&#x1ea5;t &#x1ed1;ng n&#x1b0;&#x1edb;c" font="bold 16.0pt SansSerif" foreground="black" background="white" buttonStyle="none">
     <WsAnnotation name="wsAnnotation" value="6,6,8"/>

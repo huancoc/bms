@@ -134,8 +134,8 @@
   <BoundLabel layout="80.0,895.0,40.0,30.0">
     <ValueBinding ord="station:|slot:/Drivers/Point_Demo/DO_Demo_Fan/out">
       <IBooleanToSimple name="image">
-        <Image name="trueValue" value="file:^px/Images/Icon/Warning.png"/>
-        <Image name="falseValue" value="file:^px/Images/Icon/Warning.png"/>
+        <Image name="trueValue" value="file:^px/image/Icon/Warning.png"/>
+        <Image name="falseValue" value="file:^px/image/Icon/Warning.png"/>
       </IBooleanToSimple>
     </ValueBinding>
   </BoundLabel>
@@ -177,8 +177,8 @@
   <BoundLabel layout="40.0,680.0,164.0,99.0">
     <ValueBinding ord="station:|slot:/Drivers/Point_Demo/DO_Demo_Fan/out">
       <IBooleanToSimple name="image">
-        <Image name="trueValue" value="file:^px/Images/Fan/fanRightTrue.gif"/>
-        <Image name="falseValue" value="file:^px/Images/Fan/fanRightTrue.gif"/>
+        <Image name="trueValue" value="file:^px/image/Fan/fanRightTrue.gif"/>
+        <Image name="falseValue" value="file:^px/image/Fan/fanRightTrue.gif"/>
       </IBooleanToSimple>
     </ValueBinding>
   </BoundLabel>
@@ -194,8 +194,8 @@
   <BoundLabel layout="40.0,780.0,164.0,99.0">
     <ValueBinding ord="station:|slot:/Drivers/Point_Demo/DO_Demo_Fan/out">
       <IBooleanToSimple name="image">
-        <Image name="trueValue" value="file:^px/Images/Fan/fanRightFalse.gif"/>
-        <Image name="falseValue" value="file:^px/Images/Fan/fanRightFalse.gif"/>
+        <Image name="trueValue" value="file:^px/image/Fan/fanRightFalse.gif"/>
+        <Image name="falseValue" value="file:^px/image/Fan/fanRightFalse.gif"/>
       </IBooleanToSimple>
     </ValueBinding>
   </BoundLabel>

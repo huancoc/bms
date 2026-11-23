@@ -76,11 +76,11 @@
     <WsAnnotation name="wsAnnotation" value="2,2,8"/>
   </BoundLabel>
 
-  <Picture layout="0.0,245.0,170.0,100.0" image="file:^px/Images/Icon/PAU_icon.png" scale="fitRatio">
+  <Picture layout="0.0,245.0,170.0,100.0" image="file:^px/image/Icon/PAU_icon.png" scale="fitRatio">
     <PopupBinding ord="file:^px/AHU/Popup/S_PAU_01.px" title="SPAU-01"/>
   </Picture>
 
-  <Picture layout="270.0,345.0,150.0,65.0" image="file:^px/Images/Icon/AHU_150x65.png" scale="fitRatio">
+  <Picture layout="270.0,345.0,150.0,65.0" image="file:^px/image/Icon/AHU_150x65.png" scale="fitRatio">
     <PopupBinding ord="file:^px/AHU/Popup/AHU_01.px" title="AHU-01"/>
   </Picture>
 
@@ -94,7 +94,7 @@
     <BoundLabelBinding hyperlink="file:^px/AHU/Popup/AHU_02.px"/>
   </BoundLabel>
 
-  <Picture layout="520.0,345.0,150.0,65.0" image="file:^px/Images/Icon/AHU_150x65.png" scale="fitRatio">
+  <Picture layout="520.0,345.0,150.0,65.0" image="file:^px/image/Icon/AHU_150x65.png" scale="fitRatio">
     <PopupBinding ord="file:^px/AHU/Popup/AHU_02.px" title="AHU-02"/>
   </Picture>
 
@@ -103,7 +103,7 @@
     <BoundLabelBinding hyperlink="file:^px/AHU/Popup/AHU_03.px"/>
   </BoundLabel>
 
-  <Picture layout="760.0,345.0,150.0,65.0" image="file:^px/Images/Icon/AHU_150x65.png" scale="fitRatio">
+  <Picture layout="760.0,345.0,150.0,65.0" image="file:^px/image/Icon/AHU_150x65.png" scale="fitRatio">
     <PopupBinding ord="file:^px/AHU/Popup/AHU_03.px" title="AHU-03"/>
   </Picture>
 
@@ -112,7 +112,7 @@
     <BoundLabelBinding hyperlink="file:^px/AHU/AHU_NX_T1.px"/>
   </BoundLabel>
 
-  <Picture layout="1000.0,345.0,150.0,65.0" image="file:^px/Images/Icon/AHU_150x65.png" scale="fitRatio">
+  <Picture layout="1000.0,345.0,150.0,65.0" image="file:^px/image/Icon/AHU_150x65.png" scale="fitRatio">
     <PopupBinding ord="file:^px/AHU/Popup/AHU_06.px" title="AHU-06"/>
   </Picture>
 
@@ -132,7 +132,7 @@
     <WsAnnotation name="wsAnnotation" value="2,2,8"/>
   </BoundLabel>
 
-  <Picture layout="270.0,595.0,150.0,65.0" image="file:^px/Images/Icon/AHU_150x65.png" scale="fitRatio">
+  <Picture layout="270.0,595.0,150.0,65.0" image="file:^px/image/Icon/AHU_150x65.png" scale="fitRatio">
     <PopupBinding ord="file:^px/AHU/Popup/AHU_07.px" title="AHU-07"/>
   </Picture>
 
@@ -146,7 +146,7 @@
     <BoundLabelBinding hyperlink="file:^px/AHU/AHU_NX_T1.px"/>
   </BoundLabel>
 
-  <Picture layout="520.0,595.0,150.0,65.0" image="file:^px/Images/Icon/AHU_150x65.png" scale="fitRatio">
+  <Picture layout="520.0,595.0,150.0,65.0" image="file:^px/image/Icon/AHU_150x65.png" scale="fitRatio">
     <PopupBinding ord="file:^px/AHU/Popup/AHU_09.px" title="AHU-09"/>
   </Picture>
 
@@ -155,7 +155,7 @@
     <BoundLabelBinding hyperlink="file:^px/AHU/AHU_NX_T1.px"/>
   </BoundLabel>
 
-  <Picture layout="760.0,595.0,150.0,65.0" image="file:^px/Images/Icon/AHU_150x65.png" scale="fitRatio">
+  <Picture layout="760.0,595.0,150.0,65.0" image="file:^px/image/Icon/AHU_150x65.png" scale="fitRatio">
     <PopupBinding ord="file:^px/AHU/Popup/AHU_10.px" title="AHU-10"/>
   </Picture>
 
@@ -164,7 +164,7 @@
     <BoundLabelBinding hyperlink="file:^px/AHU/AHU_NX_T1.px"/>
   </BoundLabel>
 
-  <Picture layout="1000.0,595.0,150.0,65.0" image="file:^px/Images/Icon/AHU_150x65.png" scale="fitRatio">
+  <Picture layout="1000.0,595.0,150.0,65.0" image="file:^px/image/Icon/AHU_150x65.png" scale="fitRatio">
     <PopupBinding ord="file:^px/AHU/Popup/AHU_11.px" title="AHU-11"/>
   </Picture>
 
@@ -189,7 +189,7 @@
     <BoundLabelBinding hyperlink="file:^px/AHU/AHU_NX_T1.px"/>
   </BoundLabel>
 
-  <Picture layout="1255.0,595.0,150.0,65.0" image="file:^px/Images/Icon/AHU_150x65.png" scale="fitRatio">
+  <Picture layout="1255.0,595.0,150.0,65.0" image="file:^px/image/Icon/AHU_150x65.png" scale="fitRatio">
     <PopupBinding ord="file:^px/AHU/Popup/AHU_12.px" title="AHU-12"/>
   </Picture>
 
@@ -205,7 +205,7 @@
     <WsAnnotation name="wsAnnotation" value="2,2,8"/>
   </BoundLabel>
 
-  <Picture layout="275.0,835.0,150.0,65.0" image="file:^px/Images/Icon/FCU_Off.png" scale="fitRatio"/>
+  <Picture layout="275.0,835.0,150.0,65.0" image="file:^px/image/Icon/FCU_Off.png" scale="fitRatio"/>
 
   <BoundLabel layout="310.0,900.0,89.99999999999994,15.0" text=" FCU-DG2.01" font="14.0pt Tahoma" foreground="black" background="#e0e0e0" halign="left" border="2.0 groove black">
     <WsAnnotation name="wsAnnotation" value="2,2,8"/>
@@ -217,14 +217,14 @@
     <BoundLabelBinding hyperlink="file:^px/AHU/AHU_NX_T1.px"/>
   </BoundLabel>
 
-  <Picture layout="525.0,835.0,150.0,65.0" image="file:^px/Images/Icon/FCU_Off.png" scale="fitRatio"/>
+  <Picture layout="525.0,835.0,150.0,65.0" image="file:^px/image/Icon/FCU_Off.png" scale="fitRatio"/>
 
   <BoundLabel layout="800.0,900.0,89.99999999999989,15.0" text=" FCU-DG2.03" font="14.0pt Tahoma" foreground="black" background="#e0e0e0" halign="left" border="2.0 groove black">
     <WsAnnotation name="wsAnnotation" value="2,2,8"/>
     <BoundLabelBinding hyperlink="file:^px/AHU/AHU_NX_T1.px"/>
   </BoundLabel>
 
-  <Picture layout="765.0,835.0,150.0,65.0" image="file:^px/Images/Icon/FCU_Off.png" scale="fitRatio"/>
+  <Picture layout="765.0,835.0,150.0,65.0" image="file:^px/image/Icon/FCU_Off.png" scale="fitRatio"/>
 
   <BoundLabel layout="840.0,805.0,9.999999999999773,30.0" font="20.0pt Tahoma" foreground="black" background="lime" halign="left" border="2.0 groove black">
     <WsAnnotation name="wsAnnotation" value="2,2,8"/>
@@ -242,7 +242,7 @@
     <WsAnnotation name="wsAnnotation" value="2,2,8"/>
   </BoundLabel>
 
-  <Picture layout="60.0,140.0,110.0,90.0" image="file:^px/Images/Icon/FAN_150x111_L.png" scale="fitRatio"/>
+  <Picture layout="60.0,140.0,110.0,90.0" image="file:^px/image/Icon/FAN_150x111_L.png" scale="fitRatio"/>
 
   <BoundLabel layout="165.0,195.0,100.0,10.0" font="20.0pt Tahoma" foreground="black" background="red" halign="left" border="2.0 groove black">
     <WsAnnotation name="wsAnnotation" value="2,2,8"/>
@@ -268,11 +268,11 @@
     <WsAnnotation name="wsAnnotation" value="2,2,8"/>
   </BoundLabel>
 
-  <Picture layout="345.0,485.0,70.0,50.0" image="file:^px/Images/Icon/FAN_150x111_L.png" scale="fitRatio"/>
+  <Picture layout="345.0,485.0,70.0,50.0" image="file:^px/image/Icon/FAN_150x111_L.png" scale="fitRatio"/>
 
-  <Picture layout="585.0,485.0,70.0,50.0" image="file:^px/Images/Icon/FAN_150x111_L.png" scale="fitRatio"/>
+  <Picture layout="585.0,485.0,70.0,50.0" image="file:^px/image/Icon/FAN_150x111_L.png" scale="fitRatio"/>
 
-  <Picture layout="830.0,485.0,70.0,50.0" image="file:^px/Images/Icon/FAN_150x111_L.png" scale="fitRatio"/>
+  <Picture layout="830.0,485.0,70.0,50.0" image="file:^px/image/Icon/FAN_150x111_L.png" scale="fitRatio"/>
 
   <BoundLabel layout="335.0,535.0,90.0,15.0" text=" EAF-AHU-01" font="14.0pt Tahoma" foreground="black" background="#e0e0e0" halign="left" border="2.0 groove black">
     <WsAnnotation name="wsAnnotation" value="2,2,8"/>
@@ -294,7 +294,7 @@
     <BoundLabelBinding hyperlink="file:^px/AHU/AHU_NX_T1.px"/>
   </BoundLabel>
 
-  <Picture layout="1070.0,485.0,70.0,50.0" image="file:^px/Images/Icon/FAN_150x111_L.png" scale="fitRatio"/>
+  <Picture layout="1070.0,485.0,70.0,50.0" image="file:^px/image/Icon/FAN_150x111_L.png" scale="fitRatio"/>
 
   <BoundLabel layout="1075.0,460.0,9.999999999999773,30.0" font="20.0pt Tahoma" foreground="black" background="red" halign="left" border="2.0 groove black">
     <WsAnnotation name="wsAnnotation" value="2,2,8"/>
@@ -316,13 +316,13 @@
     <WsAnnotation name="wsAnnotation" value="2,2,8"/>
   </BoundLabel>
 
-  <Picture layout="350.0,725.0,70.0,50.0" image="file:^px/Images/Icon/FAN_150x111_L.png" scale="fitRatio"/>
+  <Picture layout="350.0,725.0,70.0,50.0" image="file:^px/image/Icon/FAN_150x111_L.png" scale="fitRatio"/>
 
-  <Picture layout="590.0,725.0,70.0,50.0" image="file:^px/Images/Icon/FAN_150x111_L.png" scale="fitRatio"/>
+  <Picture layout="590.0,725.0,70.0,50.0" image="file:^px/image/Icon/FAN_150x111_L.png" scale="fitRatio"/>
 
-  <Picture layout="835.0,725.0,70.0,50.0" image="file:^px/Images/Icon/FAN_150x111_L.png" scale="fitRatio"/>
+  <Picture layout="835.0,725.0,70.0,50.0" image="file:^px/image/Icon/FAN_150x111_L.png" scale="fitRatio"/>
 
-  <Picture layout="1075.0,725.0,70.0,50.0" image="file:^px/Images/Icon/FAN_150x111_L.png" scale="fitRatio"/>
+  <Picture layout="1075.0,725.0,70.0,50.0" image="file:^px/image/Icon/FAN_150x111_L.png" scale="fitRatio"/>
 
   <BoundLabel layout="1080.0,700.0,9.999999999999773,30.0" font="20.0pt Tahoma" foreground="black" background="red" halign="left" border="2.0 groove black">
     <WsAnnotation name="wsAnnotation" value="2,2,8"/>
@@ -348,7 +348,7 @@
     <BoundLabelBinding hyperlink="file:^px/AHU/AHU_NX_T1.px"/>
   </BoundLabel>
 
-  <Picture layout="1330.0,725.0,70.0,50.0" image="file:^px/Images/Icon/FAN_150x111_L.png" scale="fitRatio"/>
+  <Picture layout="1330.0,725.0,70.0,50.0" image="file:^px/image/Icon/FAN_150x111_L.png" scale="fitRatio"/>
 
   <BoundLabel layout="1335.0,700.0,9.999999999999773,30.0" font="20.0pt Tahoma" foreground="black" background="red" halign="left" border="2.0 groove black">
     <WsAnnotation name="wsAnnotation" value="2,2,8"/>
@@ -359,7 +359,7 @@
     <BoundLabelBinding hyperlink="file:^px/AHU/AHU_NX_T1.px"/>
   </BoundLabel>
 
-  <Picture layout="1210.0,235.0,170.0,100.0" image="file:^px/Images/Icon/PAU_icon.png" scale="fitRatio">
+  <Picture layout="1210.0,235.0,170.0,100.0" image="file:^px/image/Icon/PAU_icon.png" scale="fitRatio">
     <PopupBinding ord="file:^px/AHU/Popup/S_PAU_02.px" title="SPAU-02"/>
   </Picture>
 
@@ -381,20 +381,20 @@
     <WsAnnotation name="wsAnnotation" value="2,2,8"/>
   </BoundLabel>
 
-  <Picture layout="1455.0,345.0,80.0,65.0" image="file:^px/Images/Icon/DHU.png" scale="fitRatio"/>
+  <Picture layout="1455.0,345.0,80.0,65.0" image="file:^px/image/Icon/DHU.png" scale="fitRatio"/>
 
   <BoundLabel layout="1575.0,410.0,80.0,15.0" text=" DHU-02" font="14.0pt Tahoma" foreground="black" background="#e0e0e0" halign="left" border="2.0 groove black">
     <WsAnnotation name="wsAnnotation" value="2,2,8"/>
     <BoundLabelBinding hyperlink="file:^px/AHU/AHU_NX_T1.px"/>
   </BoundLabel>
 
-  <Picture layout="1575.0,345.0,80.0,65.0" image="file:^px/Images/Icon/DHU.png" scale="fitRatio"/>
+  <Picture layout="1575.0,345.0,80.0,65.0" image="file:^px/image/Icon/DHU.png" scale="fitRatio"/>
 
   <BoundLabel layout="1610.0,315.0,9.999999999999773,30.0" font="20.0pt Tahoma" foreground="black" background="lime" halign="left" border="2.0 groove black">
     <WsAnnotation name="wsAnnotation" value="2,2,8"/>
   </BoundLabel>
 
-  <Picture layout="1700.0,345.0,150.0,65.0" image="file:^px/Images/Icon/AHU_150x65.png" scale="fitRatio">
+  <Picture layout="1700.0,345.0,150.0,65.0" image="file:^px/image/Icon/AHU_150x65.png" scale="fitRatio">
     <PopupBinding ord="file:^px/AHU/Popup/AHU_08.px" title="AHU-08"/>
   </Picture>
 
