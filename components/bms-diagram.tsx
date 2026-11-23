@@ -134,7 +134,8 @@ function ChillerNode({
         ? '/px/kitPxGraphics/Pumps/Pumps_Base/Pump_Base_Right/Pump_Base_Right_On.gif'
         : '/px/kitPxGraphics/Chillers/CoolingTowers/DrawThru/CoolingTower_DrawThru_Right/CoolingTower_DrawThru_Right_On1.gif'
 
-  const handleClick = () => {
+  const handleClick = (event: React.MouseEvent<HTMLDivElement>) => {
+    event.stopPropagation()
     if (editMode) {
       onSelectEdit()
       return
@@ -146,6 +147,7 @@ function ChillerNode({
 
   const handlePointerDown = (event: ReactPointerEvent<HTMLDivElement>) => {
     if (!editMode) return
+    event.stopPropagation()
     onSelectEdit()
     onPointerDown(event, item.id)
   }
@@ -160,6 +162,7 @@ function ChillerNode({
       onKeyDown={(e) => {
         if (!editMode && isClickable && (e.key === 'Enter' || e.key === ' ')) {
           e.preventDefault()
+          e.stopPropagation()
           onOpenFaceplate()
         }
       }}
@@ -315,7 +318,8 @@ function AhuDiagram({
             tabIndex={0}
             className={`equipment-node overlay-badge ahu-badge ${isOn ? 'is-on' : 'is-off'} ${editMode ? 'is-editable' : ''} ${isSelected ? 'is-selected' : ''}`}
             style={style}
-            onClick={() => {
+            onClick={(event) => {
+              event.stopPropagation()
               if (editMode) {
                 setSelectedEditId(item.id)
                 return
@@ -325,11 +329,13 @@ function AhuDiagram({
             onKeyDown={(e) => {
               if (!editMode && (e.key === 'Enter' || e.key === ' ')) {
                 e.preventDefault()
+                e.stopPropagation()
                 setSelectedUnit(item.label)
               }
             }}
             onPointerDown={(event) => {
               if (!editMode) return
+              event.stopPropagation()
               setSelectedEditId(item.id)
               onPointerDown(event, item.id)
             }}
@@ -420,7 +426,8 @@ function PauDiagram({
             tabIndex={0}
             className={`equipment-node pau-overlay-unit ${isOn ? 'is-on' : 'is-off'} ${editMode ? 'is-editable' : ''} ${isSelected ? 'is-selected' : ''}`}
             style={style}
-            onClick={() => {
+            onClick={(event) => {
+              event.stopPropagation()
               if (editMode) {
                 setSelectedEditId(item.id)
                 return
@@ -430,11 +437,13 @@ function PauDiagram({
             onKeyDown={(e) => {
               if (!editMode && (e.key === 'Enter' || e.key === ' ')) {
                 e.preventDefault()
+                e.stopPropagation()
                 setSelectedUnit(item.label)
               }
             }}
             onPointerDown={(event) => {
               if (!editMode) return
+              event.stopPropagation()
               setSelectedEditId(item.id)
               onPointerDown(event, item.id)
             }}
@@ -510,7 +519,8 @@ function FcuDiagram({
             tabIndex={0}
             className={`equipment-node fcu-overlay-badge ${isOn ? 'is-on' : 'is-off'} ${editMode ? 'is-editable' : ''} ${isSelected ? 'is-selected' : ''}`}
             style={style}
-            onClick={() => {
+            onClick={(event) => {
+              event.stopPropagation()
               if (editMode) {
                 setSelectedEditId(item.id)
                 return
@@ -520,11 +530,13 @@ function FcuDiagram({
             onKeyDown={(e) => {
               if (!editMode && (e.key === 'Enter' || e.key === ' ')) {
                 e.preventDefault()
+                e.stopPropagation()
                 setSelectedUnit(item.label)
               }
             }}
             onPointerDown={(event) => {
               if (!editMode) return
+              event.stopPropagation()
               setSelectedEditId(item.id)
               onPointerDown(event, item.id)
             }}
