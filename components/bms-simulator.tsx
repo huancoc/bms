@@ -13,6 +13,8 @@ import {
   Fan,
   Gauge,
   Layers3,
+  PanelRightClose,
+  PanelRightOpen,
   RotateCcw,
   SlidersHorizontal,
   Thermometer,
@@ -135,7 +137,7 @@ export default function BmsSimulator() {
   const [ahuPoints, setAhuPoints] = useState<Equipment[]>(initialAhuPoints)
   const [pauPoints, setPauPoints] = useState<Equipment[]>(initialPauPoints)
   const [fcuPoints, setFcuPoints] = useState<Equipment[]>(initialFcuPoints)
-  const [drawerOpen, setDrawerOpen] = useState(false)
+  const [drawerOpen, setDrawerOpen] = useState(true)
   const [selectedEquipmentId, setSelectedEquipmentId] = useState<string | null>(null)
   const [selectedUnit, setSelectedUnit] = useState<string | null>(null)
   const [editMode, setEditMode] = useState(false)
@@ -183,7 +185,7 @@ export default function BmsSimulator() {
     if (!selectedEditId || !currentEditableList.some((p) => p.id === selectedEditId)) {
       setSelectedEditId(currentEditableList[0].id)
     }
-  }, [activePage])
+  }, [activePage, currentEditableList, selectedEditId])
 
   useEffect(() => {
     setPoints((current) =>
@@ -256,7 +258,7 @@ export default function BmsSimulator() {
 
     window.addEventListener('keydown', handleKeyDown)
     return () => window.removeEventListener('keydown', handleKeyDown)
-  }, [editMode, selectedEditId, activePage])
+  }, [editMode, selectedEditId, activePage, currentEditableList])
 
   const handleOpenEquipmentFaceplate = (id: string) => {
     if (editMode) return
@@ -277,8 +279,21 @@ export default function BmsSimulator() {
     )
   }
 
+  const setUnitState = (label: string, on: boolean) => {
+    setUnitStatus((current) => ({ ...current, [label]: on }))
+  }
+
   const updateEquipmentProps = (id: string, patch: Partial<Equipment>) => {
     setPoints((current) =>
+      current.map((point) => (point.id === id ? { ...point, ...patch } : point)),
+    )
+    setAhuPoints((current) =>
+      current.map((point) => (point.id === id ? { ...point, ...patch } : point)),
+    )
+    setPauPoints((current) =>
+      current.map((point) => (point.id === id ? { ...point, ...patch } : point)),
+    )
+    setFcuPoints((current) =>
       current.map((point) => (point.id === id ? { ...point, ...patch } : point)),
     )
   }
@@ -291,6 +306,15 @@ export default function BmsSimulator() {
       setFaultedPoints((current) => [...current, id])
       setPoints((current) =>
         current.map((point) => (point.id === id ? { ...point, on: false, hz: 0 } : point)),
+      )
+      setAhuPoints((current) =>
+        current.map((point) => (point.id === id ? { ...point, on: false } : point)),
+      )
+      setPauPoints((current) =>
+        current.map((point) => (point.id === id ? { ...point, on: false } : point)),
+      )
+      setFcuPoints((current) =>
+        current.map((point) => (point.id === id ? { ...point, on: false } : point)),
       )
     }
   }
@@ -520,12 +544,39 @@ export default function BmsSimulator() {
   }
 
   const selectedEditPoint = currentEditableList.find((p) => p.id === selectedEditId) ?? null
-  const activeFaceplateItem = points.find((p) => p.id === selectedEquipmentId) ?? null
+
+  const allEquipment: Equipment[] = [...points, ...ahuPoints, ...pauPoints, ...fcuPoints]
+  const activeFaceplateItem = allEquipment.find((p) => p.id === selectedEquipmentId) ?? null
   const activeFaceplateFaulted = activeFaceplateItem ? faultedPoints.includes(activeFaceplateItem.id) : false
 
   const chillerSwitchList = points.filter(
     (p) => p.kind === 'chiller' || p.kind === 'pump' || p.kind === 'tower',
   )
+
+  const drawerEquipmentList: Equipment[] =
+    activePage === 'chiller'
+      ? chillerSwitchList
+      : activePage === 'ahu'
+        ? ahuPoints
+        : activePage === 'pau'
+          ? pauPoints
+          : activePage === 'fcu'
+            ? fcuPoints
+            : chillerSwitchList
+
+  const isUnitOn = (item: Equipment): boolean => {
+    const override = unitStatus[item.label]
+    return override !== undefined ? override : item.on
+  }
+
+  const toggleEquipment = (item: Equipment, nextOn: boolean) => {
+    if (item.kind === 'chiller' || item.kind === 'pump' || item.kind === 'tower') {
+      setPoint(item.id, nextOn)
+    } else {
+      setUnitState(item.label, nextOn)
+      updateEquipmentProps(item.id, { on: nextOn })
+    }
+  }
 
   return (
     <main className="app-shell">
@@ -560,14 +611,15 @@ export default function BmsSimulator() {
             type="button"
             className={`compact-drawer-btn ${drawerOpen ? 'selected' : ''}`}
             onClick={() => setDrawerOpen(!drawerOpen)}
+            aria-expanded={drawerOpen}
           >
-            <SlidersHorizontal />
-            <span>Điều khiển nhanh</span>
+            {drawerOpen ? <PanelRightClose /> : <PanelRightOpen />}
+            <span>{drawerOpen ? 'Ẩn điều khiển' : 'Hiện điều khiển'}</span>
           </button>
         </div>
       </header>
 
-      <div className="workspace">
+      <div className={`workspace ${drawerOpen ? 'drawer-open' : 'drawer-closed'}`}>
         <section className="graphic-wrap">
           <BmsDiagram
             activePage={activePage}
@@ -585,364 +637,385 @@ export default function BmsSimulator() {
           />
         </section>
 
-        {drawerOpen && (
-          <aside className="control-drawer">
-            <div className="drawer-head">
-              <div>
-                <span className="eyebrow">BMS SIMULATOR</span>
-                <h2>Điều khiển nhanh hệ thống</h2>
+        <aside className={`control-drawer ${drawerOpen ? 'is-open' : 'is-collapsed'}`} aria-hidden={!drawerOpen}>
+          <div className="drawer-head">
+            <div>
+              <span className="eyebrow">BMS SIMULATOR</span>
+              <h2>Điều khiển nhanh hệ thống</h2>
+            </div>
+            <button
+              type="button"
+              className="icon-button close-drawer"
+              onClick={() => setDrawerOpen(false)}
+              aria-label="Đóng bảng điều khiển"
+            >
+              <X />
+            </button>
+          </div>
+
+          <div className="drawer-scroll">
+            <section className="drawer-card-section">
+              <div className="section-label">
+                <span>1. CHUYỂN TRANG NHANH</span>
+                <CircleHelp />
               </div>
-              <button
-                type="button"
-                className="icon-button close-drawer"
-                onClick={() => setDrawerOpen(false)}
-                aria-label="Đóng bảng điều khiển"
-              >
-                <X />
-              </button>
-            </div>
-
-            <div className="drawer-scroll">
-              <section className="drawer-card-section">
-                <div className="section-label">
-                  <span>1. KỊCH BẢN TRÌNH DIỄN NHANH</span>
-                  <CircleHelp />
-                </div>
-                <div className="scenario-list">
-                  <button type="button" onClick={() => applyScenario('normal')}>
-                    <span className="scenario-icon green">
-                      <Activity />
-                    </span>
-                    <span>
-                      <b>Vận hành bình thường (1 Chiller)</b>
-                      <small>Chạy Chiller 1, bơm & tháp giải nhiệt số 1</small>
-                    </span>
-                    <ChevronRight />
-                  </button>
-                  <button type="button" onClick={() => applyScenario('high')}>
-                    <span className="scenario-icon blue">
-                      <Gauge />
-                    </span>
-                    <span>
-                      <b>Cao tải (Chạy 2 Chiller)</b>
-                      <small>Kích hoạt toàn bộ 2 tổ máy làm lạnh</small>
-                    </span>
-                    <ChevronRight />
-                  </button>
-                  <button type="button" onClick={() => applyScenario('fault')}>
-                    <span className="scenario-icon amber">
-                      <AlertTriangle />
-                    </span>
-                    <span>
-                      <b>Giả lập sự cố Trip</b>
-                      <small>Báo lỗi Trip CTWP-01 & tháp giải nhiệt CT-01</small>
-                    </span>
-                    <ChevronRight />
-                  </button>
-                </div>
-              </section>
-
-              <section className="drawer-card-section">
-                <div className="section-label">
-                  <span>2. CÔNG TẮC THIẾT BỊ CHILLER</span>
-                  <span className="count-pill">
-                    {chillerSwitchList.filter((p) => p.on).length}/{chillerSwitchList.length} CHẠY
-                  </span>
-                </div>
-                <div className="point-list">
-                  {chillerSwitchList.map((point) => {
-                    const isFaulted = faultedPoints.includes(point.id)
-                    return (
-                      <div className="point-row" key={point.id}>
-                        <span className={`point-icon ${point.on ? 'on' : isFaulted ? 'fault' : ''}`}>
-                          {point.kind === 'chiller' ? (
-                            <Layers3 />
-                          ) : point.kind === 'tower' ? (
-                            <Fan />
-                          ) : (
-                            <Activity />
-                          )}
-                        </span>
-                        <span className="point-name">
-                          <b>
-                            <i
-                              className={`status-light ${
-                                isFaulted ? 'warning' : point.on ? 'running' : 'stopped'
-                              }`}
-                            />{' '}
-                            {point.label}
-                          </b>
-                          <small>
-                            {point.id} ·{' '}
-                            {isFaulted
-                              ? 'LỖI TRIP'
-                              : point.on
-                                ? typeof point.hz === 'number'
-                                  ? `Đang chạy (${point.hz.toFixed(1)} Hz)`
-                                  : 'Đang chạy'
-                                : 'Đang dừng'}
-                          </small>
-                        </span>
-                        <button
-                          type="button"
-                          className={`switch ${point.on ? 'on' : ''}`}
-                          onClick={() => setPoint(point.id, !point.on)}
-                          role="switch"
-                          aria-checked={point.on}
-                          aria-label={`Bật tắt ${point.label}`}
-                        >
-                          <i />
-                        </button>
-                      </div>
-                    )
-                  })}
-                </div>
-              </section>
-
-              <section className="drawer-card-section">
-                <div className="section-label">
-                  <span>3. THANH TRƯỢT GIẢ LẬP CẢM BIẾN</span>
-                  <span className="live-mini">
-                    <i className="live-dot" /> TRỰC TIẾP
-                  </span>
-                </div>
-
-                <label className="range-row">
-                  <div className="range-row-head">
-                    <span>
-                      <Thermometer /> Nước lạnh cấp (CHWS)
-                    </span>
-                    <b>{supplyTemp.toFixed(1)}°C</b>
-                  </div>
-                  <input
-                    type="range"
-                    min="5"
-                    max="12"
-                    step="0.1"
-                    value={supplyTemp}
-                    onChange={(e) => setSupplyTemp(Number(e.target.value))}
-                  />
-                </label>
-
-                <label className="range-row">
-                  <div className="range-row-head">
-                    <span>
-                      <Thermometer /> Nước lạnh hồi (CHWR)
-                    </span>
-                    <b>{returnTemp.toFixed(1)}°C</b>
-                  </div>
-                  <input
-                    type="range"
-                    min="8"
-                    max="18"
-                    step="0.1"
-                    value={returnTemp}
-                    onChange={(e) => setReturnTemp(Number(e.target.value))}
-                  />
-                </label>
-
-                <label className="range-row">
-                  <div className="range-row-head">
-                    <span>
-                      <Thermometer /> Nước giải nhiệt cấp (CDWS)
-                    </span>
-                    <b>{condenserSupplyTemp.toFixed(1)}°C</b>
-                  </div>
-                  <input
-                    type="range"
-                    min="22"
-                    max="35"
-                    step="0.1"
-                    value={condenserSupplyTemp}
-                    onChange={(e) => setCondenserSupplyTemp(Number(e.target.value))}
-                  />
-                </label>
-
-                <label className="range-row">
-                  <div className="range-row-head">
-                    <span>
-                      <Thermometer /> Nước giải nhiệt hồi (CDWR)
-                    </span>
-                    <b>{condenserReturnTemp.toFixed(1)}°C</b>
-                  </div>
-                  <input
-                    type="range"
-                    min="25"
-                    max="42"
-                    step="0.1"
-                    value={condenserReturnTemp}
-                    onChange={(e) => setCondenserReturnTemp(Number(e.target.value))}
-                  />
-                </label>
-
-                <label className="range-row">
-                  <div className="range-row-head">
-                    <span>
-                      <Gauge /> Chênh áp đường ống (DP)
-                    </span>
-                    <b>{pressure.toFixed(2)} bar</b>
-                  </div>
-                  <input
-                    type="range"
-                    min="0.5"
-                    max="2.5"
-                    step="0.01"
-                    value={pressure}
-                    onChange={(e) => setPressure(Number(e.target.value))}
-                  />
-                </label>
-
-                <label className="range-row">
-                  <div className="range-row-head">
-                    <span>
-                      <CloudSun /> Nhiệt độ ngoài trời (OAT)
-                    </span>
-                    <b>{outdoorTemp.toFixed(1)}°C</b>
-                  </div>
-                  <input
-                    type="range"
-                    min="15"
-                    max="42"
-                    step="0.1"
-                    value={outdoorTemp}
-                    onChange={(e) => setOutdoorTemp(Number(e.target.value))}
-                  />
-                </label>
-              </section>
-
-              <section className="drawer-card-section">
-                <div className="section-label">
-                  <span>4. CÔNG CỤ CHỈNH SỬA TỌA ĐỘ</span>
-                  <span className="count-pill">{activePage.toUpperCase()}</span>
-                </div>
-
-                <div className="edit-toggle-row">
-                  <div className="edit-toggle-info">
-                    <span className="edit-icon">
-                      <SlidersHorizontal />
-                    </span>
-                    <span>
-                      <b>Chỉnh tọa độ trên sơ đồ</b>
-                      <small>Kéo thả, resize góc, mũi tên / Shift+mũi tên</small>
-                    </span>
-                  </div>
+              <div className="page-quick-list">
+                {pages.map((page) => (
                   <button
+                    key={page.id}
                     type="button"
-                    className={`switch ${editMode ? 'on' : ''}`}
-                    onClick={() => setEditMode(!editMode)}
-                    role="switch"
-                    aria-checked={editMode}
-                    aria-label="Chế độ chỉnh tọa độ"
+                    className={`page-quick-btn ${activePage === page.id ? 'active' : ''}`}
+                    onClick={() => setActivePage(page.id)}
                   >
-                    <i />
+                    <span>{page.short}</span>
+                    <small>{page.label}</small>
                   </button>
-                </div>
+                ))}
+              </div>
+            </section>
 
-                {editMode && currentEditableList.length > 0 && (
-                  <div className="edit-inspector">
-                    <label className="inspector-select-row">
-                      <span>Phần tử đang chọn</span>
-                      <select
-                        value={selectedEditId ?? ''}
-                        onChange={(e) => setSelectedEditId(e.target.value || null)}
+            <section className="drawer-card-section">
+              <div className="section-label">
+                <span>2. KỊCH BẢN VẬN HÀNH NHANH</span>
+                <CircleHelp />
+              </div>
+              <div className="scenario-list">
+                <button type="button" onClick={() => applyScenario('normal')}>
+                  <span className="scenario-icon green">
+                    <Activity />
+                  </span>
+                  <span>
+                    <b>Vận hành bình thường (1 Chiller)</b>
+                    <small>Chạy Chiller 1, bơm & tháp giải nhiệt số 1</small>
+                  </span>
+                  <ChevronRight />
+                </button>
+                <button type="button" onClick={() => applyScenario('high')}>
+                  <span className="scenario-icon blue">
+                    <Gauge />
+                  </span>
+                  <span>
+                    <b>Cao tải (Chạy 2 Chiller)</b>
+                    <small>Kích hoạt toàn bộ 2 tổ máy làm lạnh</small>
+                  </span>
+                  <ChevronRight />
+                </button>
+                <button type="button" onClick={() => applyScenario('fault')}>
+                  <span className="scenario-icon amber">
+                    <AlertTriangle />
+                  </span>
+                  <span>
+                    <b>Giả lập sự cố Trip</b>
+                    <small>Báo lỗi Trip CTWP-01 & tháp giải nhiệt CT-01</small>
+                  </span>
+                  <ChevronRight />
+                </button>
+              </div>
+            </section>
+
+            <section className="drawer-card-section">
+              <div className="section-label">
+                <span>3. CÔNG TẮC THIẾT BỊ · {activePage.toUpperCase()}</span>
+                <span className="count-pill">
+                  {drawerEquipmentList.filter((p) => isUnitOn(p)).length}/{drawerEquipmentList.length} CHẠY
+                </span>
+              </div>
+              <div className="point-list">
+                {drawerEquipmentList.map((point) => {
+                  const isFaulted = faultedPoints.includes(point.id)
+                  const on = isUnitOn(point)
+                  return (
+                    <div className="point-row" key={point.id}>
+                      <span className={`point-icon ${on ? 'on' : isFaulted ? 'fault' : ''}`}>
+                        {point.kind === 'chiller' || point.kind === 'ahu' ? (
+                          <Layers3 />
+                        ) : point.kind === 'tower' ? (
+                          <Fan />
+                        ) : point.kind === 'pump' || point.kind === 'pau' ? (
+                          <Activity />
+                        ) : (
+                          <Thermometer />
+                        )}
+                      </span>
+                      <span className="point-name">
+                        <b>
+                          <i
+                            className={`status-light ${
+                              isFaulted ? 'warning' : on ? 'running' : 'stopped'
+                            }`}
+                          />{' '}
+                          {point.label}
+                        </b>
+                        <small>
+                          {point.id} ·{' '}
+                          {isFaulted
+                            ? 'LỖI TRIP'
+                            : on
+                              ? typeof point.hz === 'number'
+                                ? `Đang chạy (${point.hz.toFixed(1)} Hz)`
+                                : 'Đang chạy'
+                              : 'Đang dừng'}
+                        </small>
+                      </span>
+                      <button
+                        type="button"
+                        className={`switch ${on ? 'on' : ''}`}
+                        onClick={() => toggleEquipment(point, !on)}
+                        role="switch"
+                        aria-checked={on}
+                        aria-label={`Bật tắt ${point.label}`}
                       >
-                        {currentEditableList.map((pt) => (
-                          <option key={pt.id} value={pt.id}>
-                            {pt.label} ({pt.id})
-                          </option>
-                        ))}
-                      </select>
-                    </label>
+                        <i />
+                      </button>
+                    </div>
+                  )
+                })}
+              </div>
+            </section>
 
-                    {selectedEditPoint && (
-                      <div className="coord-grid">
-                        <label>
-                          <span>X%</span>
-                          <input
-                            type="number"
-                            step="0.1"
-                            min="0"
-                            max="100"
-                            value={selectedEditPoint.x}
-                            onChange={(e) => updateSelectedPointField('x', e.target.value)}
-                          />
-                        </label>
-                        <label>
-                          <span>Y%</span>
-                          <input
-                            type="number"
-                            step="0.1"
-                            min="0"
-                            max="100"
-                            value={selectedEditPoint.y}
-                            onChange={(e) => updateSelectedPointField('y', e.target.value)}
-                          />
-                        </label>
-                        <label>
-                          <span>W%</span>
-                          <input
-                            type="number"
-                            step="0.1"
-                            min="0.5"
-                            max="100"
-                            value={selectedEditPoint.width}
-                            onChange={(e) => updateSelectedPointField('width', e.target.value)}
-                          />
-                        </label>
-                        <label>
-                          <span>H%</span>
-                          <input
-                            type="number"
-                            step="0.1"
-                            min="0.5"
-                            max="100"
-                            value={selectedEditPoint.height}
-                            onChange={(e) => updateSelectedPointField('height', e.target.value)}
-                          />
-                        </label>
-                      </div>
-                    )}
+            <section className="drawer-card-section">
+              <div className="section-label">
+                <span>4. THANH TRƯỢT GIẢ LẬP CẢM BIẾN</span>
+                <span className="live-mini">
+                  <i className="live-dot" /> TRỰC TIẾP
+                </span>
+              </div>
 
-                    <p className="inspector-hint">
-                      Mũi tên: ±0.1% vị trí · Shift + Mũi tên: ±0.1% kích thước
-                    </p>
-                  </div>
-                )}
-
-                <div className="edit-actions-row">
-                  <button
-                    type="button"
-                    className="secondary-action-btn"
-                    onClick={resetCoordinates}
-                    title="Đặt lại tọa độ mặc định của trang hiện tại"
-                  >
-                    <RotateCcw />
-                    <span>Đặt lại</span>
-                  </button>
-                  <button
-                    type="button"
-                    className="copy-json-btn"
-                    onClick={copyCoordinatesJson}
-                  >
-                    {copiedJson ? <Check /> : <Copy />}
-                    <span>{copiedJson ? 'Đã copy!' : 'Copy tọa độ'}</span>
-                  </button>
+              <label className="range-row">
+                <div className="range-row-head">
+                  <span>
+                    <Thermometer /> Nước lạnh cấp (CHWS)
+                  </span>
+                  <b>{supplyTemp.toFixed(1)}°C</b>
                 </div>
-              </section>
+                <input
+                  type="range"
+                  min="5"
+                  max="12"
+                  step="0.1"
+                  value={supplyTemp}
+                  onChange={(e) => setSupplyTemp(Number(e.target.value))}
+                />
+              </label>
 
-              <button type="button" className="export-button" onClick={exportConfig}>
-                <ArrowDownToLine /> Xuất file cấu hình JSON
-              </button>
-            </div>
+              <label className="range-row">
+                <div className="range-row-head">
+                  <span>
+                    <Thermometer /> Nước lạnh hồi (CHWR)
+                  </span>
+                  <b>{returnTemp.toFixed(1)}°C</b>
+                </div>
+                <input
+                  type="range"
+                  min="8"
+                  max="18"
+                  step="0.1"
+                  value={returnTemp}
+                  onChange={(e) => setReturnTemp(Number(e.target.value))}
+                />
+              </label>
 
-            <div className="drawer-foot">
-              <span>
-                <i className="live-dot" /> Mô phỏng đang hoạt động
-              </span>
-              <span>v1.5.1</span>
-            </div>
-          </aside>
-        )}
+              <label className="range-row">
+                <div className="range-row-head">
+                  <span>
+                    <Thermometer /> Nước giải nhiệt cấp (CDWS)
+                  </span>
+                  <b>{condenserSupplyTemp.toFixed(1)}°C</b>
+                </div>
+                <input
+                  type="range"
+                  min="22"
+                  max="35"
+                  step="0.1"
+                  value={condenserSupplyTemp}
+                  onChange={(e) => setCondenserSupplyTemp(Number(e.target.value))}
+                />
+              </label>
+
+              <label className="range-row">
+                <div className="range-row-head">
+                  <span>
+                    <Thermometer /> Nước giải nhiệt hồi (CDWR)
+                  </span>
+                  <b>{condenserReturnTemp.toFixed(1)}°C</b>
+                </div>
+                <input
+                  type="range"
+                  min="25"
+                  max="42"
+                  step="0.1"
+                  value={condenserReturnTemp}
+                  onChange={(e) => setCondenserReturnTemp(Number(e.target.value))}
+                />
+              </label>
+
+              <label className="range-row">
+                <div className="range-row-head">
+                  <span>
+                    <Gauge /> Chênh áp đường ống (DP)
+                  </span>
+                  <b>{pressure.toFixed(2)} bar</b>
+                </div>
+                <input
+                  type="range"
+                  min="0.5"
+                  max="2.5"
+                  step="0.01"
+                  value={pressure}
+                  onChange={(e) => setPressure(Number(e.target.value))}
+                />
+              </label>
+
+              <label className="range-row">
+                <div className="range-row-head">
+                  <span>
+                    <CloudSun /> Nhiệt độ ngoài trời (OAT)
+                  </span>
+                  <b>{outdoorTemp.toFixed(1)}°C</b>
+                </div>
+                <input
+                  type="range"
+                  min="15"
+                  max="42"
+                  step="0.1"
+                  value={outdoorTemp}
+                  onChange={(e) => setOutdoorTemp(Number(e.target.value))}
+                />
+              </label>
+            </section>
+
+            <section className="drawer-card-section">
+              <div className="section-label">
+                <span>5. CÔNG CỤ TINH CHỈNH TỌA ĐỘ</span>
+                <span className="count-pill">{activePage.toUpperCase()}</span>
+              </div>
+
+              <div className="edit-toggle-row">
+                <div className="edit-toggle-info">
+                  <span className="edit-icon">
+                    <SlidersHorizontal />
+                  </span>
+                  <span>
+                    <b>Chỉnh tọa độ trên sơ đồ</b>
+                    <small>Kéo thả, resize góc, mũi tên / Shift+mũi tên</small>
+                  </span>
+                </div>
+                <button
+                  type="button"
+                  className={`switch ${editMode ? 'on' : ''}`}
+                  onClick={() => setEditMode(!editMode)}
+                  role="switch"
+                  aria-checked={editMode}
+                  aria-label="Chế độ chỉnh tọa độ"
+                >
+                  <i />
+                </button>
+              </div>
+
+              {editMode && currentEditableList.length > 0 && (
+                <div className="edit-inspector">
+                  <label className="inspector-select-row">
+                    <span>Phần tử đang chọn</span>
+                    <select
+                      value={selectedEditId ?? ''}
+                      onChange={(e) => setSelectedEditId(e.target.value || null)}
+                    >
+                      {currentEditableList.map((pt) => (
+                        <option key={pt.id} value={pt.id}>
+                          {pt.label} ({pt.id})
+                        </option>
+                      ))}
+                    </select>
+                  </label>
+
+                  {selectedEditPoint && (
+                    <div className="coord-grid">
+                      <label>
+                        <span>X%</span>
+                        <input
+                          type="number"
+                          step="0.1"
+                          min="0"
+                          max="100"
+                          value={selectedEditPoint.x}
+                          onChange={(e) => updateSelectedPointField('x', e.target.value)}
+                        />
+                      </label>
+                      <label>
+                        <span>Y%</span>
+                        <input
+                          type="number"
+                          step="0.1"
+                          min="0"
+                          max="100"
+                          value={selectedEditPoint.y}
+                          onChange={(e) => updateSelectedPointField('y', e.target.value)}
+                        />
+                      </label>
+                      <label>
+                        <span>W%</span>
+                        <input
+                          type="number"
+                          step="0.1"
+                          min="0.5"
+                          max="100"
+                          value={selectedEditPoint.width}
+                          onChange={(e) => updateSelectedPointField('width', e.target.value)}
+                        />
+                      </label>
+                      <label>
+                        <span>H%</span>
+                        <input
+                          type="number"
+                          step="0.1"
+                          min="0.5"
+                          max="100"
+                          value={selectedEditPoint.height}
+                          onChange={(e) => updateSelectedPointField('height', e.target.value)}
+                        />
+                      </label>
+                    </div>
+                  )}
+
+                  <p className="inspector-hint">
+                    Mũi tên: ±0.1% vị trí · Shift + Mũi tên: ±0.1% kích thước
+                  </p>
+                </div>
+              )}
+
+              <div className="edit-actions-row">
+                <button
+                  type="button"
+                  className="secondary-action-btn"
+                  onClick={resetCoordinates}
+                  title="Đặt lại tọa độ mặc định của trang hiện tại"
+                >
+                  <RotateCcw />
+                  <span>Đặt lại</span>
+                </button>
+                <button
+                  type="button"
+                  className="copy-json-btn"
+                  onClick={copyCoordinatesJson}
+                >
+                  {copiedJson ? <Check /> : <Copy />}
+                  <span>{copiedJson ? 'Đã copy!' : 'Copy tọa độ'}</span>
+                </button>
+              </div>
+            </section>
+
+            <button type="button" className="export-button" onClick={exportConfig}>
+              <ArrowDownToLine /> Xuất file cấu hình JSON
+            </button>
+          </div>
+
+          <div className="drawer-foot">
+            <span>
+              <i className="live-dot" /> Mô phỏng đang hoạt động
+            </span>
+            <span>v2.0.0</span>
+          </div>
+        </aside>
       </div>
 
       {activeFaceplateItem && (
@@ -961,7 +1034,11 @@ export default function BmsSimulator() {
                     ? 'CHILLER FACEPLATE · ĐIỀU KHIỂN TỔ MÁY'
                     : activeFaceplateItem.kind === 'pump' || activeFaceplateItem.kind === 'tower'
                       ? 'VSD DRIVE FACEPLATE · ĐIỀU KHIỂN ĐỘNG CƠ'
-                      : 'CONTROL LOOP · THÔNG SỐ VẬN HÀNH'}
+                      : activeFaceplateItem.kind === 'ahu'
+                        ? 'AHU FACEPLATE · ĐIỀU KHIỂN XỬ LÝ KHÔNG KHÍ'
+                        : activeFaceplateItem.kind === 'pau'
+                          ? 'PAU/DHU FACEPLATE · CẤP GIÓ TƯƠI'
+                          : 'FCU FACEPLATE · ĐIỀU HÒA KHU VỰC'}
                 </span>
                 <h2 id="faceplate-title">{activeFaceplateItem.label}</h2>
               </div>
@@ -975,7 +1052,12 @@ export default function BmsSimulator() {
               </button>
             </div>
 
-            {activeFaceplateItem.kind === 'chiller' && (
+            {(activeFaceplateItem.kind === 'chiller' ||
+              activeFaceplateItem.kind === 'pump' ||
+              activeFaceplateItem.kind === 'tower' ||
+              activeFaceplateItem.kind === 'ahu' ||
+              activeFaceplateItem.kind === 'pau' ||
+              activeFaceplateItem.kind === 'fcu') && (
               <div className="faceplate-body">
                 <div className="faceplate-status-bar">
                   <div className="faceplate-state-pill">
@@ -999,139 +1081,7 @@ export default function BmsSimulator() {
                   <button
                     type="button"
                     className={`switch ${activeFaceplateItem.on ? 'on' : ''}`}
-                    onClick={() => setPoint(activeFaceplateItem.id, !activeFaceplateItem.on)}
-                    role="switch"
-                    aria-checked={activeFaceplateItem.on}
-                    aria-label="Chạy / Dừng Chiller"
-                  >
-                    <i />
-                  </button>
-                </div>
-
-                <div className="faceplate-control-row">
-                  <span>Chế độ điều khiển</span>
-                  <div className="segmented-control">
-                    <button
-                      type="button"
-                      className={(activeFaceplateItem.mode ?? 'auto') === 'auto' ? 'active' : ''}
-                      onClick={() => updateEquipmentProps(activeFaceplateItem.id, { mode: 'auto' })}
-                    >
-                      Auto
-                    </button>
-                    <button
-                      type="button"
-                      className={activeFaceplateItem.mode === 'manual' ? 'active' : ''}
-                      onClick={() =>
-                        updateEquipmentProps(activeFaceplateItem.id, { mode: 'manual' })
-                      }
-                    >
-                      Manual
-                    </button>
-                  </div>
-                </div>
-
-                <div className="faceplate-slider-card">
-                  <div className="faceplate-slider-head">
-                    <span>Nhiệt độ nước lạnh cài đặt (Setpoint)</span>
-                    <div className="inline-number-box">
-                      <input
-                        type="number"
-                        min="5.0"
-                        max="12.0"
-                        step="0.1"
-                        value={(activeFaceplateItem.setpoint ?? 7.0).toFixed(1)}
-                        onChange={(e) => {
-                          const v = Math.min(12, Math.max(5, Number(e.target.value) || 7.0))
-                          updateEquipmentProps(activeFaceplateItem.id, { setpoint: round1(v) })
-                          setSupplyTemp(round1(v))
-                        }}
-                      />
-                      <span>°C</span>
-                    </div>
-                  </div>
-                  <input
-                    type="range"
-                    min="5.0"
-                    max="12.0"
-                    step="0.1"
-                    value={activeFaceplateItem.setpoint ?? 7.0}
-                    onChange={(e) => {
-                      const v = Number(e.target.value)
-                      updateEquipmentProps(activeFaceplateItem.id, { setpoint: v })
-                      setSupplyTemp(v)
-                    }}
-                  />
-                </div>
-
-                <div className="parameter-grid">
-                  <div>
-                    <small>Dòng điện máy nén</small>
-                    <b>{activeFaceplateItem.on ? '78.4 %RLA' : '0.0 %RLA'}</b>
-                  </div>
-                  <div>
-                    <small>Nước lạnh cấp / hồi</small>
-                    <b>
-                      {supplyTemp.toFixed(1)}°C / {returnTemp.toFixed(1)}°C
-                    </b>
-                  </div>
-                  <div>
-                    <small>Áp suất gas hút</small>
-                    <b>{activeFaceplateItem.on ? '3.15 bar' : '4.80 bar'}</b>
-                  </div>
-                  <div>
-                    <small>Áp suất gas đẩy</small>
-                    <b>{activeFaceplateItem.on ? '9.62 bar' : '4.85 bar'}</b>
-                  </div>
-                  <div>
-                    <small>Nước giải nhiệt cấp / hồi</small>
-                    <b>
-                      {condenserSupplyTemp.toFixed(1)}°C / {condenserReturnTemp.toFixed(1)}°C
-                    </b>
-                  </div>
-                  <div>
-                    <small>Giờ chạy tích lũy</small>
-                    <b>{activeFaceplateItem.runHours ?? 1428} giờ</b>
-                  </div>
-                </div>
-
-                <button
-                  type="button"
-                  className={`trip-sim-btn ${activeFaceplateFaulted ? 'is-faulted' : ''}`}
-                  onClick={() => toggleTripFault(activeFaceplateItem.id)}
-                >
-                  <AlertTriangle />
-                  <span>
-                    {activeFaceplateFaulted ? 'Reset Alarm (Xóa lỗi Trip)' : 'Giả lập lỗi Trip'}
-                  </span>
-                </button>
-              </div>
-            )}
-
-            {(activeFaceplateItem.kind === 'pump' || activeFaceplateItem.kind === 'tower') && (
-              <div className="faceplate-body">
-                <div className="faceplate-status-bar">
-                  <div className="faceplate-state-pill">
-                    <i
-                      className={`status-light ${
-                        activeFaceplateFaulted
-                          ? 'warning'
-                          : activeFaceplateItem.on
-                            ? 'running'
-                            : 'stopped'
-                      }`}
-                    />
-                    <strong>
-                      {activeFaceplateFaulted
-                        ? 'BÁO LỖI TRIP'
-                        : activeFaceplateItem.on
-                          ? 'ĐANG VẬN HÀNH (ON)'
-                          : 'ĐÃ DỪNG (OFF)'}
-                    </strong>
-                  </div>
-                  <button
-                    type="button"
-                    className={`switch ${activeFaceplateItem.on ? 'on' : ''}`}
-                    onClick={() => setPoint(activeFaceplateItem.id, !activeFaceplateItem.on)}
+                    onClick={() => toggleEquipment(activeFaceplateItem, !activeFaceplateItem.on)}
                     role="switch"
                     aria-checked={activeFaceplateItem.on}
                     aria-label="Chạy / Dừng thiết bị"
@@ -1153,81 +1103,115 @@ export default function BmsSimulator() {
                     <button
                       type="button"
                       className={activeFaceplateItem.mode === 'manual' ? 'active' : ''}
-                      onClick={() =>
-                        updateEquipmentProps(activeFaceplateItem.id, { mode: 'manual' })
-                      }
+                      onClick={() => updateEquipmentProps(activeFaceplateItem.id, { mode: 'manual' })}
                     >
                       Manual
                     </button>
                   </div>
                 </div>
 
-                <div className="faceplate-slider-card">
-                  <div className="faceplate-slider-head">
-                    <span>Tần số biến tần VSD</span>
-                    <div className="inline-number-box">
-                      <input
-                        type="number"
-                        min="0"
-                        max="50"
-                        step="0.5"
-                        value={(activeFaceplateItem.hz ?? 0).toFixed(1)}
-                        onChange={(e) => {
-                          const v = Math.min(50, Math.max(0, Number(e.target.value) || 0))
-                          updateEquipmentProps(activeFaceplateItem.id, {
-                            hz: round1(v),
-                            on: v > 0 ? true : activeFaceplateItem.on,
-                          })
-                        }}
-                      />
-                      <span>Hz</span>
+                {(activeFaceplateItem.kind === 'pump' || activeFaceplateItem.kind === 'tower') && (
+                  <div className="faceplate-slider-card">
+                    <div className="faceplate-slider-head">
+                      <span>Tần số biến tần VSD</span>
+                      <div className="inline-number-box">
+                        <input
+                          type="number"
+                          min="0"
+                          max="50"
+                          step="0.5"
+                          value={(activeFaceplateItem.hz ?? 0).toFixed(1)}
+                          onChange={(e) => {
+                            const v = Math.min(50, Math.max(0, Number(e.target.value) || 0))
+                            updateEquipmentProps(activeFaceplateItem.id, {
+                              hz: round1(v),
+                              on: v > 0 ? true : activeFaceplateItem.on,
+                            })
+                          }}
+                        />
+                        <span>Hz</span>
+                      </div>
+                    </div>
+                    <input
+                      type="range"
+                      min="0"
+                      max="50"
+                      step="0.5"
+                      value={activeFaceplateItem.hz ?? 0}
+                      onChange={(e) => {
+                        const v = Number(e.target.value)
+                        updateEquipmentProps(activeFaceplateItem.id, {
+                          hz: v,
+                          on: v > 0 ? true : false,
+                        })
+                        if (v > 0 && activeFaceplateFaulted) {
+                          setFaultedPoints((cur) => cur.filter((pid) => pid !== activeFaceplateItem.id))
+                        }
+                      }}
+                    />
+                  </div>
+                )}
+
+                {(activeFaceplateItem.kind === 'chiller' ||
+                  activeFaceplateItem.kind === 'ahu' ||
+                  activeFaceplateItem.kind === 'pau' ||
+                  activeFaceplateItem.kind === 'fcu') && (
+                  <div className="faceplate-slider-card">
+                    <div className="faceplate-slider-head">
+                      <span>Nhiệt độ cài đặt (Setpoint)</span>
+                      <div className="inline-number-box">
+                        <input
+                          type="number"
+                          min="5.0"
+                          max="30.0"
+                          step="0.1"
+                          value={(activeFaceplateItem.setpoint ?? 22.0).toFixed(1)}
+                          onChange={(e) => {
+                            const v = Math.min(30, Math.max(5, Number(e.target.value) || 22.0))
+                            updateEquipmentProps(activeFaceplateItem.id, { setpoint: round1(v) })
+                            if (activeFaceplateItem.kind === 'chiller') setSupplyTemp(round1(v))
+                          }}
+                        />
+                        <span>°C</span>
+                      </div>
+                    </div>
+                    <input
+                      type="range"
+                      min="5.0"
+                      max="30.0"
+                      step="0.1"
+                      value={activeFaceplateItem.setpoint ?? 22.0}
+                      onChange={(e) => {
+                        const v = Number(e.target.value)
+                        updateEquipmentProps(activeFaceplateItem.id, { setpoint: v })
+                        if (activeFaceplateItem.kind === 'chiller') setSupplyTemp(v)
+                      }}
+                    />
+                  </div>
+                )}
+
+                {(activeFaceplateItem.kind === 'chiller' ||
+                  activeFaceplateItem.kind === 'pump' ||
+                  activeFaceplateItem.kind === 'tower') && (
+                  <div className="parameter-grid">
+                    <div>
+                      <small>Chế độ vận hành</small>
+                      <b>{(activeFaceplateItem.mode ?? 'auto').toUpperCase()}</b>
+                    </div>
+                    <div>
+                      <small>Giờ chạy tích lũy</small>
+                      <b>{activeFaceplateItem.runHours ?? 1428} giờ</b>
+                    </div>
+                    <div>
+                      <small>Trạng thái Trip</small>
+                      <b>{activeFaceplateFaulted ? 'TRIP_ON' : 'Bình thường'}</b>
+                    </div>
+                    <div>
+                      <small>Điểm dữ liệu</small>
+                      <b>{activeFaceplateItem.id}</b>
                     </div>
                   </div>
-                  <input
-                    type="range"
-                    min="0"
-                    max="50"
-                    step="0.5"
-                    value={activeFaceplateItem.hz ?? 0}
-                    onChange={(e) => {
-                      const v = Number(e.target.value)
-                      updateEquipmentProps(activeFaceplateItem.id, {
-                        hz: v,
-                        on: v > 0 ? true : false,
-                      })
-                      if (v > 0 && activeFaceplateFaulted) {
-                        setFaultedPoints((cur) => cur.filter((pid) => pid !== activeFaceplateItem.id))
-                      }
-                    }}
-                  />
-                </div>
-
-                <div className="parameter-grid">
-                  <div>
-                    <small>Tần số hiện tại</small>
-                    <b>
-                      {activeFaceplateItem.on
-                        ? `${(activeFaceplateItem.hz ?? 45).toFixed(1)} Hz`
-                        : '0.0 Hz'}
-                    </b>
-                  </div>
-                  <div>
-                    <small>Dòng điện động cơ</small>
-                    <b>
-                      {activeFaceplateItem.on
-                        ? `${(((activeFaceplateItem.hz ?? 45) / 50) * 38.5).toFixed(1)} A`
-                        : '0.0 A'}
-                    </b>
-                  </div>
-                  <div>
-                    <small>Trạng thái Trip</small>
-                    <b>{activeFaceplateFaulted ? 'TRIP_ON' : 'Bình thường'}</b>
-                  </div>
-                  <div>
-                    <small>Giờ chạy tích lũy</small>
-                    <b>{activeFaceplateItem.runHours ?? 2100} giờ</b>
-                  </div>
-                </div>
+                )}
 
                 <button
                   type="button"
@@ -1236,9 +1220,7 @@ export default function BmsSimulator() {
                 >
                   <AlertTriangle />
                   <span>
-                    {activeFaceplateFaulted
-                      ? 'Reset Trip (Khôi phục trạng thái)'
-                      : 'Giả lập sự cố Trip'}
+                    {activeFaceplateFaulted ? 'Reset Alarm (Xóa lỗi Trip)' : 'Giả lập lỗi Trip'}
                   </span>
                 </button>
               </div>
