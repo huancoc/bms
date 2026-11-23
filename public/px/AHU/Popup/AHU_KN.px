@@ -322,8 +322,8 @@
   <Picture layout="1040.0,260.0,32.0,32.0" scale="fitRatio">
     <ValueBinding ord="station:|slot:/Drivers/NiagaraNetwork/WEB_CVI/points/DDC_CP_KN/TR_AHU_KN_01">
       <IBooleanToSimple name="image">
-        <Image name="trueValue" value="file:^px/Images/Icon/Trip_On.png"/>
-        <Image name="falseValue" value="file:^px/Images/Icon/Trip_Off.png"/>
+        <Image name="trueValue" value="file:^px/image/Icon/Trip_On.png"/>
+        <Image name="falseValue" value="file:^px/image/Icon/Trip_Off.png"/>
       </IBooleanToSimple>
     </ValueBinding>
   </Picture>
@@ -331,8 +331,8 @@
   <Picture layout="925.0,260.0,32.0,32.0" scale="fitRatio">
     <ValueBinding ord="station:|slot:/Drivers/NiagaraNetwork/WEB_CVI/points/DDC_CP_KN/AL_SCR_01">
       <IBooleanToSimple name="image">
-        <Image name="trueValue" value="file:^px/Images/Icon/Trip_On.png"/>
-        <Image name="falseValue" value="file:^px/Images/Icon/Trip_Off.png"/>
+        <Image name="trueValue" value="file:^px/image/Icon/Trip_On.png"/>
+        <Image name="falseValue" value="file:^px/image/Icon/Trip_Off.png"/>
       </IBooleanToSimple>
     </ValueBinding>
   </Picture>

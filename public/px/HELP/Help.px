@@ -149,9 +149,9 @@
     <WsAnnotation name="wsAnnotation" value="2,2,8"/>
   </BoundLabel>
 
-  <Picture layout="40.0,680.0,32.0,32.0" image="file:^px/Images/Icon/Trip_On.png" scale="fitRatio"/>
+  <Picture layout="40.0,680.0,32.0,32.0" image="file:^px/image/Icon/Trip_On.png" scale="fitRatio"/>
 
-  <Picture layout="40.0,715.0,32.0,32.0" image="file:^px/Images/Icon/Trip_Off.png" scale="fitRatio"/>
+  <Picture layout="40.0,715.0,32.0,32.0" image="file:^px/image/Icon/Trip_Off.png" scale="fitRatio"/>
 
   <BoundLabel layout="90.0,720.0,310.0,30.0" text=" Kh&#xf4;ng l&#x1ed7;i trip" font="14.0pt Tahoma" foreground="white" background="#4d000000" halign="left">
     <WsAnnotation name="wsAnnotation" value="2,2,8"/>

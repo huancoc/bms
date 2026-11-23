@@ -122,13 +122,13 @@
     <WsAnnotation name="wsAnnotation" value="2,2,8"/>
   </BoundLabel>
 
-  <Picture layout="105.0,385.0,50.0,50.0" image="file:^px/Images/Icon/DoorCL.png" scale="fitRatio" halign="fill"/>
+  <Picture layout="105.0,385.0,50.0,50.0" image="file:^px/image/Icon/DoorCL.png" scale="fitRatio" halign="fill"/>
 
   <BoundLabel layout="20.0,440.0,220.0,50.0" font="bold 12.0pt Segoe UI" background="#80ff0000" border="1.0 solid black">
     <WsAnnotation name="wsAnnotation" value="2,2,8"/>
   </BoundLabel>
 
-  <Picture layout="105.0,440.0,50.0,50.0" image="file:^px/Images/Icon/DoorOP.png" scale="fitRatio" halign="fill"/>
+  <Picture layout="105.0,440.0,50.0,50.0" image="file:^px/image/Icon/DoorOP.png" scale="fitRatio" halign="fill"/>
 
 </CanvasPane>
 </content>

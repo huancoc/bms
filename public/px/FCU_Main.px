@@ -182,8 +182,8 @@
   <Picture layout="340.0,250.0,89.99999999999977,40.0" scale="fitRatio">
     <ValueBinding ord="station:|slot:/Drivers/FCU_Status/Status_FCU_01">
       <IBooleanToSimple name="image">
-        <Image name="trueValue" value="file:^px/Images/Icon/FCU_On.png"/>
-        <Image name="falseValue" value="file:^px/Images/Icon/FCU_Off.png"/>
+        <Image name="trueValue" value="file:^px/image/Icon/FCU_On.png"/>
+        <Image name="falseValue" value="file:^px/image/Icon/FCU_Off.png"/>
       </IBooleanToSimple>
     </ValueBinding>
     <PopupBinding ord="file:^px/FCU/Popup/FCU_01.px" title="FCU-01" size="1000.0,400.0"/>
@@ -192,8 +192,8 @@
   <Picture layout="340.0,370.0,89.99999999999977,40.0" scale="fitRatio">
     <ValueBinding ord="station:|slot:/Drivers/FCU_Status/Status_FCU_04">
       <IBooleanToSimple name="image">
-        <Image name="trueValue" value="file:^px/Images/Icon/FCU_On.png"/>
-        <Image name="falseValue" value="file:^px/Images/Icon/FCU_Off.png"/>
+        <Image name="trueValue" value="file:^px/image/Icon/FCU_On.png"/>
+        <Image name="falseValue" value="file:^px/image/Icon/FCU_Off.png"/>
       </IBooleanToSimple>
     </ValueBinding>
     <PopupBinding ord="file:^px/FCU/Popup/FCU_04.px" title="FCU-04" size="1000.0,400.0"/>
@@ -202,8 +202,8 @@
   <Picture layout="340.0,290.0,89.99999999999977,40.0" scale="fitRatio">
     <ValueBinding ord="station:|slot:/Drivers/FCU_Status/Status_FCU_02">
       <IBooleanToSimple name="image">
-        <Image name="trueValue" value="file:^px/Images/Icon/FCU_On.png"/>
-        <Image name="falseValue" value="file:^px/Images/Icon/FCU_Off.png"/>
+        <Image name="trueValue" value="file:^px/image/Icon/FCU_On.png"/>
+        <Image name="falseValue" value="file:^px/image/Icon/FCU_Off.png"/>
       </IBooleanToSimple>
     </ValueBinding>
     <PopupBinding ord="file:^px/FCU/Popup/FCU_02.px" title="FCU-02" size="1000.0,400.0"/>
@@ -212,8 +212,8 @@
   <Picture layout="340.0,330.0,89.99999999999977,40.0" scale="fitRatio">
     <ValueBinding ord="station:|slot:/Drivers/FCU_Status/Status_FCU_03">
       <IBooleanToSimple name="image">
-        <Image name="trueValue" value="file:^px/Images/Icon/FCU_On.png"/>
-        <Image name="falseValue" value="file:^px/Images/Icon/FCU_Off.png"/>
+        <Image name="trueValue" value="file:^px/image/Icon/FCU_On.png"/>
+        <Image name="falseValue" value="file:^px/image/Icon/FCU_Off.png"/>
       </IBooleanToSimple>
     </ValueBinding>
     <PopupBinding ord="file:^px/FCU/Popup/FCU_03.px" title="FCU-03" size="1000.0,400.0"/>
@@ -222,8 +222,8 @@
   <Picture layout="840.0,250.0,90.0,40.00000000000003" scale="fitRatio">
     <ValueBinding ord="station:|slot:/Drivers/FCU_Status/Status_FCU_05">
       <IBooleanToSimple name="image">
-        <Image name="trueValue" value="file:^px/Images/Icon/FCU_On.png"/>
-        <Image name="falseValue" value="file:^px/Images/Icon/FCU_Off.png"/>
+        <Image name="trueValue" value="file:^px/image/Icon/FCU_On.png"/>
+        <Image name="falseValue" value="file:^px/image/Icon/FCU_Off.png"/>
       </IBooleanToSimple>
     </ValueBinding>
     <PopupBinding ord="file:^px/FCU/Popup/FCU_05.px" title="FCU-05" size="1000.0,400.0"/>
@@ -232,8 +232,8 @@
   <Picture layout="840.0,290.0,90.0,40.00000000000003" scale="fitRatio">
     <ValueBinding ord="station:|slot:/Drivers/FCU_Status/Status_FCU_06">
       <IBooleanToSimple name="image">
-        <Image name="trueValue" value="file:^px/Images/Icon/FCU_On.png"/>
-        <Image name="falseValue" value="file:^px/Images/Icon/FCU_Off.png"/>
+        <Image name="trueValue" value="file:^px/image/Icon/FCU_On.png"/>
+        <Image name="falseValue" value="file:^px/image/Icon/FCU_Off.png"/>
       </IBooleanToSimple>
     </ValueBinding>
     <PopupBinding ord="file:^px/FCU/Popup/FCU_06.px" title="FCU-06" size="1000.0,400.0"/>
@@ -242,8 +242,8 @@
   <Picture layout="840.0,330.0,90.0,40.0" scale="fitRatio">
     <ValueBinding ord="station:|slot:/Drivers/FCU_Status/Status_FCU_07">
       <IBooleanToSimple name="image">
-        <Image name="trueValue" value="file:^px/Images/Icon/FCU_On.png"/>
-        <Image name="falseValue" value="file:^px/Images/Icon/FCU_Off.png"/>
+        <Image name="trueValue" value="file:^px/image/Icon/FCU_On.png"/>
+        <Image name="falseValue" value="file:^px/image/Icon/FCU_Off.png"/>
       </IBooleanToSimple>
     </ValueBinding>
     <PopupBinding ord="file:^px/FCU/Popup/FCU_07.px" title="FCU-07" size="1000.0,400.0"/>
@@ -252,8 +252,8 @@
   <Picture layout="840.0,370.0,90.0,40.0" scale="fitRatio">
     <ValueBinding ord="station:|slot:/Drivers/FCU_Status/Status_FCU_08">
       <IBooleanToSimple name="image">
-        <Image name="trueValue" value="file:^px/Images/Icon/FCU_On.png"/>
-        <Image name="falseValue" value="file:^px/Images/Icon/FCU_Off.png"/>
+        <Image name="trueValue" value="file:^px/image/Icon/FCU_On.png"/>
+        <Image name="falseValue" value="file:^px/image/Icon/FCU_Off.png"/>
       </IBooleanToSimple>
     </ValueBinding>
     <PopupBinding ord="file:^px/FCU/Popup/FCU_08.px" title="FCU-08" size="1000.0,400.0"/>
@@ -262,8 +262,8 @@
   <Picture layout="840.0,410.0,90.0,40.0" scale="fitRatio">
     <ValueBinding ord="station:|slot:/Drivers/FCU_Status/Status_FCU_09">
       <IBooleanToSimple name="image">
-        <Image name="trueValue" value="file:^px/Images/Icon/FCU_On.png"/>
-        <Image name="falseValue" value="file:^px/Images/Icon/FCU_Off.png"/>
+        <Image name="trueValue" value="file:^px/image/Icon/FCU_On.png"/>
+        <Image name="falseValue" value="file:^px/image/Icon/FCU_Off.png"/>
       </IBooleanToSimple>
     </ValueBinding>
     <PopupBinding ord="file:^px/FCU/Popup/FCU_09.px" title="FCU-09" size="1000.0,400.0"/>
@@ -272,8 +272,8 @@
   <Picture layout="840.0,450.0,90.00000000000006,40.0" scale="fitRatio">
     <ValueBinding ord="station:|slot:/Drivers/FCU_Status/Status_FCU_10">
       <IBooleanToSimple name="image">
-        <Image name="trueValue" value="file:^px/Images/Icon/FCU_On.png"/>
-        <Image name="falseValue" value="file:^px/Images/Icon/FCU_Off.png"/>
+        <Image name="trueValue" value="file:^px/image/Icon/FCU_On.png"/>
+        <Image name="falseValue" value="file:^px/image/Icon/FCU_Off.png"/>
       </IBooleanToSimple>
     </ValueBinding>
     <PopupBinding ord="file:^px/FCU/Popup/FCU_10.px" title="FCU-10" size="1000.0,400.0"/>
@@ -282,8 +282,8 @@
   <Picture layout="840.0,490.0,90.0,40.0" scale="fitRatio">
     <ValueBinding ord="station:|slot:/Drivers/FCU_Status/Status_FCU_11">
       <IBooleanToSimple name="image">
-        <Image name="trueValue" value="file:^px/Images/Icon/FCU_On.png"/>
-        <Image name="falseValue" value="file:^px/Images/Icon/FCU_Off.png"/>
+        <Image name="trueValue" value="file:^px/image/Icon/FCU_On.png"/>
+        <Image name="falseValue" value="file:^px/image/Icon/FCU_Off.png"/>
       </IBooleanToSimple>
     </ValueBinding>
     <PopupBinding ord="file:^px/FCU/Popup/FCU_11.px" title="FCU-11" size="1000.0,400.0"/>
@@ -292,8 +292,8 @@
   <Picture layout="840.0,530.0,90.0,40.0" scale="fitRatio">
     <ValueBinding ord="station:|slot:/Drivers/FCU_Status/Status_FCU_12">
       <IBooleanToSimple name="image">
-        <Image name="trueValue" value="file:^px/Images/Icon/FCU_On.png"/>
-        <Image name="falseValue" value="file:^px/Images/Icon/FCU_Off.png"/>
+        <Image name="trueValue" value="file:^px/image/Icon/FCU_On.png"/>
+        <Image name="falseValue" value="file:^px/image/Icon/FCU_Off.png"/>
       </IBooleanToSimple>
     </ValueBinding>
     <PopupBinding ord="file:^px/FCU/Popup/FCU_12.px" title="FCU-12" size="1000.0,400.0"/>
@@ -302,8 +302,8 @@
   <Picture layout="840.0,570.0,90.0,40.0" scale="fitRatio">
     <ValueBinding ord="station:|slot:/Drivers/FCU_Status/Status_FCU_13">
       <IBooleanToSimple name="image">
-        <Image name="trueValue" value="file:^px/Images/Icon/FCU_On.png"/>
-        <Image name="falseValue" value="file:^px/Images/Icon/FCU_Off.png"/>
+        <Image name="trueValue" value="file:^px/image/Icon/FCU_On.png"/>
+        <Image name="falseValue" value="file:^px/image/Icon/FCU_Off.png"/>
       </IBooleanToSimple>
     </ValueBinding>
     <PopupBinding ord="file:^px/FCU/Popup/FCU_13.px" title="FCU-13" size="1000.0,400.0"/>
@@ -312,8 +312,8 @@
   <Picture layout="840.0,610.0,90.0,40.0" scale="fitRatio">
     <ValueBinding ord="station:|slot:/Drivers/FCU_Status/Status_FCU_14">
       <IBooleanToSimple name="image">
-        <Image name="trueValue" value="file:^px/Images/Icon/FCU_On.png"/>
-        <Image name="falseValue" value="file:^px/Images/Icon/FCU_Off.png"/>
+        <Image name="trueValue" value="file:^px/image/Icon/FCU_On.png"/>
+        <Image name="falseValue" value="file:^px/image/Icon/FCU_Off.png"/>
       </IBooleanToSimple>
     </ValueBinding>
     <PopupBinding ord="file:^px/FCU/Popup/FCU_14.px" title="FCU-14" size="1000.0,400.0"/>
@@ -322,8 +322,8 @@
   <Picture layout="1220.0,330.0,90.0,40.00000000000003" scale="fitRatio">
     <ValueBinding ord="station:|slot:/Drivers/FCU_Status/Status_FCU_17">
       <IBooleanToSimple name="image">
-        <Image name="trueValue" value="file:^px/Images/Icon/FCU_On.png"/>
-        <Image name="falseValue" value="file:^px/Images/Icon/FCU_Off.png"/>
+        <Image name="trueValue" value="file:^px/image/Icon/FCU_On.png"/>
+        <Image name="falseValue" value="file:^px/image/Icon/FCU_Off.png"/>
       </IBooleanToSimple>
     </ValueBinding>
     <PopupBinding ord="file:^px/FCU/Popup/FCU_17.px" title="FCU-17" size="1000.0,400.0"/>
@@ -332,8 +332,8 @@
   <Picture layout="1220.0,250.0,90.0,40.00000000000003" scale="fitRatio">
     <ValueBinding ord="station:|slot:/Drivers/FCU_Status/Status_FCU_15">
       <IBooleanToSimple name="image">
-        <Image name="trueValue" value="file:^px/Images/Icon/FCU_On.png"/>
-        <Image name="falseValue" value="file:^px/Images/Icon/FCU_Off.png"/>
+        <Image name="trueValue" value="file:^px/image/Icon/FCU_On.png"/>
+        <Image name="falseValue" value="file:^px/image/Icon/FCU_Off.png"/>
       </IBooleanToSimple>
     </ValueBinding>
     <PopupBinding ord="file:^px/FCU/Popup/FCU_15.px" title="FCU-15" size="1000.0,400.0"/>
@@ -342,8 +342,8 @@
   <Picture layout="1220.0,290.0,90.0,40.00000000000003" scale="fitRatio">
     <ValueBinding ord="station:|slot:/Drivers/FCU_Status/Status_FCU_16">
       <IBooleanToSimple name="image">
-        <Image name="trueValue" value="file:^px/Images/Icon/FCU_On.png"/>
-        <Image name="falseValue" value="file:^px/Images/Icon/FCU_Off.png"/>
+        <Image name="trueValue" value="file:^px/image/Icon/FCU_On.png"/>
+        <Image name="falseValue" value="file:^px/image/Icon/FCU_Off.png"/>
       </IBooleanToSimple>
     </ValueBinding>
     <PopupBinding ord="file:^px/FCU/Popup/FCU_16.px" title="FCU-16" size="1000.0,400.0"/>

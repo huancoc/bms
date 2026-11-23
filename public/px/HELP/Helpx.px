@@ -126,15 +126,15 @@
     <WsAnnotation name="wsAnnotation" value="6,6,8"/>
   </ImageButton>
 
-  <BoundLabel layout="20.0,195.0,55.0,30.0" image="file:^px/Images/Icon/1463731501_Circle_Green.png"/>
+  <BoundLabel layout="20.0,195.0,55.0,30.0" image="file:^px/image/Icon/1463731501_Circle_Green.png"/>
 
-  <BoundLabel layout="25.0,275.0,40.0,30.0" image="file:^px/Images/Icon/1463731515_Circle_Yellow.png"/>
+  <BoundLabel layout="25.0,275.0,40.0,30.0" image="file:^px/image/Icon/1463731515_Circle_Yellow.png"/>
 
   <BoundLabel layout="70.0,190.0,290.00000000000006,40.00000000000006" text="Tr&#x1ea1;ng th&#xe1;i ho&#x1ea1;t &#x111;&#x1ed9;ng b&#x1ead;t" font="18.0pt SansSerif" halign="left" textToIconAlign="center">
     <WsAnnotation name="wsAnnotation" value="2,2,8"/>
   </BoundLabel>
 
-  <BoundLabel layout="20.0,235.0,55.0,30.0" image="file:^px/Images/Icon/1463731422_Circle_Red.png"/>
+  <BoundLabel layout="20.0,235.0,55.0,30.0" image="file:^px/image/Icon/1463731422_Circle_Red.png"/>
 
   <BoundLabel layout="70.0,230.0,290.00000000000006,40.00000000000006" text="Tr&#x1ea1;ng th&#xe1;i ho&#x1ea1;t &#x111;&#x1ed9;ng t&#x1eaf;t" font="18.0pt SansSerif" halign="left" textToIconAlign="center">
     <WsAnnotation name="wsAnnotation" value="2,2,8"/>
@@ -148,7 +148,7 @@
     <WsAnnotation name="wsAnnotation" value="2,2,8"/>
   </BoundLabel>
 
-  <BoundLabel layout="25.0,315.0,40.0,30.0" image="file:^px/Images/Icon/1463731583_Circle_Grey.png"/>
+  <BoundLabel layout="25.0,315.0,40.0,30.0" image="file:^px/image/Icon/1463731583_Circle_Grey.png"/>
 
   <BoundLabel layout="70.0,365.0,65.0,30.0" font="bold 12.0pt Segoe UI" background="lime" textToIconAlign="center" border="2.0 groove black">
     <WsAnnotation name="wsAnnotation" value="2,2,8"/>

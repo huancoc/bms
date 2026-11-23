@@ -22,8 +22,8 @@
   <Picture layout="0.0,0.0,690.0,810.0" scale="fitRatio" halign="fill">
     <ValueBinding ord="station:|slot:/Drivers/Page_ani/Pic_1">
       <IBooleanToSimple name="image">
-        <Image name="trueValue" value="file:^px/Images/ANIMATION/1.jpg"/>
-        <Image name="falseValue" value="file:^px/Images/ANIMATION/1.jpg"/>
+        <Image name="trueValue" value="file:^px/image/ANIMATION/1.jpg"/>
+        <Image name="falseValue" value="file:^px/image/ANIMATION/1.jpg"/>
       </IBooleanToSimple>
     </ValueBinding>
   </Picture>
@@ -31,8 +31,8 @@
   <Picture layout="0.0,0.0,690.0,810.0" scale="fitRatio" halign="fill">
     <ValueBinding ord="station:|slot:/Drivers/Page_ani/Pic_2">
       <IBooleanToSimple name="image">
-        <Image name="trueValue" value="file:^px/Images/ANIMATION/2.jpg"/>
-        <Image name="falseValue" value="file:^px/Images/ANIMATION/2.jpg"/>
+        <Image name="trueValue" value="file:^px/image/ANIMATION/2.jpg"/>
+        <Image name="falseValue" value="file:^px/image/ANIMATION/2.jpg"/>
       </IBooleanToSimple>
     </ValueBinding>
   </Picture>
@@ -40,8 +40,8 @@
   <Picture layout="0.0,0.0,690.0,810.0" scale="fitRatio" halign="fill">
     <ValueBinding ord="station:|slot:/Drivers/Page_ani/Pic_3">
       <IBooleanToSimple name="image">
-        <Image name="trueValue" value="file:^px/Images/ANIMATION/3.jpg"/>
-        <Image name="falseValue" value="file:^px/Images/ANIMATION/3.jpg"/>
+        <Image name="trueValue" value="file:^px/image/ANIMATION/3.jpg"/>
+        <Image name="falseValue" value="file:^px/image/ANIMATION/3.jpg"/>
       </IBooleanToSimple>
     </ValueBinding>
   </Picture>
@@ -49,8 +49,8 @@
   <Picture layout="0.0,0.0,690.0,810.0" scale="fitRatio" halign="fill">
     <ValueBinding ord="station:|slot:/Drivers/Page_ani/Pic_4">
       <IBooleanToSimple name="image">
-        <Image name="trueValue" value="file:^px/Images/ANIMATION/4.jpg"/>
-        <Image name="falseValue" value="file:^px/Images/ANIMATION/4.jpg"/>
+        <Image name="trueValue" value="file:^px/image/ANIMATION/4.jpg"/>
+        <Image name="falseValue" value="file:^px/image/ANIMATION/4.jpg"/>
       </IBooleanToSimple>
     </ValueBinding>
   </Picture>
@@ -58,8 +58,8 @@
   <Picture layout="0.0,0.0,690.0,810.0" scale="fitRatio" halign="fill">
     <ValueBinding ord="station:|slot:/Drivers/Page_ani/Pic_5">
       <IBooleanToSimple name="image">
-        <Image name="trueValue" value="file:^px/Images/ANIMATION/5.jpg"/>
-        <Image name="falseValue" value="file:^px/Images/ANIMATION/5.jpg"/>
+        <Image name="trueValue" value="file:^px/image/ANIMATION/5.jpg"/>
+        <Image name="falseValue" value="file:^px/image/ANIMATION/5.jpg"/>
       </IBooleanToSimple>
     </ValueBinding>
   </Picture>
