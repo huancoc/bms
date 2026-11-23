@@ -226,3 +226,57 @@ h1 { margin: 0; font-size: 23px; font-weight: 600; letter-spacing: -.035em; }
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { scroll-behavior: auto !important; animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
 }
+
+/* Presentation mode: the BMS diagram is the product surface; tools stay one click away. */
+html, body { width: 100%; height: 100%; min-height: 0; overflow: hidden; }
+body { background: #7f8996; }
+.app-shell { width: 100%; height: 100dvh; min-height: 0; background: #7f8996; }
+.topbar, .workspace-heading, .page-tabs, .toolbar, .mobile-help { display: none !important; }
+.workspace { width: 100%; height: 100%; margin: 0; padding: 0; }
+.editor-layout { display: block; width: 100%; height: 100%; min-height: 0; }
+.canvas-panel { width: 100%; height: 100%; min-height: 0; overflow: visible; border: 0; border-radius: 0; background: transparent; }
+.canvas-toolbar, .canvas-footer { display: none; }
+.stage-wrap { width: 100%; height: 100%; min-height: 0; padding: 0; overflow: hidden; background: #7f8996; background-image: none; }
+.stage { width: min(100vw, calc(100dvh * 1.9424)); max-width: none; height: auto; max-height: 100dvh; margin: auto; box-shadow: none; }
+.canvas-loading { inset: 0; }
+.control-launcher { position: fixed; z-index: 80; right: 20px; bottom: 20px; display: inline-flex; align-items: center; gap: 9px; min-height: 44px; padding: 0 15px; border: 1px solid rgba(255,255,255,.28); border-radius: 999px; color: #effaf8; background: rgba(12,29,43,.78); box-shadow: 0 8px 28px rgba(8,18,28,.25); backdrop-filter: blur(14px); cursor: pointer; font-size: 12px; font-weight: 700; transition: background .18s, transform .18s; }
+.control-launcher:hover { transform: translateY(-2px); background: rgba(16,49,62,.92); }
+.control-launcher > span:first-child { color: #7ce0cf; font-size: 19px; line-height: 1; }
+.control-drawer { position: fixed; z-index: 90; top: 16px; right: 16px; bottom: 16px; display: flex; flex-direction: column; width: min(390px, calc(100vw - 32px)); overflow: hidden; border: 1px solid rgba(180,207,226,.2); border-radius: 16px; color: var(--text); background: rgba(10,22,35,.86); box-shadow: 0 22px 80px rgba(0,0,0,.4); backdrop-filter: blur(24px); transform: translateX(calc(100% + 24px)); visibility: hidden; transition: transform .24s ease, visibility .24s; }
+.control-drawer.is-open { transform: translateX(0); visibility: visible; }
+.drawer-heading { flex: 0 0 auto; display: flex; align-items: center; justify-content: space-between; padding: 18px 19px 14px; border-bottom: 1px solid rgba(178,201,222,.14); }
+.drawer-heading > div { display: grid; gap: 4px; }
+.drawer-heading .eyebrow { margin: 0; color: #75cfc1; font-size: 9px; letter-spacing: .15em; }
+.drawer-heading strong { font: 600 16px 'Space Grotesk', sans-serif; }
+.drawer-close { width: 32px; height: 32px; display: grid; place-items: center; border: 1px solid rgba(178,201,222,.15); border-radius: 9px; color: #dce7f1; background: rgba(255,255,255,.05); cursor: pointer; font-size: 20px; }
+.drawer-content { min-height: 0; overflow: auto; padding: 14px; scrollbar-color: #3a5668 transparent; }
+.drawer-content > .page-tabs { display: flex !important; width: 100%; flex-wrap: wrap; margin: 0 0 12px; background: rgba(255,255,255,.035); }
+.drawer-content > .page-tabs .page-tab { flex: 1; justify-content: center; gap: 6px; padding: 8px 7px; font-size: 10px; }
+.drawer-content > .toolbar { display: flex !important; flex-direction: column; align-items: stretch; gap: 8px; margin: 0 0 12px; border-radius: 9px; background: rgba(255,255,255,.04); }
+.drawer-content .tool-group, .drawer-content .toolbar-actions { flex-wrap: wrap; justify-content: space-between; }
+.drawer-content .edit-hint { display: none; }
+.drawer-content > .panel { display: none; }
+body.is-editing .drawer-content > .element-panel, body.is-editing .drawer-content > .inspector-panel { display: flex; flex-direction: column; min-height: 0; max-height: 42vh; margin-top: 10px; border-radius: 10px; }
+body.is-editing .drawer-content > .inspector-panel { display: grid; grid-template-columns: 1fr 1fr; align-items: start; overflow-y: auto; }
+body.is-editing .drawer-content > .inspector-panel > .panel-heading { grid-column: 1 / -1; }
+body.is-editing .drawer-content .element-panel { height: 34vh; }
+body.is-editing .drawer-content .export-divider { display: none; }
+body.is-editing .drawer-content .export-heading, body.is-editing .drawer-content .json-preview, body.is-editing .drawer-content .button-copy { grid-column: auto; grid-row: auto; width: auto; margin: 8px 10px; }
+body.is-editing .drawer-content .export-heading { padding: 8px 10px 0; }
+.virtual-value-row { display: flex; align-items: center; justify-content: space-between; gap: 8px; min-height: 36px; margin-top: 8px; padding-top: 8px; border-top: 1px solid var(--line-soft); color: #91a3b8; font-size: 9px; font-weight: 600; }
+.virtual-value-row[hidden] { display: none; }
+.virtual-value-row input { width: 105px; min-height: 30px; padding: 0 8px; border: 1px solid #304258; border-radius: 5px; color: #e7f2f8; background: #0f1a29; font-size: 11px; }
+.stage-hotspots { position: absolute; z-index: 5; inset: 0; pointer-events: none; }
+.stage-hotspot { position: absolute; top: 11.45%; height: 4.35%; border: 0; padding: 0; background: transparent; cursor: pointer; pointer-events: auto; }
+.stage-hotspot:focus-visible { outline: 2px solid #40d8c4; outline-offset: 1px; background: rgba(49,202,185,.12); }
+.stage-hotspot[data-page="chiller"] { left: 12.55%; width: 8.85%; }
+.stage-hotspot[data-page="ahu"] { left: 21.4%; width: 8.15%; }
+.stage-hotspot[data-page="pau"] { left: 29.55%; width: 8.95%; }
+.stage-hotspot[data-page="fcu"] { left: 38.5%; width: 8.1%; }
+.stage-hotspot[data-page="help"] { left: 46.6%; width: 9.15%; }
+.stage.is-edit-mode .stage-hotspots { display: none; }
+@media (max-width: 760px) {
+  .control-launcher { right: 12px; bottom: 12px; min-height: 42px; }
+  .control-drawer { top: 10px; right: 10px; bottom: 10px; width: min(390px, calc(100vw - 20px)); }
+  .stage { width: min(100vw, calc(100dvh * 1.9424)); }
+}
