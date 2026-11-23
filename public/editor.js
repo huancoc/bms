@@ -2,7 +2,9 @@ const PX_WIDTH = 1855;
 const PX_HEIGHT = 955;
 const CHILLER_SAMPLE_VALUES = ['27.8°C', '31.2°C', '12.4°C', '7.1°C', '1.45bar', '32%'];
 const PAGE_CONFIG = {
+  home: { title: 'Home', file: '/px/Home.px', background: '/px/Backgound/Home_BG.jpg' },
   chiller: { title: 'Chiller', file: '/px/CHILLER.px', background: '/px/Backgound/BG_Chiller.jpg' },
+  help: { title: 'Help', file: '/px/HELP/Help.px', background: '/px/Backgound/BG_Help.jpg' },
   ahu: { title: 'AHU', file: '/px/AHU_Main.px', background: '/px/Backgound/BG_AHU.jpg' },
   pau: { title: 'PAU', file: '/px/PAU_Main.px', background: '/px/Backgound/BG_PAU.jpg' },
   fcu: { title: 'FCU', file: '/px/FCU_Main.px', background: '/px/Backgound/BG_FCU.jpg' },
@@ -42,6 +44,8 @@ const elements = {
   elementSize: document.querySelector('#element-size'),
   statusRow: document.querySelector('#status-row'),
   statusToggle: document.querySelector('#status-toggle'),
+  virtualValueRow: document.querySelector('#virtual-value-row'),
+  virtualValue: document.querySelector('#virtual-value'),
   jsonPreview: document.querySelector('#json-preview'),
   copyJson: document.querySelector('#copy-json'),
   toast: document.querySelector('#toast'),
@@ -245,6 +249,7 @@ function renderPage(pageKey) {
   elements.stage.setAttribute('aria-label', `${page.title} sơ đồ BMS. ${state.editMode ? 'Dùng chuột hoặc phím mũi tên để di chuyển phần tử.' : 'Bật chỉnh tọa độ để di chuyển phần tử.'}`);
   elements.stageElements.replaceChildren();
   elements.stageOverlay.replaceChildren();
+  renderNavigationHotspots();
 
   for (const item of page.items) {
     const node = createDiagramItem(item);
@@ -258,6 +263,37 @@ function renderPage(pageKey) {
   renderInspector();
   updateModeStyles();
   elements.stageLoading.hidden = true;
+}
+
+function renderNavigationHotspots() {
+  let layer = elements.stage.querySelector('.stage-hotspots');
+  if (!layer) {
+    layer = document.createElement('nav');
+    layer.className = 'stage-hotspots';
+    layer.setAttribute('aria-label', 'Điều hướng trang BMS trên sơ đồ');
+    elements.stage.append(layer);
+  }
+  layer.replaceChildren();
+  for (const [pageKey, label] of [['chiller', 'Chiller'], ['ahu', 'AHU'], ['pau', 'PAU'], ['fcu', 'FCU'], ['help', 'Help']]) {
+    const button = document.createElement('button');
+    button.type = 'button';
+    button.className = 'stage-hotspot';
+    button.dataset.page = pageKey;
+    button.setAttribute('aria-label', `Mở trang ${label}`);
+    button.title = label;
+    button.addEventListener('click', () => navigateToPage(pageKey));
+    layer.append(button);
+  }
+}
+
+function navigateToPage(pageKey) {
+  document.querySelectorAll('.page-tab').forEach((tab) => {
+    const active = tab.dataset.page === pageKey;
+    tab.classList.toggle('is-active', active);
+    tab.setAttribute('aria-selected', String(active));
+  });
+  elements.search.value = '';
+  loadPage(pageKey);
 }
 
 function createDiagramItem(item) {
@@ -325,7 +361,16 @@ function createDiagramItem(item) {
 
   node.addEventListener('click', (event) => {
     event.stopPropagation();
-    if (!state.editMode || item.draggable === false) selectItem(item.id);
+    if (state.editMode || item.draggable === false) return;
+    if (['equipment', 'trip', 'flow-switch'].includes(item.category)) {
+      item.isOn = !item.isOn;
+      renderPageElements(getPage());
+      renderInspector();
+      showToast(`${item.name}: ${item.category === 'trip' ? (item.isOn ? 'Trip giả lập' : 'Bình thường') : item.isOn ? 'Đang chạy' : 'Đã dừng'}`);
+      return;
+    }
+    selectItem(item.id);
+    openControlDrawer();
   });
   node.addEventListener('pointerdown', (event) => beginDrag(event, item));
   node.addEventListener('keydown', (event) => handleItemKeydown(event, item));
@@ -406,6 +451,8 @@ function renderInspector() {
   elements.elementSize.textContent = `${Math.round(item.layout.width)} × ${Math.round(item.layout.height)} px`;
   const hasState = ['equipment', 'trip', 'flow-switch'].includes(item.category);
   elements.statusRow.hidden = !hasState;
+  elements.virtualValueRow.hidden = item.category !== 'point' || !item.virtual;
+  elements.virtualValue.value = item.text || '';
   elements.statusToggle.setAttribute('aria-pressed', String(item.isOn));
   elements.statusToggle.querySelector('strong').textContent = item.category === 'trip' ? (item.isOn ? 'Báo trip' : 'Bình thường') : item.category === 'flow-switch' ? (item.isOn ? 'FS Mở' : 'FS Đóng') : (item.isOn ? 'Đang chạy' : 'Đang tắt');
 }
@@ -467,6 +514,7 @@ function handleItemKeydown(event, item) {
 }
 
 function updateModeStyles() {
+  document.body.classList.toggle('is-editing', state.editMode);
   elements.stage.classList.toggle('is-edit-mode', state.editMode);
   elements.editToggle.setAttribute('aria-pressed', String(state.editMode));
   elements.virtualToggle.setAttribute('aria-pressed', String(state.showVirtual));
@@ -590,15 +638,7 @@ function setItemState() {
 }
 
 for (const tab of document.querySelectorAll('.page-tab')) {
-  tab.addEventListener('click', () => {
-    document.querySelectorAll('.page-tab').forEach((candidate) => {
-      const isActive = candidate === tab;
-      candidate.classList.toggle('is-active', isActive);
-      candidate.setAttribute('aria-selected', String(isActive));
-    });
-    elements.search.value = '';
-    loadPage(tab.dataset.page);
-  });
+  tab.addEventListener('click', () => navigateToPage(tab.dataset.page));
 }
 
 elements.editToggle.addEventListener('click', () => {
@@ -621,6 +661,14 @@ elements.copyJson.addEventListener('click', async () => {
 elements.coordX.addEventListener('change', (event) => setCoordinate('xPercent', event.target.value));
 elements.coordY.addEventListener('change', (event) => setCoordinate('yPercent', event.target.value));
 elements.statusToggle.addEventListener('click', setItemState);
+elements.virtualValue.addEventListener('change', (event) => {
+  const item = getPage()?.items.find((candidate) => candidate.id === state.selectedId);
+  if (!item || item.category !== 'point') return;
+  item.text = cleanText(event.target.value).slice(0, 32);
+  event.target.value = item.text;
+  const node = elements.stageElements.querySelector(`[data-id="${CSS.escape(item.id)}"] .diagram-badge`);
+  if (node) node.textContent = item.text;
+});
 elements.search.addEventListener('input', renderElementList);
 
 document.addEventListener('pointermove', (event) => {
@@ -639,6 +687,32 @@ elements.stage.addEventListener('click', (event) => {
     renderElementList();
     renderInspector();
   }
+});
+
+const drawer = document.querySelector('#control-drawer');
+const drawerContent = document.querySelector('#drawer-content');
+const launcher = document.querySelector('#control-launcher');
+
+function openControlDrawer() {
+  drawer.classList.add('is-open');
+  drawer.setAttribute('aria-hidden', 'false');
+  launcher.setAttribute('aria-expanded', 'true');
+}
+
+function closeControlDrawer() {
+  drawer.classList.remove('is-open');
+  drawer.setAttribute('aria-hidden', 'true');
+  launcher.setAttribute('aria-expanded', 'false');
+}
+
+for (const selector of ['.page-tabs', '.toolbar', '.element-panel', '.inspector-panel']) {
+  const control = document.querySelector(selector);
+  if (control) drawerContent.append(control);
+}
+launcher.addEventListener('click', () => drawer.classList.contains('is-open') ? closeControlDrawer() : openControlDrawer());
+document.querySelector('#drawer-close').addEventListener('click', closeControlDrawer);
+document.addEventListener('keydown', (event) => {
+  if (event.key === 'Escape' && drawer.classList.contains('is-open')) closeControlDrawer();
 });
 
 loadPage(state.activePage);

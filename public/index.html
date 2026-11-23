@@ -34,10 +34,12 @@
         </div>
 
         <nav class="page-tabs" aria-label="Choose a BMS page" role="tablist">
+          <button class="page-tab" type="button" role="tab" aria-selected="false" data-page="home">Home <span>00</span></button>
           <button class="page-tab is-active" type="button" role="tab" aria-selected="true" data-page="chiller">Chiller <span>01</span></button>
           <button class="page-tab" type="button" role="tab" aria-selected="false" data-page="ahu">AHU <span>02</span></button>
           <button class="page-tab" type="button" role="tab" aria-selected="false" data-page="pau">PAU <span>03</span></button>
           <button class="page-tab" type="button" role="tab" aria-selected="false" data-page="fcu">FCU <span>04</span></button>
+          <button class="page-tab" type="button" role="tab" aria-selected="false" data-page="help">Help <span>05</span></button>
         </nav>
 
         <div class="toolbar" role="toolbar" aria-label="Layout tools">
@@ -91,6 +93,7 @@
               </div>
               <div class="dimensions-row"><span>Kích thước gốc</span><strong id="element-size">—</strong></div>
               <div class="status-row" id="status-row" hidden><span>Trạng thái thiết bị</span><button class="status-toggle" id="status-toggle" type="button" aria-pressed="true"><span></span><strong>Đang chạy</strong></button></div>
+              <label class="virtual-value-row" id="virtual-value-row" hidden><span>Giá trị điểm ảo</span><input id="virtual-value" type="text" inputmode="decimal" aria-label="Giá trị điểm ảo"></label>
               <p class="inspector-tip"><span aria-hidden="true">i</span> Tọa độ được xuất theo phần trăm khung sơ đồ, thích ứng với mọi kích thước màn hình.</p>
             </div>
             <div class="export-divider"></div>
@@ -101,6 +104,11 @@
         </div>
         <p class="mobile-help">Trên màn hình nhỏ, kéo ngang để xem toàn bộ sơ đồ. Bật <strong>Chỉnh tọa độ</strong> trước khi di chuyển phần tử.</p>
       </section>
+      <button class="control-launcher" id="control-launcher" type="button" aria-expanded="false" aria-controls="control-drawer"><span aria-hidden="true">☷</span><span>Bảng điều khiển</span></button>
+      <aside class="control-drawer" id="control-drawer" aria-label="Bảng điều khiển BMS" aria-hidden="true">
+        <div class="drawer-heading"><div><span class="eyebrow">BMS CONTROL</span><strong>Điều khiển nhanh</strong></div><button class="drawer-close" id="drawer-close" type="button" aria-label="Đóng bảng điều khiển">×</button></div>
+        <div class="drawer-content" id="drawer-content"></div>
+      </aside>
       <div class="toast" id="toast" role="status" aria-live="polite"></div>
     </main>
   </body>
