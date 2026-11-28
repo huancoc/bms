@@ -1,5 +1,5 @@
 import type { ChillerPlant } from '@/lib/bms/types'
-import { COLORS, Fan, Pipe, Pump, Sensor, Valve } from '../svg'
+import { COLORS, Fan, Pipe, Pump, Sensor, Valve } from './svg'
 
 const X = [260, 560]
 const P = [100, 220]
