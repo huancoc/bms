@@ -667,7 +667,10 @@ export default function BmsDiagram(props: Props) {
   const { activePage, setActivePage } = props
   return (
     <div className={`graphic-canvas ${activePage === 'home' || activePage === 'help' ? 'home-canvas' : ''}`}>
-      <AssetImage className="graphic-background" src={pageBackgrounds[activePage]} />
+      {activePage !== 'chiller' && (
+  <AssetImage className="graphic-background" src={pageBackgrounds[activePage]} />
+)}
+
       {navHotspots.map((hotspot) => (
         <button
           key={hotspot.page}
