@@ -1,5 +1,5 @@
 'use client'
-
+import { SvgChillerDiagram, type ChillerPlant } from './source-views/chiller-diagram'
 import { useEffect, useState, type CSSProperties, type PointerEvent as ReactPointerEvent } from 'react'
 import { AlertTriangle, ChevronRight } from 'lucide-react'
 import './bms-diagram.css'
@@ -217,14 +217,10 @@ function ChillerNode({
 }
 
 function ChillerDiagram({
+function ChillerDiagram({
   points,
   faultedPoints,
-  editMode,
-  selectedEditId,
-  setSelectedEditId,
   onSelectEquipment,
-  onPointerDown,
-  onResizePointerDown,
 }: Pick<
   Props,
   | 'points'
@@ -236,25 +232,108 @@ function ChillerDiagram({
   | 'onPointerDown'
   | 'onResizePointerDown'
 >) {
+  const getPt = (id: string) => points.find((p) => p.id === id)
+  const numVal = (id: string, fallback: number) => {
+    const v = Number(getPt(id)?.value)
+    return Number.isNaN(v) ? fallback : v
+  }
+
+  const ch1 = getPt('CHILLER_01')
+  const ch2 = getPt('CHILLER_02')
+  const chwp1 = getPt('CHWP_01')
+  const chwp2 = getPt('CHWP_02')
+  const ctwp1 = getPt('CTWP_01')
+  const ctwp2 = getPt('CTWP_02')
+  const ct1a = getPt('CT_01_A')
+  const ct2a = getPt('CT_02_A')
+
+  const chws = numVal('SENS_CHWS', 7.1)
+  const chwr = numVal('SENS_CHWR', 12.4)
+  const cws = numVal('SENS_CDWS', 27.8)
+  const cwr = numVal('SENS_CDWR', 31.2)
+  const dpBar = numVal('SENS_DP', 1.45)
+  const bypass = numVal('FLOW_BYPASS_VSD', 32)
+
+  const activeChillers = (ch1?.on ? 1 : 0) + (ch2?.on ? 1 : 0)
+  const load = activeChillers === 2 ? 0.88 : activeChillers === 1 ? 0.52 : 0
+  const tons = Math.round(load * 600)
+  const kw = Math.round(tons * 0.62)
+  const kwPerTon = tons > 0 ? kw / tons : 0
+  const flow = activeChillers * 45 + (chwp1?.on ? 15 : 0) + (chwp2?.on ? 15 : 0)
+
+  const plantData: ChillerPlant = {
+    chws,
+    chwr,
+    cws,
+    cwr,
+    kw,
+    kwPerTon,
+    tons,
+    flow,
+    dp: dpBar * 100, // Đổi bar sang kPa
+    bypass,
+    chwp: [
+      { id: 'CHWP-01', on: !!chwp1?.on, tripped: faultedPoints.includes('CHWP_01'), hz: chwp1?.hz ?? 0 },
+      { id: 'CHWP-02', on: !!chwp2?.on, tripped: faultedPoints.includes('CHWP_02'), hz: chwp2?.hz ?? 0 },
+    ],
+    cwp: [
+      { id: 'CTWP-01', on: !!ctwp1?.on, hz: ctwp1?.hz ?? 0 },
+      { id: 'CTWP-02', on: !!ctwp2?.on, hz: ctwp2?.hz ?? 0 },
+    ],
+    towers: [
+      { id: 'CT-01', on: !!ct1a?.on, hz: ct1a?.hz ?? 0 },
+      { id: 'CT-02', on: !!ct2a?.on, hz: ct2a?.hz ?? 0 },
+    ],
+    chillers: [
+      {
+        id: 'CHILLER-01',
+        on: !!ch1?.on && !faultedPoints.includes('CHILLER_01'),
+        cmd: !!ch1?.on,
+        plr: ch1?.on ? (activeChillers === 2 ? 0.88 : 0.72) : 0,
+        kw: ch1?.on ? Math.round(kw / Math.max(1, activeChillers)) : 0,
+        valve: ch1?.on ? 100 : 0,
+      },
+      {
+        id: 'CHILLER-02',
+        on: !!ch2?.on && !faultedPoints.includes('CHILLER_02'),
+        cmd: !!ch2?.on,
+        plr: ch2?.on ? 0.85 : 0,
+        kw: ch2?.on ? Math.round(kw / Math.max(1, activeChillers)) : 0,
+        valve: ch2?.on ? 100 : 0,
+      },
+    ],
+  }
+
   return (
-    <>
-      <AssetImage className="chiller-layout" src="/px/Layout/Chillerx.PNG" />
-      {points.map((point) => (
-        <ChillerNode
-          key={point.id}
-          item={point}
-          faulted={faultedPoints.includes(point.id)}
-          editMode={editMode}
-          isSelected={editMode && selectedEditId === point.id}
-          onSelectEdit={() => setSelectedEditId(point.id)}
-          onOpenFaceplate={() => onSelectEquipment(point.id)}
-          onPointerDown={onPointerDown}
-          onResizePointerDown={onResizePointerDown}
-        />
-      ))}
-    </>
+    <div className="relative h-full w-full overflow-auto bg-slate-50 p-3 flex flex-col justify-between">
+      <div className="flex-1 flex items-center justify-center">
+        <SvgChillerDiagram c={plantData} load={load} />
+      </div>
+      {/* Thanh truy cập nhanh Faceplate điều khiển từng thiết bị */}
+      <div className="mt-2 flex flex-wrap items-center justify-center gap-1.5 border-t border-slate-200 pt-2">
+        {points
+          .filter((p) => p.kind === 'chiller' || p.kind === 'pump' || p.kind === 'tower' || p.id === 'SENS_DP' || p.id === 'FLOW_BYPASS_VSD')
+          .map((item) => (
+            <button
+              key={item.id}
+              type="button"
+              onClick={() => onSelectEquipment(item.id)}
+              className={`rounded-md border px-2.5 py-1 text-xs font-semibold transition ${
+                faultedPoints.includes(item.id)
+                  ? 'border-red-300 bg-red-50 text-red-700'
+                  : item.on
+                    ? 'border-emerald-300 bg-emerald-50 text-emerald-800 hover:bg-emerald-100'
+                    : 'border-slate-300 bg-white text-slate-600 hover:bg-slate-100'
+              }`}
+            >
+              {item.label}
+            </button>
+          ))}
+      </div>
+    </div>
   )
 }
+
 
 function AhuDiagram({
   points,
