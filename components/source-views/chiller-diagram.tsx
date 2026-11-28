@@ -1,10 +1,26 @@
-import type { ChillerPlant } from '@/lib/bms/types'
 import { COLORS, Fan, Pipe, Pump, Sensor, Valve } from './svg'
+
+export type ChillerPlant = {
+  chws: number
+  chwr: number
+  cws: number
+  cwr: number
+  kw: number
+  kwPerTon: number
+  tons: number
+  flow: number
+  dp: number
+  bypass: number
+  chwp: { id: string; on: boolean; tripped?: boolean; hz: number }[]
+  cwp: { id: string; on: boolean; hz: number }[]
+  towers: { id: string; on: boolean; hz: number }[]
+  chillers: { id: string; on: boolean; cmd: boolean; plr: number; kw: number; valve: number }[]
+}
 
 const X = [260, 560]
 const P = [100, 220]
 
-export function ChillerDiagram({ c, load }: { c: ChillerPlant; load: number }) {
+export function SvgChillerDiagram({ c, load }: { c: ChillerPlant; load: number }) {
   const anyPump = c.chwp.some((p) => p.on)
   const anyChiller = c.chillers.some((ch) => ch.on)
   const flowing = anyPump && anyChiller
