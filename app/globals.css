@@ -115,3 +115,65 @@ button { color:inherit; }
 @media (max-width:1100px) { .workspace { padding:12px; gap:10px; }.control-drawer { width:300px; min-width:300px; }.graphic-canvas { min-height:430px; }.equipment-node { width:76px; min-height:51px; }.equipment-node.chiller { width:82px; min-height:59px; }.summary-stats { gap:11px; } }
 @media (max-width:760px) { .topbar { height:65px; padding:0 16px; }.brand-mark { width:34px; height:34px; }.brand-lockup h1 { font-size:16px; }.brand-lockup p { font-size:7px; }.connection { display:none; }.weather { padding-left:0; border:0; }.quick-nav { height:56px; gap:0; padding:0 6px; overflow-x:auto; }.nav-tab { min-width:0; flex:1; padding:0 7px; text-align:center; }.nav-tab span { font-size:7px; }.nav-tab strong { font-size:10px; }.summary-row { min-height:48px; padding:0 13px; }.breadcrumb { font-size:8px; }.summary-stats { display:none; }.points-toggle { padding:7px; font-size:9px; }.workspace { position:relative; display:block; padding:10px; }.graphic-canvas { min-height:0; aspect-ratio:1855 / 955; }.schematic-title { top:3%; }.schematic-title .eyebrow { font-size:6px; }.schematic-title > strong { font-size:clamp(10px,2.2vw,16px); }.system-state { font-size:6px; }.equipment-node { width:clamp(41px,8vw,75px); min-height:clamp(29px,5vw,48px); gap:1px; padding:3px 2px; border-radius:4px; }.equipment-node.chiller { width:clamp(48px,9vw,82px); min-height:clamp(36px,6vw,55px); }.machine-symbol { transform:scale(.7); margin:-2px; }.pump-symbol { transform:scale(.7); margin:-2px; }.tower-symbol svg { width:12px; height:12px; }.equipment-name { max-width:100%; font-size:clamp(5px,1vw,7px); }.run-dot { width:4px; height:4px; right:3px; top:3px; }.sensor { min-width:0; gap:2px; padding:3px 4px; border-radius:3px; }.sensor > span { font-size:clamp(4px,.75vw,6px); }.sensor strong { font-size:clamp(8px,1.5vw,12px); }.sensor small { font-size:6px; }.pressure-sensor { min-width:65px; }.pressure-sensor em { font-size:5px; }.flow-label { gap:3px; padding:2px 3px; font-size:5px; }.flow-label .status-light { width:4px; height:4px; box-shadow:none; }.pipe-loop { border-width:3px; }.pipe-loop::before { border-left-width:3px; }.pipe-loop::after { border-top-width:3px; }.pipe-label { top:-14px; font-size:5px; }.canvas-footer { font-size:5px; }.canvas-caption { font-size:8px; }.control-drawer { position:fixed; z-index:20; right:0; top:0; bottom:0; width:min(390px,100vw); height:100dvh; min-height:0; border-radius:12px 0 0 12px; box-shadow:-20px 0 60px #050a0e88; }.close-drawer { display:flex; }.drawer-head { padding:19px; }.drawer-scroll { padding:0 19px 20px; }.drawer-foot { padding:12px 19px; }.ahu-board { inset:18% 3% 5%; grid-template-columns:repeat(3,1fr); gap:4px; }.unit-card { gap:3px; padding:4px; }.unit-icon { width:19px; height:19px; }.unit-icon svg { width:12px; }.unit-info b { font-size:7px; }.unit-info small { font-size:5px; }.unit-temp { font-size:7px; }.fcu-groups { inset:17% 2% 4%; gap:3px; }.fcu-group { padding:4px; }.fcu-group h3 { font-size:5px; margin-bottom:5px; padding-bottom:4px; }.fcu-list { gap:3px; }.fcu-unit { gap:3px; padding:3px; }.fcu-fan { width:14px; height:14px; }.fcu-fan svg { width:9px; }.fcu-unit b, .fcu-unit > strong { font-size:6px; }.fcu-unit small { display:none; }.air-duct { top:22%; padding:5px; font-size:6px; }.pau-unit { gap:3px; padding:3px 4px; }.pau-unit b { font-size:6px; }.pau-unit .unit-icon { width:15px; height:15px; }.pau-unit .unit-icon svg { width:10px; }.pau-unit .status-light { width:4px; height:4px; box-shadow:none; }.welcome-card { left:4%; top:17%; width:69%; padding:12px; }.welcome-icon { width:25px; height:25px; margin-bottom:8px; }.welcome-icon svg { width:14px; }.welcome-card h2 { margin:6px 0; font-size:clamp(11px,2.4vw,19px); }.welcome-card > p { font-size:7px; line-height:1.45; }.welcome-cards { gap:4px; margin-top:9px; }.welcome-cards button { padding:5px; column-gap:3px; }.welcome-cards button > span { font-size:6px; }.welcome-cards button b { font-size:7px; }.welcome-cards button small { font-size:5px; }.welcome-cards button svg { width:9px; }.canvas-watermark { font-size:5px; }.canvas-watermark span { font-size:4px; } }
 @media (max-width:390px) { .weather span { display:none; }.brand-lockup { gap:8px; }.nav-tab { padding:0 4px; }.nav-tab strong { font-size:9px; }.summary-row { padding:0 9px; } }
+
+@keyframes bms-flow {
+  to {
+    stroke-dashoffset: -28;
+  }
+}
+.bms-flow {
+  stroke-dasharray: 10 18;
+  animation: bms-flow 0.9s linear infinite;
+}
+@keyframes bms-flow-air {
+  to {
+    stroke-dashoffset: -40;
+  }
+}
+.bms-flow-air {
+  stroke-dasharray: 16 24;
+  animation: bms-flow-air 1.1s linear infinite;
+}
+@keyframes bms-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+.bms-spin {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: bms-spin 1s linear infinite;
+}
+.bms-rot {
+  transform-box: fill-box;
+  transform-origin: center;
+  transition: transform 0.8s ease;
+}
+@keyframes bms-wave {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-80px);
+  }
+}
+.bms-wave {
+  animation: bms-wave 2.8s linear infinite;
+}
+@keyframes bms-blink {
+  50% {
+    opacity: 0.25;
+  }
+}
+.bms-blink {
+  animation: bms-blink 0.9s ease-in-out infinite;
+}
+@media (prefers-reduced-motion: reduce) {
+  .bms-flow,
+  .bms-flow-air,
+  .bms-spin,
+  .bms-wave,
+  .bms-blink {
+    animation-duration: 6s !important;
+  }
+}
